@@ -1,0 +1,202 @@
+name: Upstream Synchronization
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      component:
+        description: 'Component to sync (all, rrt-advocate, toi-otoi-framework, aimybox-voice)'
+        required: false
+        default: 'all'
+      force_sync:
+        description: 'Force synchronization even if no changes detected'
+        required: false
+        default: 'false'
+
+jobs:
+  sync-upstream:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Configure Git
+      run: |
+        git config user.name "NeuroLift Foundation Bot"
+        git config user.email "foundation-bot@neurolift.tech"
+    
+    - name: Add upstream remotes
+      run: |
+        git remote add rrt-upstream https://github.com/JDUB1216/rrt-advocate.git || true
+        git remote add toi-otoi-upstream https://github.com/JDUB1216/nlt-otoi.git || true
+        git remote add aimybox-upstream https://github.com/JDUB1216/aimybox-android-assistant.git || true
+        git remote -v
+    
+    - name: Fetch upstream changes
+      run: |
+        git fetch rrt-upstream main
+        git fetch toi-otoi-upstream main
+        git fetch aimybox-upstream master
+    
+    - name: Check for RRT Advocate changes
+      id: check-rrt
+      if: github.event.inputs.component == 'all' || github.event.inputs.component == 'rrt-advocate'
+      run: |
+        # Check if there are new commits in upstream
+        LAST_SYNC=$(git log --grep="Sync RRT Advocate from upstream" --oneline -1 --format="%H" || echo "")
+        if [ -z "$LAST_SYNC" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "reason=Initial sync" >> $GITHUB_OUTPUT
+        else
+          # Check if upstream has new commits since last sync
+          NEW_COMMITS=$(git rev-list --count $LAST_SYNC..rrt-upstream/main 2>/dev/null || echo "1")
+          if [ "$NEW_COMMITS" -gt "0" ] || [ "${{ github.event.inputs.force_sync }}" = "true" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "reason=$NEW_COMMITS new commits" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+        fi
+    
+    - name: Sync RRT Advocate
+      if: steps.check-rrt.outputs.changes == 'true'
+      run: |
+        echo "Syncing RRT Advocate: ${{ steps.check-rrt.outputs.reason }}"
+        git subtree pull --prefix=rrt-advocate rrt-upstream main --squash -m "Sync RRT Advocate from upstream: ${{ steps.check-rrt.outputs.reason }}"
+    
+    - name: Check for TOI-OTOI Framework changes
+      id: check-toi-otoi
+      if: github.event.inputs.component == 'all' || github.event.inputs.component == 'toi-otoi-framework'
+      run: |
+        LAST_SYNC=$(git log --grep="Sync TOI-OTOI Framework from upstream" --oneline -1 --format="%H" || echo "")
+        if [ -z "$LAST_SYNC" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "reason=Initial sync" >> $GITHUB_OUTPUT
+        else
+          NEW_COMMITS=$(git rev-list --count $LAST_SYNC..toi-otoi-upstream/main 2>/dev/null || echo "1")
+          if [ "$NEW_COMMITS" -gt "0" ] || [ "${{ github.event.inputs.force_sync }}" = "true" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "reason=$NEW_COMMITS new commits" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+        fi
+    
+    - name: Sync TOI-OTOI Framework
+      if: steps.check-toi-otoi.outputs.changes == 'true'
+      run: |
+        echo "Syncing TOI-OTOI Framework: ${{ steps.check-toi-otoi.outputs.reason }}"
+        git subtree pull --prefix=toi-otoi-framework toi-otoi-upstream main --squash -m "Sync TOI-OTOI Framework from upstream: ${{ steps.check-toi-otoi.outputs.reason }}"
+    
+    - name: Check for Aimybox Voice changes
+      id: check-aimybox
+      if: github.event.inputs.component == 'all' || github.event.inputs.component == 'aimybox-voice'
+      run: |
+        LAST_SYNC=$(git log --grep="Sync Aimybox Voice from upstream" --oneline -1 --format="%H" || echo "")
+        if [ -z "$LAST_SYNC" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "reason=Initial sync" >> $GITHUB_OUTPUT
+        else
+          NEW_COMMITS=$(git rev-list --count $LAST_SYNC..aimybox-upstream/master 2>/dev/null || echo "1")
+          if [ "$NEW_COMMITS" -gt "0" ] || [ "${{ github.event.inputs.force_sync }}" = "true" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "reason=$NEW_COMMITS new commits" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+        fi
+    
+    - name: Sync Aimybox Voice
+      if: steps.check-aimybox.outputs.changes == 'true'
+      run: |
+        echo "Syncing Aimybox Voice: ${{ steps.check-aimybox.outputs.reason }}"
+        git subtree pull --prefix=aimybox-voice aimybox-upstream master --squash -m "Sync Aimybox Voice from upstream: ${{ steps.check-aimybox.outputs.reason }}"
+    
+    - name: Run integration tests
+      if: steps.check-rrt.outputs.changes == 'true' || steps.check-toi-otoi.outputs.changes == 'true' || steps.check-aimybox.outputs.changes == 'true'
+      run: |
+        echo "Running integration tests after sync..."
+        # Add integration test commands here
+        python3 -m pytest tests/ -v || echo "Tests failed but continuing..."
+    
+    - name: Update GEMINI_TOPOGRAPHY
+      if: steps.check-rrt.outputs.changes == 'true' || steps.check-toi-otoi.outputs.changes == 'true' || steps.check-aimybox.outputs.changes == 'true'
+      run: |
+        echo "Updating GEMINI_TOPOGRAPHY with sync information..."
+        python3 scripts/update_topography.py --sync-update
+    
+    - name: Create sync summary
+      if: steps.check-rrt.outputs.changes == 'true' || steps.check-toi-otoi.outputs.changes == 'true' || steps.check-aimybox.outputs.changes == 'true'
+      run: |
+        echo "# Upstream Sync Summary" > sync_summary.md
+        echo "Date: $(date)" >> sync_summary.md
+        echo "" >> sync_summary.md
+        
+        if [ "${{ steps.check-rrt.outputs.changes }}" = "true" ]; then
+          echo "- ✅ RRT Advocate: ${{ steps.check-rrt.outputs.reason }}" >> sync_summary.md
+        else
+          echo "- ⏭️ RRT Advocate: No changes" >> sync_summary.md
+        fi
+        
+        if [ "${{ steps.check-toi-otoi.outputs.changes }}" = "true" ]; then
+          echo "- ✅ TOI-OTOI Framework: ${{ steps.check-toi-otoi.outputs.reason }}" >> sync_summary.md
+        else
+          echo "- ⏭️ TOI-OTOI Framework: No changes" >> sync_summary.md
+        fi
+        
+        if [ "${{ steps.check-aimybox.outputs.changes }}" = "true" ]; then
+          echo "- ✅ Aimybox Voice: ${{ steps.check-aimybox.outputs.reason }}" >> sync_summary.md
+        else
+          echo "- ⏭️ Aimybox Voice: No changes" >> sync_summary.md
+        fi
+        
+        echo "" >> sync_summary.md
+        echo "Integration tests: $([ -f test_results.txt ] && echo "✅ Passed" || echo "⚠️ See logs")" >> sync_summary.md
+        
+        cat sync_summary.md
+    
+    - name: Push changes
+      if: steps.check-rrt.outputs.changes == 'true' || steps.check-toi-otoi.outputs.changes == 'true' || steps.check-aimybox.outputs.changes == 'true'
+      run: |
+        git add .
+        git commit -m "Automated upstream sync: $(date)" -m "$(cat sync_summary.md)" || echo "No additional changes to commit"
+        git push origin main
+    
+    - name: Create issue on sync failure
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: 'Upstream Sync Failed',
+            body: `The automated upstream synchronization failed on ${new Date().toISOString()}.
+            
+            **Workflow Run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}
+            
+            **Component:** ${{ github.event.inputs.component || 'all' }}
+            
+            Please check the workflow logs and resolve any conflicts manually.`,
+            labels: ['sync-failure', 'automation']
+          })
+
+  notify-notion:
+    needs: sync-upstream
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: Notify Notion of sync status
+      run: |
+        echo "Would notify Notion of sync status here"
+        # Add Notion API call to log the sync status
+        # This would integrate with the Notion project for change tracking

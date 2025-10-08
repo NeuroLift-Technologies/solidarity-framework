@@ -1,0 +1,55 @@
+# NeuroLift Foundation Configuration
+# Main configuration file for the unified ADHD support system
+
+# Foundation settings
+foundation:
+  version: "1.0.0"
+  mode: "unified"  # unified, crisis_only, voice_only, framework_only
+  debug: false
+
+# Component configuration
+components:
+  rrt_advocate:
+    enabled: true
+    config_path: "rrt-advocate/config/crisis_thresholds.yaml"
+    monitoring_interval: 1  # seconds
+    
+  toi_otoi_framework:
+    enabled: true
+    learning_enabled: true
+    optimization_interval: 300  # seconds
+    
+  voice_interface:
+    enabled: true
+    stress_detection: true
+    response_style: "supportive"
+    
+  supervisor_ai:
+    enabled: true
+    coordination_interval: 30  # seconds
+
+# Privacy and security settings
+privacy:
+  data_encryption: true
+  local_processing: true
+  external_sharing: false
+  data_retention_days: 30
+  
+security:
+  access_control: true
+  audit_logging: true
+  input_validation: true
+
+# Performance settings
+performance:
+  max_response_time: 5.0  # seconds
+  cache_enabled: true
+  background_optimization: true
+  max_concurrent_interactions: 10
+
+# Logging configuration
+logging:
+  level: "INFO"
+  file: "logs/neurolift_foundation.log"
+  max_size: "10MB"
+  backup_count: 5

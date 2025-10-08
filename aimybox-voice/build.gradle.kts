@@ -1,5 +1,5 @@
 buildscript {
-    val kotlinVersion = "1.8.21"
+    val kotlinVersion = "1.9.20"
     val aimyboxVersion = "0.17.6-alpha.2"
 
     extra.set("kotlinVersion", kotlinVersion)
@@ -12,7 +12,7 @@ buildscript {
 
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        classpath("com.android.tools.build:gradle:7.1.3")
+        classpath("com.android.tools.build:gradle:8.1.4")
     }
 
 }
@@ -27,7 +27,7 @@ allprojects {
 }
 
 tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+    delete(rootProject.layout.buildDirectory)
 }
 
 val Project.isSubmodule get() = name != rootProject.name

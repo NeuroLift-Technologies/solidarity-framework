@@ -17,13 +17,13 @@ android {
 
     namespace = "com.justai.aimybox.assistant"
 
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.justai.aimybox.assistant"
 
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
 
         versionName = aimyboxVersion
         versionCode = 1
@@ -52,6 +52,11 @@ android {
         checkAllWarnings = true
         warningsAsErrors = false
     }
+    
+    buildFeatures {
+        buildConfig = true
+    }
+    
     namespace = "com.justai.aimybox.assistant"
 }
 
@@ -65,7 +70,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
 
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.20")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
 
     implementation("com.just-ai.aimybox:components:$aimyboxVersion")

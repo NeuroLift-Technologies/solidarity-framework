@@ -1,9 +1,14 @@
 """
-NeuroLift Foundation - Unified ADHD Support System
+NeuroLift Foundation - Universal AI-Fusion Platform
 Main implementation integrating RRT Advocate, TOI-OTOI Framework, and Aimybox Voice Interface
 
 This module provides the central coordination hub for the complete NeuroLift ecosystem,
-combining crisis intervention, intelligent optimization, and natural voice interaction.
+combining intelligent support, adaptive optimization, and natural voice interaction.
+
+EVOLUTION: Originally designed for neurodivergent/ADHD support, this foundation has evolved
+into a universal platform that can be adapted for any domain, use case, or user base.
+The core architecture, principles, and capabilities are universally applicable across
+healthcare, education, workplace, mental health, aging care, and custom domains.
 """
 
 import asyncio
@@ -25,36 +30,41 @@ from coordination.state_manager import UnifiedStateManager
 from coordination.component_communication import ComponentCommunication
 
 class FoundationMode(Enum):
-    """Operating modes for the NeuroLift Foundation"""
-    UNIFIED = "unified"           # All components active
-    CRISIS_ONLY = "crisis_only"   # RRT Advocate only
-    VOICE_ONLY = "voice_only"     # Voice interface only
-    FRAMEWORK_ONLY = "framework"  # TOI-OTOI only
+    """Operating modes for the Universal NeuroLift Foundation"""
+    UNIFIED = "unified"           # All components active (universal mode)
+    SUPPORT_ONLY = "support_only" # RRT Advocate only (universal support)
+    VOICE_ONLY = "voice_only"     # Voice interface only (universal communication)
+    FRAMEWORK_ONLY = "framework"  # TOI-OTOI only (universal optimization)
     DEVELOPMENT = "development"   # Development mode with debugging
+    DOMAIN_SPECIFIC = "domain_specific"  # Configured for specific domain
 
 class InteractionType(Enum):
-    """Types of user interactions supported by the foundation"""
-    VOICE_COMMAND = "voice_command"
-    CRISIS_ALERT = "crisis_alert"
-    PREFERENCE_UPDATE = "preference_update"
-    OPTIMIZATION_REQUEST = "optimization_request"
-    STATUS_INQUIRY = "status_inquiry"
-    EMERGENCY_ESCALATION = "emergency_escalation"
+    """Types of user interactions supported by the universal foundation"""
+    VOICE_COMMAND = "voice_command"           # Universal voice interaction
+    SUPPORT_ALERT = "support_alert"          # Universal support request (evolved from crisis_alert)
+    PREFERENCE_UPDATE = "preference_update"   # Universal preference management
+    OPTIMIZATION_REQUEST = "optimization_request"  # Universal optimization
+    STATUS_INQUIRY = "status_inquiry"         # Universal status checking
+    EMERGENCY_ESCALATION = "emergency_escalation"  # Universal emergency handling
+    DOMAIN_SWITCH = "domain_switch"          # Switch between domains
+    LEARNING_UPDATE = "learning_update"       # Update learning from any domain
 
 @dataclass
 class FoundationConfig:
-    """Configuration for the NeuroLift Foundation"""
+    """Configuration for the Universal NeuroLift Foundation"""
     user_id: str
     mode: FoundationMode
+    domain: str = "universal"  # healthcare, education, workplace, mental_health, aging_care, custom
     components: Dict[str, bool] = field(default_factory=lambda: {
-        "rrt_advocate": True,
-        "toi_otoi_framework": True,
-        "voice_interface": True,
-        "supervisor_ai": True
+        "rrt_advocate": True,        # Universal support system
+        "toi_otoi_framework": True,  # Universal optimization
+        "voice_interface": True,     # Universal communication
+        "supervisor_ai": True        # Universal coordination
     })
     privacy_settings: Dict[str, Any] = field(default_factory=dict)
     performance_settings: Dict[str, Any] = field(default_factory=dict)
     integration_settings: Dict[str, Any] = field(default_factory=dict)
+    domain_settings: Dict[str, Any] = field(default_factory=dict)  # Domain-specific configuration
 
 @dataclass
 class UserInteraction:
@@ -81,10 +91,16 @@ class FoundationResponse:
 
 class NeuroLiftFoundation:
     """
-    NeuroLift Foundation - Unified ADHD Support System
+    NeuroLift Foundation - Universal AI-Fusion Platform
     
     Central coordination hub integrating RRT Advocate, TOI-OTOI Framework,
-    and Aimybox Voice Interface into a cohesive ADHD support platform.
+    and Aimybox Voice Interface into a cohesive, universal platform.
+    
+    EVOLUTION: Originally designed for ADHD support, this foundation has evolved
+    into a universal platform adaptable to any domain, use case, or user base.
+    The core architecture provides intelligent support, adaptive optimization,
+    and natural voice interaction across healthcare, education, workplace,
+    mental health, aging care, and custom domains.
     """
     
     def __init__(self, config: FoundationConfig):

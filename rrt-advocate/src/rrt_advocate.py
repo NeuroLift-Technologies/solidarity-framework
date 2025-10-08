@@ -1,9 +1,14 @@
 """
-RRT Advocate - Rapid Response Team Advocate
-Main implementation for crisis intervention and immediate ADHD support
+RRT Advocate - Universal Support System
+Main implementation for intelligent support and intervention across any domain
 
 This module implements the core RRT Advocate functionality within the
-NeuroLift Technologies AI-fusion framework.
+NeuroLift Technologies universal AI-fusion framework.
+
+EVOLUTION: Originally designed for ADHD crisis intervention, the RRT Advocate
+has evolved into a universal support system that can detect and respond to
+support needs across any domain - healthcare, education, workplace, mental health,
+aging care, and custom use cases.
 """
 
 import asyncio
@@ -22,16 +27,16 @@ from response.de_escalation.de_escalation_engine import DeEscalationEngine
 from coordination.supervisor.supervisor_interface import SupervisorInterface
 from learning.patterns.pattern_analyzer import PatternAnalyzer
 
-class CrisisLevel(Enum):
-    """Crisis severity levels for response coordination"""
-    GREEN = "stable"
-    YELLOW = "elevated"
-    ORANGE = "high"
-    RED = "critical"
-    BLACK = "emergency"
+class SupportLevel(Enum):
+    """Universal support levels for response coordination across any domain"""
+    GREEN = "stable"      # No immediate support needed
+    YELLOW = "elevated"   # Minor support recommended
+    ORANGE = "high"       # Significant support needed
+    RED = "critical"      # Urgent support required
+    BLACK = "emergency"   # Emergency intervention needed
 
 class ResponseStatus(Enum):
-    """Status of crisis response interventions"""
+    """Status of universal support interventions"""
     PENDING = "pending"
     ACTIVE = "active"
     SUCCESSFUL = "successful"
@@ -39,10 +44,10 @@ class ResponseStatus(Enum):
     FAILED = "failed"
 
 @dataclass
-class CrisisAssessment:
-    """Comprehensive crisis assessment data structure"""
+class SupportAssessment:
+    """Comprehensive support assessment data structure for any domain"""
     timestamp: datetime
-    crisis_level: CrisisLevel
+    support_level: SupportLevel
     primary_indicators: List[str]
     secondary_indicators: List[str]
     confidence_score: float
@@ -50,6 +55,7 @@ class CrisisAssessment:
     recommended_interventions: List[str]
     escalation_threshold: float
     user_safety_score: float
+    domain_context: str  # healthcare, education, workplace, mental_health, etc.
     context_factors: Dict[str, Any] = field(default_factory=dict)
 
 @dataclass
@@ -66,10 +72,15 @@ class InterventionResponse:
 
 class RRTAdvocate:
     """
-    Rapid Response Team Advocate - Crisis intervention specialist
+    Universal Support Advocate - Intelligent support specialist for any domain
     
-    The RRT Advocate provides immediate crisis detection, assessment, and
-    intervention for ADHD-related emergencies within the NeuroLift ecosystem.
+    The RRT Advocate provides immediate support detection, assessment, and
+    intervention across any domain within the NeuroLift ecosystem.
+    
+    EVOLUTION: Originally designed for ADHD crisis intervention, the RRT Advocate
+    has evolved into a universal support system that can detect and respond to
+    support needs across healthcare, education, workplace, mental health,
+    aging care, and custom domains.
     """
     
     def __init__(self, 

@@ -1,8 +1,11 @@
-<h1 align="center">Aimybox voice assistant</h1>
+<h1 align="center">Aimybox Voice Interface</h1>
 <a href="https://aimybox.com"><img src="https://i.imgur.com/qyCxMmO.gif" align="right"></a>
 
-<h4>Open source voice assistant built on top
+<h4>Universal voice interface for the NeuroLift Foundation<br>
+Open source voice assistant built on top
 of <a href="https://github.com/just-ai/aimybox-android-sdk">Aimybox SDK</a></h4>
+
+<p><strong>EVOLUTION:</strong> Originally designed for neurodivergent support, this voice interface has evolved into a universal communication layer that can be adapted for any domain, use case, or user base within the NeuroLift Foundation ecosystem.</p>
 
 <p>
     <a href="https://twitter.com/intent/follow?screen_name=aimybox"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/aimybox.svg?label=Follow%20on%20Twitter&style=popout"></a>
@@ -13,25 +16,27 @@ of <a href="https://github.com/just-ai/aimybox-android-sdk">Aimybox SDK</a></h4>
 
 #### Note that _components_ library was moved to [Aimybox Android SDK repository](https://github.com/just-ai/aimybox-android-sdk/tree/master/components).
 
-# Key Features
+# Universal Key Features
 
-* Provides ready to use **UI components** for fast building of your voice assistant app
-* Modular and independent from speech-to-text, text-to-speech and NLU vendors
-* Provides ready to use speech-to-text and text-to-speech implementations
+* **Universal Communication**: Provides ready to use **UI components** for fast building of voice assistant apps across any domain
+* **Domain Adaptable**: Modular and independent from speech-to-text, text-to-speech and NLU vendors, adaptable to any use case
+* **Multi-Modal Support**: Provides ready to use speech-to-text and text-to-speech implementations
   like [Android platform speechkit](https://github.com/just-ai/aimybox-android-sdk/tree/master/google-platform-speechkit),
   [Google Cloud speechkit](https://github.com/just-ai/aimybox-android-sdk/tree/master/google-cloud-speechkit),
   [Houndify](https://github.com/just-ai/aimybox-android-sdk/tree/master/houndify-speechkit)
   or [Snowboy wake word trigger](https://github.com/just-ai/aimybox-android-sdk/tree/master/snowboy-speechkit)
-* Works with any NLU providers
+* **Universal NLU**: Works with any NLU providers
   like [Aimylogic](https://help.aimybox.com/en/article/aimylogic-webhook-5quhb1/),
   [Rasa](https://github.com/just-ai/aimybox-android-sdk/tree/master/rasa-api)
   or [Dialogflow](https://help.aimybox.com/en/article/dialogflow-agent-cqdvjn/)
-* Fully customizable and extendable, you can connect any other speech-to-text, text-to-speech and
-  NLU services
-* Open source under Apache 2.0, written in pure Kotlin
-* Embeddable into any application or device running Android
-* Voice skills logic and complexity is not limited by any restrictions
-* Can interact with any local device services and local networks
+* **Extensible Architecture**: Fully customizable and extendable, you can connect any other speech-to-text, text-to-speech and
+  NLU services for any domain
+* **Cross-Platform**: Open source under Apache 2.0, written in pure Kotlin
+* **Universal Integration**: Embeddable into any application or device running Android
+* **Unlimited Complexity**: Voice skills logic and complexity is not limited by any restrictions
+* **Local Network Support**: Can interact with any local device services and local networks
+* **Context Awareness**: Adapts language and responses based on domain context (healthcare, education, workplace, etc.)
+* **Privacy-First**: Supports local processing and encrypted communication for any sensitive domain
 
 # How to start using
 

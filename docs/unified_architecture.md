@@ -88,7 +88,7 @@ class RRTAdvocateIntegration:
 
 #### Core Capabilities
 - Terms of Interaction (TOI) management and enforcement
-- Optimization Through Organized Intelligence (OTOI) continuous improvement
+- Orchestrated Terms of Interaction (OTOI) continuous improvement
 - User preference learning and adaptation
 - System-wide optimization coordination
 

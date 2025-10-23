@@ -1,5 +1,5 @@
 # NeuroLift Foundation - Python Dependencies
-# Core dependencies for the unified ADHD support system
+# Core dependencies for the unified universal support system
 
 # Core Python packages
 asyncio-mqtt==0.16.1

@@ -11,7 +11,7 @@
 The NeuroLift Foundation is a comprehensive, unified platform that evolved from our core neurodivergent-focused project into a universal foundation for building any and everything we create. It integrates three core components into a single, cohesive AI-fusion system:
 
 - **🚨 RRT Advocate** - Rapid Response Team for crisis intervention and immediate support
-- **🧠 TOI-OTOI Framework** - Terms of Interaction and Optimization Through Organized Intelligence
+- **🧠 TOI-OTOI Framework** - Terms of Interaction and Orchestrated Terms of Interaction
 - **🎤 Aimybox Voice Interface** - Natural language voice interaction capabilities
 
 This foundation serves as the cornerstone for the complete NeuroLift Technologies ecosystem, providing privacy-first, user-centric AI assistance that can be adapted for any domain, use case, or user base.

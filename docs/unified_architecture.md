@@ -5,7 +5,7 @@
 The NeuroLift Foundation represents the evolution from a specialized ADHD support system into a universal, comprehensive AI-fusion platform. It integrates three core components into a unified, domain-adaptable system:
 
 1. **RRT Advocate** - Universal crisis intervention and immediate support (adaptable to any domain)
-2. **TOI-OTOI Framework** - Terms of Interaction and Optimization Through Organized Intelligence (universal learning and adaptation)
+2. **TOI-OTOI Framework** - Terms of Interaction and Orchestrated Terms of Interaction (universal learning and adaptation)
 3. **Aimybox Voice Interface** - Natural language voice interaction capabilities (cross-domain communication)
 
 This unified architecture creates a complete foundation for the NeuroLift Technologies ecosystem, combining intelligent support, adaptive optimization, and natural voice interaction into a cohesive platform that can be configured for any domain, use case, or user base.
@@ -88,7 +88,7 @@ class RRTAdvocateIntegration:
 
 #### Core Capabilities
 - Terms of Interaction (TOI) management and enforcement
-- Optimization Through Organized Intelligence (OTOI) continuous improvement
+- Orchestrated Terms of Interaction (OTOI) continuous improvement
 - User preference learning and adaptation
 - System-wide optimization coordination
 

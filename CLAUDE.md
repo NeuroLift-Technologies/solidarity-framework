@@ -1,52 +1,53 @@
-# CLAUDE.md — NeuroLift-Technologies/.github
+# CLAUDE.md — NeuroLift-Technologies/solidarity-framework
 > OTOI Compliance File · ORG-DEV-OTOI-1.0.0 · Step 3 of Agent Onboarding (SOP-NLT-001)
 
 ---
 
 ## Repository Identity
 
-| Field              | Value                                               |
-|--------------------|-----------------------------------------------------|
-| **Repository**     | `NeuroLift-Technologies/.github`                    |
-| **Visibility**     | Public                                              |
-| **Purpose**        | Organization-wide GitHub configuration hub          |
-| **OTOI Version**   | ORG-DEV-OTOI-1.0.0                                  |
-| **Governing SOP**  | SOP-NLT-001 (`SOPs/new-agent-onboarding.md`)        |
-| **Synced From**    | `.github-private` (canonical governance source)     |
+| Field              | Value                                                     |
+|--------------------|-----------------------------------------------------------|
+| **Repository**     | `NeuroLift-Technologies/solidarity-framework`              |
+| **Visibility**     | Private                                                    |
+| **Purpose**        | Agent Solidarity Kit — The layer between the model and agent |
+| **OTOI Version**   | ORG-DEV-OTOI-1.0.0                                        |
+| **Governing SOP**  | SOP-NLT-001 (`SOPs/new-agent-onboarding.md`)              |
+| **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol               |
 
 ---
 
 ## Purpose of This Repository
 
-The `.github` repository is the **central configuration hub** for the NeuroLift Technologies GitHub organization. GitHub treats this repository specially — files here serve as organization-wide defaults for all repositories that do not define their own versions.
+The **solidarity-framework** repository is the **NeuroLift Technologies' Agent Solidarity Kit** — the required governance and integration layer for all NLT agents. It combines three core components:
 
-**This repository contains:**
-- Community health files (`CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`)
-- Default issue and pull request templates
-- GitHub Copilot custom instructions (`.github/copilot-instructions.md`)
-- Reusable CI/CD workflows (`.github/workflows/`)
-- NLT governance files (synced from `.github-private`)
-- Agent coordination infrastructure (`docs/`, `templates/`, `SOPs/`)
+- **RRT Advocate** (`rrt-advocate/`) — Crisis intervention and immediate safety protocols
+- **NLT-OTOI Framework** (`nlt-otoi/`) — Interaction governance and orchestration
+- **Sleepwalker Protocol** (`sleepwalker/`) — Emotional continuity across sessions
+- **Unified Core** (`unified-core/`) — Integration layer connecting all components
+
+All agents developed by NeuroLift Technologies **must** use this kit as the layer between the AI model and the agent.
 
 ---
 
 ## What Agents May and May Not Do Here
 
 ### ✅ In Scope (proceed after task confirmation)
-- Update community health files (`CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`)
-- Update or add issue/PR templates under `ISSUE_TEMPLATE/`
-- Update `.github/copilot-instructions.md`
-- Update reusable workflow files in `.github/workflows/`
+- Update integration code in `unified-core/`
+- Add tests for any component
+- Update documentation in `docs/`
 - Update governance tracking files in `docs/active-threads.md`
 - Add agent registration and handoff records to `docs/agent-log/`
 - Minor documentation improvements (typos, clarity, formatting)
+- Bug fixes within existing component integrations
 
 ### 🔴 Out of Scope — Escalate to Joshua W. Dorsey, Sr.
 - Modifying the governance framework itself (OTOI, AGENTS.md, SOPs)
-- Changes to `sync-governance-public.yml` workflow logic
-- Introducing new external service integrations
-- Changes that affect how governance files are synced from `.github-private`
-- Any architectural decisions about how this repo interacts with other org repos
+- Adding or removing core components (rrt-advocate, nlt-otoi, sleepwalker)
+- Introducing new external service integrations or LLM provider dependencies
+- Architectural decisions about component interaction patterns
+- Changes to crisis intervention logic (`rrt-advocate/src/rrt_advocate.py`)
+- Changes to crisis thresholds (`rrt-advocate/config/crisis_thresholds.yaml`)
+- Production deployment decisions
 - Changes to the Solidarity Framework principles
 
 ---
@@ -55,10 +56,9 @@ The `.github` repository is the **central configuration hub** for the NeuroLift 
 
 Before beginning work, confirm you have read:
 
-- [ ] `.github-private/NLT-DEV-OTOI.md` — the constitutional agent contract (ORG-DEV-OTOI-1.0.0)
-- [ ] `.github-private/AGENTS.md` — coordination gateway and guardrails
-- [ ] `SOPs/new-agent-onboarding.md` (this repo) — onboarding process SOP-NLT-001
-- [ ] `docs/active-threads.md` (this repo) — current work in progress
+- [ ] `AGENTS.md` — coordination gateway and guardrails
+- [ ] `SOPs/new-agent-onboarding.md` — onboarding process SOP-NLT-001
+- [ ] `docs/active-threads.md` — current work in progress
 
 ---
 
@@ -77,26 +77,31 @@ Valid types: `feat`, `fix`, `docs`, `refactor`, `chore`, `test`, `ci`
 
 Examples for this repo:
 ```
-[CLAUDE] chore(governance): sync active-threads from private repo
-[CLAUDE] docs(contributing): clarify PR checklist items
-[CODEX] feat(templates): add governance-proposal issue template
+[CLAUDE] feat(integration): add sleepwalker protocol integration
+[COPILOT] fix(rrt): correct crisis threshold handling
+[CODEX] docs(readme): update architecture diagram
 ```
 
 ### Technology Stack
-This is a configuration-only repository. It contains:
-- Markdown files (`.md`) — primary format for all docs and templates
-- JSON files (`.json`) — structured templates and agent records
-- YAML files (`.yml`) — GitHub Actions workflows
-- Shell scripts (`.sh`) — governance validation utilities
+- **Python 3.10+** — Primary language for all components
+- **TypeScript** — Sleepwalker Protocol TypeScript implementation
+- **AsyncIO** — Async processing framework
+- **PyYAML** — Configuration management
+- **pytest** — Testing framework
 
-No application code lives in this repository.
+### Key Files
+- `unified-core/neurolift_foundation.py` — Main foundation class
+- `unified-core/integration/` — Component integration modules
+- `rrt-advocate/src/rrt_advocate.py` — Crisis intervention engine
+- `nlt-otoi/src/fusion/` — OTOI framework core
+- `sleepwalker/sleepwalker_protocol/` — SWP Python implementation
 
 ---
 
 ## Escalation
 
 **Primary escalation contact:** Joshua W. Dorsey, Sr.
-**Email:** `joshua@neurolift.tech`
+**Email:** `info@neuroliftsolutions.com`
 **Use the escalation template:** `templates/escalation.md`
 **Or file a GitHub Issue:** Use the `agent-escalation` issue template
 
@@ -104,13 +109,4 @@ When in doubt, escalate. It is always better to pause than to guess.
 
 ---
 
-## Governance Sync Note
-
-Many files in this repository are **synced from `.github-private`** via the `sync-governance-public.yml` workflow. If you need to modify a governance document, the canonical edit should be made in `.github-private` and will propagate here on the next sync. Do not edit synced files in this repo directly unless you are the sync workflow itself.
-
-Synced files are marked with a header comment: `<!-- SYNCED FROM .github-private — do not edit directly -->`
-
----
-
 *This file is part of the ORG-DEV-OTOI-1.0.0 governance framework for NeuroLift Technologies.*
-*Canonical source: `.github-private/CLAUDE.md` (synced to this repo)*

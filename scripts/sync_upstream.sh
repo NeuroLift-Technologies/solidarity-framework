@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# NeuroLift Foundation - Manual Upstream Synchronization Script
+# NeuroLift Agent Solidarity Kit - Manual Upstream Synchronization Script
 # Synchronizes components with their upstream repositories
 
 set -e
@@ -20,8 +20,8 @@ LOG_FILE="$REPO_ROOT/sync.log"
 # Component configurations
 declare -A COMPONENTS=(
     ["rrt-advocate"]="rrt-upstream main"
-    ["toi-otoi-framework"]="toi-otoi-upstream main"
-    ["aimybox-voice"]="aimybox-upstream master"
+    ["nlt-otoi"]="nlt-otoi-upstream main"
+    ["sleepwalker"]="sleepwalker-upstream main"
 )
 
 # Functions
@@ -43,7 +43,7 @@ warning() {
 
 usage() {
     cat << EOF
-NeuroLift Foundation - Upstream Synchronization Script
+NeuroLift Agent Solidarity Kit - Upstream Synchronization Script
 
 Usage: $0 [OPTIONS] [COMPONENT]
 
@@ -58,8 +58,8 @@ OPTIONS:
 COMPONENTS:
     all                 Sync all components (default)
     rrt-advocate        Sync RRT Advocate only
-    toi-otoi-framework  Sync TOI-OTOI Framework only
-    aimybox-voice       Sync Aimybox Voice Interface only
+    nlt-otoi            Sync NLT-OTOI Framework only
+    sleepwalker         Sync Sleepwalker Protocol only
 
 EXAMPLES:
     $0                          # Sync all components
@@ -82,7 +82,7 @@ check_prerequisites() {
     
     # Check if we're in the correct repository
     if [[ ! -f "$REPO_ROOT/unified-core/neurolift_foundation.py" ]]; then
-        error "Not in the NeuroLift Foundation repository root"
+        error "Not in the Agent Solidarity Kit repository root"
         exit 1
     fi
     
@@ -99,9 +99,9 @@ setup_remotes() {
     log "Setting up upstream remotes..."
     
     # Add upstream remotes if they don't exist
-    git remote add rrt-upstream https://github.com/JDUB1216/rrt-advocate.git 2>/dev/null || true
-    git remote add toi-otoi-upstream https://github.com/JDUB1216/nlt-otoi.git 2>/dev/null || true
-    git remote add aimybox-upstream https://github.com/JDUB1216/aimybox-android-assistant.git 2>/dev/null || true
+    git remote add rrt-upstream https://github.com/NeuroLift-Technologies/rrt-advocate.git 2>/dev/null || true
+    git remote add nlt-otoi-upstream https://github.com/NeuroLift-Technologies/nlt-otoi.git 2>/dev/null || true
+    git remote add sleepwalker-upstream https://github.com/NeuroLift-Technologies/sleepwalker.git 2>/dev/null || true
     
     success "Upstream remotes configured"
 }
@@ -110,8 +110,8 @@ fetch_upstream() {
     log "Fetching upstream changes..."
     
     git fetch rrt-upstream main || warning "Failed to fetch rrt-upstream"
-    git fetch toi-otoi-upstream main || warning "Failed to fetch toi-otoi-upstream"
-    git fetch aimybox-upstream master || warning "Failed to fetch aimybox-upstream"
+    git fetch nlt-otoi-upstream main || warning "Failed to fetch nlt-otoi-upstream"
+    git fetch sleepwalker-upstream main || warning "Failed to fetch sleepwalker-upstream"
     
     success "Upstream fetch completed"
 }
@@ -350,7 +350,7 @@ main() {
                 INTERACTIVE="false"
                 shift
                 ;;
-            all|rrt-advocate|toi-otoi-framework|aimybox-voice)
+            all|rrt-advocate|nlt-otoi|sleepwalker)
                 COMPONENT="$1"
                 shift
                 ;;
@@ -363,9 +363,9 @@ main() {
     done
     
     # Initialize log
-    echo "=== NeuroLift Foundation Sync - $(date) ===" > "$LOG_FILE"
+    echo "=== NeuroLift Agent Solidarity Kit Sync - $(date) ===" > "$LOG_FILE"
     
-    log "Starting NeuroLift Foundation upstream synchronization"
+    log "Starting Agent Solidarity Kit upstream synchronization"
     log "Component: $COMPONENT"
     log "Force: $FORCE"
     log "Dry run: $DRY_RUN"
@@ -381,7 +381,7 @@ main() {
     # Determine which components to process
     local components_to_process=()
     if [[ "$COMPONENT" == "all" ]]; then
-        components_to_process=("rrt-advocate" "toi-otoi-framework" "aimybox-voice")
+        components_to_process=("rrt-advocate" "nlt-otoi" "sleepwalker")
     else
         components_to_process=("$COMPONENT")
     fi

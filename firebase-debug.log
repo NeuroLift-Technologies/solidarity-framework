@@ -1,0 +1,63 @@
+[debug] [2025-10-23T10:34:10.325Z] ----------------------------------------------------------------------
+[debug] [2025-10-23T10:34:10.327Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/i78h9v2gl6qg2w9646hi06syn3hbv4kj-firebase-tools-14.19.1/lib/node_modules/firebase-tools/lib/bin/firebase.js init hosting
+[debug] [2025-10-23T10:34:10.327Z] CLI Version:   14.19.1
+[debug] [2025-10-23T10:34:10.328Z] Platform:      linux
+[debug] [2025-10-23T10:34:10.328Z] Node Version:  v20.19.1
+[debug] [2025-10-23T10:34:10.328Z] Time:          Thu Oct 23 2025 10:34:10 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-10-23T10:34:10.328Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-23T10:34:10.332Z] Checked if tokens are valid: true, expires at: 1761218090634
+[debug] [2025-10-23T10:34:10.333Z] Checked if tokens are valid: true, expires at: 1761218090634
+[debug] [2025-10-23T10:34:10.336Z] >>> [apiv2][query] GET https://monospace-pa.googleapis.com/v1/workspaces/neurolift-foundation-78456871 [none]
+[debug] [2025-10-23T10:34:11.275Z] <<< [apiv2][status] GET https://monospace-pa.googleapis.com/v1/workspaces/neurolift-foundation-78456871 200
+[debug] [2025-10-23T10:34:11.276Z] <<< [apiv2][body] GET https://monospace-pa.googleapis.com/v1/workspaces/neurolift-foundation-78456871 {"workspaceId":"neurolift-foundation-78456871","name":"neurolift-foundation","workspaceRedirectUrl":"firebase-neurolift-foundation-1761205582829.cluster-pgviq6mvsncnqxx6kr7pbz65v6.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2025-10-23T10:31:38.337561Z","workspaceTemplate":"WORKSPACE_TEMPLATE_FLUTTER","owner":"SELF","serviceAccountEmail":"msp-2515202998295223948@monospace-per-ws-sa-7.iam.gserviceaccount.com","gitRepoUrl":"https://github.com/JDUB1216/neurolift-foundation","enableNix":true,"ownerEmail":"neuro.edge24@gmail.com","workstationAccessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiZmlyZWJhc2UtbmV1cm9saWZ0LWZvdW5kYXRpb24tMTc2MTIwNTU4MjgyOS5jbHVzdGVyLXBndmlxNm12c25jbnF4eDZrcjdwYno2NXY2LmNsb3Vkd29ya3N0YXRpb25zLmRldiIsImlhdCI6MTc2MTIxNTY1MSwiZXhwIjoxNzYxMzAyMDUxfQ.zYKYs_mK73IGIhZCnL1w8w8ozCGdDGO8PNCr3AxEbEO3R5Nqu9I7I8I-_jIG_JqgJm7Vudw132-vVgvkSDe7-0KP9Qs3rTbApWVflKNXaqh9354RM_i-QOuqNhntoUvEC2njKpJB-GwwyztH-XdgAxaPhOJvOT3Q7nnbit0_dwODomhuXKz1kNzx289AIWxqpDu_Q7s4XKWM6zd8uzwD9A5A-zBN3pMVHJL3qU04RUeyWcXL3dfw8QZudykBgsKXAzXoyS_T3RyzG5FEHsBzUVvTGkQQQF-j0tXD41zpmGVoeovR9DZYdB57BNXPTCHUU8BFBny4tDXbyv5XeRgotg","firebaseProjectId":"neurolift-155e7"}
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/neurolift-foundation
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-10-23T10:34:11.279Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-23T10:34:11.279Z] > authorizing via signed-in user (neuro.edge24@gmail.com)
+[debug] [2025-10-23T10:34:11.280Z] Checked if tokens are valid: true, expires at: 1761218090634
+[debug] [2025-10-23T10:34:11.280Z] Checked if tokens are valid: true, expires at: 1761218090634
+[debug] [2025-10-23T10:34:11.280Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/neurolift-155e7 [none]
+[debug] [2025-10-23T10:34:11.551Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/neurolift-155e7 200
+[debug] [2025-10-23T10:34:11.551Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/neurolift-155e7 {"projectId":"neurolift-155e7","projectNumber":"960403638063","displayName":"NeuroLift Technologies","name":"projects/neurolift-155e7","resources":{"hostingSite":"neurolift-155e7"},"state":"ACTIVE","etag":"1_ec11d82c-6120-4cce-b451-b74e15192848"}
+[info] i  Using project neurolift-155e7 (NeuroLift Technologies) . 
+[info] 
+=== Hosting Setup
+[debug] [2025-10-23T10:34:11.558Z] Checked if tokens are valid: true, expires at: 1761218090634
+[debug] [2025-10-23T10:34:11.558Z] Checked if tokens are valid: true, expires at: 1761218090634
+[debug] [2025-10-23T10:34:11.559Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/neurolift-155e7 [none]
+[debug] [2025-10-23T10:34:11.717Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/neurolift-155e7 200
+[debug] [2025-10-23T10:34:11.717Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/neurolift-155e7 {"projectId":"neurolift-155e7","projectNumber":"960403638063","displayName":"NeuroLift Technologies","name":"projects/neurolift-155e7","resources":{"hostingSite":"neurolift-155e7"},"state":"ACTIVE","etag":"1_ec11d82c-6120-4cce-b451-b74e15192848"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] i  public/404.html is unchanged 
+[debug] [2025-10-23T10:36:28.001Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2025-10-23T10:36:28.015Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2025-10-23T10:36:28.015Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"12.4.0","browserURL":"https://www.gstatic.com/firebasejs/12.4.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/12.4.0/firebase.tgz"},"live":{"version":"12.4","browserURL":"https://www.gstatic.com/firebasejs/live/12.4/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/12.4/firebase.tgz"},"components":{"ai":"https://www.gstatic.com/firebasejs/12.4.0/firebase-ai.js","analytics":"https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/12.4.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/12.4.0/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/12.4.0/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/12.4.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/12.4.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/12.4.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/12.4.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/12.4.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/12.4.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/12.4.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js","data-connect":"https://www.gstatic.com/firebasejs/12.4.0/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.memory.js"}}
+[info] i  public/index.html is unchanged 
+[info] 
+[info] i  Detected a .git folder at /home/user/neurolift-foundation 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=718499693&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...

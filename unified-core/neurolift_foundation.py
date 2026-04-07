@@ -1,9 +1,10 @@
 """
-NeuroLift Foundation - Unified ADHD Support System
-Main implementation integrating RRT Advocate, TOI-OTOI Framework, and Aimybox Voice Interface
+NeuroLift Agent Solidarity Kit - Unified Agent Development Framework
+Main implementation integrating RRT Advocate, NLT-OTOI Framework, and Sleepwalker Protocol
 
-This module provides the central coordination hub for the complete NeuroLift ecosystem,
-combining crisis intervention, intelligent optimization, and natural voice interaction.
+This module provides the central coordination hub for the complete NeuroLift agent ecosystem,
+combining crisis intervention (RRTA), interaction governance (OTOI), and emotional continuity (SWP).
+All agents developed by NeuroLift Technologies require this as the layer between the model and the agent.
 """
 
 import asyncio
@@ -19,22 +20,22 @@ from pathlib import Path
 # Import component integrations
 from integration.rrt_integration import RRTAdvocateIntegration
 from integration.toi_otoi_integration import TOIOTOIIntegration
-from integration.voice_integration import VoiceInterfaceIntegration
+from integration.sleepwalker_integration import SleepwalkerIntegration
 from supervisor.supervisor_ai import SupervisorAI
 from coordination.state_manager import UnifiedStateManager
 from coordination.component_communication import ComponentCommunication
 
 class FoundationMode(Enum):
-    """Operating modes for the NeuroLift Foundation"""
+    """Operating modes for the NeuroLift Agent Solidarity Kit"""
     UNIFIED = "unified"           # All components active
     CRISIS_ONLY = "crisis_only"   # RRT Advocate only
-    VOICE_ONLY = "voice_only"     # Voice interface only
-    FRAMEWORK_ONLY = "framework"  # TOI-OTOI only
+    CONTINUITY_ONLY = "continuity"  # Sleepwalker Protocol only
+    FRAMEWORK_ONLY = "framework"  # NLT-OTOI only
     DEVELOPMENT = "development"   # Development mode with debugging
 
 class InteractionType(Enum):
-    """Types of user interactions supported by the foundation"""
-    VOICE_COMMAND = "voice_command"
+    """Types of user interactions supported by the Agent Solidarity Kit"""
+    EMOTIONAL_ASSESSMENT = "emotional_assessment"
     CRISIS_ALERT = "crisis_alert"
     PREFERENCE_UPDATE = "preference_update"
     OPTIMIZATION_REQUEST = "optimization_request"
@@ -49,7 +50,7 @@ class FoundationConfig:
     components: Dict[str, bool] = field(default_factory=lambda: {
         "rrt_advocate": True,
         "toi_otoi_framework": True,
-        "voice_interface": True,
+        "sleepwalker_protocol": True,
         "supervisor_ai": True
     })
     privacy_settings: Dict[str, Any] = field(default_factory=dict)
@@ -81,15 +82,16 @@ class FoundationResponse:
 
 class NeuroLiftFoundation:
     """
-    NeuroLift Foundation - Unified ADHD Support System
+    NeuroLift Agent Solidarity Kit - Unified Agent Development Framework
     
-    Central coordination hub integrating RRT Advocate, TOI-OTOI Framework,
-    and Aimybox Voice Interface into a cohesive ADHD support platform.
+    Central coordination hub integrating RRT Advocate, NLT-OTOI Framework,
+    and Sleepwalker Protocol into a cohesive agent governance layer.
+    All NLT agents use this as the layer between the model and the agent.
     """
     
     def __init__(self, config: FoundationConfig):
         """
-        Initialize the NeuroLift Foundation
+        Initialize the NeuroLift Agent Solidarity Kit
         
         Args:
             config: Foundation configuration including user ID and component settings
@@ -105,7 +107,7 @@ class NeuroLiftFoundation:
         # Core components (initialized as None, loaded during startup)
         self.rrt: Optional[RRTAdvocateIntegration] = None
         self.framework: Optional[TOIOTOIIntegration] = None
-        self.voice: Optional[VoiceInterfaceIntegration] = None
+        self.sleepwalker: Optional[SleepwalkerIntegration] = None
         self.supervisor: Optional[SupervisorAI] = None
         
         # Coordination systems
@@ -173,10 +175,10 @@ class NeuroLiftFoundation:
                 await self.framework.initialize()
                 self.logger.info("TOI-OTOI Framework integration initialized")
             
-            if self.config.components.get("voice_interface", True):
-                self.voice = VoiceInterfaceIntegration(self)
-                await self.voice.initialize()
-                self.logger.info("Voice Interface integration initialized")
+            if self.config.components.get("sleepwalker_protocol", True):
+                self.sleepwalker = SleepwalkerIntegration(self)
+                await self.sleepwalker.initialize()
+                self.logger.info("Sleepwalker Protocol integration initialized")
             
             if self.config.components.get("supervisor_ai", True):
                 self.supervisor = SupervisorAI(self)
@@ -207,18 +209,18 @@ class NeuroLiftFoundation:
 
     async def _establish_component_communication(self):
         """Establish communication channels between components"""
-        if self.rrt and self.voice:
-            await self.communication.link_rrt_voice(self.rrt, self.voice)
+        if self.rrt and self.sleepwalker:
+            await self.communication.link_rrt_sleepwalker(self.rrt, self.sleepwalker)
             
-        if self.voice and self.framework:
-            await self.communication.link_voice_framework(self.voice, self.framework)
+        if self.sleepwalker and self.framework:
+            await self.communication.link_sleepwalker_framework(self.sleepwalker, self.framework)
             
         if self.framework and self.rrt:
             await self.communication.link_framework_rrt(self.framework, self.rrt)
             
         if self.supervisor:
             await self.communication.link_supervisor(
-                self.supervisor, [self.rrt, self.framework, self.voice]
+                self.supervisor, [self.rrt, self.framework, self.sleepwalker]
             )
 
     async def start(self) -> bool:
@@ -246,8 +248,8 @@ class NeuroLiftFoundation:
             if self.framework:
                 await self.framework.start()
                 
-            if self.voice:
-                await self.voice.start()
+            if self.sleepwalker:
+                await self.sleepwalker.start()
                 
             if self.supervisor:
                 await self.supervisor.start()
@@ -297,22 +299,28 @@ class NeuroLiftFoundation:
             # Route interaction based on type and priority
             response_content = {}
             
-            if interaction.interaction_type == InteractionType.VOICE_COMMAND:
-                if self.voice:
-                    response_content = await self.voice.process_command(interaction.data)
-                    components_involved.append("voice_interface")
+            if interaction.interaction_type == InteractionType.EMOTIONAL_ASSESSMENT:
+                if self.sleepwalker:
+                    response_content = await self.sleepwalker.assess_emotional_state(
+                        interaction.data.get("user_input", ""),
+                        interaction.data.get("session_history")
+                    )
+                    components_involved.append("sleepwalker_protocol")
                 else:
-                    raise Exception("Voice interface not available")
+                    raise Exception("Sleepwalker Protocol not available")
                     
             elif interaction.interaction_type == InteractionType.CRISIS_ALERT:
                 if self.rrt:
                     response_content = await self.rrt.handle_crisis(interaction.data)
                     components_involved.append("rrt_advocate")
                     
-                    # Notify voice interface for crisis support
-                    if self.voice:
-                        await self.voice.provide_crisis_support(response_content)
-                        components_involved.append("voice_interface")
+                    # Notify sleepwalker for emotional continuity tracking
+                    if self.sleepwalker:
+                        await self.sleepwalker.assess_emotional_state(
+                            str(interaction.data),
+                            []
+                        )
+                        components_involved.append("sleepwalker_protocol")
                 else:
                     raise Exception("RRT Advocate not available")
                     
@@ -341,10 +349,12 @@ class NeuroLiftFoundation:
                     response_content.update(crisis_response)
                     components_involved.append("rrt_advocate")
                     
-                if self.voice:
-                    voice_response = await self.voice.emergency_support(interaction.data)
-                    response_content.update(voice_response)
-                    components_involved.append("voice_interface")
+                if self.sleepwalker:
+                    swp_response = await self.sleepwalker.assess_emotional_state(
+                        str(interaction.data), []
+                    )
+                    response_content.update(swp_response)
+                    components_involved.append("sleepwalker_protocol")
                     
                 if self.supervisor:
                     supervisor_response = await self.supervisor.coordinate_emergency(interaction.data)
@@ -407,30 +417,30 @@ class NeuroLiftFoundation:
             
             return error_response
 
-    async def voice_interaction(self, voice_input: str, context: Dict[str, Any] = None) -> str:
+    async def assess_emotional_state(self, user_input: str, context: Dict[str, Any] = None) -> Dict[str, Any]:
         """
-        Simplified voice interaction interface
+        Assess emotional state through the Sleepwalker Protocol
         
         Args:
-            voice_input: Voice input from user
-            context: Additional context for the interaction
+            user_input: User input text to assess
+            context: Additional context for the assessment
             
         Returns:
-            str: Voice response from the system
+            Dict containing emotional state assessment
         """
         interaction = UserInteraction(
             timestamp=datetime.now(),
-            interaction_type=InteractionType.VOICE_COMMAND,
-            data={"voice_input": voice_input, "context": context or {}},
+            interaction_type=InteractionType.EMOTIONAL_ASSESSMENT,
+            data={"user_input": user_input, "context": context or {}},
             user_id=self.user_id
         )
         
         response = await self.process_interaction(interaction)
         
         if response.success:
-            return response.content.get("voice_response", "I'm here to help!")
+            return response.content
         else:
-            return "I'm sorry, I'm having trouble processing that right now."
+            return {"error": "Assessment failed", "details": response.content}
 
     async def crisis_alert(self, crisis_data: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -499,8 +509,8 @@ class NeuroLiftFoundation:
         if self.framework:
             status["components"]["toi_otoi_framework"] = await self.framework.get_status()
             
-        if self.voice:
-            status["components"]["voice_interface"] = await self.voice.get_status()
+        if self.sleepwalker:
+            status["components"]["sleepwalker_protocol"] = await self.sleepwalker.get_status()
             
         if self.supervisor:
             status["components"]["supervisor_ai"] = await self.supervisor.get_status()
@@ -536,12 +546,12 @@ class NeuroLiftFoundation:
                 health_status["overall_healthy"] = False
                 health_status["issues"].extend(framework_health.get("issues", []))
         
-        if self.voice:
-            voice_health = await self.voice.health_check()
-            health_status["components"]["voice_interface"] = voice_health
-            if not voice_health.get("healthy", False):
+        if self.sleepwalker:
+            swp_health = await self.sleepwalker.health_check()
+            health_status["components"]["sleepwalker_protocol"] = swp_health
+            if not swp_health.get("healthy", False):
                 health_status["overall_healthy"] = False
-                health_status["issues"].extend(voice_health.get("issues", []))
+                health_status["issues"].extend(swp_health.get("issues", []))
         
         if self.supervisor:
             supervisor_health = await self.supervisor.health_check()
@@ -610,8 +620,8 @@ class NeuroLiftFoundation:
                 await self.rrt.shutdown()
             if self.framework:
                 await self.framework.shutdown()
-            if self.voice:
-                await self.voice.shutdown()
+            if self.sleepwalker:
+                await self.sleepwalker.shutdown()
             if self.supervisor:
                 await self.supervisor.shutdown()
             if self.state_manager:
@@ -620,8 +630,8 @@ class NeuroLiftFoundation:
             self.logger.error(f"Cleanup error: {e}")
 
     async def shutdown(self):
-        """Gracefully shutdown the NeuroLift Foundation"""
-        self.logger.info("Shutting down NeuroLift Foundation...")
+        """Gracefully shutdown the NeuroLift Agent Solidarity Kit"""
+        self.logger.info("Shutting down NeuroLift Agent Solidarity Kit...")
         
         try:
             self.is_running = False
@@ -630,8 +640,8 @@ class NeuroLiftFoundation:
             if self.supervisor:
                 await self.supervisor.shutdown()
                 
-            if self.voice:
-                await self.voice.shutdown()
+            if self.sleepwalker:
+                await self.sleepwalker.shutdown()
                 
             if self.framework:
                 await self.framework.shutdown()
@@ -646,7 +656,7 @@ class NeuroLiftFoundation:
             final_status = await self.get_system_status()
             self.logger.info(f"Final status: {json.dumps(final_status, indent=2, default=str)}")
             
-            self.logger.info("NeuroLift Foundation shutdown complete")
+            self.logger.info("NeuroLift Agent Solidarity Kit shutdown complete")
             
         except Exception as e:
             self.logger.error(f"Shutdown error: {e}")
@@ -702,20 +712,20 @@ async def create_foundation(user_id: str,
 # ============================================================================
 
 async def main():
-    """Main function for testing NeuroLift Foundation"""
-    print("NeuroLift Foundation - Unified ADHD Support System")
+    """Main function for testing NeuroLift Agent Solidarity Kit"""
+    print("NeuroLift Agent Solidarity Kit - Unified Agent Development Framework")
     print("=" * 60)
     
     try:
         # Create foundation
         foundation = await create_foundation("test_user_001", FoundationMode.UNIFIED)
         
-        # Test voice interaction
-        voice_response = await foundation.voice_interaction(
-            "How are you feeling today?",
+        # Test emotional state assessment via Sleepwalker Protocol
+        assessment = await foundation.assess_emotional_state(
+            "I'm feeling a bit overwhelmed with work today",
             {"mood": "anxious", "energy": "low"}
         )
-        print(f"Voice Response: {voice_response}")
+        print(f"Emotional Assessment: {assessment}")
         
         # Test system status
         status = await foundation.get_system_status()

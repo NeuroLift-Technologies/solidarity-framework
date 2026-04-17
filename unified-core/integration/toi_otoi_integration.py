@@ -11,8 +11,8 @@ import sys
 import os
 import json
 
-# Add TOI-OTOI framework to path
-sys.path.append(os.path.join(os.path.dirname(__file__), '../../toi-otoi-framework'))
+# Add NLT-OTOI framework to path
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../nlt-otoi'))
 
 class TOIOTOIIntegration:
     """Integration wrapper for TOI-OTOI Framework within the unified foundation"""

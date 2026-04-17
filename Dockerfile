@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 
 # Define environment variable
-ENV NAME World
+ENV NAME NeuroLift-Agent-Solidarity-Kit
 
-# Run app.py when the container launches
+# Run the foundation when the container launches
 CMD ["python", "-u", "unified-core/neurolift_foundation.py"]

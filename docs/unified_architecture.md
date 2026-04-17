@@ -1,25 +1,28 @@
-# NeuroLift Foundation - Unified Architecture Design
+# NeuroLift Agent Solidarity Kit - Unified Architecture Design
 
 ## Overview
 
-The NeuroLift Foundation represents the integration of three core components into a unified, comprehensive ADHD support system:
+The NeuroLift Agent Solidarity Kit represents the integration of three core components into a unified agent development framework — the required layer between the AI model and the agent:
 
-1. **RRT Advocate** - Crisis intervention and immediate support
-2. **TOI-OTOI Framework** - Terms of Interaction and Orchestrated Terms of Interaction
-3. **Aimybox Voice Interface** - Natural language voice interaction capabilities
+1. **RRT Advocate** — Crisis intervention and immediate safety (Protective Layer)
+2. **NLT-OTOI Framework** — Terms of Interaction and Orchestrated Terms of Interaction (Constitutional Layer)
+3. **Sleepwalker Protocol (SWP)** — Emotional continuity governance across sessions (Continuity Layer)
 
-This unified architecture creates a complete foundation for the NeuroLift Technologies ecosystem, combining crisis response, intelligent optimization, and natural voice interaction into a cohesive platform.
+This unified architecture creates the complete foundation for all NeuroLift Technologies agents, combining crisis response, interaction governance, and emotional continuity into a cohesive governance layer.
 
 ## Architectural Principles
 
 ### Privacy-First Design
 All components maintain local processing capabilities with encrypted storage, ensuring user data remains under user control while enabling powerful AI assistance.
 
+### Solidarity Framework
+The architecture operates under the Solidarity Framework principles: Transparency, Minimal Footprint, Escalation Culture, Human Flourishing, Privacy First, and Agency Preservation.
+
 ### Modular Integration
 Each component maintains its specialized functionality while providing clear integration points for seamless coordination and data sharing.
 
 ### User Agency
-The system empowers users with complete control over their interaction preferences, crisis response protocols, and optimization strategies.
+The system empowers users with complete control over their interaction preferences, crisis response protocols, and emotional continuity settings.
 
 ### Scalable Foundation
 The architecture supports the addition of new Advocates and capabilities while maintaining system coherence and performance.

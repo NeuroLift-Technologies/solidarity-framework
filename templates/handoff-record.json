@@ -1,0 +1,70 @@
+{
+  "_template_info": {
+    "template_version": "1.0.0",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "otoi_section": "§5 — Handoff Protocol",
+    "sop_reference": "SOP-NLT-001 Step 8",
+    "instructions": "Complete ALL fields before ending your session. Save to docs/agent-log/handoffs/{YYYY-MM-DD}-{session-id}.json. A partial handoff is a governance violation. No session ends without this record.",
+    "file_naming": "{YYYY-MM-DD}-{session-id}.json"
+  },
+  "handoff_record": {
+    "session_id": "REPLACE_WITH_SESSION_ID (must match registration)",
+    "agent_name": "REPLACE_WITH_AGENT_NAME",
+    "platform": "REPLACE_WITH_PLATFORM",
+    "date": "REPLACE_WITH_ISO_8601_DATE",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "REPLACE_WITH_REPO (e.g. NeuroLift-Technologies/.github)",
+    "branch": "REPLACE_WITH_BRANCH",
+    "active_thread_id": "REPLACE_WITH_THREAD_ID",
+    "work_completed": [
+      "REPLACE_WITH_COMPLETED_ITEM_1",
+      "REPLACE_WITH_COMPLETED_ITEM_2"
+    ],
+    "work_in_progress": [
+      "REPLACE_WITH_IN_PROGRESS_ITEM_1 (or 'None' if all complete)"
+    ],
+    "blockers": [
+      "REPLACE_WITH_BLOCKER_1 (or 'None' if no blockers)"
+    ],
+    "decisions_made": [
+      {
+        "decision": "REPLACE_WITH_DECISION_DESCRIPTION",
+        "rationale": "REPLACE_WITH_RATIONALE",
+        "made_by": "REPLACE_WITH_DECISION_MAKER (agent name or human name)"
+      }
+    ],
+    "decisions_pending": [
+      {
+        "decision": "REPLACE_WITH_PENDING_DECISION (or 'None' if none)",
+        "owner": "REPLACE_WITH_WHO_DECIDES",
+        "urgency": "REPLACE_WITH_LOW_MEDIUM_HIGH"
+      }
+    ],
+    "escalations": [
+      {
+        "topic": "REPLACE_WITH_ESCALATION_TOPIC (or 'None' if no escalations)",
+        "status": "REPLACE_WITH_STATUS (pending / resolved / not-required)",
+        "issue_url": "REPLACE_WITH_GITHUB_ISSUE_URL_OR_null"
+      }
+    ],
+    "next_agent_notes": "REPLACE_WITH_FREEFORM_NOTES — what the next agent absolutely must know before picking up this work",
+    "files_modified": [
+      "REPLACE_WITH_FILE_PATH_1",
+      "REPLACE_WITH_FILE_PATH_2"
+    ],
+    "files_created": [
+      "REPLACE_WITH_NEW_FILE_PATH_1 (or empty array if none)"
+    ],
+    "files_deleted": [
+      "REPLACE_WITH_DELETED_FILE_PATH_1 (or empty array if none)"
+    ],
+    "tests_run": [
+      "REPLACE_WITH_TEST_COMMAND_OR_DESCRIPTION_1 (or 'None' if no tests)"
+    ],
+    "tests_passing": true,
+    "pr_url": "REPLACE_WITH_PR_URL_OR_null",
+    "commit_shas": [
+      "REPLACE_WITH_COMMIT_SHA_1"
+    ]
+  }
+}

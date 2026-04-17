@@ -1,0 +1,39 @@
+{
+  "_template_info": {
+    "template_version": "1.0.0",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "otoi_section": "§3 — Agent Registration",
+    "sop_reference": "SOP-NLT-001 Step 5",
+    "instructions": "Complete all fields. Save to docs/agent-log/registrations/{YYYY-MM-DD}-{agent-name}-{session-id}.json. This file must be committed as your first action in any session.",
+    "file_naming": "{YYYY-MM-DD}-{agent-name}-{session-id}.json"
+  },
+  "agent_registration": {
+    "agent_name": "REPLACE_WITH_AGENT_NAME",
+    "platform": "REPLACE_WITH_PLATFORM (e.g. Claude Code, Codex CLI, Cursor, Gemini CLI, GitHub Copilot)",
+    "version": "REPLACE_WITH_MODEL_OR_TOOL_VERSION",
+    "session_id": "REPLACE_WITH_UNIQUE_SESSION_ID (e.g. a1b2c3d4)",
+    "entry_date": "REPLACE_WITH_ISO_8601_DATE (e.g. 2025-04-04)",
+    "entry_point": "REPLACE_WITH_ENTRY_POINT (e.g. GitHub Issue #42, PR review request, direct task prompt)",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "REPLACE_WITH_REPO (e.g. NeuroLift-Technologies/.github)",
+    "working_branch": "REPLACE_WITH_BRANCH (e.g. feature/my-feature)",
+    "task_summary": "REPLACE_WITH_ONE_SENTENCE_TASK_DESCRIPTION",
+    "active_thread_id": "REPLACE_WITH_THREAD_ID from docs/active-threads.md, or NEW if creating a new thread",
+    "capabilities_self_reported": [
+      "REPLACE_WITH_CAPABILITY_1 (e.g. code generation)",
+      "REPLACE_WITH_CAPABILITY_2 (e.g. file editing)",
+      "REPLACE_WITH_CAPABILITY_3 (e.g. test execution)"
+    ],
+    "known_limitations": [
+      "REPLACE_WITH_LIMITATION_1 (e.g. cannot access external URLs)",
+      "REPLACE_WITH_LIMITATION_2 (e.g. context window limit of X tokens)"
+    ],
+    "preferred_handoff_format": "REPLACE_WITH_FORMAT (e.g. JSON handoff record + inline comments)",
+    "escalation_acknowledged": true,
+    "escalation_contact": "joshua@neurolift.tech",
+    "solidarity_framework_acknowledged": true,
+    "commit_format_acknowledged": true,
+    "handoff_required_acknowledged": true
+  }
+}

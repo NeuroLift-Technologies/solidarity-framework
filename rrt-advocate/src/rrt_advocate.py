@@ -26,14 +26,7 @@ from response.interventions.intervention_manager import InterventionManager
 from response.de_escalation.de_escalation_engine import DeEscalationEngine
 from coordination.supervisor.supervisor_interface import SupervisorInterface
 from learning.patterns.pattern_analyzer import PatternAnalyzer
-
-class SupportLevel(Enum):
-    """Universal support levels for response coordination across any domain"""
-    GREEN = "stable"      # No immediate support needed
-    YELLOW = "elevated"   # Minor support recommended
-    ORANGE = "high"       # Significant support needed
-    RED = "critical"      # Urgent support required
-    BLACK = "emergency"   # Emergency intervention needed
+from crisis.assessors.crisis_assessor import CrisisAssessment, CrisisLevel
 
 class ResponseStatus(Enum):
     """Status of universal support interventions"""
@@ -42,21 +35,6 @@ class ResponseStatus(Enum):
     SUCCESSFUL = "successful"
     ESCALATED = "escalated"
     FAILED = "failed"
-
-@dataclass
-class SupportAssessment:
-    """Comprehensive support assessment data structure for any domain"""
-    timestamp: datetime
-    support_level: SupportLevel
-    primary_indicators: List[str]
-    secondary_indicators: List[str]
-    confidence_score: float
-    estimated_duration: Optional[timedelta]
-    recommended_interventions: List[str]
-    escalation_threshold: float
-    user_safety_score: float
-    domain_context: str  # healthcare, education, workplace, mental_health, etc.
-    context_factors: Dict[str, Any] = field(default_factory=dict)
 
 @dataclass
 class InterventionResponse:

@@ -1,6 +1,6 @@
-# Active Threads — NeuroLift-Technologies/.github
+# Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-04-04
+> Last updated: 2026-04-21
 
 ---
 
@@ -42,7 +42,15 @@ This file tracks all **current and recently completed** work threads in this rep
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
 
-*No completed threads yet.*
+### THREAD-ASK-align-solidarity-kit — Align PR with Agent Solidarity Kit (main)
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-ASK-align-solidarity-kit |
+| **Status** | ✅ Complete |
+| **Completed** | 2026-04-21 |
+| **Owner** | CURSOR |
+| **Branch** | `cursor/review-fix-refresh-and-build-repo-5f72` |
+| **Summary** | Documentation and messaging aligned to Agent Solidarity Kit; unified core package renamed to `core_coordination` to avoid `coordination` namespace clash with `rrt-advocate`; voice stub + `voice_interaction` added; integration smoke script passes 4/4 with correct PYTHONPATH. |
 
 ---
 

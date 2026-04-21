@@ -1,11 +1,10 @@
-# NeuroLift Foundation Configuration
-# Universal configuration file for the AI-fusion platform
-# Evolved from neurodivergent support to universal foundation
+# Agent Solidarity Kit — unified core configuration
+# Derived from our core project work; evolved into the shared layer between model and agent.
 
 # Foundation settings
 foundation:
   version: "1.0.0"
-  mode: "unified"  # unified, crisis_only, voice_only, framework_only
+  mode: "unified"  # unified, crisis_only, continuity, framework, development (see FoundationMode)
   debug: false
   domain: "universal"  # healthcare, education, workplace, mental_health, aging_care, custom
   evolution_stage: "universal"  # neurodivergent_focused -> universal_foundation

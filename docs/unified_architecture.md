@@ -124,10 +124,10 @@ class VoiceInterfaceIntegration:
 ```python
 class NeuroLiftFoundation:
     """
-    Central coordination hub for the unified NeuroLift Foundation
-    
-    Integrates RRT Advocate, TOI-OTOI Framework, and Aimybox Voice Interface
-    into a cohesive ADHD support system.
+    Central coordination hub for the Agent Solidarity Kit unified core.
+
+    Integrates RRT Advocate, NLT-OTOI, Sleepwalker Protocol, and supporting interfaces
+    into one governance layer between the model and the agent.
     """
     
     def __init__(self, user_id: str, config_path: str):

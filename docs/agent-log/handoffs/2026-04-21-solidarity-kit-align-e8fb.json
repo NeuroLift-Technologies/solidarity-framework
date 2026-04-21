@@ -1,0 +1,54 @@
+{
+  "_template_info": {
+    "template_version": "1.0.0",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "otoi_section": "§5 — Session Handoff",
+    "sop_reference": "SOP-NLT-001",
+    "instructions": "Complete all fields when ending a session with work in progress or at a milestone."
+  },
+  "handoff_record": {
+    "session_id": "solidarity-kit-align-e8fb",
+    "handoff_date": "2026-04-21",
+    "agent_name": "CURSOR",
+    "branch": "cursor/review-fix-refresh-and-build-repo-5f72",
+    "completed": [
+      "Imported CrisisLevel/CrisisAssessment from crisis_assessor into rrt_advocate.RRTAdvocate for consistent types",
+      "Fixed integration_test.py: repo-relative sys.path, correct rrt_advocate import, absolute config path",
+      "Renamed user-facing strings in unified_core and docs toward Agent Solidarity Kit; rewrote docs/EVOLUTION_STORY.md",
+      "Adjusted config/foundation.yml header and mode comment to match FoundationMode",
+      "Registered agent session per OTOI §3",
+      "Updated docs/active-threads.md with THREAD-ASK-align-solidarity-kit"
+    ],
+    "in_progress": [],
+    "blockers": [],
+    "decisions": [
+      "Removed redundant SupportLevel/SupportAssessment definitions in rrt_advocate.py in favor of crisis_assessor types to restore integration compatibility without touching crisis thresholds YAML."
+    ],
+    "next_steps": [
+      "Run pytest from repo root and fix any remaining import or path issues",
+      "Update PR description if it still says NeuroLift Foundation-only scope"
+    ],
+    "files_modified": [
+      "rrt-advocate/src/rrt_advocate.py",
+      "tests/integration_test.py",
+      "unified_core/neurolift_foundation.py",
+      "unified_core/integration/rrt_integration.py",
+      "unified_core/integration/toi_otoi_integration.py",
+      "unified_core/integration/sleepwalker_integration.py",
+      "unified_core/coordination/component_communication.py",
+      "unified_core/coordination/state_manager.py",
+      "unified_core/supervisor/supervisor_ai.py",
+      "config/foundation.yml",
+      "docs/unified_architecture.md",
+      "docs/EVOLUTION_STORY.md",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-04-21-cursor-solidarity-kit-align-e8fb.json",
+      "docs/agent-log/handoffs/2026-04-21-solidarity-kit-align-e8fb.json"
+    ],
+    "files_removed": [
+      "UNIVERSAL_TRANSFORMATION_COMPLETE.md",
+      "REVIEW_SUMMARY.md"
+    ],
+    "test_status": "integration_test.py (PYTHONPATH=unified_core:rrt-advocate/src): 4/4 passed"
+  }
+}

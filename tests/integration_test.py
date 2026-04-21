@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-NeuroLift Foundation Integration Test
-Tests the basic functionality of the unified ADHD support system
+Agent Solidarity Kit integration tests
+
+Exercises unified core initialization, RRT Advocate wiring, and coordination helpers.
 """
 
 import asyncio
@@ -10,8 +11,12 @@ import os
 import logging
 from datetime import datetime
 
-# Add the workspace to Python path
-sys.path.insert(0, '/workspace')
+# Ensure repo root and rrt-advocate/src are importable when run from any cwd
+_REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_RRT_SRC = os.path.join(_REPO_ROOT, "rrt-advocate", "src")
+for _p in (_REPO_ROOT, _RRT_SRC):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
 
 # Set up logging
 logging.basicConfig(
@@ -20,8 +25,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger("IntegrationTest")
 
-async def test_foundation_initialization():
-    """Test basic foundation initialization"""
+async def run_foundation_initialization():
+    """Exercise basic unified core initialization (run via ``python tests/integration_test.py``)."""
     try:
         from unified_core.neurolift_foundation import create_foundation, FoundationMode
         
@@ -55,15 +60,19 @@ async def test_foundation_initialization():
         logger.error(f"❌ Foundation initialization test failed: {e}")
         return False
 
-async def test_rrt_advocate():
-    """Test RRT Advocate functionality"""
+async def run_rrt_advocate():
+    """Exercise RRT Advocate wiring (run via ``python tests/integration_test.py``)."""
     try:
-        from rrt_advocate.src.rrt_advocate import create_rrt_advocate
+        from rrt_advocate import create_rrt_advocate
+
+        rrt_config = os.path.join(
+            _REPO_ROOT, "rrt-advocate", "config", "crisis_thresholds.yaml"
+        )
         
         logger.info("Testing RRT Advocate...")
         
         # Create RRT Advocate
-        advocate = await create_rrt_advocate("test_user_001")
+        advocate = await create_rrt_advocate("test_user_001", config_path=rrt_config)
         
         # Test status report
         status = await advocate.get_status_report()
@@ -83,8 +92,8 @@ async def test_rrt_advocate():
         logger.error(f"❌ RRT Advocate test failed: {e}")
         return False
 
-async def test_integration_modules():
-    """Test integration modules"""
+async def run_integration_modules():
+    """Exercise integration modules (run via ``python tests/integration_test.py``)."""
     try:
         logger.info("Testing integration modules...")
         
@@ -120,10 +129,10 @@ async def test_integration_modules():
         logger.error(f"❌ Integration modules test failed: {e}")
         return False
 
-async def test_state_manager():
-    """Test state manager functionality"""
+async def run_state_manager():
+    """Exercise state manager (run via ``python tests/integration_test.py``)."""
     try:
-        from unified_core.coordination.state_manager import UnifiedStateManager, StateScope, StateAccess
+        from unified_core.core_coordination.state_manager import UnifiedStateManager, StateScope, StateAccess
         
         logger.info("Testing state manager...")
         
@@ -154,14 +163,14 @@ async def test_state_manager():
 async def main():
     """Run all integration tests"""
     logger.info("=" * 60)
-    logger.info("NeuroLift Foundation Integration Tests")
+    logger.info("Agent Solidarity Kit integration tests")
     logger.info("=" * 60)
     
     tests = [
-        ("Foundation Initialization", test_foundation_initialization),
-        ("RRT Advocate", test_rrt_advocate),
-        ("Integration Modules", test_integration_modules),
-        ("State Manager", test_state_manager),
+        ("Foundation Initialization", run_foundation_initialization),
+        ("RRT Advocate", run_rrt_advocate),
+        ("Integration Modules", run_integration_modules),
+        ("State Manager", run_state_manager),
     ]
     
     results = []
@@ -192,7 +201,7 @@ async def main():
     logger.info(f"\nOverall: {passed}/{total} tests passed")
     
     if passed == total:
-        logger.info("🎉 All tests passed! The NeuroLift Foundation is ready.")
+        logger.info("🎉 All tests passed! The Agent Solidarity Kit unified core looks healthy.")
         return 0
     else:
         logger.warning(f"⚠️  {total - passed} tests failed. Please review the issues above.")

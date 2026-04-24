@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-04-21
+> Last updated: 2026-04-24
 
 ---
 
@@ -42,6 +42,16 @@ This file tracks all **current and recently completed** work threads in this rep
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
 
+### THREAD-ASK-remove-aimybox — Remove Aimybox / voice interface layer
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-ASK-remove-aimybox |
+| **Status** | ✅ Complete |
+| **Completed** | 2026-04-24 |
+| **Owner** | CURSOR |
+| **Branch** | `cursor/review-fix-refresh-and-build-repo-5f72` |
+| **Summary** | Removed voice integration module and all Aimybox/voice routing from unified core; RRT-to-TOI-OTOI path uses `rrt_to_framework` + `ingest_rrt_crisis_context`; documentation and config updated; `tests/integration_test.py` 4/4. |
+
 ### THREAD-ASK-align-solidarity-kit — Align PR with Agent Solidarity Kit (main)
 | Field | Value |
 |-------|-------|
@@ -50,7 +60,7 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Completed** | 2026-04-21 |
 | **Owner** | CURSOR |
 | **Branch** | `cursor/review-fix-refresh-and-build-repo-5f72` |
-| **Summary** | Documentation and messaging aligned to Agent Solidarity Kit; unified core package renamed to `core_coordination` to avoid `coordination` namespace clash with `rrt-advocate`; voice stub + `voice_interaction` added; integration smoke script passes 4/4 with correct PYTHONPATH. |
+| **Summary** | Documentation and messaging aligned to Agent Solidarity Kit; unified core package renamed to `core_coordination` to avoid `coordination` namespace clash with `rrt-advocate`; (superseded) earlier voice stub removed in THREAD-ASK-remove-aimybox. |
 
 ---
 

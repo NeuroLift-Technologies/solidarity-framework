@@ -39,13 +39,6 @@ async def run_foundation_initialization():
         status = await foundation.get_system_status()
         logger.info(f"Foundation status: {status}")
         
-        # Test voice interaction
-        voice_response = await foundation.voice_interaction(
-            "Hello, how are you?",
-            {"mood": "neutral", "energy": "normal"}
-        )
-        logger.info(f"Voice response: {voice_response}")
-        
         # Test system status
         health = await foundation.health_check()
         logger.info(f"Health check: {health}")
@@ -114,13 +107,6 @@ async def run_integration_modules():
         toi_integration = TOIOTOIIntegration(foundation)
         initialized = await toi_integration.initialize()
         logger.info(f"TOI-OTOI Integration initialized: {initialized}")
-        
-        # Test Voice integration
-        from unified_core.integration.voice_integration import VoiceInterfaceIntegration
-        
-        voice_integration = VoiceInterfaceIntegration(foundation)
-        initialized = await voice_integration.initialize()
-        logger.info(f"Voice Integration initialized: {initialized}")
         
         logger.info("✅ Integration modules test passed")
         return True

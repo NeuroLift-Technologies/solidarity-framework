@@ -398,10 +398,6 @@ class UnifiedStateManager:
                 "user.preferences.*", "user.optimization.*", "user.learning.*",
                 "component.toi_otoi_framework.*", "session.*"
             ],
-            "voice_interface": [
-                "user.voice_preferences.*", "user.conversation_history",
-                "component.voice_interface.*", "session.*"
-            ],
             "supervisor_ai": [
                 "*"  # Supervisor has access to everything
             ],

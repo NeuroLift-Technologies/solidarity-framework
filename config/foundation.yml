@@ -25,13 +25,6 @@ components:
     universal_learning: true  # Learns from any domain
     adaptation_speed: "moderate"  # How quickly to adapt to new domains
     
-  voice_interface:
-    enabled: true
-    stress_detection: true
-    response_style: "supportive"
-    multi_modal: true  # Supports text, voice, and other modalities
-    domain_aware: true  # Adapts language and responses to domain context
-    
   supervisor_ai:
     enabled: true
     coordination_interval: 30  # seconds

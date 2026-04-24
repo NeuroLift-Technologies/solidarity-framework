@@ -329,18 +329,6 @@ class SupervisorAI:
                 specialization="optimization"
             )
         
-        # Register Voice Interface
-        if hasattr(self.foundation, 'voice') and self.foundation.voice:
-            self.advocates["voice_interface"] = AdvocateInfo(
-                name="voice_interface",
-                status=AdvocateStatus.DORMANT,
-                capabilities=["voice_interaction", "natural_language", "stress_detection", "conversation"],
-                current_load=0.0,
-                last_activity=datetime.now(),
-                performance_score=1.0,
-                specialization="voice_interaction"
-            )
-        
         self.logger.info(f"Registered {len(self.advocates)} Advocates")
     
     async def _coordination_loop(self):

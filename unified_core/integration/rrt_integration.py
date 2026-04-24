@@ -89,10 +89,6 @@ class RRTAdvocateIntegration:
             if assessment.crisis_level != CrisisLevel.GREEN:
                 await self.rrt_advocate._handle_crisis(assessment)
                 
-                # Notify other components if needed
-                if hasattr(self.foundation, 'voice') and self.foundation.voice:
-                    await self._notify_voice_interface(assessment)
-                    
                 if hasattr(self.foundation, 'framework') and self.foundation.framework:
                     await self._notify_framework(assessment)
             
@@ -137,18 +133,6 @@ class RRTAdvocateIntegration:
         except Exception as e:
             self.logger.error(f"Emergency escalation failed: {e}")
             return {"error": str(e)}
-    
-    async def _notify_voice_interface(self, assessment: CrisisAssessment):
-        """Notify voice interface of crisis for voice support"""
-        try:
-            if hasattr(self.foundation, 'communication'):
-                await self.foundation.communication.rrt_to_voice({
-                    "crisis_level": assessment.crisis_level.value,
-                    "confidence": assessment.confidence_score,
-                    "support_needed": True
-                })
-        except Exception as e:
-            self.logger.error(f"Failed to notify voice interface: {e}")
     
     async def _notify_framework(self, assessment: CrisisAssessment):
         """Notify TOI-OTOI framework for optimization"""

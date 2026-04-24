@@ -22,7 +22,6 @@ from pathlib import Path
 from integration.rrt_integration import RRTAdvocateIntegration
 from integration.toi_otoi_integration import TOIOTOIIntegration
 from integration.sleepwalker_integration import SleepwalkerIntegration
-from integration.voice_integration import VoiceInterfaceIntegration
 from supervisor.supervisor_ai import SupervisorAI
 from core_coordination.state_manager import UnifiedStateManager
 from core_coordination.component_communication import ComponentCommunication
@@ -53,7 +52,6 @@ class FoundationConfig:
         "rrt_advocate": True,
         "toi_otoi_framework": True,
         "sleepwalker_protocol": True,
-        "voice_interface": True,
         "supervisor_ai": True
     })
     privacy_settings: Dict[str, Any] = field(default_factory=dict)
@@ -111,7 +109,6 @@ class NeuroLiftFoundation:
         self.rrt: Optional[RRTAdvocateIntegration] = None
         self.framework: Optional[TOIOTOIIntegration] = None
         self.sleepwalker: Optional[SleepwalkerIntegration] = None
-        self.voice: Optional[VoiceInterfaceIntegration] = None
         self.supervisor: Optional[SupervisorAI] = None
         
         # Coordination systems
@@ -185,11 +182,6 @@ class NeuroLiftFoundation:
                 self.sleepwalker = SleepwalkerIntegration(self)
                 await self.sleepwalker.initialize()
                 self.logger.info("Sleepwalker Protocol integration initialized")
-
-            if self.config.components.get("voice_interface", True):
-                self.voice = VoiceInterfaceIntegration(self)
-                await self.voice.initialize()
-                self.logger.info("Voice interface integration initialized")
             
             if self.config.components.get("supervisor_ai", True):
                 self.supervisor = SupervisorAI(self)
@@ -234,7 +226,7 @@ class NeuroLiftFoundation:
             
         if self.supervisor:
             await self.communication.link_supervisor(
-                self.supervisor, [self.rrt, self.framework, self.sleepwalker, self.voice]
+                self.supervisor, [self.rrt, self.framework, self.sleepwalker]
             )
 
     async def start(self) -> bool:
@@ -431,18 +423,6 @@ class NeuroLiftFoundation:
             
             return error_response
 
-    async def voice_interaction(self, utterance: str, context: Dict[str, Any] = None) -> Dict[str, Any]:
-        """Voice-oriented interaction shim (delegates to voice integration stub or SWP context)."""
-        if self.voice:
-            voice_health = await self.voice.health_check()
-            return {
-                "utterance": utterance,
-                "context": context or {},
-                "voice_integration": voice_health.get("healthy", False),
-                "note": "Voice pipeline stub; plug Aimybox or voice stack here.",
-            }
-        return {"error": "voice_interface_disabled", "utterance": utterance}
-
     async def assess_emotional_state(self, user_input: str, context: Dict[str, Any] = None) -> Dict[str, Any]:
         """
         Assess emotional state through the Sleepwalker Protocol
@@ -537,9 +517,6 @@ class NeuroLiftFoundation:
             
         if self.sleepwalker:
             status["components"]["sleepwalker_protocol"] = await self.sleepwalker.get_status()
-
-        if self.voice:
-            status["components"]["voice_interface"] = await self.voice.health_check()
             
         if self.supervisor:
             status["components"]["supervisor_ai"] = await self.supervisor.get_status()
@@ -581,13 +558,6 @@ class NeuroLiftFoundation:
             if not swp_health.get("healthy", False):
                 health_status["overall_healthy"] = False
                 health_status["issues"].extend(swp_health.get("issues", []))
-
-        if self.voice:
-            voice_health = await self.voice.health_check()
-            health_status["components"]["voice_interface"] = voice_health
-            if not voice_health.get("healthy", False):
-                health_status["overall_healthy"] = False
-                health_status["issues"].extend(voice_health.get("issues", []))
         
         if self.supervisor:
             supervisor_health = await self.supervisor.health_check()

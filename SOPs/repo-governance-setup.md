@@ -1,4 +1,3 @@
-<!-- SYNCED FROM .github-private — do not edit directly -->
 # SOP-NLT-002 — Repository Governance Bootstrap
 > Standard Operating Procedure · ORG-DEV-OTOI-1.0.0
 > Applies to: Any agent bootstrapping NLT governance infrastructure in a new repository
@@ -26,7 +25,7 @@ Use this SOP when:
 - You have read and completed SOP-NLT-001 (new agent onboarding) for your session
 - Joshua W. Dorsey, Sr. has approved the repository creation or governance bootstrap
 - You have write access to the target repository
-- You have access to the governance templates in `NeuroLift-Technologies/.github/templates/`
+- You have access to the governance templates in `NeuroLift-Technologies/solidarity-framework/templates/`
 
 ---
 
@@ -96,7 +95,7 @@ touch docs/agent-log/handoffs/.gitkeep
 
 ### Phase 3 — Create Repo-Specific CLAUDE.md
 
-Copy the `CLAUDE.md` template from `NeuroLift-Technologies/.github/CLAUDE.md` and customize:
+Copy the `CLAUDE.md` template from `NeuroLift-Technologies/solidarity-framework/CLAUDE.md` and customize:
 - Update the repository name and description
 - Update the purpose section to describe this specific repo
 - Update the in-scope/out-of-scope items for this repo's domain
@@ -110,7 +109,7 @@ Copy the `CLAUDE.md` template from `NeuroLift-Technologies/.github/CLAUDE.md` an
 
 ### Phase 4 — Create docs/active-threads.md
 
-Copy from `NeuroLift-Technologies/.github/docs/active-threads.md` and:
+Copy from `NeuroLift-Technologies/solidarity-framework/docs/active-threads.md` and:
 - Update the repository name in the header
 - Clear any existing threads (start with empty Active Threads section)
 - Update the last-updated date
@@ -123,8 +122,8 @@ Copy from `NeuroLift-Technologies/.github/docs/active-threads.md` and:
 ### Phase 5 — Add AGENTS.md (Tier 2)
 
 Either:
-- Copy the org-level `AGENTS.md` from `.github` directly, OR
-- Create a minimal `AGENTS.md` that references `NeuroLift-Technologies/.github/AGENTS.md` for the canonical version
+- Copy the org-level `AGENTS.md` from `NeuroLift-Technologies/solidarity-framework` directly, OR
+- Create a minimal `AGENTS.md` that references `NeuroLift-Technologies/solidarity-framework/AGENTS.md` for the canonical version
 
 Add any repo-specific coordination notes at the top.
 
@@ -135,7 +134,7 @@ Add any repo-specific coordination notes at the top.
 
 ### Phase 6 — Add Templates (Tier 3, if required)
 
-Copy all templates from `NeuroLift-Technologies/.github/templates/`:
+Copy all templates from `NeuroLift-Technologies/solidarity-framework/templates/`:
 - `agent-registration.json`
 - `handoff-record.json`
 - `escalation.md`
@@ -148,7 +147,7 @@ Copy all templates from `NeuroLift-Technologies/.github/templates/`:
 
 ### Phase 7 — Add Governance Validation
 
-Copy from `NeuroLift-Technologies/.github/.nltotoi/`:
+Copy from `NeuroLift-Technologies/solidarity-framework/.nltotoi/`:
 - `.nltotoi/index/governance-files.md` (customize for this repo)
 - `.nltotoi/scripts/validate-governance.sh`
 
@@ -209,4 +208,4 @@ Before closing the bootstrap PR, confirm:
 
 ---
 
-*Canonical source: `.github-private/SOPs/repo-governance-setup.md` · Synced to public `.github` repo*
+*Maintained in `NeuroLift-Technologies/solidarity-framework`*

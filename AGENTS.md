@@ -13,14 +13,6 @@ You are a coding agent operating within the **NeuroLift Technologies** organizat
 2. Repo-level `CLAUDE.md` — Project-specific context (in the repo you are working in)
 3. `docs/active-threads.md` — Current work state (in the repo you are working in)
 
-> **Can't access `.github-private`?** If links to this repository return 404, key governance
-> docs are mirrored publicly:
-> - NLT-DEV-OTOI.md → https://github.com/NeuroLift-Technologies/.github/blob/main/governance/NLT-DEV-OTOI.md
-> - AGENTS.md → https://github.com/NeuroLift-Technologies/.github/blob/main/governance/AGENTS.md
->
-> Ask your org admin to grant the GitHub App access to `.github-private`. See
-> `docs/troubleshooting/github-app-access.md` in this repo for instructions.
-
 **Final authority:** Joshua W. Dorsey, Sr. Escalate. Do not guess.
 
 ---
@@ -32,7 +24,7 @@ The ethical foundation of all NLT work is publicly documented in the **Solidarit
 - Public governance principles: [`NeuroLift-Technologies/.github`](https://github.com/NeuroLift-Technologies/.github)
 - HAIEF reference: https://elevaitionfoundation.org
 
-The principles are public. The operational machinery is in this private repository.
+The principles are public. The operational machinery is in `NeuroLift-Technologies/solidarity-framework`.
 
 ---
 
@@ -88,7 +80,7 @@ These are **non-negotiable**. No exceptions without explicit Joshua approval:
 
 ## Internal File Map
 
-All files below live in this repository (`NeuroLift-Technologies/.github-private`):
+All files below live in this repository (`NeuroLift-Technologies/solidarity-framework`):
 
 ```
 NLT-DEV-OTOI.md                        ← Canonical org-level agent contract

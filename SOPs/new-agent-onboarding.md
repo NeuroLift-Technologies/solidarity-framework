@@ -1,4 +1,3 @@
-<!-- SYNCED FROM .github-private — do not edit directly -->
 # SOP-NLT-001 — New Agent Onboarding
 > Standard Operating Procedure · ORG-DEV-OTOI-1.0.0
 > Applies to: All AI coding agents working in any NeuroLift Technologies repository
@@ -31,7 +30,7 @@ This SOP applies to:
 ## Prerequisites
 
 - Access to the target repository
-- Ability to read `.github-private/NLT-DEV-OTOI.md` (or a summary provided by a human)
+- Ability to read `NLT-DEV-OTOI.md` in `NeuroLift-Technologies/solidarity-framework` (or a summary provided by a human)
 - Knowledge of your agent name, platform, and version
 
 ---
@@ -42,7 +41,7 @@ This SOP applies to:
 
 ### Step 1 — Read NLT-DEV-OTOI.md
 
-**Location:** `.github-private/NLT-DEV-OTOI.md`
+**Location:** `NLT-DEV-OTOI.md` in `NeuroLift-Technologies/solidarity-framework`
 
 Read the full document. This is the **constitutional document** for all NLT agent work — the canonical org-level coding agent contract.
 
@@ -64,7 +63,7 @@ Read the full document. This is the **constitutional document** for all NLT agen
 
 ### Step 2 — Read AGENTS.md
 
-**Location:** `AGENTS.md` in your target repository (also at `.github-private/AGENTS.md` for the canonical version)
+**Location:** `AGENTS.md` in your target repository (also at `NeuroLift-Technologies/solidarity-framework/AGENTS.md` for the canonical version)
 
 Read the full `AGENTS.md`. This is the **internal coordination gateway** — it defines how agents coordinate, what the non-negotiable guardrails are, and how multi-agent sessions work.
 
@@ -81,7 +80,7 @@ Read the full `AGENTS.md`. This is the **internal coordination gateway** — it 
 
 **Location:** `CLAUDE.md` in the **specific repository you'll be working in**
 
-> ⚠️ Read the target repo's `CLAUDE.md`, not the `.github-private` one. Each repo has its own.
+> ⚠️ Read the target repo's `CLAUDE.md`, not this repo's. Each repo has its own.
 
 This gives you:
 - Repository identity and purpose
@@ -258,7 +257,7 @@ END WITH:       Handoff record in docs/agent-log/handoffs/
                 No session ends without a handoff.
 
 KEY DOCS:
-  OTOI:         .github-private/NLT-DEV-OTOI.md
+  OTOI:         NLT-DEV-OTOI.md
   AGENTS:       AGENTS.md
   THREADS:      docs/active-threads.md
   REGISTER:     templates/agent-registration.json
@@ -282,4 +281,4 @@ KEY DOCS:
 
 ---
 
-*Canonical source: `.github-private/SOPs/new-agent-onboarding.md` · Synced to public `.github` repo*
+*Maintained in `NeuroLift-Technologies/solidarity-framework`*

@@ -1,4 +1,4 @@
-# Agent Log — NeuroLift-Technologies/.github
+# Agent Log — NeuroLift-Technologies/solidarity-framework
 
 This directory contains the persistent audit trail of all AI agent sessions that have worked in this repository. It is a core component of the ORG-DEV-OTOI-1.0.0 governance framework.
 
@@ -80,7 +80,7 @@ Handoffs document:
 
 | Document | Location |
 |----------|----------|
-| OTOI Contract | `.github-private/NLT-DEV-OTOI.md` |
+| OTOI Contract | `NLT-DEV-OTOI.md` |
 | Agent Coordination | `AGENTS.md` |
 | Onboarding SOP | `SOPs/new-agent-onboarding.md` |
 | Registration Template | `templates/agent-registration.json` |

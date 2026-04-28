@@ -1,8 +1,8 @@
-# Governance File Index — NeuroLift Technologies `.github-private`
+# Governance File Index — NeuroLift Technologies `solidarity-framework`
 
 **Last updated:** 2026-04-06  
 **Maintained by:** `.nltotoi/` namespace tooling  
-**Scope:** `NeuroLift-Technologies/.github-private`
+**Scope:** `NeuroLift-Technologies/solidarity-framework`
 
 ---
 

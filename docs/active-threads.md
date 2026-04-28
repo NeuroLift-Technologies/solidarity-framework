@@ -50,6 +50,20 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Related PR** | Branch `copilot/update-deployment-instructions` |
 | **Notes** | Governance session artifacts (registration, this thread entry, handoff record) were filed retroactively per §2.1 transparency requirement. Work commits: `8b594e6`, `92618ca`. No architectural decisions were made; all changes were scoping/naming corrections only. |
 
+### THREAD-003 — Governance Enforcement for Remote Agents
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-003 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-04-28 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/update-deployment-instructions` |
+| **Task** | Investigate root cause of VS Code Copilot Agents - Insiders not following governance; implement fixes to enforce OTOI §4.1 session start protocol for all remote agents |
+| **Scope** | `.github/copilot-instructions.md`, `.github/PULL_REQUEST_TEMPLATE.md`, `.github/workflows/validate-governance.yml`, `docs/active-threads.md` |
+| **Blockers** | None |
+| **Related PR** | Branch `copilot/update-deployment-instructions` |
+| **Notes** | Root cause: `.github/copilot-instructions.md` contained no OTOI governance protocol — only generic coding standards. VS Code Copilot reads this file at session start; without governance instructions there, it had no awareness of SOP-NLT-001. Three fixes: (1) copilot-instructions.md updated with full OTOI session start protocol, commit format, guardrails, escalation triggers, and handoff requirement; (2) PULL_REQUEST_TEMPLATE.md updated with governance checklist; (3) validate-governance.yml updated with agent-commit-format CI job. |
+
 ---
 
 ## Completed Threads

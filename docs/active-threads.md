@@ -50,6 +50,20 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Related PR** | Branch `copilot/update-deployment-instructions` |
 | **Notes** | Governance session artifacts (registration, this thread entry, handoff record) were filed retroactively per §2.1 transparency requirement. Work commits: `8b594e6`, `92618ca`. No architectural decisions were made; all changes were scoping/naming corrections only. |
 
+### THREAD-004 — Solidarity Framework Skills
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-004 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-04-28 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/create-skills-for-solidarity-framework` |
+| **Task** | Create standalone skill files for each Solidarity Framework component (RRT Advocate, NLT-OTOI, Sleepwalker Protocol, Unified Foundation) to enable modular adoption |
+| **Scope** | `agents/rrt-advocate-skill.md`, `agents/nlt-otoi-skill.md`, `agents/sleepwalker-skill.md`, `agents/solidarity-foundation-skill.md`, `docs/active-threads.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
+| **Blockers** | None |
+| **Related PR** | Branch `copilot/create-skills-for-solidarity-framework` |
+| **Notes** | No architectural changes. Pure documentation/skill-file authoring. Skills are additive — no existing files deleted or modified. |
+
 ### THREAD-003 — Governance Enforcement for Remote Agents
 | Field | Value |
 |-------|-------|

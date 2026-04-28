@@ -1,0 +1,117 @@
+{
+  "_template_info": {
+    "template_version": "1.0.0",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "otoi_section": "§5 — Handoff Protocol",
+    "sop_reference": "SOP-NLT-001 Step 8",
+    "note": "RETROACTIVE — handoff filed after session work was completed per §2.1 transparency requirement."
+  },
+  "handoff_record": {
+    "session_id": "update-deployment-instructions",
+    "agent_name": "GitHub Copilot",
+    "platform": "GitHub Copilot",
+    "date": "2026-04-28",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/solidarity-framework",
+    "branch": "copilot/update-deployment-instructions",
+    "active_thread_id": "THREAD-002",
+    "work_completed": [
+      "Updated AGENTS.md to reference solidarity-framework instead of .github-private",
+      "Updated NLT-DEV-OTOI.md repository scope references",
+      "Updated SOPs/new-agent-onboarding.md repository-specific references",
+      "Updated SOPs/repo-governance-setup.md repository-specific references",
+      "Updated SOPs/incident-response.md repository-specific references",
+      "Updated SOPs/SOPs/new-agent-onboarding.md (nested duplicate) repository-specific references",
+      "Updated SOPs/SOPs/repo-governance-setup.md (nested duplicate) repository-specific references",
+      "Updated SOPs/SOPs/incident-response.md (nested duplicate) repository-specific references",
+      "Updated agents/nlt-governance-steward.md repository-specific references",
+      "Updated .nltotoi/index/governance-files.md repository-specific references",
+      "Updated .nltotoi/.nltotoi/README.md repository-specific references",
+      "Updated .nltotoi/.nltotoi/index/governance-files.md repository-specific references",
+      "Updated .nltotoi/.nltotoi/proposals/validation-roadmap.md repository-specific references",
+      "Updated nltotoi.json repository-specific references",
+      "Updated docs/agent-log/README.md repository-specific references",
+      "Updated docs/escalations/README.md repository-specific references",
+      "Updated ISSUE_TEMPLATE/governance-proposal.md repository-specific references",
+      "Updated rrt-advocate/CLAUDE.md repository-specific references",
+      "Updated file-structure.md repository-specific references",
+      "Added agents/swe-agent.md new Copilot agent profile",
+      "Filed retroactive governance session artifacts (registration, active-threads entry, this handoff record)"
+    ],
+    "work_in_progress": [
+      "None — all scoped work is complete"
+    ],
+    "blockers": [
+      "None"
+    ],
+    "decisions_made": [
+      {
+        "decision": "Replace all .github-private repository references with solidarity-framework throughout governance files",
+        "rationale": "Governance files were copied wholesale from the .github-private template repo and retained source repo references. This made them inaccurate for the solidarity-framework repo and would confuse future agents reading them.",
+        "made_by": "GitHub Copilot (scoping correction only — no architectural decisions involved)"
+      },
+      {
+        "decision": "Update nested SOPs/SOPs/ files in addition to top-level SOPs/",
+        "rationale": "Nested duplicate paths were present in the repository and required the same scoping corrections to maintain consistency",
+        "made_by": "GitHub Copilot"
+      }
+    ],
+    "decisions_pending": [
+      {
+        "decision": "Determine whether nested SOPs/SOPs/ directory is intentional or a structural artifact that should be removed",
+        "owner": "Joshua W. Dorsey, Sr.",
+        "urgency": "low"
+      },
+      {
+        "decision": "Determine whether .nltotoi/.nltotoi/ nested directory is intentional or a structural artifact that should be removed",
+        "owner": "Joshua W. Dorsey, Sr.",
+        "urgency": "low"
+      }
+    ],
+    "escalations": [
+      {
+        "topic": "None — no escalation triggers were encountered during this session",
+        "status": "not-required",
+        "issue_url": null
+      }
+    ],
+    "next_agent_notes": "RETROACTIVE SESSION: Governance artifacts were filed after the primary work commits rather than before work began — a protocol deviation disclosed here per §2.1. The work itself (repository scoping corrections and swe-agent.md creation) is complete and correct. Two structural questions are flagged in decisions_pending: whether the nested SOPs/SOPs/ and .nltotoi/.nltotoi/ directories are intentional. These should be reviewed by Joshua W. Dorsey, Sr. before any further structural changes. THREAD-002 is closed. THREAD-001 (on branch copilot/sync-governance-public-files) was pre-existing and unrelated to this session's scope. Active-threads.md header was also updated from .github to solidarity-framework.",
+    "files_modified": [
+      "AGENTS.md",
+      "NLT-DEV-OTOI.md",
+      "SOPs/new-agent-onboarding.md",
+      "SOPs/repo-governance-setup.md",
+      "SOPs/incident-response.md",
+      "SOPs/SOPs/new-agent-onboarding.md",
+      "SOPs/SOPs/repo-governance-setup.md",
+      "SOPs/SOPs/incident-response.md",
+      "agents/nlt-governance-steward.md",
+      ".nltotoi/index/governance-files.md",
+      ".nltotoi/.nltotoi/README.md",
+      ".nltotoi/.nltotoi/index/governance-files.md",
+      ".nltotoi/.nltotoi/proposals/validation-roadmap.md",
+      "nltotoi.json",
+      "docs/agent-log/README.md",
+      "docs/escalations/README.md",
+      "ISSUE_TEMPLATE/governance-proposal.md",
+      "rrt-advocate/CLAUDE.md",
+      "file-structure.md",
+      "docs/active-threads.md"
+    ],
+    "files_created": [
+      "agents/swe-agent.md",
+      "docs/agent-log/registrations/2026-04-28-copilot-update-deployment-instructions.json",
+      "docs/agent-log/handoffs/2026-04-28-update-deployment-instructions.json"
+    ],
+    "files_deleted": [],
+    "tests_run": [
+      "None — this session involved documentation and scoping corrections only; no executable tests applicable"
+    ],
+    "tests_passing": true,
+    "pr_url": null,
+    "commit_shas": [
+      "8b594e6",
+      "92618ca"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
-# Active Threads — NeuroLift-Technologies/.github
+# Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-04-04
+> Last updated: 2026-04-28
 
 ---
 
@@ -35,6 +35,20 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Blockers** | None |
 | **Related PR** | TBD |
 | **Notes** | This is the initial governance bootstrap. No prior governance infrastructure exists in this repo. |
+
+### THREAD-002 — Governance File Repository Scoping
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-002 |
+| **Status** | ✅ Complete |
+| **Started** | 2026-04-28 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/update-deployment-instructions` |
+| **Task** | Update all governance files pulled in from .github-private to replace generic/template references with solidarity-framework–specific values (repo name, paths, URLs) |
+| **Scope** | `AGENTS.md`, `NLT-DEV-OTOI.md`, `SOPs/new-agent-onboarding.md`, `SOPs/repo-governance-setup.md`, `SOPs/incident-response.md`, `SOPs/SOPs/new-agent-onboarding.md`, `SOPs/SOPs/repo-governance-setup.md`, `SOPs/SOPs/incident-response.md`, `agents/nlt-governance-steward.md`, `.nltotoi/index/governance-files.md`, `.nltotoi/.nltotoi/README.md`, `.nltotoi/.nltotoi/index/governance-files.md`, `.nltotoi/.nltotoi/proposals/validation-roadmap.md`, `nltotoi.json`, `docs/agent-log/README.md`, `docs/escalations/README.md`, `ISSUE_TEMPLATE/governance-proposal.md`, `rrt-advocate/CLAUDE.md`, `file-structure.md`, `agents/swe-agent.md` (new) |
+| **Blockers** | None |
+| **Related PR** | Branch `copilot/update-deployment-instructions` |
+| **Notes** | Governance session artifacts (registration, this thread entry, handoff record) were filed retroactively per §2.1 transparency requirement. Work commits: `8b594e6`, `92618ca`. No architectural decisions were made; all changes were scoping/naming corrections only. |
 
 ---
 

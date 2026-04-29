@@ -186,6 +186,7 @@ class NeuroLiftFoundation:
             if self.config.components.get("supervisor_ai", True):
                 self.supervisor = SupervisorAI(self)
                 await self.supervisor.initialize()
+                await self.supervisor.start()
                 self.logger.info("Supervisor AI initialized")
 
             if self.config.components.get("vibevoice", True):

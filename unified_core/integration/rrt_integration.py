@@ -196,7 +196,9 @@ class RRTAdvocateIntegration:
         if self.rrt_advocate:
             try:
                 rrt_status = await self.rrt_advocate.get_status_report()
-                if rrt_status.get("performance", {}).get("success_rate", 0) < 0.5:
+                history_count = rrt_status.get("crisis_history_count", 0)
+                success_rate = rrt_status.get("performance", {}).get("success_rate", 1.0)
+                if history_count > 0 and success_rate < 0.5:
                     health["healthy"] = False
                     health["issues"].append("Low success rate")
             except Exception as e:

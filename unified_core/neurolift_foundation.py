@@ -5,7 +5,6 @@ Main implementation integrating RRT Advocate, NLT-OTOI Framework, and Sleepwalke
 This module provides the central coordination hub for the complete NeuroLift agent ecosystem,
 combining crisis intervention (RRTA), interaction governance (OTOI), and emotional continuity (SWP).
 All agents developed by NeuroLift Technologies require this as the layer between the model and the agent.
-This foundation was derived from our neurodivergent-focused core work and expanded into a universal base layer.
 """
 
 import asyncio
@@ -22,9 +21,10 @@ from pathlib import Path
 from integration.rrt_integration import RRTAdvocateIntegration
 from integration.toi_otoi_integration import TOIOTOIIntegration
 from integration.sleepwalker_integration import SleepwalkerIntegration
+from integration.vibevoice_integration import VibeVoiceIntegration
 from supervisor.supervisor_ai import SupervisorAI
-from core_coordination.state_manager import UnifiedStateManager
-from core_coordination.component_communication import ComponentCommunication
+from coordination.state_manager import UnifiedStateManager
+from coordination.component_communication import ComponentCommunication
 
 class FoundationMode(Enum):
     """Operating modes for the NeuroLift Agent Solidarity Kit"""
@@ -45,14 +45,15 @@ class InteractionType(Enum):
 
 @dataclass
 class FoundationConfig:
-    """Configuration for the Agent Solidarity Kit unified core"""
+    """Configuration for the Agent Solidarity Framework Development Kit (ASFDK)"""
     user_id: str
     mode: FoundationMode
     components: Dict[str, bool] = field(default_factory=lambda: {
         "rrt_advocate": True,
         "toi_otoi_framework": True,
         "sleepwalker_protocol": True,
-        "supervisor_ai": True
+        "supervisor_ai": True,
+        "vibevoice": True
     })
     privacy_settings: Dict[str, Any] = field(default_factory=dict)
     performance_settings: Dict[str, Any] = field(default_factory=dict)
@@ -71,7 +72,7 @@ class UserInteraction:
 
 @dataclass
 class FoundationResponse:
-    """Response from the Agent Solidarity Kit unified core"""
+    """Response from the Agent Solidarity Framework Development Kit (ASFDK)"""
     timestamp: datetime
     response_type: str
     content: Dict[str, Any]
@@ -110,6 +111,7 @@ class NeuroLiftFoundation:
         self.framework: Optional[TOIOTOIIntegration] = None
         self.sleepwalker: Optional[SleepwalkerIntegration] = None
         self.supervisor: Optional[SupervisorAI] = None
+        self.voice: Optional[VibeVoiceIntegration] = None
         
         # Coordination systems
         self.state_manager: Optional[UnifiedStateManager] = None
@@ -131,9 +133,7 @@ class NeuroLiftFoundation:
             "uptime": timedelta(0)
         }
         
-        self.logger.info(
-            f"Agent Solidarity Kit (unified core) created for user {self.user_id} in {self.mode.value} mode"
-        )
+        self.logger.info(f"Agent Solidarity Framework Development Kit (ASFDK) created for user {self.user_id} in {self.mode.value} mode")
 
     def _setup_logging(self):
         """Configure logging for the foundation"""
@@ -157,7 +157,7 @@ class NeuroLiftFoundation:
             return True
             
         try:
-            self.logger.info("Initializing Agent Solidarity Kit (unified core)...")
+            self.logger.info("Initializing Agent Solidarity Framework Development Kit (ASFDK)...")
             start_time = datetime.now()
             
             # Initialize state management first
@@ -186,8 +186,12 @@ class NeuroLiftFoundation:
             if self.config.components.get("supervisor_ai", True):
                 self.supervisor = SupervisorAI(self)
                 await self.supervisor.initialize()
-                await self.supervisor.start()
                 self.logger.info("Supervisor AI initialized")
+
+            if self.config.components.get("vibevoice", True):
+                self.voice = VibeVoiceIntegration(self)
+                await self.voice.initialize()
+                self.logger.info("VibeVoice integration initialized")
             
             # Establish inter-component communication
             await self._establish_component_communication()
@@ -202,9 +206,7 @@ class NeuroLiftFoundation:
             self.startup_time = datetime.now()
             
             initialization_time = (datetime.now() - start_time).total_seconds()
-            self.logger.info(
-                f"Agent Solidarity Kit (unified core) initialized successfully in {initialization_time:.2f}s"
-            )
+            self.logger.info(f"Agent Solidarity Framework Development Kit (ASFDK) initialized successfully in {initialization_time:.2f}s")
             
             return True
             
@@ -231,7 +233,7 @@ class NeuroLiftFoundation:
 
     async def start(self) -> bool:
         """
-        Start the Agent Solidarity Kit unified core
+        Start the Agent Solidarity Framework Development Kit (ASFDK)
         
         Returns:
             bool: True if startup successful
@@ -245,7 +247,7 @@ class NeuroLiftFoundation:
             return True
             
         try:
-            self.logger.info("Starting Agent Solidarity Kit (unified core)...")
+            self.logger.info("Starting Agent Solidarity Framework Development Kit (ASFDK)...")
             
             # Start all active components
             if self.rrt:
@@ -259,13 +261,16 @@ class NeuroLiftFoundation:
                 
             if self.supervisor:
                 await self.supervisor.start()
+
+            if self.voice:
+                await self.voice.start()
             
             # Start background tasks
             asyncio.create_task(self._performance_monitoring_loop())
             asyncio.create_task(self._health_monitoring_loop())
             
             self.is_running = True
-            self.logger.info("Agent Solidarity Kit (unified core) started successfully")
+            self.logger.info("Agent Solidarity Framework Development Kit (ASFDK) started successfully")
             
             return True
             
@@ -676,7 +681,7 @@ async def create_foundation(user_id: str,
                           mode: FoundationMode = FoundationMode.UNIFIED,
                           config_path: Optional[str] = None) -> NeuroLiftFoundation:
     """
-    Factory function to create and initialize the Agent Solidarity Kit unified core
+    Factory function to create and initialize the Agent Solidarity Framework Development Kit (ASFDK)
     
     Args:
         user_id: Unique identifier for the user
@@ -684,7 +689,7 @@ async def create_foundation(user_id: str,
         config_path: Path to configuration file
         
     Returns:
-        Initialized unified core instance
+        Initialized Agent Solidarity Framework Development Kit (ASFDK) instance
     """
     # Load configuration
     if config_path and Path(config_path).exists():
@@ -710,7 +715,7 @@ async def create_foundation(user_id: str,
         await foundation.start()
         return foundation
     else:
-        raise Exception("Failed to initialize Agent Solidarity Kit (unified core)")
+        raise Exception("Failed to initialize Agent Solidarity Framework Development Kit (ASFDK)")
 
 
 # ============================================================================

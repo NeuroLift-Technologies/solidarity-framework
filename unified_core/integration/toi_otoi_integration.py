@@ -1,6 +1,6 @@
 """
 TOI-OTOI Framework Integration Module
-Integrates the TOI-OTOI Framework with the Agent Solidarity Kit unified core
+Integrates the TOI-OTOI Framework with the Agent Solidarity Framework Development Kit (ASFDK)
 """
 
 import asyncio
@@ -75,6 +75,10 @@ class TOIOTOIIntegration:
             if "general_preferences" in preferences:
                 await self._process_preferences_otoi(preferences["general_preferences"])
             
+            # Voice-based preference updates
+            if "voice_preferences" in preferences:
+                await self._process_voice_preferences(preferences["voice_preferences"])
+            
             return {
                 "status": "preferences_updated",
                 "toi_version": self._get_toi_version(),
@@ -92,6 +96,8 @@ class TOIOTOIIntegration:
             
             if optimization_type == "crisis_response":
                 return await self._optimize_crisis_response(optimization_request)
+            elif optimization_type == "voice_interaction":
+                return await self._optimize_voice_interaction(optimization_request)
             elif optimization_type == "user_experience":
                 return await self._optimize_user_experience(optimization_request)
             else:
@@ -126,21 +132,39 @@ class TOIOTOIIntegration:
         """Get current user Terms of Interaction"""
         return self.user_toi.copy()
     
-    async def ingest_rrt_crisis_context(self, rrt_message: Dict[str, Any]) -> None:
-        """Ingest RRT/communication-layer crisis context for OTOI learning."""
-        if not rrt_message:
-            return
-        if rrt_message.get("optimization_request"):
-            await self._update_learning_patterns_crisis(rrt_message.get("crisis_data"))
-
+    async def process_voice_configuration(self, voice_command: Dict[str, Any]) -> Dict[str, Any]:
+        """Process voice-based configuration through TOI-OTOI"""
+        try:
+            command_type = voice_command.get("type", "unknown")
+            
+            if command_type == "preference_update":
+                return await self._voice_preference_update(voice_command)
+            elif command_type == "toi_modification":
+                return await self._voice_toi_modification(voice_command)
+            elif command_type == "optimization_request":
+                return await self._voice_optimization_request(voice_command)
+            else:
+                return {"error": f"Unknown voice command type: {command_type}"}
+                
+        except Exception as e:
+            self.logger.error(f"Voice configuration processing failed: {e}")
+            return {"error": str(e)}
+    
     async def _load_user_toi(self):
         """Load user's Terms of Interaction"""
         # Default TOI structure
         self.user_toi = {
             "crisis_response": {
                 "auto_escalation": True,
+                "voice_support_preferred": True,
                 "external_contact_threshold": "red",
                 "privacy_level": "high"
+            },
+            "voice_interaction": {
+                "response_style": "supportive",
+                "verbosity": "moderate",
+                "emotional_tone": "calm",
+                "crisis_voice_enabled": True
             },
             "optimization": {
                 "learning_enabled": True,
@@ -177,6 +201,7 @@ class TOIOTOIIntegration:
         """Load learning patterns for optimization"""
         self.learning_patterns = {
             "crisis_response_patterns": {},
+            "voice_interaction_patterns": {},
             "preference_evolution": {},
             "effectiveness_trends": {}
         }
@@ -233,6 +258,14 @@ class TOIOTOIIntegration:
         for opportunity in optimization_opportunities:
             await self._apply_optimization(opportunity)
     
+    async def _process_voice_preferences(self, voice_preferences: Dict[str, Any]):
+        """Process voice-specific preferences"""
+        if "response_style" in voice_preferences:
+            self.user_toi["voice_interaction"]["response_style"] = voice_preferences["response_style"]
+        
+        if "crisis_support_style" in voice_preferences:
+            self.user_toi["crisis_response"]["voice_support_style"] = voice_preferences["crisis_support_style"]
+    
     async def _optimize_crisis_response(self, request: Dict[str, Any]) -> Dict[str, Any]:
         """Optimize crisis response protocols"""
         crisis_data = request.get("crisis_data", {})
@@ -247,6 +280,23 @@ class TOIOTOIIntegration:
             "optimization_type": "crisis_response",
             "strategy": optimized_strategy,
             "confidence": patterns.get("confidence", 0.5),
+            "applied": True
+        }
+    
+    async def _optimize_voice_interaction(self, request: Dict[str, Any]) -> Dict[str, Any]:
+        """Optimize voice interaction patterns"""
+        voice_data = request.get("voice_data", {})
+        
+        # Analyze voice interaction effectiveness
+        effectiveness = await self._analyze_voice_effectiveness(voice_data)
+        
+        # Generate voice optimization recommendations
+        recommendations = await self._generate_voice_optimization(effectiveness)
+        
+        return {
+            "optimization_type": "voice_interaction",
+            "recommendations": recommendations,
+            "effectiveness_score": effectiveness.get("score", 0.5),
             "applied": True
         }
     
@@ -311,25 +361,6 @@ class TOIOTOIIntegration:
             "execution_time": response.execution_time,
             "components": response.components_involved
         })
-
-    async def _update_learning_patterns_crisis(self, crisis_data: Any) -> None:
-        """Store lightweight crisis context for OTOI pattern tracking."""
-        if crisis_data is None:
-            return
-        patterns = self.learning_patterns["crisis_response_patterns"]
-        key = "rrt_ingest"
-        if key not in patterns:
-            patterns[key] = []
-        patterns[key].append(
-            {
-                "crisis_level": getattr(
-                    getattr(crisis_data, "crisis_level", None), "value", "unknown"
-                ),
-                "confidence": getattr(crisis_data, "confidence_score", None),
-            }
-        )
-        if len(patterns[key]) > 500:
-            patterns[key] = patterns[key][-500:]
     
     def _get_toi_version(self) -> str:
         """Get current TOI version identifier"""
@@ -389,7 +420,12 @@ class TOIOTOIIntegration:
     async def _apply_optimization(self, opportunity): pass
     async def _analyze_crisis_patterns(self, crisis_data): return {}
     async def _generate_crisis_optimization(self, patterns): return {}
+    async def _analyze_voice_effectiveness(self, voice_data): return {}
+    async def _generate_voice_optimization(self, effectiveness): return {}
     async def _analyze_experience_metrics(self, experience_data): return {}
     async def _generate_ux_optimization(self, metrics): return {}
     async def _analyze_system_performance(self): return {}
     async def _generate_general_optimization(self, performance): return {}
+    async def _voice_preference_update(self, voice_command): return {}
+    async def _voice_toi_modification(self, voice_command): return {}
+    async def _voice_optimization_request(self, voice_command): return {}

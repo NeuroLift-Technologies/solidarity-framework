@@ -1,4 +1,4 @@
-# NeuroLift Technologies' Agent Solidarity Kit
+# Agent Solidarity Framework Development Kit (ASFDK)
 
 **The Unified Agent Development Framework — The Layer Between the Model and the Agent**
 
@@ -9,11 +9,12 @@
 
 ## Overview
 
-The **NeuroLift Technologies' Agent Solidarity Kit** is the required governance and integration layer for all agents developed by NeuroLift Technologies. It evolved from our original neurodivergent-focused core work into a universal foundation for everything we create, and now sits between the AI model and the agent, providing:
+The **Agent Solidarity Framework Development Kit (ASFDK)** is the required governance and integration layer for all agents developed by NeuroLift Technologies. It sits between the AI model and the agent, providing:
 
 - **🚨 RRT Advocate** — Rapid Response Team for crisis intervention and immediate safety protocols
 - **📋 NLT-OTOI Framework** — Terms of Interaction and Orchestrated Terms of Interaction for governance and user preferences
 - **🌙 Sleepwalker Protocol (SWP)** — Emotional continuity governance for long-term safety across sessions
+- **🎙️ VibeVoice** — Open-source frontier voice AI for speech recognition (ASR) and text-to-speech (TTS)
 
 Every NLT agent **must** integrate this kit as its foundational layer. The Solidarity Framework ensures human safety, transparency, minimal footprint, and escalation culture.
 
@@ -23,7 +24,7 @@ Every NLT agent **must** integrate this kit as its foundational layer. The Solid
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│              NeuroLift Agent Solidarity Kit                      │
+│     Agent Solidarity Framework Development Kit (ASFDK)          │
 │          "The Layer Between the Model and the Agent"             │
 ├─────────────────────────────────────────────────────────────────┤
 │  ┌──────────────────┐  ┌──────────────────┐  ┌───────────────┐ │
@@ -36,6 +37,12 @@ Every NLT agent **must** integrate this kit as its foundational layer. The Solid
 │  │ • Tiered Alerts   │  │ • User Prefs     │  │ • Session     │ │
 │  │ • Agency Preserv. │  │ • Multi-Agent    │  │   Continuity  │ │
 │  └──────────────────┘  └──────────────────┘  └───────────────┘ │
+├─────────────────────────────────────────────────────────────────┤
+│                      VibeVoice (Voice Layer)                     │
+│  ┌──────────────────────────┐  ┌──────────────────────────────┐ │
+│  │ VibeVoice-ASR-7B          │  │ VibeVoice-Realtime-0.5B      │ │
+│  │ (Speech Recognition)      │  │ (Text-to-Speech Streaming)   │ │
+│  └──────────────────────────┘  └──────────────────────────────┘ │
 ├─────────────────────────────────────────────────────────────────┤
 │                        Unified Core                              │
 │  ┌──────────────────┐  ┌──────────────────┐  ┌───────────────┐ │
@@ -51,6 +58,7 @@ Every NLT agent **must** integrate this kit as its foundational layer. The Solid
 | **RRT Advocate** | [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) | Crisis intervention & safety |
 | **NLT-OTOI** | [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) | Interaction governance & orchestration |
 | **Sleepwalker** | [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) | Emotional continuity across sessions |
+| **VibeVoice** | [`NeuroLift-Technologies/VibeVoice`](https://github.com/NeuroLift-Technologies/VibeVoice) | Voice AI — ASR (speech recognition) & TTS (speech synthesis) |
 
 ## 🚀 Quick Start
 

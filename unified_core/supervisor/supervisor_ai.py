@@ -1,5 +1,5 @@
 """
-Supervisor AI - Central coordination for the Agent Solidarity Kit
+Supervisor AI - Central Coordination for the Agent Solidarity Framework Development Kit (ASFDK)
 Manages and coordinates all Advocates within the unified system
 """
 
@@ -40,9 +40,9 @@ class AdvocateInfo:
 class SupervisorAI:
     """
     Supervisor AI - Central coordination hub for all NeuroLift Advocates
-    
+
     Manages the activation, coordination, and optimization of specialized
-    Advocates within the Agent Solidarity Kit unified core.
+    Advocates within the Agent Solidarity Framework Development Kit (ASFDK).
     """
     
     def __init__(self, foundation):
@@ -92,9 +92,6 @@ class SupervisorAI:
         """Start Supervisor AI operations"""
         if not self.is_initialized:
             return False
-
-        if self.is_active:
-            return True
             
         try:
             # Start coordination loop
@@ -327,6 +324,18 @@ class SupervisorAI:
                 last_activity=datetime.now(),
                 performance_score=1.0,
                 specialization="optimization"
+            )
+        
+        # Register Voice Interface
+        if hasattr(self.foundation, 'voice') and self.foundation.voice:
+            self.advocates["voice_interface"] = AdvocateInfo(
+                name="voice_interface",
+                status=AdvocateStatus.DORMANT,
+                capabilities=["voice_interaction", "natural_language", "stress_detection", "conversation"],
+                current_load=0.0,
+                last_activity=datetime.now(),
+                performance_score=1.0,
+                specialization="voice_interaction"
             )
         
         self.logger.info(f"Registered {len(self.advocates)} Advocates")

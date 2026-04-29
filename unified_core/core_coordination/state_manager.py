@@ -1,5 +1,5 @@
 """
-Unified State Manager - Centralized state management for the Agent Solidarity Kit
+Unified State Manager - Centralized state management for the Agent Solidarity Framework Development Kit (ASFDK)
 Manages shared state across all components while maintaining privacy and consistency
 """
 
@@ -42,7 +42,7 @@ class StateEntry:
 
 class UnifiedStateManager:
     """
-    Unified State Manager for the Agent Solidarity Kit
+    Unified State Manager for the Agent Solidarity Framework Development Kit (ASFDK)
     
     Provides centralized, secure, and consistent state management across
     all foundation components while maintaining privacy and data integrity.
@@ -397,6 +397,10 @@ class UnifiedStateManager:
             "toi_otoi_framework": [
                 "user.preferences.*", "user.optimization.*", "user.learning.*",
                 "component.toi_otoi_framework.*", "session.*"
+            ],
+            "voice_interface": [
+                "user.voice_preferences.*", "user.conversation_history",
+                "component.voice_interface.*", "session.*"
             ],
             "supervisor_ai": [
                 "*"  # Supervisor has access to everything

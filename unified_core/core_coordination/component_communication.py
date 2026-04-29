@@ -1,5 +1,5 @@
 """
-Component Communication - Inter-component coordination for the Agent Solidarity Kit
+Component Communication - Inter-component coordination for the Agent Solidarity Framework Development Kit (ASFDK)
 Manages communication and data flow between all foundation components
 """
 
@@ -15,6 +15,7 @@ class MessageType(Enum):
     STATUS_UPDATE = "status_update"
     CRISIS_ALERT = "crisis_alert"
     OPTIMIZATION_REQUEST = "optimization_request"
+    VOICE_ANALYSIS = "voice_analysis"
     PREFERENCE_UPDATE = "preference_update"
     COORDINATION_REQUEST = "coordination_request"
     HEALTH_CHECK = "health_check"
@@ -43,10 +44,10 @@ class ComponentMessage:
 
 class ComponentCommunication:
     """
-    Manages communication between Agent Solidarity Kit components
+    Manages communication between all Agent Solidarity Framework Development Kit (ASFDK) components
     
     Provides a centralized communication hub for RRT Advocate, TOI-OTOI Framework,
-    Sleepwalker, and Supervisor AI to coordinate their activities.
+    Voice Interface, and Supervisor AI to coordinate their activities.
     """
     
     def __init__(self, state_manager):
@@ -86,36 +87,48 @@ class ComponentCommunication:
             self.logger.error(f"Communication initialization failed: {e}")
             return False
     
-    async def link_rrt_sleepwalker(self, rrt_component, sleepwalker_component):
-        """Establish communication link between RRT Advocate and Sleepwalker Protocol."""
+    async def link_rrt_voice(self, rrt_component, voice_component):
+        """Establish communication link between RRT Advocate and Voice Interface"""
         try:
-            channel_id = "rrt_sleepwalker_channel"
+            channel_id = "rrt_voice_channel"
+            
+            # Set up bidirectional communication
             self.active_channels[channel_id] = {
-                "components": ["rrt_advocate", "sleepwalker_protocol"],
+                "components": ["rrt_advocate", "voice_interface"],
                 "rrt_instance": rrt_component,
-                "sleepwalker_instance": sleepwalker_component,
+                "voice_instance": voice_component,
                 "established": datetime.now(),
-                "message_count": 0,
+                "message_count": 0
             }
-            self.logger.info("RRT-Sleepwalker communication link established")
+            
+            # Register message handlers
+            await self._register_rrt_voice_handlers(rrt_component, voice_component)
+            
+            self.logger.info("RRT-Voice communication link established")
+            
         except Exception as e:
-            self.logger.error(f"Failed to link RRT-Sleepwalker: {e}")
-
-    async def link_sleepwalker_framework(self, sleepwalker_component, framework_component):
-        """Establish communication link between Sleepwalker Protocol and TOI-OTOI."""
+            self.logger.error(f"Failed to link RRT-Voice: {e}")
+    
+    async def link_voice_framework(self, voice_component, framework_component):
+        """Establish communication link between Voice Interface and TOI-OTOI Framework"""
         try:
-            channel_id = "sleepwalker_framework_channel"
+            channel_id = "voice_framework_channel"
+            
             self.active_channels[channel_id] = {
-                "components": ["sleepwalker_protocol", "toi_otoi_framework"],
-                "sleepwalker_instance": sleepwalker_component,
+                "components": ["voice_interface", "toi_otoi_framework"],
+                "voice_instance": voice_component,
                 "framework_instance": framework_component,
                 "established": datetime.now(),
-                "message_count": 0,
+                "message_count": 0
             }
-            self.logger.info("Sleepwalker-Framework communication link established")
+            
+            await self._register_voice_framework_handlers(voice_component, framework_component)
+            
+            self.logger.info("Voice-Framework communication link established")
+            
         except Exception as e:
-            self.logger.error(f"Failed to link Sleepwalker-Framework: {e}")
-
+            self.logger.error(f"Failed to link Voice-Framework: {e}")
+    
     async def link_framework_rrt(self, framework_component, rrt_component):
         """Establish communication link between TOI-OTOI Framework and RRT Advocate"""
         try:
@@ -189,20 +202,36 @@ class ComponentCommunication:
             self.communication_metrics["failed_messages"] += 1
             return ""
     
-    async def rrt_to_framework(self, payload: Dict[str, Any]) -> bool:
-        """Send RRT data to TOI-OTOI Framework (e.g. crisis context for optimization)."""
+    async def rrt_to_voice(self, crisis_data: Dict[str, Any]) -> bool:
+        """Send crisis data from RRT Advocate to Voice Interface"""
         try:
             return await self.send_message(
                 source="rrt_advocate",
-                destination="toi_otoi_framework",
+                destination="voice_interface",
                 message_type=MessageType.CRISIS_ALERT,
-                data=payload,
+                data=crisis_data,
                 priority=MessagePriority.HIGH
             ) != ""
+            
         except Exception as e:
-            self.logger.error(f"RRT to Framework communication failed: {e}")
+            self.logger.error(f"RRT to Voice communication failed: {e}")
             return False
-
+    
+    async def voice_to_framework(self, voice_data: Dict[str, Any]) -> bool:
+        """Send voice analysis data to TOI-OTOI Framework"""
+        try:
+            return await self.send_message(
+                source="voice_interface",
+                destination="toi_otoi_framework",
+                message_type=MessageType.VOICE_ANALYSIS,
+                data=voice_data,
+                priority=MessagePriority.NORMAL
+            ) != ""
+            
+        except Exception as e:
+            self.logger.error(f"Voice to Framework communication failed: {e}")
+            return False
+    
     async def framework_to_rrt(self, optimization_data: Dict[str, Any]) -> bool:
         """Send optimization data from Framework to RRT Advocate"""
         try:
@@ -216,6 +245,21 @@ class ComponentCommunication:
             
         except Exception as e:
             self.logger.error(f"Framework to RRT communication failed: {e}")
+            return False
+    
+    async def voice_to_rrt(self, stress_data: Dict[str, Any]) -> bool:
+        """Send stress detection data from Voice to RRT Advocate"""
+        try:
+            return await self.send_message(
+                source="voice_interface",
+                destination="rrt_advocate",
+                message_type=MessageType.CRISIS_ALERT,
+                data=stress_data,
+                priority=MessagePriority.HIGH
+            ) != ""
+            
+        except Exception as e:
+            self.logger.error(f"Voice to RRT communication failed: {e}")
             return False
     
     async def broadcast_emergency(self, source: str, emergency_data: Dict[str, Any]) -> List[str]:
@@ -332,6 +376,38 @@ class ComponentCommunication:
             return self.message_handlers[destination].get(message_type)
         return None
     
+    async def _register_rrt_voice_handlers(self, rrt_component, voice_component):
+        """Register message handlers for RRT-Voice communication"""
+        # RRT Advocate handlers
+        if "rrt_advocate" not in self.message_handlers:
+            self.message_handlers["rrt_advocate"] = {}
+        
+        self.message_handlers["rrt_advocate"][MessageType.VOICE_ANALYSIS] = \
+            lambda msg: self._handle_voice_to_rrt(rrt_component, msg)
+        
+        # Voice Interface handlers
+        if "voice_interface" not in self.message_handlers:
+            self.message_handlers["voice_interface"] = {}
+        
+        self.message_handlers["voice_interface"][MessageType.CRISIS_ALERT] = \
+            lambda msg: self._handle_rrt_to_voice(voice_component, msg)
+    
+    async def _register_voice_framework_handlers(self, voice_component, framework_component):
+        """Register message handlers for Voice-Framework communication"""
+        # Voice Interface handlers
+        if "voice_interface" not in self.message_handlers:
+            self.message_handlers["voice_interface"] = {}
+        
+        self.message_handlers["voice_interface"][MessageType.OPTIMIZATION_REQUEST] = \
+            lambda msg: self._handle_framework_to_voice(voice_component, msg)
+        
+        # Framework handlers
+        if "toi_otoi_framework" not in self.message_handlers:
+            self.message_handlers["toi_otoi_framework"] = {}
+        
+        self.message_handlers["toi_otoi_framework"][MessageType.VOICE_ANALYSIS] = \
+            lambda msg: self._handle_voice_to_framework(framework_component, msg)
+    
     async def _register_framework_rrt_handlers(self, framework_component, rrt_component):
         """Register message handlers for Framework-RRT communication"""
         # Framework handlers
@@ -360,6 +436,38 @@ class ComponentCommunication:
             lambda msg: self._handle_emergency_to_supervisor(supervisor_component, msg)
     
     # Message handling methods
+    async def _handle_rrt_to_voice(self, voice_component, message: ComponentMessage):
+        """Handle crisis alert from RRT to Voice"""
+        try:
+            await voice_component.provide_crisis_support(message.data)
+            self.logger.info("Crisis alert delivered to Voice Interface")
+        except Exception as e:
+            self.logger.error(f"RRT to Voice handling failed: {e}")
+    
+    async def _handle_voice_to_rrt(self, rrt_component, message: ComponentMessage):
+        """Handle voice analysis data to RRT"""
+        try:
+            await rrt_component.handle_crisis(message.data)
+            self.logger.info("Voice analysis delivered to RRT Advocate")
+        except Exception as e:
+            self.logger.error(f"Voice to RRT handling failed: {e}")
+    
+    async def _handle_voice_to_framework(self, framework_component, message: ComponentMessage):
+        """Handle voice data to Framework"""
+        try:
+            await framework_component.process_voice_configuration(message.data)
+            self.logger.info("Voice data delivered to Framework")
+        except Exception as e:
+            self.logger.error(f"Voice to Framework handling failed: {e}")
+    
+    async def _handle_framework_to_voice(self, voice_component, message: ComponentMessage):
+        """Handle optimization request to Voice"""
+        try:
+            # Apply voice optimizations
+            self.logger.info("Optimization request delivered to Voice Interface")
+        except Exception as e:
+            self.logger.error(f"Framework to Voice handling failed: {e}")
+    
     async def _handle_framework_to_rrt(self, rrt_component, message: ComponentMessage):
         """Handle optimization request to RRT"""
         try:
@@ -369,10 +477,12 @@ class ComponentCommunication:
             self.logger.error(f"Framework to RRT handling failed: {e}")
     
     async def _handle_rrt_to_framework(self, framework_component, message: ComponentMessage):
-        """Handle RRT context for TOI-OTOI (no external voice layer)."""
+        """Handle crisis data to Framework"""
         try:
-            await framework_component.ingest_rrt_crisis_context(message.data)
-            self.logger.info("Crisis context delivered to TOI-OTOI")
+            await framework_component.analyze_interaction_for_optimization(
+                message.data.get("interaction"), message.data.get("response")
+            )
+            self.logger.info("Crisis data delivered to Framework")
         except Exception as e:
             self.logger.error(f"RRT to Framework handling failed: {e}")
     

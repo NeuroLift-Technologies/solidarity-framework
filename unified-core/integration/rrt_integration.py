@@ -1,6 +1,6 @@
 """
 RRT Advocate Integration Module
-Integrates the RRT Advocate with the unified NeuroLift Foundation
+Integrates the RRT Advocate with the Agent Solidarity Framework Development Kit (ASFDK)
 """
 
 import asyncio

@@ -1,5 +1,5 @@
 """
-Component Communication - Inter-component coordination for NeuroLift Foundation
+Component Communication - Inter-component coordination for the Agent Solidarity Framework Development Kit (ASFDK)
 Manages communication and data flow between all foundation components
 """
 
@@ -44,7 +44,7 @@ class ComponentMessage:
 
 class ComponentCommunication:
     """
-    Manages communication between all NeuroLift Foundation components
+    Manages communication between all Agent Solidarity Framework Development Kit (ASFDK) components
     
     Provides a centralized communication hub for RRT Advocate, TOI-OTOI Framework,
     Voice Interface, and Supervisor AI to coordinate their activities.

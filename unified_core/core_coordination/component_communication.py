@@ -108,6 +108,10 @@ class ComponentCommunication:
             
         except Exception as e:
             self.logger.error(f"Failed to link RRT-Voice: {e}")
+
+    async def link_rrt_sleepwalker(self, rrt_component, sleepwalker_component):
+        """Backward-compatible alias for linking RRT Advocate and Sleepwalker."""
+        await self.link_rrt_voice(rrt_component, sleepwalker_component)
     
     async def link_voice_framework(self, voice_component, framework_component):
         """Establish communication link between Voice Interface and TOI-OTOI Framework"""
@@ -128,6 +132,10 @@ class ComponentCommunication:
             
         except Exception as e:
             self.logger.error(f"Failed to link Voice-Framework: {e}")
+
+    async def link_sleepwalker_framework(self, sleepwalker_component, framework_component):
+        """Backward-compatible alias for linking Sleepwalker and Framework."""
+        await self.link_voice_framework(sleepwalker_component, framework_component)
     
     async def link_framework_rrt(self, framework_component, rrt_component):
         """Establish communication link between TOI-OTOI Framework and RRT Advocate"""

@@ -16,7 +16,20 @@ Closes #
 - [ ] 📖 Documentation update
 - [ ] 🔧 Refactor / chore (no functional change)
 
-## Checklist
+## Governance Checklist (ORG-DEV-OTOI-1.0.0)
+
+- [ ] Governance validation script passed: `bash .nltotoi/scripts/validate-governance.sh`
+- [ ] Agent self-registration filed to `docs/agent-log/registrations/` before work began
+- [ ] `docs/active-threads.md` updated — thread opened at session start, status updated
+- [ ] All commits follow `[AGENT_NAME] type(scope): description` format
+- [ ] Handoff record written to `docs/agent-log/handoffs/` using `templates/handoff-record.json`
+- [ ] No LLM provider locked in without Joshua W. Dorsey, Sr. approval
+- [ ] No architecture decisions made without Joshua W. Dorsey, Sr. approval
+- [ ] No production credentials or secrets committed
+- [ ] No external service integrations added without Joshua W. Dorsey, Sr. approval
+- [ ] Escalations (if any) documented in `docs/escalations/` or filed as GitHub issues
+
+## Code Checklist
 
 - [ ] My code follows the project's style guidelines
 - [ ] I have performed a self-review of my code

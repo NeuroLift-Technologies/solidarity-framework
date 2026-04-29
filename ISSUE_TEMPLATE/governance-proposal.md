@@ -9,7 +9,7 @@ assignees: ''
 <!--
 Governance changes require Joshua W. Dorsey, Sr. approval before any agent implements them.
 Do not implement a governance change based on this issue alone — wait for explicit approval.
-All approved governance changes should be made in .github-private and synced to this repo.
+All approved governance changes should be made directly in NeuroLift-Technologies/solidarity-framework.
 -->
 
 ## Proposal Summary
@@ -102,7 +102,7 @@ If approved, how should this change be implemented?
 - [ ] Joshua W. Dorsey, Sr. has reviewed
 - [ ] Proposal is approved / rejected / sent back for revision
 - [ ] Implementation is authorized
-- [ ] Changes are made in `.github-private` and synced
+- [ ] Changes are made in `NeuroLift-Technologies/solidarity-framework`
 
 **Decision:**
 <!-- Joshua will fill this in -->

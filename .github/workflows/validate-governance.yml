@@ -1,0 +1,53 @@
+name: Governance Validation
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run governance validation
+        run: bash .nltotoi/scripts/validate-governance.sh
+
+  agent-commit-format:
+    name: Agent Commit Format Check
+    runs-on: ubuntu-latest
+    # Skip for fork PRs per OTOI §4.2 Fork Repository Exception
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check agent commit format
+        run: |
+          set +e
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+          PATTERN='^\[.+\] (feat|fix|docs|refactor|chore|test|ci)\(.+\): .+'
+          FAILURES=0
+
+          echo ""
+          echo "Checking commits between ${BASE} and ${HEAD} for OTOI §4.2 commit format..."
+          echo "Required: [AGENT_NAME] type(scope): description"
+          echo ""
+
+          while IFS= read -r line; do
+            SHA=$(echo "$line" | cut -d' ' -f1)
+            MSG=$(echo "$line" | cut -d' ' -f2-)
+            if echo "$MSG" | grep -qE "$PATTERN"; then
+              echo "  ✓ ${SHA}: ${MSG}"
+            else
+              echo "  ✗ ${SHA}: ${MSG}"
+              echo "    → Non-compliant. Expected: [AGENT_NAME] type(scope): description"
+              FAILURES=$((FAILURES + 1))
+            fi
+          done < <(git log --oneline "${BASE}..${HEAD}" 2>/dev/null)
+
+          echo ""
+          if [ "$FAILURES" -gt 0 ]; then
+            echo "FAILED: ${FAILURES} commit(s) do not follow the required format (OTOI §4.2)."
+            echo "See SOPs/new-agent-onboarding.md Step 7 and NLT-DEV-OTOI.md §4.2 for the required format."
+            exit 1
+          else
+            echo "PASSED: All commits follow the required agent commit format (OTOI §4.2)."
+          fi

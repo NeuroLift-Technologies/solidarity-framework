@@ -1,4 +1,3 @@
-<!-- SYNCED FROM .github-private — do not edit directly -->
 # SOP-NLT-003 — Incident Response
 > Standard Operating Procedure · ORG-DEV-OTOI-1.0.0
 > Applies to: All AI coding agents and human contributors at NeuroLift Technologies
@@ -182,4 +181,4 @@ If credentials, tokens, API keys, or secrets are committed to any repository:
 
 ---
 
-*Canonical source: `.github-private/SOPs/incident-response.md` · Synced to public `.github` repo*
+*Maintained in `NeuroLift-Technologies/solidarity-framework`*

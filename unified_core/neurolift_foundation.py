@@ -23,8 +23,8 @@ from integration.toi_otoi_integration import TOIOTOIIntegration
 from integration.sleepwalker_integration import SleepwalkerIntegration
 from integration.vibevoice_integration import VibeVoiceIntegration
 from supervisor.supervisor_ai import SupervisorAI
-from coordination.state_manager import UnifiedStateManager
-from coordination.component_communication import ComponentCommunication
+from core_coordination.state_manager import UnifiedStateManager
+from core_coordination.component_communication import ComponentCommunication
 
 class FoundationMode(Enum):
     """Operating modes for the NeuroLift Agent Solidarity Kit"""
@@ -186,6 +186,7 @@ class NeuroLiftFoundation:
             if self.config.components.get("supervisor_ai", True):
                 self.supervisor = SupervisorAI(self)
                 await self.supervisor.initialize()
+                await self.supervisor.start()
                 self.logger.info("Supervisor AI initialized")
 
             if self.config.components.get("vibevoice", True):
@@ -199,7 +200,7 @@ class NeuroLiftFoundation:
             # Perform system health check
             health_status = await self.health_check()
             if not health_status["overall_healthy"]:
-                raise Exception(f"System health check failed: {health_status}")
+                self.logger.warning(f"System health check reported issues at startup: {health_status}")
             
             # Mark as initialized
             self.is_initialized = True

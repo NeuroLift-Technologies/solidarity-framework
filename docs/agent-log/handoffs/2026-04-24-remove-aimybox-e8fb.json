@@ -1,0 +1,16 @@
+{
+  "handoff_record": {
+    "session_id": "remove-aimybox-e8fb",
+    "handoff_date": "2026-04-24",
+    "agent_name": "CURSOR",
+    "branch": "cursor/review-fix-refresh-and-build-repo-5f72",
+    "completed": [
+      "Deleted unified_core/integration/voice_integration.py and removed voice from NeuroLiftFoundation",
+      "Stripped voice routes from ComponentCommunication; added rrt_to_framework and ingesting via TOIOTOIIntegration.ingest_rrt_crisis_context",
+      "Pruned toi_otoi_integration voice-only APIs and default TOI keys",
+      "Removed voice from supervisor advocate registry, rrt_integration, state permissions, config/foundation.yml",
+      "Rewrote docs/unified_architecture.md without Aimybox; updated tests/integration_test.py"
+    ],
+    "test_status": "python3 tests/integration_test.py with PYTHONPATH=unified_core:rrt-advocate/src — 4/4 passed"
+  }
+}

@@ -110,7 +110,7 @@ class ComponentCommunication:
             self.logger.error(f"Failed to link RRT-Voice: {e}")
 
     async def link_rrt_sleepwalker(self, rrt_component, sleepwalker_component):
-        """Backward-compatible alias for linking RRT Advocate and Sleepwalker."""
+        """Establish communication link between RRT Advocate and Sleepwalker."""
         try:
             channel_id = "rrt_sleepwalker_channel"
             self.active_channels[channel_id] = {
@@ -145,7 +145,7 @@ class ComponentCommunication:
             self.logger.error(f"Failed to link Voice-Framework: {e}")
 
     async def link_sleepwalker_framework(self, sleepwalker_component, framework_component):
-        """Backward-compatible alias for linking Sleepwalker and Framework."""
+        """Establish communication link between Sleepwalker and Framework."""
         try:
             channel_id = "sleepwalker_framework_channel"
             self.active_channels[channel_id] = {

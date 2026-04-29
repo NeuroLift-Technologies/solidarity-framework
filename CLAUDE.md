@@ -9,20 +9,21 @@
 |--------------------|-----------------------------------------------------------|
 | **Repository**     | `NeuroLift-Technologies/solidarity-framework`              |
 | **Visibility**     | Private                                                    |
-| **Purpose**        | Agent Solidarity Kit — The layer between the model and agent |
+| **Purpose**        | Agent Solidarity Framework Development Kit (ASFDK) — The layer between the model and agent |
 | **OTOI Version**   | ORG-DEV-OTOI-1.0.0                                        |
 | **Governing SOP**  | SOP-NLT-001 (`SOPs/new-agent-onboarding.md`)              |
-| **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol               |
+| **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol, VibeVoice    |
 
 ---
 
 ## Purpose of This Repository
 
-The **solidarity-framework** repository is the **NeuroLift Technologies' Agent Solidarity Kit** — the required governance and integration layer for all NLT agents. It combines three core components:
+The **solidarity-framework** repository is the **Agent Solidarity Framework Development Kit (ASFDK)** — the required governance and integration layer for all NLT agents. It combines four core components:
 
 - **RRT Advocate** (`rrt-advocate/`) — Crisis intervention and immediate safety protocols
 - **NLT-OTOI Framework** (`nlt-otoi/`) — Interaction governance and orchestration
 - **Sleepwalker Protocol** (`sleepwalker/`) — Emotional continuity across sessions
+- **VibeVoice** (`vibevoice/`) — Open-source frontier voice AI (ASR + TTS)
 - **Unified Core** (`unified-core/`) — Integration layer connecting all components
 
 All agents developed by NeuroLift Technologies **must** use this kit as the layer between the AI model and the agent.

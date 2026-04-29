@@ -1,14 +1,15 @@
-# NeuroLift Agent Solidarity Kit - Unified Architecture Design
+# Agent Solidarity Framework Development Kit (ASFDK) - Unified Architecture Design
 
 ## Overview
 
-The NeuroLift Agent Solidarity Kit represents the integration of three core components into a unified agent development framework — the required layer between the AI model and the agent:
+The Agent Solidarity Framework Development Kit (ASFDK) represents the integration of four core components into a unified agent development framework — the required layer between the AI model and the agent:
 
 1. **RRT Advocate** — Crisis intervention and immediate safety (Protective Layer)
 2. **NLT-OTOI Framework** — Terms of Interaction and Orchestrated Terms of Interaction (Constitutional Layer)
 3. **Sleepwalker Protocol (SWP)** — Emotional continuity governance across sessions (Continuity Layer)
+4. **VibeVoice** — Open-source frontier voice AI for ASR and TTS (Voice Layer)
 
-This unified architecture creates the complete foundation for all NeuroLift Technologies agents, combining crisis response, interaction governance, and emotional continuity into a cohesive governance layer.
+This unified architecture creates the complete foundation for all NeuroLift Technologies agents, combining crisis response, interaction governance, emotional continuity, and voice interaction into a cohesive governance layer.
 
 ## Architectural Principles
 
@@ -89,33 +90,34 @@ class TOIOTOIIntegration:
         return await self.optimize_system_responses(crisis_history)
 ```
 
-### 3. Aimybox Voice Interface Integration
+### 3. VibeVoice Integration
 
 #### Core Capabilities
-- Natural language voice interaction
-- Speech-to-text and text-to-speech processing
+- Natural language voice interaction (ASR + TTS)
+- Long-form speech-to-text via VibeVoice-ASR-7B (60-minute single-pass, 50+ languages, speaker diarization)
+- Streaming text-to-speech via VibeVoice-Realtime-0.5B (low-latency synthesis)
 - Voice-based command recognition and execution
-- Emotional tone and stress pattern analysis
+- Emotional tone and stress pattern analysis for crisis detection support
 
 #### Integration Points
 ```python
-# Aimybox Voice Interface integration with unified core
-class VoiceInterfaceIntegration:
-    def __init__(self, unified_core):
-        self.core = unified_core
-        self.rrt_advocate = unified_core.rrt
-        self.toi_otoi = unified_core.framework
+# VibeVoice integration with unified core
+class VibeVoiceIntegration:
+    def __init__(self, foundation):
+        self.foundation = foundation
+        self.rrt = foundation.rrt
+        self.framework = foundation.framework
         
     async def voice_crisis_intervention(self):
         """Voice-guided crisis intervention protocols"""
-        crisis_level = await self.rrt_advocate.assess_current_state()
+        crisis_level = await self.rrt.assess_current_state()
         if crisis_level.requires_intervention:
             return await self.guide_voice_intervention(crisis_level)
             
     async def voice_toi_management(self):
         """Voice-based TOI configuration and optimization"""
         voice_command = await self.capture_voice_command()
-        return await self.toi_otoi.process_voice_configuration(voice_command)
+        return await self.framework.process_voice_configuration(voice_command)
 ```
 
 ## Unified Core Architecture
@@ -124,9 +126,9 @@ class VoiceInterfaceIntegration:
 ```python
 class NeuroLiftFoundation:
     """
-    Central coordination hub for the unified NeuroLift Foundation
+    Central coordination hub for the Agent Solidarity Framework Development Kit (ASFDK)
     
-    Integrates RRT Advocate, TOI-OTOI Framework, and Aimybox Voice Interface
+    Integrates RRT Advocate, TOI-OTOI Framework, and VibeVoice
     into a cohesive ADHD support system.
     """
     
@@ -264,12 +266,12 @@ class UnifiedStateManager:
 # Update from upstream repositories
 git subtree pull --prefix=rrt-advocate rrt-upstream main --squash
 git subtree pull --prefix=toi-otoi-framework toi-otoi-upstream main --squash
-git subtree pull --prefix=aimybox-voice aimybox-upstream master --squash
+git subtree pull --prefix=vibevoice https://github.com/NeuroLift-Technologies/VibeVoice.git main --squash
 
 # Push changes back to upstream (when needed)
 git subtree push --prefix=rrt-advocate rrt-upstream main
 git subtree push --prefix=toi-otoi-framework toi-otoi-upstream main
-git subtree push --prefix=aimybox-voice aimybox-upstream master
+git subtree push --prefix=vibevoice https://github.com/NeuroLift-Technologies/VibeVoice.git main
 ```
 
 ### Integration Testing

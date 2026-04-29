@@ -1,6 +1,6 @@
 """
 TOI-OTOI Framework Integration Module
-Integrates the TOI-OTOI Framework with the unified NeuroLift Foundation
+Integrates the TOI-OTOI Framework with the Agent Solidarity Framework Development Kit (ASFDK)
 """
 
 import asyncio

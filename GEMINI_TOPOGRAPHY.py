@@ -5,7 +5,9 @@ This file provides comprehensive information about the Agent Solidarity Kit repo
 structure, component integration, and data relationships for AI system understanding.
 
 Repository: solidarity-framework
-Purpose: Unified Agent Development Framework combining RRT Advocate, NLT-OTOI Framework, and Sleepwalker Protocol
+Purpose: Unified agent development platform — ASFDK core layer (RRT Advocate, NLT-OTOI Framework,
+         Sleepwalker Protocol, VibeVoice), coding-agent operations hub (agents, SOPs, governance
+         workflows), and Cloudflare agent development resources (links, MCP configs, hosting)
 Owner: NeuroLift Technologies
 Organization: NeuroLift Technologies
 Governance: ORG-DEV-OTOI-1.0.0
@@ -42,10 +44,12 @@ class RepositoryTopography:
     # Project Information
     project_title: str = "NeuroLift Agent Solidarity Kit"
     project_description: str = """
-    The unified agent development framework required for all NeuroLift Technologies agents.
-    Combines three core components — RRT Advocate (crisis intervention), NLT-OTOI Framework 
-    (interaction governance), and Sleepwalker Protocol (emotional continuity) — into the 
-    layer between the model and the agent.
+    The unified agent development platform for NeuroLift Technologies. Combines four core ASFDK
+    components — RRT Advocate (crisis intervention), NLT-OTOI Framework (interaction governance),
+    Sleepwalker Protocol (emotional continuity), and VibeVoice (voice AI) — as the required layer
+    between the model and the agent. Also serves as the org-wide coding-agent operations hub
+    (agent profiles, SOPs, governance workflows) and Cloudflare agent development reference
+    (Agents SDK resources, MCP server configs, and hosting infrastructure).
     """
     
     # Governance

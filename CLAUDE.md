@@ -24,7 +24,7 @@ The **solidarity-framework** repository is the **Agent Solidarity Framework Deve
 - **RRT Advocate** (`rrt-advocate/`) — Crisis intervention and immediate safety protocols
 - **NLT-OTOI Framework** (`nlt-otoi/`) — Interaction governance and orchestration
 - **Sleepwalker Protocol** (`sleepwalker/`) — Emotional continuity across sessions
-- **VibeVoice** — Open-source frontier voice AI (ASR + TTS)
+- **VibeVoice** — Open-source frontier voice AI (ASR + TTS) — see [`NeuroLift-Technologies/VibeVoice`](https://github.com/NeuroLift-Technologies/VibeVoice)
 - **Unified Core** (`unified-core/`) — Integration layer connecting all components
 
 ### 2. Coding-Agent Operations Hub

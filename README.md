@@ -1,6 +1,6 @@
 # Agent Solidarity Framework Development Kit (ASFDK)
 
-**The Unified Agent Development Platform — The Layer Between the Model and the Agent**
+**The Unified Agent Development Platform — ASFDK Core · Agent Operations · Cloudflare Dev Resources**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -156,7 +156,7 @@ if __name__ == "__main__":
 ```
 solidarity-framework/                    # Agent Solidarity Kit root
 │
-│  ── Core ASFDK Components ──────────────────────────────────────────────
+│  -- Core ASFDK Components ---------------------------------------------------
 ├── rrt-advocate/                        # 🚨 Crisis intervention component
 │   ├── src/rrt_advocate.py             # Core crisis intervention engine
 │   ├── config/crisis_thresholds.yaml   # Crisis detection configuration
@@ -182,7 +182,7 @@ solidarity-framework/                    # Agent Solidarity Kit root
 │   ├── supervisor/                     # Supervisor AI coordination
 │   └── coordination/                   # Cross-component coordination
 │
-│  ── Coding-Agent Operations Hub ────────────────────────────────────────
+│  -- Coding-Agent Operations Hub ---------------------------------------------
 ├── agents/                             # 🤖 Org-wide agent & skill profiles
 │   ├── nlt-governance-steward.md      # OTOI compliance & guidance agent
 │   ├── rrt-advocate-skill.md          # RRT Advocate skill definition
@@ -215,12 +215,12 @@ solidarity-framework/                    # Agent Solidarity Kit root
 │   ├── workflows/
 │   └── PULL_REQUEST_TEMPLATE.md
 │
-│  ── Cloudflare Agent Development ───────────────────────────────────────
+│  -- Cloudflare Agent Development --------------------------------------------
 ├── links.md                            # 🔗 Cloudflare agent development references
 ├── mcp-config.yaml                     # 🔌 MCP server configurations (GitHub + Cloudflare)
 ├── hosting/                            # 🌐 Web application layer (Next.js)
 │
-│  ── Repository Root ────────────────────────────────────────────────────
+│  -- Repository Root ---------------------------------------------------------
 ├── AGENTS.md                           # Agent coordination protocol
 ├── CLAUDE.md                           # AI assistant guide (OTOI compliant)
 ├── NLT-DEV-OTOI.md                    # Org-level coding agent contract

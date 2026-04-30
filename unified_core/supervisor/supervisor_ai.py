@@ -92,6 +92,8 @@ class SupervisorAI:
         """Start Supervisor AI operations"""
         if not self.is_initialized:
             return False
+        if self.is_active:
+            return True
             
         try:
             # Start coordination loop

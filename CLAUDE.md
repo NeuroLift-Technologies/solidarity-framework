@@ -9,22 +9,34 @@
 |--------------------|-----------------------------------------------------------|
 | **Repository**     | `NeuroLift-Technologies/solidarity-framework`              |
 | **Visibility**     | Private                                                    |
-| **Purpose**        | Agent Solidarity Framework Development Kit (ASFDK) — The layer between the model and agent |
+| **Purpose**        | Agent Solidarity Framework Development Kit (ASFDK) — Unified agent development platform: ASFDK core layer, coding-agent operations hub, and Cloudflare agent development resources |
 | **OTOI Version**   | ORG-DEV-OTOI-1.0.0                                        |
 | **Governing SOP**  | SOP-NLT-001 (`SOPs/new-agent-onboarding.md`)              |
-| **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol, VibeVoice    |
+| **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol, VibeVoice, Agent Ops Hub, Cloudflare Dev Resources |
 
 ---
 
 ## Purpose of This Repository
 
-The **solidarity-framework** repository is the **Agent Solidarity Framework Development Kit (ASFDK)** — the required governance and integration layer for all NLT agents. It combines four core components:
+The **solidarity-framework** repository is the **Agent Solidarity Framework Development Kit (ASFDK)** — the unified agent development platform for NeuroLift Technologies. It serves three interconnected purposes:
 
+### 1. ASFDK Core Layer (layer between the model and the agent)
 - **RRT Advocate** (`rrt-advocate/`) — Crisis intervention and immediate safety protocols
 - **NLT-OTOI Framework** (`nlt-otoi/`) — Interaction governance and orchestration
 - **Sleepwalker Protocol** (`sleepwalker/`) — Emotional continuity across sessions
-- **VibeVoice** (`vibevoice/`) — Open-source frontier voice AI (ASR + TTS)
+- **VibeVoice** — Open-source frontier voice AI (ASR + TTS) — see [`NeuroLift-Technologies/VibeVoice`](https://github.com/NeuroLift-Technologies/VibeVoice)
 - **Unified Core** (`unified-core/`) — Integration layer connecting all components
+
+### 2. Coding-Agent Operations Hub
+- **Agent & Skill Profiles** (`agents/`) — Org-wide custom agent and skill definitions
+- **Governance SOPs** (`SOPs/`) — Standard operating procedures for agent onboarding, repo setup, and incident response
+- **Templates** (`templates/`) — OTOI-compliant registration and handoff artifacts
+- **CI Workflows** (`.github/workflows/`) — Automated governance validation and enforcement
+
+### 3. Cloudflare Agent Development Platform
+- **Agent Reference Links** (`links.md`) — Curated Cloudflare Workers, Agents SDK, and MCP resources
+- **MCP Server Configuration** (`mcp-config.yaml`) — Ready-to-use GitHub and Cloudflare MCP configs
+- **Hosting** (`hosting/`) — Web application layer for agent-facing interfaces
 
 All agents developed by NeuroLift Technologies **must** use this kit as the layer between the AI model and the agent.
 

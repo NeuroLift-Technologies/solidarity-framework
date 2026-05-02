@@ -22,25 +22,28 @@ This file tracks all **current and recently completed** work threads in this rep
 
 <!-- Add new threads here. One entry per thread. -->
 
-### THREAD-001 — Governance File Bootstrap
-| Field | Value |
-|-------|-------|
-| **Thread ID** | THREAD-001 |
-| **Status** | 🔴 Stale — Escalation Required |
-| **Started** | 2025-04-04 |
-| **Owner** | Pending assignment |
-| **Branch** | `copilot/sync-governance-public-files` (branch not found in repo) |
-| **Task** | Create and populate all initial governance files for the `.github` public repo as part of the `sync-governance-public.yml` workflow bootstrap |
-| **Scope** | `CLAUDE.md`, `AGENTS.md`, `docs/`, `templates/`, `SOPs/`, `ISSUE_TEMPLATE/agent-escalation.md`, `ISSUE_TEMPLATE/governance-proposal.md`, `.nltotoi/` |
-| **Blockers** | Thread has had no update in 13+ months. Branch `copilot/sync-governance-public-files` does not exist in this repository. Task appears to target the separate `NeuroLift-Technologies/.github` public repo, which is out of scope for this agent. |
-| **Related PR** | TBD |
-| **Notes** | **STALE — flagged 2026-05-02 by GitHub Copilot session c9d2.** No owner has been assigned and the branch does not exist. Per conflict avoidance rules, stale threads (7+ days with no update) must be escalated to Joshua W. Dorsey, Sr. This is the initial governance bootstrap. No prior governance infrastructure exists in this repo. |
+<!-- No active threads. -->
 
 ---
 
 ## Completed Threads
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
+
+### THREAD-001 — Governance File Bootstrap
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-001 |
+| **Status** | ✅ Complete |
+| **Started** | 2025-04-04 |
+| **Completed** | 2026-05-02 |
+| **Owner** | GitHub Copilot (@copilot) — session c9d4 |
+| **Branch** | `copilot/work-on-active-threads-again` |
+| **Task** | Create the `sync-governance-public.yml` workflow to bootstrap governance files from solidarity-framework into the `NeuroLift-Technologies/.github` public repo |
+| **Scope** | `.github/workflows/sync-governance-public.yml` — all other governance files (CLAUDE.md, AGENTS.md, docs/, templates/, SOPs/, ISSUE_TEMPLATE/agent-escalation.md, ISSUE_TEMPLATE/governance-proposal.md, .nltotoi/) already existed from prior threads |
+| **Blockers** | None — workflow created. Requires `GOVERNANCE_SYNC_TOKEN` secret (PAT with `contents: write` on NeuroLift-Technologies/.github) to be configured by Joshua W. Dorsey, Sr. before the workflow can push to the target repo |
+| **Related PR** | `copilot/work-on-active-threads-again` |
+| **Notes** | Resumed and completed by session c9d4 per explicit user instruction. The `sync-governance-public.yml` workflow syncs AGENTS.md, NLT-DEV-OTOI.md, SOPs/, templates/, ISSUE_TEMPLATE/agent-escalation.md, ISSUE_TEMPLATE/governance-proposal.md, PULL_REQUEST_TEMPLATE/agent-contribution.md, and .nltotoi/ to NeuroLift-Technologies/.github on every push to main/master that touches those files, plus supports workflow_dispatch with a dry-run option. A human must add the GOVERNANCE_SYNC_TOKEN secret once before the first run. |
 
 ### THREAD-004 — Solidarity Framework Skills
 | Field | Value |

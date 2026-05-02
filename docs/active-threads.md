@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-04-29
+> Last updated: 2026-05-02
 
 ---
 
@@ -26,15 +26,51 @@ This file tracks all **current and recently completed** work threads in this rep
 | Field | Value |
 |-------|-------|
 | **Thread ID** | THREAD-001 |
-| **Status** | 🟡 In Progress |
+| **Status** | 🔴 Stale — Escalation Required |
 | **Started** | 2025-04-04 |
 | **Owner** | Pending assignment |
-| **Branch** | `copilot/sync-governance-public-files` |
+| **Branch** | `copilot/sync-governance-public-files` (branch not found in repo) |
 | **Task** | Create and populate all initial governance files for the `.github` public repo as part of the `sync-governance-public.yml` workflow bootstrap |
 | **Scope** | `CLAUDE.md`, `AGENTS.md`, `docs/`, `templates/`, `SOPs/`, `ISSUE_TEMPLATE/agent-escalation.md`, `ISSUE_TEMPLATE/governance-proposal.md`, `.nltotoi/` |
-| **Blockers** | None |
+| **Blockers** | Thread has had no update in 13+ months. Branch `copilot/sync-governance-public-files` does not exist in this repository. Task appears to target the separate `NeuroLift-Technologies/.github` public repo, which is out of scope for this agent. |
 | **Related PR** | TBD |
-| **Notes** | This is the initial governance bootstrap. No prior governance infrastructure exists in this repo. |
+| **Notes** | **STALE — flagged 2026-05-02 by GitHub Copilot session c9d2.** No owner has been assigned and the branch does not exist. Per conflict avoidance rules, stale threads (7+ days with no update) must be escalated to Joshua W. Dorsey, Sr. This is the initial governance bootstrap. No prior governance infrastructure exists in this repo. |
+
+---
+
+## Completed Threads
+
+<!-- Move threads here when closed. Retain for 30 days after completion. -->
+
+### THREAD-004 — Solidarity Framework Skills
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-004 |
+| **Status** | ✅ Complete |
+| **Started** | 2026-04-28 |
+| **Completed** | 2026-05-02 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/create-skills-for-solidarity-framework` |
+| **Task** | Create standalone skill files for each Solidarity Framework component (RRT Advocate, NLT-OTOI, Sleepwalker Protocol, Unified Foundation) to enable modular adoption |
+| **Scope** | `agents/rrt-advocate-skill.md`, `agents/nlt-otoi-skill.md`, `agents/sleepwalker-skill.md`, `agents/solidarity-foundation-skill.md`, `docs/active-threads.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
+| **Blockers** | None |
+| **Related PR** | Branch `copilot/create-skills-for-solidarity-framework` |
+| **Notes** | All four skill files verified present and complete as of 2026-05-02. Closed by GitHub Copilot session c9d2. |
+
+### THREAD-003 — Governance Enforcement for Remote Agents
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-003 |
+| **Status** | ✅ Complete |
+| **Started** | 2026-04-28 |
+| **Completed** | 2026-05-02 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/update-deployment-instructions` |
+| **Task** | Investigate root cause of VS Code Copilot Agents - Insiders not following governance; implement fixes to enforce OTOI §4.1 session start protocol for all remote agents |
+| **Scope** | `.github/copilot-instructions.md`, `.github/PULL_REQUEST_TEMPLATE.md`, `.github/workflows/validate-governance.yml`, `docs/active-threads.md` |
+| **Blockers** | None |
+| **Related PR** | Branch `copilot/update-deployment-instructions` |
+| **Notes** | Root cause: `.github/copilot-instructions.md` contained no OTOI governance protocol — only generic coding standards. VS Code Copilot reads this file at session start; without governance instructions there, it had no awareness of SOP-NLT-001. Three fixes: (1) copilot-instructions.md updated with full OTOI session start protocol, commit format, guardrails, escalation triggers, and handoff requirement; (2) PULL_REQUEST_TEMPLATE.md updated with governance checklist; (3) validate-governance.yml updated with agent-commit-format CI job. All three files verified complete 2026-05-02 by GitHub Copilot session c9d2. |
 
 ### THREAD-002 — Governance File Repository Scoping
 | Field | Value |
@@ -49,40 +85,6 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Blockers** | None |
 | **Related PR** | Branch `copilot/update-deployment-instructions` |
 | **Notes** | Governance session artifacts (registration, this thread entry, handoff record) were filed retroactively per §2.1 transparency requirement. Work commits: `8b594e6`, `92618ca`. No architectural decisions were made; all changes were scoping/naming corrections only. |
-
-### THREAD-004 — Solidarity Framework Skills
-| Field | Value |
-|-------|-------|
-| **Thread ID** | THREAD-004 |
-| **Status** | 🟡 In Progress |
-| **Started** | 2026-04-28 |
-| **Owner** | GitHub Copilot (@copilot) |
-| **Branch** | `copilot/create-skills-for-solidarity-framework` |
-| **Task** | Create standalone skill files for each Solidarity Framework component (RRT Advocate, NLT-OTOI, Sleepwalker Protocol, Unified Foundation) to enable modular adoption |
-| **Scope** | `agents/rrt-advocate-skill.md`, `agents/nlt-otoi-skill.md`, `agents/sleepwalker-skill.md`, `agents/solidarity-foundation-skill.md`, `docs/active-threads.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
-| **Blockers** | None |
-| **Related PR** | Branch `copilot/create-skills-for-solidarity-framework` |
-| **Notes** | No architectural changes. Pure documentation/skill-file authoring. Skills are additive — no existing files deleted or modified. |
-
-### THREAD-003 — Governance Enforcement for Remote Agents
-| Field | Value |
-|-------|-------|
-| **Thread ID** | THREAD-003 |
-| **Status** | 🟡 In Progress |
-| **Started** | 2026-04-28 |
-| **Owner** | GitHub Copilot (@copilot) |
-| **Branch** | `copilot/update-deployment-instructions` |
-| **Task** | Investigate root cause of VS Code Copilot Agents - Insiders not following governance; implement fixes to enforce OTOI §4.1 session start protocol for all remote agents |
-| **Scope** | `.github/copilot-instructions.md`, `.github/PULL_REQUEST_TEMPLATE.md`, `.github/workflows/validate-governance.yml`, `docs/active-threads.md` |
-| **Blockers** | None |
-| **Related PR** | Branch `copilot/update-deployment-instructions` |
-| **Notes** | Root cause: `.github/copilot-instructions.md` contained no OTOI governance protocol — only generic coding standards. VS Code Copilot reads this file at session start; without governance instructions there, it had no awareness of SOP-NLT-001. Three fixes: (1) copilot-instructions.md updated with full OTOI session start protocol, commit format, guardrails, escalation triggers, and handoff requirement; (2) PULL_REQUEST_TEMPLATE.md updated with governance checklist; (3) validate-governance.yml updated with agent-commit-format CI job. |
-
----
-
-## Completed Threads
-
-<!-- Move threads here when closed. Retain for 30 days after completion. -->
 
 ### THREAD-ASK-remove-aimybox — Remove Aimybox / voice interface layer
 | Field | Value |

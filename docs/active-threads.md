@@ -1,6 +1,6 @@
-# Active Threads — NeuroLift-Technologies/.github
+# Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-04-04
+> Last updated: 2026-04-29
 
 ---
 
@@ -36,13 +36,73 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Related PR** | TBD |
 | **Notes** | This is the initial governance bootstrap. No prior governance infrastructure exists in this repo. |
 
+### THREAD-002 — Governance File Repository Scoping
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-002 |
+| **Status** | ✅ Complete |
+| **Started** | 2026-04-28 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/update-deployment-instructions` |
+| **Task** | Update all governance files pulled in from .github-private to replace generic/template references with solidarity-framework–specific values (repo name, paths, URLs) |
+| **Scope** | `AGENTS.md`, `NLT-DEV-OTOI.md`, `SOPs/new-agent-onboarding.md`, `SOPs/repo-governance-setup.md`, `SOPs/incident-response.md`, `SOPs/SOPs/new-agent-onboarding.md`, `SOPs/SOPs/repo-governance-setup.md`, `SOPs/SOPs/incident-response.md`, `agents/nlt-governance-steward.md`, `.nltotoi/index/governance-files.md`, `.nltotoi/.nltotoi/README.md`, `.nltotoi/.nltotoi/index/governance-files.md`, `.nltotoi/.nltotoi/proposals/validation-roadmap.md`, `nltotoi.json`, `docs/agent-log/README.md`, `docs/escalations/README.md`, `ISSUE_TEMPLATE/governance-proposal.md`, `rrt-advocate/CLAUDE.md`, `file-structure.md`, `agents/swe-agent.md` (new) |
+| **Blockers** | None |
+| **Related PR** | Branch `copilot/update-deployment-instructions` |
+| **Notes** | Governance session artifacts (registration, this thread entry, handoff record) were filed retroactively per §2.1 transparency requirement. Work commits: `8b594e6`, `92618ca`. No architectural decisions were made; all changes were scoping/naming corrections only. |
+
+### THREAD-004 — Solidarity Framework Skills
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-004 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-04-28 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/create-skills-for-solidarity-framework` |
+| **Task** | Create standalone skill files for each Solidarity Framework component (RRT Advocate, NLT-OTOI, Sleepwalker Protocol, Unified Foundation) to enable modular adoption |
+| **Scope** | `agents/rrt-advocate-skill.md`, `agents/nlt-otoi-skill.md`, `agents/sleepwalker-skill.md`, `agents/solidarity-foundation-skill.md`, `docs/active-threads.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
+| **Blockers** | None |
+| **Related PR** | Branch `copilot/create-skills-for-solidarity-framework` |
+| **Notes** | No architectural changes. Pure documentation/skill-file authoring. Skills are additive — no existing files deleted or modified. |
+
+### THREAD-003 — Governance Enforcement for Remote Agents
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-003 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-04-28 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/update-deployment-instructions` |
+| **Task** | Investigate root cause of VS Code Copilot Agents - Insiders not following governance; implement fixes to enforce OTOI §4.1 session start protocol for all remote agents |
+| **Scope** | `.github/copilot-instructions.md`, `.github/PULL_REQUEST_TEMPLATE.md`, `.github/workflows/validate-governance.yml`, `docs/active-threads.md` |
+| **Blockers** | None |
+| **Related PR** | Branch `copilot/update-deployment-instructions` |
+| **Notes** | Root cause: `.github/copilot-instructions.md` contained no OTOI governance protocol — only generic coding standards. VS Code Copilot reads this file at session start; without governance instructions there, it had no awareness of SOP-NLT-001. Three fixes: (1) copilot-instructions.md updated with full OTOI session start protocol, commit format, guardrails, escalation triggers, and handoff requirement; (2) PULL_REQUEST_TEMPLATE.md updated with governance checklist; (3) validate-governance.yml updated with agent-commit-format CI job. |
+
 ---
 
 ## Completed Threads
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
 
-*No completed threads yet.*
+### THREAD-ASK-remove-aimybox — Remove Aimybox / voice interface layer
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-ASK-remove-aimybox |
+| **Status** | ✅ Complete |
+| **Completed** | 2026-04-24 |
+| **Owner** | CURSOR |
+| **Branch** | `cursor/review-fix-refresh-and-build-repo-5f72` |
+| **Summary** | Removed voice integration module and all Aimybox/voice routing from unified core; RRT-to-TOI-OTOI path uses `rrt_to_framework` + `ingest_rrt_crisis_context`; documentation and config updated; `tests/integration_test.py` 4/4. |
+
+### THREAD-ASK-align-solidarity-kit — Align PR with Agent Solidarity Kit (main)
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-ASK-align-solidarity-kit |
+| **Status** | ✅ Complete |
+| **Completed** | 2026-04-21 |
+| **Owner** | CURSOR |
+| **Branch** | `cursor/review-fix-refresh-and-build-repo-5f72` |
+| **Summary** | Documentation and messaging aligned to Agent Solidarity Kit; unified core package renamed to `core_coordination` to avoid `coordination` namespace clash with `rrt-advocate`; (superseded) earlier voice stub removed in THREAD-ASK-remove-aimybox. |
 
 ---
 

@@ -1,5 +1,5 @@
 """
-Unified State Manager - Centralized state management for NeuroLift Foundation
+Unified State Manager - Centralized state management for the Agent Solidarity Framework Development Kit (ASFDK)
 Manages shared state across all components while maintaining privacy and consistency
 """
 
@@ -42,7 +42,7 @@ class StateEntry:
 
 class UnifiedStateManager:
     """
-    Unified State Manager for NeuroLift Foundation
+    Unified State Manager for the Agent Solidarity Framework Development Kit (ASFDK)
     
     Provides centralized, secure, and consistent state management across
     all foundation components while maintaining privacy and data integrity.

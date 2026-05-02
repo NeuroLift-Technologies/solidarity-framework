@@ -1,6 +1,6 @@
 """
 Sleepwalker Protocol Integration Module
-Integrates the Sleepwalker Protocol (SWP) with the unified NeuroLift Foundation
+Integrates the Sleepwalker Protocol (SWP) with the Agent Solidarity Framework Development Kit (ASFDK)
 
 The Sleepwalker Protocol provides governance for long-term emotional continuity
 in human-AI interactions. While RRT Advocate handles acute crisis intervention,

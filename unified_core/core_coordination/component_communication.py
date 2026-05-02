@@ -1,5 +1,5 @@
 """
-Component Communication - Inter-component coordination for NeuroLift Foundation
+Component Communication - Inter-component coordination for the Agent Solidarity Framework Development Kit (ASFDK)
 Manages communication and data flow between all foundation components
 """
 
@@ -44,7 +44,7 @@ class ComponentMessage:
 
 class ComponentCommunication:
     """
-    Manages communication between all NeuroLift Foundation components
+    Manages communication between all Agent Solidarity Framework Development Kit (ASFDK) components
     
     Provides a centralized communication hub for RRT Advocate, TOI-OTOI Framework,
     Voice Interface, and Supervisor AI to coordinate their activities.
@@ -108,6 +108,21 @@ class ComponentCommunication:
             
         except Exception as e:
             self.logger.error(f"Failed to link RRT-Voice: {e}")
+
+    async def link_rrt_sleepwalker(self, rrt_component, sleepwalker_component):
+        """Establish communication link between RRT Advocate and Sleepwalker."""
+        try:
+            channel_id = "rrt_sleepwalker_channel"
+            self.active_channels[channel_id] = {
+                "components": ["rrt_advocate", "sleepwalker_protocol"],
+                "rrt_instance": rrt_component,
+                "sleepwalker_instance": sleepwalker_component,
+                "established": datetime.now(),
+                "message_count": 0
+            }
+            self.logger.info("RRT-Sleepwalker communication link established")
+        except Exception as e:
+            self.logger.error(f"Failed to link RRT-Sleepwalker: {e}")
     
     async def link_voice_framework(self, voice_component, framework_component):
         """Establish communication link between Voice Interface and TOI-OTOI Framework"""
@@ -128,6 +143,21 @@ class ComponentCommunication:
             
         except Exception as e:
             self.logger.error(f"Failed to link Voice-Framework: {e}")
+
+    async def link_sleepwalker_framework(self, sleepwalker_component, framework_component):
+        """Establish communication link between Sleepwalker and Framework."""
+        try:
+            channel_id = "sleepwalker_framework_channel"
+            self.active_channels[channel_id] = {
+                "components": ["sleepwalker_protocol", "toi_otoi_framework"],
+                "sleepwalker_instance": sleepwalker_component,
+                "framework_instance": framework_component,
+                "established": datetime.now(),
+                "message_count": 0
+            }
+            self.logger.info("Sleepwalker-Framework communication link established")
+        except Exception as e:
+            self.logger.error(f"Failed to link Sleepwalker-Framework: {e}")
     
     async def link_framework_rrt(self, framework_component, rrt_component):
         """Establish communication link between TOI-OTOI Framework and RRT Advocate"""

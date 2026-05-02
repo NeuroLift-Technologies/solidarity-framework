@@ -1,6 +1,6 @@
-# NeuroLift Technologies' Agent Solidarity Kit
+# Agent Solidarity Framework Development Kit (ASFDK)
 
-**The Unified Agent Development Framework — The Layer Between the Model and the Agent**
+**The Unified Agent Development Platform — ASFDK Core · Agent Operations · Cloudflare Dev Resources**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -9,13 +9,34 @@
 
 ## Overview
 
-The **NeuroLift Technologies' Agent Solidarity Kit** is the required governance and integration layer for all agents developed by NeuroLift Technologies. It sits between the AI model and the agent, providing:
+The **Agent Solidarity Framework Development Kit (ASFDK)** is the unified agent development platform for NeuroLift Technologies. It serves as both the required governance and integration layer for all NLT agents **and** the operational hub for coding-agent infrastructure, Cloudflare-based agent development, and hosted tooling.
+
+### Core Agent Framework
+
+The ASFDK sits between the AI model and the agent, providing:
 
 - **🚨 RRT Advocate** — Rapid Response Team for crisis intervention and immediate safety protocols
 - **📋 NLT-OTOI Framework** — Terms of Interaction and Orchestrated Terms of Interaction for governance and user preferences
 - **🌙 Sleepwalker Protocol (SWP)** — Emotional continuity governance for long-term safety across sessions
+- **🎙️ VibeVoice** — Open-source frontier voice AI for speech recognition (ASR) and text-to-speech (TTS)
 
-Every NLT agent **must** integrate this kit as its foundational layer. The Solidarity Framework ensures human safety, transparency, minimal footprint, and escalation culture.
+Every NLT agent **must** integrate this kit as its foundational layer.
+
+### Coding-Agent Operations Hub
+
+This repository also houses the org-wide infrastructure for all NLT coding agents:
+
+- **🤖 Agent & Skill Profiles** (`agents/`) — Custom agent and skill definitions deployed across the org
+- **📋 Governance SOPs & Templates** (`SOPs/`, `templates/`) — OTOI-compliant operating procedures and registration artifacts
+- **⚙️ CI Workflows** (`.github/workflows/`) — Automated governance validation, commit-format enforcement, and security checks
+
+### Cloudflare Agent Development
+
+- **🔗 Agent Reference Links** (`links.md`) — Curated Cloudflare Workers, Agents SDK, Durable Objects, and MCP resources for NLT agent builds
+- **🔌 MCP Server Configuration** (`mcp-config.yaml`) — Ready-to-use MCP server configs for GitHub and Cloudflare tooling
+- **🌐 Hosting** (`hosting/`) — Web application layer for agent-facing interfaces
+
+The Solidarity Framework ensures human safety, transparency, minimal footprint, and escalation culture across all of these layers.
 
 ## 🏗️ Architecture
 
@@ -23,7 +44,7 @@ Every NLT agent **must** integrate this kit as its foundational layer. The Solid
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│              NeuroLift Agent Solidarity Kit                      │
+│     Agent Solidarity Framework Development Kit (ASFDK)          │
 │          "The Layer Between the Model and the Agent"             │
 ├─────────────────────────────────────────────────────────────────┤
 │  ┌──────────────────┐  ┌──────────────────┐  ┌───────────────┐ │
@@ -36,6 +57,12 @@ Every NLT agent **must** integrate this kit as its foundational layer. The Solid
 │  │ • Tiered Alerts   │  │ • User Prefs     │  │ • Session     │ │
 │  │ • Agency Preserv. │  │ • Multi-Agent    │  │   Continuity  │ │
 │  └──────────────────┘  └──────────────────┘  └───────────────┘ │
+├─────────────────────────────────────────────────────────────────┤
+│                      VibeVoice (Voice Layer)                     │
+│  ┌──────────────────────────┐  ┌──────────────────────────────┐ │
+│  │ VibeVoice-ASR-7B          │  │ VibeVoice-Realtime-0.5B      │ │
+│  │ (Speech Recognition)      │  │ (Text-to-Speech Streaming)   │ │
+│  └──────────────────────────┘  └──────────────────────────────┘ │
 ├─────────────────────────────────────────────────────────────────┤
 │                        Unified Core                              │
 │  ┌──────────────────┐  ┌──────────────────┐  ┌───────────────┐ │
@@ -51,6 +78,7 @@ Every NLT agent **must** integrate this kit as its foundational layer. The Solid
 | **RRT Advocate** | [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) | Crisis intervention & safety |
 | **NLT-OTOI** | [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) | Interaction governance & orchestration |
 | **Sleepwalker** | [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) | Emotional continuity across sessions |
+| **VibeVoice** | [`NeuroLift-Technologies/VibeVoice`](https://github.com/NeuroLift-Technologies/VibeVoice) | Voice AI — ASR (speech recognition) & TTS (speech synthesis) |
 
 ## 🚀 Quick Start
 
@@ -127,6 +155,8 @@ if __name__ == "__main__":
 
 ```
 solidarity-framework/                    # Agent Solidarity Kit root
+│
+│  -- Core ASFDK Components ---------------------------------------------------
 ├── rrt-advocate/                        # 🚨 Crisis intervention component
 │   ├── src/rrt_advocate.py             # Core crisis intervention engine
 │   ├── config/crisis_thresholds.yaml   # Crisis detection configuration
@@ -151,6 +181,15 @@ solidarity-framework/                    # Agent Solidarity Kit root
 │   │   └── sleepwalker_integration.py
 │   ├── supervisor/                     # Supervisor AI coordination
 │   └── coordination/                   # Cross-component coordination
+│
+│  -- Coding-Agent Operations Hub ---------------------------------------------
+├── agents/                             # 🤖 Org-wide agent & skill profiles
+│   ├── nlt-governance-steward.md      # OTOI compliance & guidance agent
+│   ├── rrt-advocate-skill.md          # RRT Advocate skill definition
+│   ├── nlt-otoi-skill.md              # NLT-OTOI skill definition
+│   ├── sleepwalker-skill.md           # Sleepwalker skill definition
+│   ├── solidarity-foundation-skill.md # Unified Foundation skill definition
+│   └── swe-agent.md                   # Senior software engineer agent
 ├── docs/                               # 📚 Governance documentation
 │   ├── active-threads.md              # Current work state
 │   └── agent-log/                     # Agent session audit trail
@@ -171,12 +210,20 @@ solidarity-framework/                    # Agent Solidarity Kit root
 ├── .nltotoi/                           # 🔒 Governance infrastructure
 │   ├── index/governance-files.md
 │   └── scripts/validate-governance.sh
-├── .github/                            # ⚙️ GitHub configuration
+├── .github/                            # ⚙️ GitHub configuration & CI workflows
 │   ├── copilot-instructions.md
 │   ├── workflows/
 │   └── PULL_REQUEST_TEMPLATE.md
+│
+│  -- Cloudflare Agent Development --------------------------------------------
+├── links.md                            # 🔗 Cloudflare agent development references
+├── mcp-config.yaml                     # 🔌 MCP server configurations (GitHub + Cloudflare)
+├── hosting/                            # 🌐 Web application layer (Next.js)
+│
+│  -- Repository Root ---------------------------------------------------------
 ├── AGENTS.md                           # Agent coordination protocol
 ├── CLAUDE.md                           # AI assistant guide (OTOI compliant)
+├── NLT-DEV-OTOI.md                    # Org-level coding agent contract
 ├── CONTRIBUTING.md                     # Contribution guidelines
 ├── CODE_OF_CONDUCT.md                  # Community standards
 ├── SECURITY.md                         # Security policy
@@ -263,7 +310,8 @@ This project is licensed under the Apache License 2.0 — see the [LICENSE](LICE
 ---
 
 **Framework Version**: 2.0.0  
-**Components**: RRT Advocate, NLT-OTOI Framework, Sleepwalker Protocol  
+**Components**: RRT Advocate, NLT-OTOI Framework, Sleepwalker Protocol, VibeVoice  
+**Platform**: ASFDK Core · Coding-Agent Ops Hub · Cloudflare Agent Development  
 **Governance**: ORG-DEV-OTOI-1.0.0  
 **Status**: 🟢 Active Development
 

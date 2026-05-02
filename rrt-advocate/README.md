@@ -270,7 +270,7 @@ This report exists to:
 
 The RRT AIdvocAIte was born on **May 16, 2025** from a real person's real crisis.
 
-The founder observed a Reddit user — a 20-year-old with ADHD and Asperger's — drowning in shame, burnout, and executive function collapse. Nobody was helping. The user's actual words were brought to ChatGPT as a role-play scenario: *"How would you assist this person?"*
+The founder observed a Reddit user — a 20-year-old with ADHD and ASD (Level 1) — drowning in shame, burnout, and executive function collapse. Nobody was helping. The user's actual words were brought to ChatGPT as a role-play scenario: *"How would you assist this person?"*
 
 That exchange produced the five personas — Ash, Sol, Echo, Kai, Myra — mapped to specific intervention functions. The concept was then discussed with Google Gemini, who conducted comprehensive deep research on neurodivergent burnout across 81 peer-reviewed and community sources, producing the clinical foundation that grounds the entire system.
 

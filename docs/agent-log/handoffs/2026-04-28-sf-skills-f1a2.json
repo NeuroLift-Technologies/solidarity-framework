@@ -1,0 +1,82 @@
+{
+  "_template_info": {
+    "template_version": "1.0.0",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "otoi_section": "§5 — Handoff Protocol",
+    "sop_reference": "SOP-NLT-001 Step 8"
+  },
+  "handoff_record": {
+    "session_id": "sf-skills-f1a2",
+    "agent_name": "GitHub Copilot",
+    "platform": "GitHub Copilot (cloud agent)",
+    "date": "2026-04-28",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/solidarity-framework",
+    "branch": "copilot/create-skills-for-solidarity-framework",
+    "active_thread_id": "THREAD-004",
+    "work_completed": [
+      "Created agents/rrt-advocate-skill.md — RRT Advocate as a standalone adoptable skill",
+      "Created agents/nlt-otoi-skill.md — NLT-OTOI Framework as a standalone adoptable skill",
+      "Created agents/sleepwalker-skill.md — Sleepwalker Protocol as a standalone adoptable skill",
+      "Created agents/solidarity-foundation-skill.md — Unified Foundation as the full adoption skill",
+      "Registered THREAD-004 in docs/active-threads.md",
+      "Filed agent registration at docs/agent-log/registrations/2026-04-28-copilot-sf-skills-f1a2.json"
+    ],
+    "work_in_progress": [
+      "None"
+    ],
+    "blockers": [
+      "None"
+    ],
+    "decisions_made": [
+      {
+        "decision": "Skills live in agents/ following the existing nlt-governance-steward.md and swe-agent.md pattern",
+        "rationale": "No architectural decision required; additive documentation following established conventions",
+        "made_by": "GitHub Copilot (agent)"
+      },
+      {
+        "decision": "Four skill files created: one per component (rrt-advocate, nlt-otoi, sleepwalker) plus one unified (solidarity-foundation)",
+        "rationale": "Enables modular adoption — teams can pick up a single component skill or adopt the full foundation",
+        "made_by": "GitHub Copilot (agent)"
+      },
+      {
+        "decision": "No existing files were deleted or modified (outside governance tracking files)",
+        "rationale": "Task explicitly stated do not delete anything",
+        "made_by": "GitHub Copilot (agent)"
+      }
+    ],
+    "decisions_pending": [
+      {
+        "decision": "None",
+        "owner": "N/A",
+        "urgency": "low"
+      }
+    ],
+    "escalations": [
+      {
+        "topic": "None",
+        "status": "not-required",
+        "issue_url": null
+      }
+    ],
+    "next_agent_notes": "Four skill files were added to agents/. They are purely documentation — no Python/TS code was changed. The skills follow the same frontmatter format as nlt-governance-steward.md and swe-agent.md. THREAD-004 is complete and should be moved to Completed Threads by the next agent or a human reviewer.",
+    "files_modified": [
+      "docs/active-threads.md"
+    ],
+    "files_created": [
+      "docs/agent-log/registrations/2026-04-28-copilot-sf-skills-f1a2.json",
+      "agents/rrt-advocate-skill.md",
+      "agents/nlt-otoi-skill.md",
+      "agents/sleepwalker-skill.md",
+      "agents/solidarity-foundation-skill.md",
+      "docs/agent-log/handoffs/2026-04-28-sf-skills-f1a2.json"
+    ],
+    "files_deleted": [],
+    "tests_run": [
+      "None — purely documentation changes"
+    ],
+    "tests_passing": true,
+    "pr_url": null,
+    "commit_shas": []
+  }
+}

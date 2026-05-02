@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-04-29
+> Last updated: 2026-05-02
 
 ---
 
@@ -21,48 +21,6 @@ This file tracks all **current and recently completed** work threads in this rep
 ## Active Threads
 
 <!-- Add new threads here. One entry per thread. -->
-
-### THREAD-001 — Governance File Bootstrap
-| Field | Value |
-|-------|-------|
-| **Thread ID** | THREAD-001 |
-| **Status** | 🟡 In Progress |
-| **Started** | 2025-04-04 |
-| **Owner** | Pending assignment |
-| **Branch** | `copilot/sync-governance-public-files` |
-| **Task** | Create and populate all initial governance files for the `.github` public repo as part of the `sync-governance-public.yml` workflow bootstrap |
-| **Scope** | `CLAUDE.md`, `AGENTS.md`, `docs/`, `templates/`, `SOPs/`, `ISSUE_TEMPLATE/agent-escalation.md`, `ISSUE_TEMPLATE/governance-proposal.md`, `.nltotoi/` |
-| **Blockers** | None |
-| **Related PR** | TBD |
-| **Notes** | This is the initial governance bootstrap. No prior governance infrastructure exists in this repo. |
-
-### THREAD-002 — Governance File Repository Scoping
-| Field | Value |
-|-------|-------|
-| **Thread ID** | THREAD-002 |
-| **Status** | ✅ Complete |
-| **Started** | 2026-04-28 |
-| **Owner** | GitHub Copilot (@copilot) |
-| **Branch** | `copilot/update-deployment-instructions` |
-| **Task** | Update all governance files pulled in from .github-private to replace generic/template references with solidarity-framework–specific values (repo name, paths, URLs) |
-| **Scope** | `AGENTS.md`, `NLT-DEV-OTOI.md`, `SOPs/new-agent-onboarding.md`, `SOPs/repo-governance-setup.md`, `SOPs/incident-response.md`, `SOPs/SOPs/new-agent-onboarding.md`, `SOPs/SOPs/repo-governance-setup.md`, `SOPs/SOPs/incident-response.md`, `agents/nlt-governance-steward.md`, `.nltotoi/index/governance-files.md`, `.nltotoi/.nltotoi/README.md`, `.nltotoi/.nltotoi/index/governance-files.md`, `.nltotoi/.nltotoi/proposals/validation-roadmap.md`, `nltotoi.json`, `docs/agent-log/README.md`, `docs/escalations/README.md`, `ISSUE_TEMPLATE/governance-proposal.md`, `rrt-advocate/CLAUDE.md`, `file-structure.md`, `agents/swe-agent.md` (new) |
-| **Blockers** | None |
-| **Related PR** | Branch `copilot/update-deployment-instructions` |
-| **Notes** | Governance session artifacts (registration, this thread entry, handoff record) were filed retroactively per §2.1 transparency requirement. Work commits: `8b594e6`, `92618ca`. No architectural decisions were made; all changes were scoping/naming corrections only. |
-
-### THREAD-004 — Solidarity Framework Skills
-| Field | Value |
-|-------|-------|
-| **Thread ID** | THREAD-004 |
-| **Status** | 🟡 In Progress |
-| **Started** | 2026-04-28 |
-| **Owner** | GitHub Copilot (@copilot) |
-| **Branch** | `copilot/create-skills-for-solidarity-framework` |
-| **Task** | Create standalone skill files for each Solidarity Framework component (RRT Advocate, NLT-OTOI, Sleepwalker Protocol, Unified Foundation) to enable modular adoption |
-| **Scope** | `agents/rrt-advocate-skill.md`, `agents/nlt-otoi-skill.md`, `agents/sleepwalker-skill.md`, `agents/solidarity-foundation-skill.md`, `docs/active-threads.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
-| **Blockers** | None |
-| **Related PR** | Branch `copilot/create-skills-for-solidarity-framework` |
-| **Notes** | No architectural changes. Pure documentation/skill-file authoring. Skills are additive — no existing files deleted or modified. |
 
 ### THREAD-003 — Governance Enforcement for Remote Agents
 | Field | Value |
@@ -103,6 +61,36 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Owner** | CURSOR |
 | **Branch** | `cursor/review-fix-refresh-and-build-repo-5f72` |
 | **Summary** | Documentation and messaging aligned to Agent Solidarity Kit; unified core package renamed to `core_coordination` to avoid `coordination` namespace clash with `rrt-advocate`; (superseded) earlier voice stub removed in THREAD-ASK-remove-aimybox. |
+
+### THREAD-004 — Solidarity Framework Skills
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-004 |
+| **Status** | ✅ Complete |
+| **Completed** | 2026-04-28 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/create-skills-for-solidarity-framework` |
+| **Summary** | Created standalone skill files for component-level and unified adoption: `agents/rrt-advocate-skill.md`, `agents/nlt-otoi-skill.md`, `agents/sleepwalker-skill.md`, and `agents/solidarity-foundation-skill.md`; registration and handoff records filed. |
+
+### THREAD-002 — Governance File Repository Scoping
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-002 |
+| **Status** | ✅ Complete |
+| **Completed** | 2026-04-28 |
+| **Owner** | GitHub Copilot (@copilot) |
+| **Branch** | `copilot/update-deployment-instructions` |
+| **Summary** | Updated governance files pulled from .github-private with solidarity-framework-specific repository references and added governance artifacts, including `agents/swe-agent.md`, with no architectural changes. |
+
+### THREAD-001 — Governance File Bootstrap
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-001 |
+| **Status** | ✅ Complete |
+| **Completed** | 2026-04-25 |
+| **Owner** | Codex |
+| **Branch** | `workspace` |
+| **Summary** | Governance bootstrap/sync completed: baseline files, governance core synchronization, governance workflow, and governance agent artifacts were applied and validated per handoff `2026-04-25-codex-governance-core-sync-handoff.json`. |
 
 ---
 

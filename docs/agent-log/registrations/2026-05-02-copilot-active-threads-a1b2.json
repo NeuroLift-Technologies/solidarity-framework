@@ -1,0 +1,38 @@
+{
+  "_template_info": {
+    "template_version": "1.0.0",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "otoi_section": "§3 — Agent Registration",
+    "sop_reference": "SOP-NLT-001 Step 5"
+  },
+  "agent_registration": {
+    "agent_name": "GitHub Copilot",
+    "platform": "GitHub Copilot (cloud agent)",
+    "version": "copilot-cloud-2026",
+    "session_id": "active-threads-a1b2",
+    "entry_date": "2026-05-02",
+    "entry_point": "Task prompt: work on the active threads",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/solidarity-framework",
+    "working_branch": "copilot/work-on-active-threads",
+    "task_summary": "Review all active threads in docs/active-threads.md, close completed ones (THREAD-003, THREAD-004), and flag stale threads (THREAD-001) for escalation per conflict-avoidance rules.",
+    "active_thread_id": "THREAD-005",
+    "capabilities_self_reported": [
+      "code generation",
+      "file editing",
+      "documentation authoring",
+      "multi-file coordination"
+    ],
+    "known_limitations": [
+      "cannot access .github/agents/ directory contents per task sandbox rules",
+      "cannot push directly — relies on report_progress tool"
+    ],
+    "preferred_handoff_format": "JSON handoff record + inline comments",
+    "escalation_acknowledged": true,
+    "escalation_contact": "info@neuroliftsolutions.com",
+    "solidarity_framework_acknowledged": true,
+    "commit_format_acknowledged": true,
+    "handoff_required_acknowledged": true
+  }
+}

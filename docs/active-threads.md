@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-05-02
+> Last updated: 2026-05-04
 
 ---
 

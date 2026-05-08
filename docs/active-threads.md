@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-05-04
+> Last updated: 2026-05-07
 
 ---
 
@@ -22,15 +22,28 @@ This file tracks all **current and recently completed** work threads in this rep
 
 <!-- Add new threads here. One entry per thread. -->
 
-<!-- No active threads. -->
-
 ---
 
 ## Completed Threads
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
 
-### THREAD-001 — Governance File Bootstrap
+### THREAD-005 — Security: Fix PostCSS XSS Vulnerability
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-005 |
+| **Status** | ✅ Complete |
+| **Started** | 2026-05-07 |
+| **Completed** | 2026-05-07 |
+| **Owner** | GitHub Copilot (@copilot) — session a575b854 |
+| **Branch** | `copilot/fix-postcss-xss-vulnerability` |
+| **Task** | Resolve Dependabot alert #10: PostCSS XSS via unescaped </style> in CSS Stringify Output. Bumped postcss from 8.4.31 to 8.5.14 via npm override in hosting/package.json |
+| **Scope** | `hosting/package.json`, `hosting/package-lock.json` |
+| **Blockers** | None |
+| **Related PR** | See PR opened by session a575b854 |
+| **Notes** | Medium severity. All 10 Dependabot alerts (#1–10) now in fixed or safe state. Used npm overrides field to pin postcss >= 8.5.14 as the clean transitive-dependency fix. |
+
+### THREAD-001— Governance File Bootstrap
 | Field | Value |
 |-------|-------|
 | **Thread ID** | THREAD-001 |

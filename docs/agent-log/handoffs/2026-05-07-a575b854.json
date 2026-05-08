@@ -64,7 +64,7 @@
       "npm audit (inside hosting/) — confirmed 0 vulnerabilities after applying override"
     ],
     "tests_passing": true,
-    "pr_url": null,
+    "pr_url": "https://github.com/NeuroLift-Technologies/solidarity-framework/pull/16",
     "commit_shas": []
   }
 }

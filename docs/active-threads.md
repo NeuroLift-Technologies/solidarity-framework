@@ -40,7 +40,7 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Task** | Resolve Dependabot alert #10: PostCSS XSS via unescaped </style> in CSS Stringify Output. Bumped postcss from 8.4.31 to 8.5.14 via npm override in hosting/package.json |
 | **Scope** | `hosting/package.json`, `hosting/package-lock.json` |
 | **Blockers** | None |
-| **Related PR** | See PR opened by session a575b854 |
+| **Related PR** | https://github.com/NeuroLift-Technologies/solidarity-framework/pull/16 |
 | **Notes** | Medium severity. All 10 Dependabot alerts (#1–10) now in fixed or safe state. Used npm overrides field to pin postcss >= 8.5.14 as the clean transitive-dependency fix. |
 
 ### THREAD-001— Governance File Bootstrap

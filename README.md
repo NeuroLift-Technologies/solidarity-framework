@@ -1,6 +1,6 @@
-# Agent Solidarity Framework Development Kit (ASFDK)
+# Agent Solidarity Framework Deployment Kit (ASFDK)
 
-**The Unified Agent Development Platform — ASFDK Core · Agent Operations · Cloudflare Dev Resources**
+**The Unified Agent Deployment Platform — ASFDK Core · Agent Operations · Cloudflare Dev Resources**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -9,7 +9,7 @@
 
 ## Overview
 
-The **Agent Solidarity Framework Development Kit (ASFDK)** is the unified agent development platform for NeuroLift Technologies. It serves as both the required governance and integration layer for all NLT agents **and** the operational hub for coding-agent infrastructure, Cloudflare-based agent development, and hosted tooling.
+The **Agent Solidarity Framework Deployment Kit (ASFDK)** is the unified agent deployment platform for NeuroLift Technologies. It serves as both the required governance and integration layer for all NLT agents **and** the operational hub for coding-agent infrastructure, Cloudflare-based agent development, and hosted tooling.
 
 ### Core Agent Framework
 

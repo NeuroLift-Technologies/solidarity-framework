@@ -20,6 +20,22 @@ This file tracks all **current and recently completed** work threads in this rep
 
 ## Active Threads
 
+### THREAD-007 — CI: Remove VibeVoice from default requirements to unblock Docker PR builds
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-007 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-05-19 |
+| **Owner** | GitHub Copilot (@copilot) — session NLT-HND-2026-009 |
+| **Branch** | `copilot/fix-docker-build-failures` |
+| **Task** | Remove VibeVoice from default dependency requirements so Docker image builds no longer require private git access on PRs |
+| **Scope** | `requirements.txt`, `docs/active-threads.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
+| **Blockers** | None |
+| **Related PR** | TBD |
+| **Notes** | User requested removing VibeVoice as a requirement. Applying minimal dependency change to keep VibeVoice optional and avoid CI failure from private git dependency. |
+
+---
+
 ### THREAD-006 — OTOI Docs: First-Receiver Advocate Rule & Positioning Statement
 | Field | Value |
 |-------|-------|

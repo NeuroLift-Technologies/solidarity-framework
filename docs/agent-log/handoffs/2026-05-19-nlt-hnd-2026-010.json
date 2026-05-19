@@ -1,0 +1,70 @@
+{
+  "handoff_record": {
+    "session_id": "nlt-hnd-2026-010",
+    "agent_name": "GitHub Copilot",
+    "platform": "GitHub Copilot Task Agent",
+    "date": "2026-05-19",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/solidarity-framework",
+    "branch": "copilot/investigate-pages-deployment-issue",
+    "active_thread_id": "THREAD-008",
+    "work_completed": [
+      "Registered the session and opened THREAD-008 in docs/active-threads.md.",
+      "Diagnosed Pages deployment issue as missing project-site base-path wiring.",
+      "Updated deploy-pages workflow to run actions/configure-pages and pass NEXT_PUBLIC_BASE_PATH to the Next.js build.",
+      "Updated hosting/next.config.ts to apply basePath and assetPrefix from NEXT_PUBLIC_BASE_PATH.",
+      "Closed THREAD-008 in completed threads."
+    ],
+    "work_in_progress": [
+      "None"
+    ],
+    "blockers": [
+      "None"
+    ],
+    "decisions_made": [
+      {
+        "decision": "Apply base-path fix in workflow + Next config instead of changing deployment target.",
+        "rationale": "This is the minimal fix for GitHub Pages project-site path resolution and static asset loading.",
+        "made_by": "GitHub Copilot"
+      }
+    ],
+    "decisions_pending": [
+      {
+        "decision": "None",
+        "owner": "None",
+        "urgency": "low"
+      }
+    ],
+    "escalations": [
+      {
+        "topic": "None",
+        "status": "not-required",
+        "issue_url": null
+      }
+    ],
+    "next_agent_notes": "Baseline repository lint/test checks currently fail for pre-existing issues unrelated to this pages fix (ruff violations across multiple files and pytest import errors for sleepwalker_protocol from repo root). Hosting builds pass with and without NEXT_PUBLIC_BASE_PATH.",
+    "files_modified": [
+      ".github/workflows/deploy-pages.yml",
+      "hosting/next.config.ts",
+      "docs/active-threads.md"
+    ],
+    "files_created": [
+      "docs/agent-log/registrations/2026-05-19-copilot-nlt-hnd-2026-010.json",
+      "docs/agent-log/handoffs/2026-05-19-nlt-hnd-2026-010.json"
+    ],
+    "files_deleted": [],
+    "tests_run": [
+      "ruff check . (fails due to pre-existing lint violations outside scope)",
+      "python -m pytest --tb=short (fails due to pre-existing sleepwalker import errors)",
+      "cd hosting && npm ci",
+      "cd hosting && npm run build",
+      "cd hosting && NEXT_PUBLIC_BASE_PATH=/solidarity-framework npm run build"
+    ],
+    "tests_passing": false,
+    "pr_url": null,
+    "commit_shas": [
+      "183666e",
+      "853090e"
+    ]
+  }
+}

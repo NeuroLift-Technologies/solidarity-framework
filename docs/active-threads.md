@@ -40,6 +40,21 @@ This file tracks all **current and recently completed** work threads in this rep
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
 
+### THREAD-008 — CI: Investigate and fix GitHub Pages deployment issue
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-008 |
+| **Status** | ✅ Complete |
+| **Started** | 2026-05-19 |
+| **Completed** | 2026-05-19 |
+| **Owner** | GitHub Copilot (@copilot) — session nlt-hnd-2026-010 |
+| **Branch** | `copilot/investigate-pages-deployment-issue` |
+| **Task** | Investigate and correct the issue with pages deployment |
+| **Scope** | `.github/workflows/deploy-pages.yml`, `hosting/next.config.ts`, `docs/active-threads.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
+| **Blockers** | None |
+| **Related PR** | TBD |
+| **Notes** | Root cause was missing Pages base-path wiring for project-site deployments. Added `actions/configure-pages@v5` and passed `NEXT_PUBLIC_BASE_PATH` into build, then updated Next.js config to apply `basePath` and `assetPrefix` for exported assets. Verified with `npm run build` and `NEXT_PUBLIC_BASE_PATH=/solidarity-framework npm run build`. |
+
 ### THREAD-007 — CI: Remove VibeVoice from default requirements to unblock Docker PR builds
 | Field | Value |
 |-------|-------|

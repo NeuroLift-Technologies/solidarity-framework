@@ -1,9 +1,3 @@
 pyyaml>=6.0
 jsonschema
 pydantic
-# VibeVoice — open-source frontier voice AI (ASR + TTS)
-# Install from: https://github.com/NeuroLift-Technologies/VibeVoice
-torch
-transformers>=4.51.3,<5.0.0
-accelerate
-vibevoice @ git+https://github.com/NeuroLift-Technologies/VibeVoice.git

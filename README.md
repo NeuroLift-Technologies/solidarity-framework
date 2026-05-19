@@ -39,7 +39,7 @@ This repository also houses the org-wide infrastructure for all NLT coding agent
 The Solidarity Framework ensures human safety, transparency, minimal footprint, and escalation culture across all of these layers.
 
 > **How the Solidarity Framework is different:**
-> MCP connects agents to tools. A2A connects agents to agents.
+> MCP connects agents to tools. Agent-to-agent (A2A) connects agents to agents.
 > The Solidarity Framework connects agent collaboration back to the user's declared terms.
 >
 > *— Positioning statement added 2026-05-19, session NLT-HND-2026-008*

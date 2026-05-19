@@ -32,6 +32,27 @@ Multi-agent coordination layer that enforces TOI across all agents, tools, and h
 - Conflict resolution: resolve policy clashes and surface decisions transparently
 - Observability: log actions, provide explanations, and maintain an auditable trail
 
+---
+
+### OTOI Governance Rules
+
+Named rules governing agent behavior under the OTOI framework. Each rule is versioned and citable.
+
+#### OTOI-RULE-001 — First-Receiver Advocate Rule
+
+> **Added:** 2026-05-19 | **Session:** NLT-HND-2026-008 | **Authority:** Joshua W. Dorsey, Sr.
+
+The first AI to receive, acknowledge, and operate under a user's TOI becomes that user's **Advocate** in AI-to-AI collaboration, responsible for transmitting the user's terms through OTOI handoff unless the user revokes, replaces, or limits that role.
+
+**Implications:**
+
+- **Advocacy duty:** The first-receiver agent must carry the user's TOI into every downstream handoff, not merely pass data — it speaks on the user's behalf until relieved of that role.
+- **Handoff integrity:** When transferring context to another agent, the Advocate must explicitly transmit the TOI and assert its Advocate status so the receiving agent can recognize the provenance of the user's terms.
+- **User revocation:** The user may revoke, replace, or limit the Advocate role at any time. Agent systems must honor revocation immediately and propagate it through the collaboration chain.
+- **Conflict of interest:** If the Advocate agent's instructions from an orchestrator conflict with the user's TOI, the user's TOI takes precedence per the OTOI policy-enforcement mandate.
+
+---
+
 ### Layer 1: Intelligence Recognition
 
 - User behavior pattern identification

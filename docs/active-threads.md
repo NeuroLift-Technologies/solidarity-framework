@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-05-07
+> Last updated: 2026-05-19
 
 ---
 
@@ -20,7 +20,19 @@ This file tracks all **current and recently completed** work threads in this rep
 
 ## Active Threads
 
-<!-- Add new threads here. One entry per thread. -->
+### THREAD-006 — OTOI Docs: First-Receiver Advocate Rule & Positioning Statement
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-006 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-05-19 |
+| **Owner** | Claude Code — session NLT-HND-2026-008 |
+| **Branch** | `claude/add-solidarity-framework-docs-Can7Y` |
+| **Task** | Add First-Receiver Advocate Rule (OTOI-RULE-001) to OTOI framework docs and add Solidarity Framework positioning statement to README |
+| **Scope** | `nlt-otoi/docs/framework-overview.md`, `README.md`, `docs/active-threads.md` |
+| **Blockers** | None |
+| **Related PR** | TBD |
+| **Notes** | Handoff from Claude.ai Main (NLT-HND-2026-008). Documentation additions only — no governance modifications. Awaiting Josh's direction before any further work. |
 
 ---
 

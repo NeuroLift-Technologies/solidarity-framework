@@ -34,11 +34,11 @@ Multi-agent coordination layer that enforces TOI across all agents, tools, and h
 
 ---
 
-## OTOI Governance Rules
+### OTOI Governance Rules
 
 Named rules governing agent behavior under the OTOI framework. Each rule is versioned and citable.
 
-### OTOI-RULE-001 — First-Receiver Advocate Rule
+#### OTOI-RULE-001 — First-Receiver Advocate Rule
 
 > **Added:** 2026-05-19 | **Session:** NLT-HND-2026-008 | **Authority:** Joshua W. Dorsey, Sr.
 

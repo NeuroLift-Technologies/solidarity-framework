@@ -34,6 +34,20 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Related PR** | TBD |
 | **Notes** | Handoff from Claude.ai Main (NLT-HND-2026-008). Documentation additions only — no governance modifications. Awaiting Josh's direction before any further work. |
 
+### THREAD-008 — CI: Investigate and fix GitHub Pages deployment issue
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-008 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-05-19 |
+| **Owner** | GitHub Copilot (@copilot) — session nlt-hnd-2026-010 |
+| **Branch** | `copilot/investigate-pages-deployment-issue` |
+| **Task** | Investigate and correct the issue with pages deployment |
+| **Scope** | `.github/workflows/deploy-pages.yml`, `hosting/*`, `docs/active-threads.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
+| **Blockers** | None |
+| **Related PR** | TBD |
+| **Notes** | Started from direct task prompt to diagnose GitHub Pages deployment failures and apply minimal workflow/config fix. |
+
 ---
 
 ## Completed Threads

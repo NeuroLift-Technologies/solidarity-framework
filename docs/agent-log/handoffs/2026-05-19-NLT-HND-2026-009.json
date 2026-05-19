@@ -1,0 +1,74 @@
+{
+  "_template_info": {
+    "template_version": "1.0.0",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "otoi_section": "§5 — Handoff Protocol",
+    "sop_reference": "SOP-NLT-001 Step 8"
+  },
+  "handoff_record": {
+    "session_id": "NLT-HND-2026-009",
+    "agent_name": "GitHub Copilot",
+    "platform": "GitHub Copilot",
+    "date": "2026-05-19",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/solidarity-framework",
+    "branch": "copilot/fix-docker-build-failures",
+    "active_thread_id": "THREAD-007",
+    "work_completed": [
+      "Investigated CI workflow runs on this branch and confirmed CI/CD pipeline failures were associated with PR-run constraints.",
+      "Registered session NLT-HND-2026-009 and tracked thread lifecycle in docs/active-threads.md.",
+      "Removed VibeVoice and voice-only dependencies from root requirements.txt to prevent private git dependency resolution during Docker build.",
+      "Validated `pip install -r requirements.txt` and local `docker build -f Dockerfile .` both succeed after the change.",
+      "Ran parallel validation (Code Review + CodeQL)."
+    ],
+    "work_in_progress": [
+      "None"
+    ],
+    "blockers": [
+      "None"
+    ],
+    "decisions_made": [
+      {
+        "decision": "Apply the minimal dependency-level fix by removing VibeVoice from default install requirements.",
+        "rationale": "User explicitly requested removing VibeVoice as a requirement, and this directly addresses PR Docker build failures caused by private git dependency access.",
+        "made_by": "GitHub Copilot"
+      }
+    ],
+    "decisions_pending": [
+      {
+        "decision": "Whether to introduce a separate optional requirements file for voice features in a follow-up task.",
+        "owner": "Joshua W. Dorsey, Sr.",
+        "urgency": "low"
+      }
+    ],
+    "escalations": [
+      {
+        "topic": "Architecture/dependency strategy for optional voice feature packaging",
+        "status": "not-required",
+        "issue_url": null
+      }
+    ],
+    "next_agent_notes": "The root CI blocker for Docker PR builds from private git dependency access is resolved by removing VibeVoice from default requirements. If voice features must be reinstated, do so via an explicitly optional install path (separate requirements/profile) with governance approval.",
+    "files_modified": [
+      "requirements.txt",
+      "docs/active-threads.md"
+    ],
+    "files_created": [
+      "docs/agent-log/registrations/2026-05-19-copilot-nlt-hnd-2026-009.json",
+      "docs/agent-log/handoffs/2026-05-19-NLT-HND-2026-009.json"
+    ],
+    "files_deleted": [],
+    "tests_run": [
+      "python -m pytest --tb=short (fails in baseline environment due to missing sleepwalker_protocol import path setup)",
+      "pip install --no-cache-dir -r requirements.txt (pass)",
+      "docker build -t sf-ci-check -f Dockerfile . (pass)",
+      "parallel_validation: Code Review (pass), CodeQL (pass/no analyzable code changes)"
+    ],
+    "tests_passing": false,
+    "pr_url": "https://github.com/NeuroLift-Technologies/solidarity-framework/pull/18",
+    "commit_shas": [
+      "5afc30c",
+      "13dbca7"
+    ]
+  }
+}

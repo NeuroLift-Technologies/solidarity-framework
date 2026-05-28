@@ -69,6 +69,7 @@ All agents developed by NeuroLift Technologies **must** use this kit as the laye
 
 Before beginning work, confirm you have read:
 
+- [ ] `NLT-DEV-OTOI.md` — repo-local governance contract (read first)
 - [ ] `AGENTS.md` — coordination gateway and guardrails
 - [ ] `SOPs/new-agent-onboarding.md` — onboarding process SOP-NLT-001
 - [ ] `docs/active-threads.md` — current work in progress

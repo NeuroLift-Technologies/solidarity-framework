@@ -9,7 +9,7 @@
 |--------------------|-----------------------------------------------------------|
 | **Repository**     | `NeuroLift-Technologies/solidarity-framework`              |
 | **Visibility**     | Private                                                    |
-| **Purpose**        | Agent Solidarity Framework Development Kit (ASFDK) — Unified agent development platform: ASFDK core layer, coding-agent operations hub, and Cloudflare agent development resources |
+| **Purpose**        | Solidarity Framework documentation and governance source: framework principles, component documentation, coding-agent operations, and Cloudflare agent development resources |
 | **OTOI Version**   | ORG-DEV-OTOI-1.0.0                                        |
 | **Governing SOP**  | SOP-NLT-001 (`SOPs/new-agent-onboarding.md`)              |
 | **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol, VibeVoice, Agent Ops Hub, Cloudflare Dev Resources |
@@ -18,16 +18,18 @@
 
 ## Purpose of This Repository
 
-The **solidarity-framework** repository is the **Agent Solidarity Framework Development Kit (ASFDK)** — the unified agent development platform for NeuroLift Technologies. It serves three interconnected purposes:
+The **solidarity-framework** repository is the canonical documentation and governance source for the NeuroLift Technologies Solidarity Framework. It is distinct from the **Agent Solidarity Framework Development Kit (ASFDK)** implementation/development-kit repository.
 
-### 1. ASFDK Core Layer (layer between the model and the agent)
+This repo serves three interconnected purposes:
+
+### 1. Framework Component Documentation
 - **RRT Advocate** (`rrt-advocate/`) — Crisis intervention and immediate safety protocols
 - **NLT-OTOI Framework** (`nlt-otoi/`) — Interaction governance and orchestration
 - **Sleepwalker Protocol** (`sleepwalker/`) — Emotional continuity across sessions
 - **VibeVoice** — Open-source frontier voice AI (ASR + TTS) — see [`NeuroLift-Technologies/VibeVoice`](https://github.com/NeuroLift-Technologies/VibeVoice)
-- **Unified Core** (`unified-core/`) — Integration layer connecting all components
+- **Unified Core** (`unified-core/`) — Reference integration layer connecting all components
 
-### 2. Coding-Agent Operations Hub
+### 2. Coding-Agent Operations Documentation
 - **Agent & Skill Profiles** (`agents/`) — Org-wide custom agent and skill definitions
 - **Governance SOPs** (`SOPs/`) — Standard operating procedures for agent onboarding, repo setup, and incident response
 - **Templates** (`templates/`) — OTOI-compliant registration and handoff artifacts
@@ -38,7 +40,7 @@ The **solidarity-framework** repository is the **Agent Solidarity Framework Deve
 - **MCP Server Configuration** (`mcp-config.yaml`) — Ready-to-use GitHub and Cloudflare MCP configs
 - **Hosting** (`hosting/`) — Web application layer for agent-facing interfaces
 
-All agents developed by NeuroLift Technologies **must** use this kit as the layer between the AI model and the agent.
+All agents developed by NeuroLift Technologies **must** follow the governance documented here and use the appropriate implementation repositories for runtime integration.
 
 ---
 

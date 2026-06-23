@@ -1,8 +1,8 @@
-# Agent Solidarity Framework Development Kit (ASFDK) - Unified Architecture Design
+# Solidarity Framework - Unified Architecture Reference
 
 ## Overview
 
-The Agent Solidarity Framework Development Kit (ASFDK) represents the integration of four core components into a unified agent development framework — the required layer between the AI model and the agent:
+The Solidarity Framework architecture describes how four core components integrate into a unified agent governance framework — the required layer between the AI model and the agent:
 
 1. **RRT Advocate** — Crisis intervention and immediate safety (Protective Layer)
 2. **NLT-OTOI Framework** — Terms of Interaction and Orchestrated Terms of Interaction (Constitutional Layer)
@@ -10,6 +10,8 @@ The Agent Solidarity Framework Development Kit (ASFDK) represents the integratio
 4. **VibeVoice** — Open-source frontier voice AI for ASR and TTS (Voice Layer)
 
 This unified architecture creates the complete foundation for all NeuroLift Technologies agents, combining crisis response, interaction governance, emotional continuity, and voice interaction into a cohesive governance layer.
+
+The **Agent Solidarity Framework Development Kit (ASFDK)** is the separate implementation/development-kit repo for this architecture. This repository documents the framework, governance model, and integration reference.
 
 ## Architectural Principles
 
@@ -126,7 +128,7 @@ class VibeVoiceIntegration:
 ```python
 class NeuroLiftFoundation:
     """
-    Central coordination hub for the Agent Solidarity Framework Development Kit (ASFDK)
+    Central coordination hub for the Solidarity Framework reference architecture
     
     Integrates RRT Advocate, TOI-OTOI Framework, and VibeVoice
     into a cohesive ADHD support system.

@@ -17,14 +17,14 @@ Those needs turned out not to be niche. They are baseline expectations for human
 
 ## What this repository is today
 
-This repository is the **Agent Solidarity Kit** — the required integration and governance layer for NLT agents. It is not a single “app”; it is the shared substrate (RRT Advocate, NLT-OTOI, Sleepwalker Protocol, unified core) that sits **between the model and the agent**.
+This repository is the **Solidarity Framework documentation and governance source**. It documents the required integration and governance layer for NLT agents. It is not a single “app” and it is not the ASFDK implementation repo; it is the source of truth for the principles, component documentation, operating procedures, and agent governance that sit **between the model and the agent**.
 
-The kit **evolved out of our core project** and is now the foundation for **everything we build** at NeuroLift Technologies (excluding product-specific surfaces like the Avatar). It stays modular so new Advocates and domains can plug in without rewriting safety and coordination.
+The framework **evolved out of our core project** and is now the foundation for **everything we build** at NeuroLift Technologies (excluding product-specific surfaces like the Avatar). It stays modular so new Advocates and domains can plug in without rewriting safety and coordination.
 
 ## Naming and scope
 
-We retired the framing of this repo as a standalone “NeuroLift Foundation” product in favor of language that matches **main**: an **Agent Solidarity Kit** inside the **Solidarity Framework**. Historical references to “foundation” in code (`neurolift_foundation`, `foundation.yml`) refer to the **unified runtime** of that kit, not a separate branding line.
+We retired the framing of this repo as a standalone “NeuroLift Foundation” product in favor of language that matches **main**: the **Solidarity Framework** documentation and governance source. Historical references to “foundation” in code (`neurolift_foundation`, `foundation.yml`) refer to the **unified runtime** documented by this repo, not a separate branding line.
 
 ## Looking ahead
 
-The same components that made the first iteration trustworthy for high-stakes support — transparency, minimal footprint, escalation culture, human agency — are what we extend into healthcare, education, workplace, wellness, and products we have not named yet. The kit is the contract; individual products are built on top of it.
+The same components that made the first iteration trustworthy for high-stakes support — transparency, minimal footprint, escalation culture, human agency — are what we extend into healthcare, education, workplace, wellness, and products we have not named yet. The framework is the contract; individual products and development kits are built on top of it.

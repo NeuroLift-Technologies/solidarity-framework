@@ -1,13 +1,15 @@
 """
-GEMINI_TOPOGRAPHY.py - NeuroLift Agent Solidarity Kit Repository Structure and Metadata
+GEMINI_TOPOGRAPHY.py - Solidarity Framework Repository Structure and Metadata
 
-This file provides comprehensive information about the Agent Solidarity Kit repository
-structure, component integration, and data relationships for AI system understanding.
+This file provides comprehensive information about the Solidarity Framework
+documentation/governance repository structure, component references, and data
+relationships for AI system understanding.
 
 Repository: solidarity-framework
-Purpose: Unified agent development platform — ASFDK core layer (RRT Advocate, NLT-OTOI Framework,
-         Sleepwalker Protocol, VibeVoice), coding-agent operations hub (agents, SOPs, governance
-         workflows), and Cloudflare agent development resources (links, MCP configs, hosting)
+Purpose: Canonical Solidarity Framework documentation and governance source;
+         includes component documentation/references, coding-agent operations
+         docs, and Cloudflare agent development resources (links, MCP configs,
+         hosting)
 Owner: NeuroLift Technologies
 Organization: NeuroLift Technologies
 Governance: ORG-DEV-OTOI-1.0.0
@@ -42,14 +44,17 @@ class RepositoryTopography:
     organization: str = "NeuroLift Technologies"
     
     # Project Information
-    project_title: str = "NeuroLift Agent Solidarity Kit"
+    project_title: str = "Solidarity Framework Documentation"
     project_description: str = """
-    The unified agent development platform for NeuroLift Technologies. Combines four core ASFDK
-    components — RRT Advocate (crisis intervention), NLT-OTOI Framework (interaction governance),
-    Sleepwalker Protocol (emotional continuity), and VibeVoice (voice AI) — as the required layer
-    between the model and the agent. Also serves as the org-wide coding-agent operations hub
-    (agent profiles, SOPs, governance workflows) and Cloudflare agent development reference
-    (Agents SDK resources, MCP server configs, and hosting infrastructure).
+    The canonical documentation and governance source for the NeuroLift
+    Technologies Solidarity Framework. Documents RRT Advocate (crisis
+    intervention), NLT-OTOI Framework (interaction governance), Sleepwalker
+    Protocol (emotional continuity), and VibeVoice (voice AI) as the required
+    layer between the model and the agent. Also serves as the org-wide
+    coding-agent operations documentation hub (agent profiles, SOPs,
+    governance workflows) and Cloudflare agent development reference (Agents
+    SDK resources, MCP server configs, and hosting infrastructure). ASFDK is a
+    separate implementation/development-kit repository.
     """
     
     # Governance

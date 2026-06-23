@@ -191,7 +191,8 @@ API references, and examples for building agents with the ADK ecosystem.
 ### google/adk-go — <https://github.com/google/adk-go>
 
 Go implementation of Google's Agent Development Kit. Use as a reference when building
-ADK-compatible agents in Go or integrating Go services with Solidarity Framework runtime components.
+ADK-compatible agents in Go or integrating Go services with Solidarity Framework
+implementation repositories.
 
 ---
 
@@ -199,7 +200,8 @@ ADK-compatible agents in Go or integrating Go services with Solidarity Framework
 
 Python implementation of Google's Agent Development Kit. Provides the core abstractions
 for building, orchestrating, and evaluating agents. Compatible with Gemini and other LLMs.
-Reference this when extending Solidarity Framework runtime components with ADK-based agent patterns.
+Reference this when documenting or implementing ADK-based agent patterns in the
+Solidarity Framework implementation repositories.
 
 ---
 
@@ -215,7 +217,7 @@ multi-agent coordination patterns applicable to the Solidarity Framework's unifi
 
 Microsoft's open-source agent framework for building conversational and task-based AI agents.
 Reference for agent lifecycle management, skill composition, and enterprise integration
-patterns when developing Solidarity Framework runtime components.
+patterns in Solidarity Framework implementation repositories.
 
 ---
 
@@ -223,7 +225,8 @@ patterns when developing Solidarity Framework runtime components.
 
 OpenAI's official Python SDK for building agentic workflows. Provides primitives for
 agent handoffs, tool use, guardrails, and tracing. Reference for agent orchestration
-patterns and cross-LLM compatibility considerations in the Solidarity Framework runtime layer.
+patterns and cross-LLM compatibility considerations in Solidarity Framework
+implementation repositories.
 
 ---
 

@@ -1,4 +1,4 @@
-# Agent Solidarity Kit — Evolution Story
+# Solidarity Framework — Evolution Story
 
 **From core project work to the universal layer between model and agent**
 

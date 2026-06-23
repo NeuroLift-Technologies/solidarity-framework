@@ -30,9 +30,9 @@ The Solidarity Framework defines the layer between the AI model and the agent, i
 - **🌙 Sleepwalker Protocol (SWP)** — Emotional continuity governance for long-term safety across sessions
 - **🎙️ VibeVoice** — Open-source frontier voice AI for speech recognition (ASR) and text-to-speech (TTS)
 
-Every NLT agent **must** follow the Solidarity Framework governance model and integrate the appropriate runtime components through the relevant implementation repositories.
+Every NLT agent **must** follow the Solidarity Framework governance model and use the relevant implementation repositories for deployable components.
 
-### Coding-Agent Operations Hub
+### Coding-Agent Operations Documentation
 
 This repository also houses documentation and governance infrastructure for NLT coding agents:
 
@@ -327,7 +327,7 @@ This project is licensed under the Apache License 2.0 — see the [LICENSE](LICE
 
 **Framework Version**: 2.0.0  
 **Components**: RRT Advocate, NLT-OTOI Framework, Sleepwalker Protocol, VibeVoice  
-**Repository Role**: Documentation · Governance · Coding-Agent Ops Hub · Cloudflare Agent Development
+**Repository Role**: Documentation · Governance · Coding-Agent Ops Documentation · Cloudflare Agent Development
 **Governance**: ORG-DEV-OTOI-1.0.0  
 **Status**: 🟢 Active Development
 

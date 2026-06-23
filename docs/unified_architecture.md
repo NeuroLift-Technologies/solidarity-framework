@@ -130,7 +130,8 @@ class NeuroLiftFoundation:
     """
     Central coordination hub for the Solidarity Framework reference architecture
     
-    Integrates RRT Advocate, TOI-OTOI Framework, and VibeVoice
+    Integrates RRT Advocate, TOI-OTOI Framework, Sleepwalker Protocol,
+    and VibeVoice
     into a cohesive ADHD support system.
     """
     
@@ -141,6 +142,7 @@ class NeuroLiftFoundation:
         # Initialize core components
         self.rrt = RRTAdvocateIntegration(self)
         self.framework = TOIOTOIIntegration(self)
+        self.sleepwalker = SleepwalkerIntegration(self)
         self.voice = VoiceInterfaceIntegration(self)
         
         # Supervisor AI coordination
@@ -153,6 +155,8 @@ class NeuroLiftFoundation:
         """Initialize all foundation components"""
         await self.rrt.start_monitoring()
         await self.framework.load_user_preferences()
+        await self.sleepwalker.initialize()
+        await self.sleepwalker.start()
         await self.voice.initialize_voice_interface()
         await self.supervisor.activate_coordination()
         

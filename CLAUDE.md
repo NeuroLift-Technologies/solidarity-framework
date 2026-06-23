@@ -12,7 +12,7 @@
 | **Purpose**        | Solidarity Framework documentation and governance source: framework principles, component documentation, coding-agent operations, and Cloudflare agent development resources |
 | **OTOI Version**   | ORG-DEV-OTOI-1.0.0                                        |
 | **Governing SOP**  | SOP-NLT-001 (`SOPs/new-agent-onboarding.md`)              |
-| **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol, VibeVoice, Agent Ops Hub, Cloudflare Dev Resources |
+| **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol, VibeVoice, Agent Ops Documentation, Cloudflare Dev Resources |
 
 ---
 

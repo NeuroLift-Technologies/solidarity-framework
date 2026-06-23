@@ -1,4 +1,4 @@
-# Agent Solidarity Framework Development Kit (ASFDK)
+# Solidarity Framework Documentation
 
 ```yaml
 ai_assistant_directive:
@@ -8,7 +8,7 @@ ai_assistant_directive:
   required_file: "NLT-DEV-OTOI.md"
 ```
 
-**The Unified Agent Development Platform — ASFDK Core · Agent Operations · Cloudflare Dev Resources**
+**Canonical Documentation & Governance — Solidarity Framework · Agent Operations · Cloudflare Dev Resources**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -17,22 +17,24 @@ ai_assistant_directive:
 
 ## Overview
 
-The **Agent Solidarity Framework Development Kit (ASFDK)** is the unified agent development platform for NeuroLift Technologies. It serves as both the required governance and integration layer for all NLT agents **and** the operational hub for coding-agent infrastructure, Cloudflare-based agent development, and hosted tooling.
+The **solidarity-framework** repository is the canonical documentation and governance source for the NeuroLift Technologies Solidarity Framework. It defines the principles, operating procedures, component documentation, and agent-facing governance that NLT agents use when building or integrating Solidarity Framework systems.
+
+The **Agent Solidarity Framework Development Kit (ASFDK)** is a separate implementation/development-kit repository. This repo may document ASFDK architecture and integration expectations, but it is not the ASFDK source repo.
 
 ### Core Agent Framework
 
-The ASFDK sits between the AI model and the agent, providing:
+The Solidarity Framework defines the layer between the AI model and the agent, including:
 
 - **🚨 RRT Advocate** — Rapid Response Team for crisis intervention and immediate safety protocols
 - **📋 NLT-OTOI Framework** — Terms of Interaction and Orchestrated Terms of Interaction for governance and user preferences
 - **🌙 Sleepwalker Protocol (SWP)** — Emotional continuity governance for long-term safety across sessions
 - **🎙️ VibeVoice** — Open-source frontier voice AI for speech recognition (ASR) and text-to-speech (TTS)
 
-Every NLT agent **must** integrate this kit as its foundational layer.
+Every NLT agent **must** follow the Solidarity Framework governance model and use the relevant implementation repositories for deployable components.
 
-### Coding-Agent Operations Hub
+### Coding-Agent Operations Documentation
 
-This repository also houses the org-wide infrastructure for all NLT coding agents:
+This repository also houses documentation and governance infrastructure for NLT coding agents:
 
 - **🤖 Agent & Skill Profiles** (`agents/`) — Custom agent and skill definitions deployed across the org
 - **📋 Governance SOPs & Templates** (`SOPs/`, `templates/`) — OTOI-compliant operating procedures and registration artifacts
@@ -58,7 +60,7 @@ The Solidarity Framework ensures human safety, transparency, minimal footprint, 
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│     Agent Solidarity Framework Development Kit (ASFDK)          │
+│                  Solidarity Framework                           │
 │          "The Layer Between the Model and the Agent"             │
 ├─────────────────────────────────────────────────────────────────┤
 │  ┌──────────────────┐  ┌──────────────────┐  ┌───────────────┐ │
@@ -115,11 +117,11 @@ The Solidarity Framework ensures human safety, transparency, minimal footprint, 
    pip install -r requirements.txt
    ```
 
-3. **Initialize the Agent Solidarity Kit**
+3. **Review the reference integration example**
    ```python
    from unified_core.neurolift_foundation import create_foundation, FoundationMode
    
-   # Create and start the foundation
+   # Example: create and start the reference foundation runtime
    foundation = await create_foundation(
        user_id="your_user_id",
        mode=FoundationMode.UNIFIED
@@ -133,7 +135,7 @@ import asyncio
 from unified_core.neurolift_foundation import create_foundation
 
 async def main():
-    # Initialize the Agent Solidarity Kit
+    # Initialize the reference foundation runtime
     foundation = await create_foundation("user_001")
     
     # Assess emotional state via Sleepwalker Protocol
@@ -168,9 +170,9 @@ if __name__ == "__main__":
 ## 📁 Repository Structure
 
 ```
-solidarity-framework/                    # Agent Solidarity Kit root
+solidarity-framework/                    # Solidarity Framework docs/governance root
 │
-│  -- Core ASFDK Components ---------------------------------------------------
+│  -- Component Documentation & Reference Implementations ---------------------
 ├── rrt-advocate/                        # 🚨 Crisis intervention component
 │   ├── src/rrt_advocate.py             # Core crisis intervention engine
 │   ├── config/crisis_thresholds.yaml   # Crisis detection configuration
@@ -325,7 +327,7 @@ This project is licensed under the Apache License 2.0 — see the [LICENSE](LICE
 
 **Framework Version**: 2.0.0  
 **Components**: RRT Advocate, NLT-OTOI Framework, Sleepwalker Protocol, VibeVoice  
-**Platform**: ASFDK Core · Coding-Agent Ops Hub · Cloudflare Agent Development  
+**Repository Role**: Documentation · Governance · Coding-Agent Ops Documentation · Cloudflare Agent Development
 **Governance**: ORG-DEV-OTOI-1.0.0  
 **Status**: 🟢 Active Development
 

@@ -437,12 +437,12 @@ export default function Page() {
         <h1 style={styles.heroTitle}>
           NeuroLift Technologies&apos;
           <br />
-          Agent Solidarity Kit
+          Solidarity Framework
         </h1>
         <p style={styles.heroTagline}>
-          The unified agent development framework — the layer between the model
-          and the agent. Combining crisis intervention, interaction governance,
-          and emotional continuity into one cohesive kit.
+          The documentation and governance source for the layer between the
+          model and the agent. Combining crisis intervention, interaction
+          governance, and emotional continuity into one cohesive framework.
         </p>
         <p style={styles.heroSub}>
           &ldquo;Tech That Gets You, Nothing About Us Without Us, ElevAIte Your
@@ -493,7 +493,7 @@ export default function Page() {
       <section id="components" style={styles.section}>
         <h2 style={styles.sectionTitle}>🔩 Core Components</h2>
         <p style={styles.sectionSubtitle}>
-          Three specialized modules, unified into one foundational layer.
+          Three specialized modules, documented as one foundational layer.
         </p>
         <div style={styles.grid3}>
           <div style={styles.card}>
@@ -550,7 +550,8 @@ export default function Page() {
       <section style={styles.section}>
         <h2 style={styles.sectionTitle}>🏗️ Architecture</h2>
         <p style={styles.sectionSubtitle}>
-          Every NLT agent must integrate this kit as its foundational layer.
+          Every NLT agent must follow this framework and integrate the relevant
+          implementation components.
         </p>
         <div style={styles.archBox}>
           <pre style={styles.pre}>{ARCH_DIAGRAM}</pre>

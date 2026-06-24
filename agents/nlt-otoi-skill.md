@@ -21,7 +21,7 @@ You operate under `ORG-DEV-OTOI-1.0.0` and the Solidarity Framework principles.
 
 ## What This Skill Does
 
-The NLT-OTOI Skill wraps the `nlt-otoi/` component and provides:
+The NLT-OTOI Skill wraps the OTOI component — published as npm package `@neurolift-technologies/otoi` and developed in repo [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) — and provides:
 
 | Capability | Description |
 |---|---|
@@ -50,10 +50,9 @@ The NLT-OTOI Skill wraps the `nlt-otoi/` component and provides:
 
 ### Python Integration
 
-```python
-import sys
-sys.path.append("path/to/solidarity-framework/nlt-otoi/src")
+The OTOI component lives in repo [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi). For Python, install the Python package from that repository (or vendor the source), then import. *(For TypeScript/JavaScript, use the npm package `@neurolift-technologies/otoi` instead.)*
 
+```python
 from fusion.otoi_orchestrator import OTOIOrchestrator
 from fusion.toi_parser import TOIParser
 
@@ -103,7 +102,7 @@ neurodivergent_accommodations:
 Stop and escalate to **Joshua W. Dorsey, Sr.** (`info@neuroliftsolutions.com`) if:
 - A user's TOI specifies a conflict resolution strategy not listed above
 - An external data store or LLM provider is needed for OTOI logging
-- Changes to `nlt-otoi/src/fusion/otoi_orchestrator.py` touch conflict resolution logic
+- Changes to `src/fusion/otoi_orchestrator.py` (in repo `NeuroLift-Technologies/nlt-otoi`) touch conflict resolution logic
 
 ---
 
@@ -119,18 +118,20 @@ This skill operates under ORG-DEV-OTOI-1.0.0:
 
 ## Key Files
 
-| File | Purpose |
-|---|---|
-| `nlt-otoi/src/fusion/otoi_orchestrator.py` | OTOI multi-agent orchestration core |
-| `nlt-otoi/src/fusion/toi_parser.py` | Parses user TOI YAML into structured preferences |
-| `nlt-otoi/src/fusion/privacy_guardian.py` | Enforces privacy rules from user TOI |
-| `unified-core/integration/toi_otoi_integration.py` | Integration wrapper (reference when embedding in a larger agent) |
+OTOI source files live in repo [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) (npm `@neurolift-technologies/otoi`). The integration wrapper lives in repo [`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk) (npm `@neurolift-technologies/asfdk`).
+
+| File | Repo | Purpose |
+|---|---|---|
+| `src/fusion/otoi_orchestrator.py` | `NeuroLift-Technologies/nlt-otoi` | OTOI multi-agent orchestration core |
+| `src/fusion/toi_parser.py` | `NeuroLift-Technologies/nlt-otoi` | Parses user TOI YAML into structured preferences |
+| `src/fusion/privacy_guardian.py` | `NeuroLift-Technologies/nlt-otoi` | Enforces privacy rules from user TOI |
+| `unified_core/integration/toi_otoi_integration.py` | `NeuroLift-Technologies/asfdk` | Integration wrapper (reference when embedding in a larger agent) |
 
 ---
 
 ## Upgrade Path
 
-When you're ready to adopt the full Solidarity Framework, the NLT-OTOI Framework integrates seamlessly via:
+When you're ready to adopt the full Solidarity Framework, the NLT-OTOI Framework integrates seamlessly through the unified core. The `unified_core` foundation is provided by the `asfdk` repo ([`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk), npm `@neurolift-technologies/asfdk`) — install that package, then:
 ```python
 from unified_core.neurolift_foundation import create_foundation, FoundationMode
 ```

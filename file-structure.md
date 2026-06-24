@@ -80,6 +80,27 @@ solidarity-framework/
     └── incident-response.md          ← What to do when an agent goes off-rails
 ```
 
+> **This is now a documentation / governance repo.** It carries the OTOI contract,
+> agent and skill guidance (`agents/`), SOPs (`SOPs/`), templates (`templates/`),
+> governance workflows, and reference docs (`links.md`, `file-structure.md`).
+> It no longer contains the pillar implementations or the integration layer.
+
+### Component implementations now live in their own repos
+
+The four pillars and the integration/unified-core layer were removed from this
+repo — they live in their own repositories and are published to npm:
+
+| Component | Repo | npm package |
+|---|---|---|
+| **TOI** | [`NeuroLift-Technologies/nlt-toi`](https://github.com/NeuroLift-Technologies/nlt-toi) | `@neurolift-technologies/toi` |
+| **OTOI** (was `nlt-otoi/`) | [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) | `@neurolift-technologies/otoi` |
+| **RRT Advocate** (was `rrt-advocate/`) | [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) | `@neurolift-technologies/rrt-advocate` |
+| **Sleepwalker Protocol** (was `sleepwalker/`) | [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) | `@neurolift-technologies/sleepwalker-protocol` |
+| **Integration / unified core** (was `unified_core/`) | [`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk) | `@neurolift-technologies/asfdk` |
+
+The former `hosting/` web app is no longer part of this repo; it lives in the
+relevant application repo rather than alongside the governance docs.
+
 ---
 
 ## Content Mapping from `nlt-business-agents`

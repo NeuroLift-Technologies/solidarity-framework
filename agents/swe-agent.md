@@ -128,11 +128,14 @@ Use `templates/escalation.md` or file a GitHub Issue using `ISSUE_TEMPLATE/agent
 | vitest / jest | TypeScript/JavaScript testing |
 
 ### Key Files
-- `unified-core/neurolift_foundation.py` — Main foundation class
-- `unified-core/integration/` — Component integration modules
-- `rrt-advocate/src/rrt_advocate.py` — Crisis intervention engine (escalate before modifying)
-- `nlt-otoi/src/fusion/` — OTOI framework core
-- `sleepwalker/sleepwalker_protocol/` — SWP Python implementation
+
+These components now live in their own repos (published to npm), not in this repo:
+
+- `unified_core/neurolift_foundation.py` — Main foundation class — repo `NeuroLift-Technologies/asfdk` (npm `@neurolift-technologies/asfdk`)
+- `unified_core/integration/` — Component integration modules — repo `NeuroLift-Technologies/asfdk`
+- `src/rrt_advocate.py` — Crisis intervention engine (escalate before modifying) — repo `NeuroLift-Technologies/rrt-advocate` (npm `@neurolift-technologies/rrt-advocate`)
+- `src/fusion/` — OTOI framework core — repo `NeuroLift-Technologies/nlt-otoi` (npm `@neurolift-technologies/otoi`)
+- `sleepwalker_protocol/` — SWP Python implementation — repo `NeuroLift-Technologies/sleepwalker` (npm `@neurolift-technologies/sleepwalker-protocol`)
 
 ---
 

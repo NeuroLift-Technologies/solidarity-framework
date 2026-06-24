@@ -23,11 +23,13 @@ The **solidarity-framework** repository is the canonical documentation and gover
 This repo serves three interconnected purposes:
 
 ### 1. Framework Component Documentation
-- **RRT Advocate** (`rrt-advocate/`) — Crisis intervention and immediate safety protocols
-- **NLT-OTOI Framework** (`nlt-otoi/`) — Interaction governance and orchestration
-- **Sleepwalker Protocol** (`sleepwalker/`) — Emotional continuity across sessions
+Component implementations are **not vendored here** — each pillar lives in its own
+repository and ships to npm. This repo documents them; integrate from source:
+- **RRT Advocate** — Crisis intervention and immediate safety protocols — [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) · npm `@neurolift-technologies/rrt-advocate`
+- **NLT-OTOI Framework** — Interaction governance and orchestration — [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) · npm `@neurolift-technologies/otoi` (and `@neurolift-technologies/toi`)
+- **Sleepwalker Protocol** — Emotional continuity across sessions — [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) · npm `@neurolift-technologies/sleepwalker-protocol`
 - **VibeVoice** — Open-source frontier voice AI (ASR + TTS) — see [`NeuroLift-Technologies/VibeVoice`](https://github.com/NeuroLift-Technologies/VibeVoice)
-- **Unified Core** (`unified-core/`) — Reference integration layer connecting all components
+- **Unified Core / reference kit** — Integration layer connecting all pillars — [`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk) (Python `unified_core` + npm `@neurolift-technologies/asfdk`)
 
 ### 2. Coding-Agent Operations Documentation
 - **Agent & Skill Profiles** (`agents/`) — Org-wide custom agent and skill definitions
@@ -38,7 +40,6 @@ This repo serves three interconnected purposes:
 ### 3. Cloudflare Agent Development Platform
 - **Agent Reference Links** (`links.md`) — Curated Cloudflare Workers, Agents SDK, and MCP resources
 - **MCP Server Configuration** (`mcp-config.yaml`) — Ready-to-use GitHub and Cloudflare MCP configs
-- **Hosting** (`hosting/`) — Web application layer for agent-facing interfaces
 
 All agents developed by NeuroLift Technologies **must** follow the governance documented here and use the appropriate implementation repositories for runtime integration.
 
@@ -46,22 +47,23 @@ All agents developed by NeuroLift Technologies **must** follow the governance do
 
 ## What Agents May and May Not Do Here
 
+This is a **documentation and governance** repository — it contains no component
+source code. Implementation changes belong in the component repos linked above.
+
 ### ✅ In Scope (proceed after task confirmation)
-- Update integration code in `unified-core/`
-- Add tests for any component
-- Update documentation in `docs/`
+- Update framework/component **documentation** (this repo describes the pillars; it does not implement them)
 - Update governance tracking files in `docs/active-threads.md`
 - Add agent registration and handoff records to `docs/agent-log/`
+- Update agent & skill profiles in `agents/`, SOPs in `SOPs/`, templates in `templates/`
+- Update Cloudflare dev resources (`links.md`, `mcp-config.yaml`)
 - Minor documentation improvements (typos, clarity, formatting)
-- Bug fixes within existing component integrations
 
 ### 🔴 Out of Scope — Escalate to Joshua W. Dorsey, Sr.
 - Modifying the governance framework itself (OTOI, AGENTS.md, SOPs)
-- Adding or removing core components (rrt-advocate, nlt-otoi, sleepwalker)
+- Implementation changes to any pillar — those belong in the component repos (`rrt-advocate`, `nlt-otoi`, `nlt-toi`, `sleepwalker`, `asfdk`), not here
 - Introducing new external service integrations or LLM provider dependencies
 - Architectural decisions about component interaction patterns
-- Changes to crisis intervention logic (`rrt-advocate/src/rrt_advocate.py`)
-- Changes to crisis thresholds (`rrt-advocate/config/crisis_thresholds.yaml`)
+- Documenting crisis intervention logic or thresholds in a way that changes intended behavior (escalate; the source of truth is `NeuroLift-Technologies/rrt-advocate`)
 - Production deployment decisions
 - Changes to the Solidarity Framework principles
 
@@ -93,24 +95,24 @@ Valid types: `feat`, `fix`, `docs`, `refactor`, `chore`, `test`, `ci`
 
 Examples for this repo:
 ```
-[CLAUDE] feat(integration): add sleepwalker protocol integration
-[COPILOT] fix(rrt): correct crisis threshold handling
+[CLAUDE] docs(components): repoint pillar references to canonical repos
+[COPILOT] docs(sops): clarify onboarding step 3
 [CODEX] docs(readme): update architecture diagram
 ```
 
 ### Technology Stack
-- **Python 3.10+** — Primary language for all components
-- **TypeScript** — Sleepwalker Protocol TypeScript implementation
-- **AsyncIO** — Async processing framework
-- **PyYAML** — Configuration management
-- **pytest** — Testing framework
+This is a **documentation/governance** repo — Markdown-first, no application code.
+- **Markdown** — Documentation, SOPs, agent/skill profiles, governance
+- **YAML / JSON** — `mcp-config.yaml`, governance templates, `.nltotoi/` config
+- Component implementations use their own stacks — see each component repo.
 
 ### Key Files
-- `unified-core/neurolift_foundation.py` — Main foundation class
-- `unified-core/integration/` — Component integration modules
-- `rrt-advocate/src/rrt_advocate.py` — Crisis intervention engine
-- `nlt-otoi/src/fusion/` — OTOI framework core
-- `sleepwalker/sleepwalker_protocol/` — SWP Python implementation
+- `NLT-DEV-OTOI.md` / `AGENTS.md` — governance contract & coordination gateway
+- `agents/` — org-wide agent & skill profiles (incl. the pillar skill docs)
+- `SOPs/` — standard operating procedures (onboarding, repo setup, incident response)
+- `templates/` — OTOI registration, handoff, escalation, intent-log artifacts
+- `docs/active-threads.md` — current work state; `docs/agent-log/` — session audit trail
+- `links.md` / `mcp-config.yaml` — Cloudflare agent development resources
 
 ---
 

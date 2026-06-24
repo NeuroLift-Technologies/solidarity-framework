@@ -21,7 +21,7 @@ You operate under `ORG-DEV-OTOI-1.0.0` and the Solidarity Framework principles.
 
 ## What This Skill Does
 
-The Sleepwalker Protocol Skill wraps the `sleepwalker/` component and provides:
+The Sleepwalker Protocol Skill wraps the Sleepwalker Protocol component — published as npm package `@neurolift-technologies/sleepwalker-protocol` and developed in repo [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) — and provides:
 
 | Capability | Description |
 |---|---|
@@ -50,10 +50,9 @@ The Sleepwalker Protocol respects four consent levels defined in the user's TOI:
 
 ### Python Integration
 
-```python
-import sys
-sys.path.append("path/to/solidarity-framework/sleepwalker")
+The Sleepwalker Protocol component lives in repo [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) and is published as npm package `@neurolift-technologies/sleepwalker-protocol`. Install or vendor that package, then import:
 
+```python
 from sleepwalker_protocol import SleepwalkerProtocol
 
 swp = SleepwalkerProtocol(
@@ -75,10 +74,10 @@ swp.save_session_context(user_id="user-123", session_data=session_summary)
 
 ### TypeScript Integration
 
-The Sleepwalker Protocol also has a TypeScript implementation:
+The Sleepwalker Protocol also has a TypeScript implementation, published as npm package `@neurolift-technologies/sleepwalker-protocol` (repo [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker)):
 
 ```typescript
-import { SleepwalkerProtocol } from "./sleepwalker/src";
+import { SleepwalkerProtocol } from "@neurolift-technologies/sleepwalker-protocol";
 
 const swp = new SleepwalkerProtocol({
   userTOIPath: "path/to/user-toi.yaml",
@@ -117,7 +116,7 @@ The Sleepwalker Protocol watches for signals that suggest the user may be in a p
 Stop and escalate to **Joshua W. Dorsey, Sr.** (`info@neuroliftsolutions.com`) if:
 - A user's consent level cannot be determined and continuity is being considered
 - An external cloud storage provider is being proposed for session state
-- Changes are needed to core state detection logic in `sleepwalker/sleepwalker_protocol/state_detection.py`
+- Changes are needed to core state detection logic in `sleepwalker_protocol/state_detection.py` (in repo `NeuroLift-Technologies/sleepwalker`)
 
 ---
 
@@ -133,20 +132,22 @@ This skill operates under ORG-DEV-OTOI-1.0.0:
 
 ## Key Files
 
-| File | Purpose |
-|---|---|
-| `sleepwalker/sleepwalker_protocol/protocol.py` | Main SleepwalkerProtocol class |
-| `sleepwalker/sleepwalker_protocol/state_detection.py` | Emotional state detection logic |
-| `sleepwalker/sleepwalker_protocol/consent.py` | Consent level management |
-| `sleepwalker/sleepwalker_protocol/continuity.py` | Cross-session context persistence |
-| `sleepwalker/sleepwalker_protocol/toi_loader.py` | Loads user TOI for governance |
-| `unified-core/integration/sleepwalker_integration.py` | Integration wrapper (reference when embedding in a larger agent) |
+Sleepwalker Protocol source files live in repo [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) (npm `@neurolift-technologies/sleepwalker-protocol`). The integration wrapper lives in repo [`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk) (npm `@neurolift-technologies/asfdk`).
+
+| File | Repo | Purpose |
+|---|---|---|
+| `sleepwalker_protocol/protocol.py` | `NeuroLift-Technologies/sleepwalker` | Main SleepwalkerProtocol class |
+| `sleepwalker_protocol/state_detection.py` | `NeuroLift-Technologies/sleepwalker` | Emotional state detection logic |
+| `sleepwalker_protocol/consent.py` | `NeuroLift-Technologies/sleepwalker` | Consent level management |
+| `sleepwalker_protocol/continuity.py` | `NeuroLift-Technologies/sleepwalker` | Cross-session context persistence |
+| `sleepwalker_protocol/toi_loader.py` | `NeuroLift-Technologies/sleepwalker` | Loads user TOI for governance |
+| `unified_core/integration/sleepwalker_integration.py` | `NeuroLift-Technologies/asfdk` | Integration wrapper (reference when embedding in a larger agent) |
 
 ---
 
 ## Upgrade Path
 
-When you're ready to adopt the full Solidarity Framework, the Sleepwalker Protocol integrates seamlessly via:
+When you're ready to adopt the full Solidarity Framework, the Sleepwalker Protocol integrates seamlessly through the unified core. The `unified_core` foundation is provided by the `asfdk` repo ([`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk), npm `@neurolift-technologies/asfdk`) — install that package, then:
 ```python
 from unified_core.neurolift_foundation import create_foundation, FoundationMode
 ```

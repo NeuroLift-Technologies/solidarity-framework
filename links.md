@@ -209,7 +209,7 @@ Solidarity Framework implementation repositories.
 
 IBM's open-source AgentStack framework for building production-ready multi-agent systems.
 Offers modular agent composition, task routing, and tool integration. Reference for
-multi-agent coordination patterns applicable to the Solidarity Framework's unified-core layer.
+multi-agent coordination patterns applicable to the Solidarity Framework's unified core (repo `NeuroLift-Technologies/asfdk`, npm `@neurolift-technologies/asfdk`).
 
 ---
 

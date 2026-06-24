@@ -57,10 +57,10 @@ The Foundation can run in several modes depending on your deployment context:
 
 ### Python Integration
 
+The unified core is provided by the `asfdk` repo ([`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk), npm `@neurolift-technologies/asfdk`) — install or vendor that package, then import:
+
 ```python
 import asyncio
-import sys
-sys.path.append("path/to/solidarity-framework/unified-core")
 
 from neurolift_foundation import (
     NeuroLiftFoundation,
@@ -99,6 +99,8 @@ response = await foundation.process_interaction(interaction)
 ```
 
 ### Minimal Quick Start (UNIFIED mode)
+
+`unified_core` is provided by the `asfdk` package (repo [`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk)):
 
 ```python
 from unified_core.neurolift_foundation import create_foundation, FoundationMode
@@ -139,7 +141,7 @@ Agent Response (governance-compliant, safety-checked)
 - It does not replace your agent's business logic — it wraps and governs it
 - It does not make architectural decisions about your deployment infrastructure
 - It does not store credentials or secrets of any kind
-- It does not modify `rrt-advocate/` crisis thresholds without Joshua W. Dorsey, Sr. approval
+- It does not modify RRT Advocate crisis thresholds (repo `NeuroLift-Technologies/rrt-advocate`) without Joshua W. Dorsey, Sr. approval
 
 ---
 
@@ -167,14 +169,16 @@ This skill operates under ORG-DEV-OTOI-1.0.0:
 
 ## Key Files
 
-| File | Purpose |
-|---|---|
-| `unified-core/neurolift_foundation.py` | Main Foundation class — entry point for full adoption |
-| `unified-core/integration/rrt_integration.py` | RRT Advocate integration wrapper |
-| `unified-core/integration/toi_otoi_integration.py` | NLT-OTOI integration wrapper |
-| `unified-core/integration/sleepwalker_integration.py` | Sleepwalker Protocol integration wrapper |
-| `unified-core/supervisor/supervisor_ai.py` | Cross-component arbitration |
-| `unified-core/coordination/state_manager.py` | Unified session state |
+The unified core and integration layer live in repo [`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk) (Python `unified_core` kit; npm umbrella `@neurolift-technologies/asfdk`).
+
+| File | Repo | Purpose |
+|---|---|---|
+| `unified_core/neurolift_foundation.py` | `NeuroLift-Technologies/asfdk` | Main Foundation class — entry point for full adoption |
+| `unified_core/integration/rrt_integration.py` | `NeuroLift-Technologies/asfdk` | RRT Advocate integration wrapper |
+| `unified_core/integration/toi_otoi_integration.py` | `NeuroLift-Technologies/asfdk` | NLT-OTOI integration wrapper |
+| `unified_core/integration/sleepwalker_integration.py` | `NeuroLift-Technologies/asfdk` | Sleepwalker Protocol integration wrapper |
+| `unified_core/supervisor/supervisor_ai.py` | `NeuroLift-Technologies/asfdk` | Cross-component arbitration |
+| `unified_core/coordination/state_manager.py` | `NeuroLift-Technologies/asfdk` | Unified session state |
 
 ---
 

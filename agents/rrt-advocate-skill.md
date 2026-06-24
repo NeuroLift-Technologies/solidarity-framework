@@ -21,7 +21,9 @@ You operate under `ORG-DEV-OTOI-1.0.0` and the Solidarity Framework principles.
 
 ## What This Skill Does
 
-The RRT Advocate Skill wraps the `rrt-advocate/` component and provides:
+> ⚠️ **Prototype — not medical advice.** The RRT Advocate is an experimental prototype for crisis *signal* detection and routing. It is **not** a medical device, diagnostic tool, or substitute for professional care or emergency services. Always route real emergencies to qualified humans and established crisis services.
+
+The RRT Advocate Skill wraps the RRT Advocate component — published as npm package `@neurolift-technologies/rrt-advocate` and developed in repo [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) — and provides:
 
 | Capability | Description |
 |---|---|
@@ -50,15 +52,14 @@ The RRT Advocate Skill wraps the `rrt-advocate/` component and provides:
 
 ### Python Integration
 
-```python
-import sys
-sys.path.append("path/to/solidarity-framework/rrt-advocate/src")
+The RRT Advocate component lives in repo [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) and is published as npm package `@neurolift-technologies/rrt-advocate`. Install or vendor that package, then import:
 
+```python
 from rrt_advocate import RRTAdvocate, CrisisLevel
 
 advocate = RRTAdvocate(
     user_id="user-123",
-    config_path="path/to/solidarity-framework/rrt-advocate/config/crisis_thresholds.yaml"
+    config_path="path/to/config/crisis_thresholds.yaml"
 )
 
 # In your interaction loop:
@@ -69,9 +70,9 @@ if assessment.crisis_level != CrisisLevel.GREEN:
 
 ### Configuration
 
-Crisis thresholds are tunable without code changes:
+Crisis thresholds are tunable without code changes. The config ships with the RRT Advocate component (repo [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate)):
 ```
-rrt-advocate/config/crisis_thresholds.yaml
+config/crisis_thresholds.yaml
 ```
 
 ---
@@ -88,7 +89,7 @@ rrt-advocate/config/crisis_thresholds.yaml
 
 Stop and escalate to **Joshua W. Dorsey, Sr.** (`info@neuroliftsolutions.com`) if:
 - A BLACK-level crisis is detected and no human supervisor is reachable
-- A change to `rrt-advocate/src/rrt_advocate.py` or `config/crisis_thresholds.yaml` is needed
+- A change to `src/rrt_advocate.py` or `config/crisis_thresholds.yaml` (in repo `NeuroLift-Technologies/rrt-advocate`) is needed
 - An LLM model or external triage service integration is proposed
 
 ---
@@ -105,17 +106,19 @@ This skill operates under ORG-DEV-OTOI-1.0.0:
 
 ## Key Files
 
-| File | Purpose |
-|---|---|
-| `rrt-advocate/src/rrt_advocate.py` | Core crisis engine (do not modify without Joshua's approval) |
-| `rrt-advocate/config/crisis_thresholds.yaml` | Tunable crisis thresholds |
-| `unified-core/integration/rrt_integration.py` | Integration wrapper (reference when embedding in a larger agent) |
+RRT Advocate source files live in repo [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) (npm `@neurolift-technologies/rrt-advocate`). The integration wrapper lives in repo [`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk) (npm `@neurolift-technologies/asfdk`).
+
+| File | Repo | Purpose |
+|---|---|---|
+| `src/rrt_advocate.py` | `NeuroLift-Technologies/rrt-advocate` | Core crisis engine (do not modify without Joshua's approval) |
+| `config/crisis_thresholds.yaml` | `NeuroLift-Technologies/rrt-advocate` | Tunable crisis thresholds |
+| `unified_core/integration/rrt_integration.py` | `NeuroLift-Technologies/asfdk` | Integration wrapper (reference when embedding in a larger agent) |
 
 ---
 
 ## Upgrade Path
 
-When you're ready to adopt the full Solidarity Framework, the RRT Advocate integrates seamlessly via:
+When you're ready to adopt the full Solidarity Framework, the RRT Advocate integrates seamlessly through the unified core. The `unified_core` foundation is provided by the `asfdk` repo ([`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk), npm `@neurolift-technologies/asfdk`) — install that package, then:
 ```python
 from unified_core.neurolift_foundation import create_foundation, FoundationMode
 ```

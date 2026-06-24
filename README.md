@@ -44,7 +44,6 @@ This repository also houses documentation and governance infrastructure for NLT 
 
 - **🔗 Agent Reference Links** (`links.md`) — Curated Cloudflare Workers, Agents SDK, Durable Objects, and MCP resources for NLT agent builds
 - **🔌 MCP Server Configuration** (`mcp-config.yaml`) — Ready-to-use MCP server configs for GitHub and Cloudflare tooling
-- **🌐 Hosting** (`hosting/`) — Web application layer for agent-facing interfaces
 
 The Solidarity Framework ensures human safety, transparency, minimal footprint, and escalation culture across all of these layers.
 
@@ -96,107 +95,54 @@ The Solidarity Framework ensures human safety, transparency, minimal footprint, 
 | **Sleepwalker** | [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) | Emotional continuity across sessions |
 | **VibeVoice** | [`NeuroLift-Technologies/VibeVoice`](https://github.com/NeuroLift-Technologies/VibeVoice) | Voice AI — ASR (speech recognition) & TTS (speech synthesis) |
 
-## 🚀 Quick Start
+## 🚀 Using the Framework
 
-### Prerequisites
+This repository is **documentation and governance only** — it no longer vendors
+the component implementations. Each Solidarity Framework pillar ships from its own
+repository and is published to npm (see [Component Sources](#component-sources)
+above). To build or integrate, install the packages directly.
 
-- Python 3.10 or higher
-- Node.js 18+ (for Sleepwalker TypeScript components)
-- Git with configured user credentials
+### Reference implementation kit — ASFDK
 
-### Installation
+The fastest way to wire all four pillars together is the **Agent Solidarity
+Framework Development Kit** ([`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk)),
+which provides both a Python `unified_core` kit and a TypeScript umbrella package
+that depends on the four pillars:
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/NeuroLift-Technologies/solidarity-framework.git
-   cd solidarity-framework
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Review the reference integration example**
-   ```python
-   from unified_core.neurolift_foundation import create_foundation, FoundationMode
-   
-   # Example: create and start the reference foundation runtime
-   foundation = await create_foundation(
-       user_id="your_user_id",
-       mode=FoundationMode.UNIFIED
-   )
-   ```
-
-### Basic Usage
-
-```python
-import asyncio
-from unified_core.neurolift_foundation import create_foundation
-
-async def main():
-    # Initialize the reference foundation runtime
-    foundation = await create_foundation("user_001")
-    
-    # Assess emotional state via Sleepwalker Protocol
-    assessment = await foundation.assess_emotional_state(
-        "I'm feeling overwhelmed today",
-        context={"mood": "anxious", "energy": "low"}
-    )
-    print(f"Assessment: {assessment}")
-    
-    # Crisis support (if needed) via RRT Advocate
-    crisis_response = await foundation.crisis_alert({
-        "stress_level": "high",
-        "indicators": ["overwhelmed", "panic"],
-        "context": "work deadline pressure"
-    })
-    
-    # Update preferences via NLT-OTOI
-    await foundation.update_preferences({
-        "toi_updates": {
-            "crisis_response": {"privacy_level": "high"}
-        }
-    })
-    
-    # Get system status
-    status = await foundation.get_system_status()
-    print(f"System Status: {status}")
-
-if __name__ == "__main__":
-    asyncio.run(main())
+```bash
+npm install @neurolift-technologies/asfdk
 ```
+
+```ts
+import { createFoundation, FoundationMode } from '@neurolift-technologies/asfdk';
+
+// The orchestrator routes interactions through the active pillars for a mode.
+const foundation = await createFoundation('user_001', FoundationMode.UNIFIED);
+const status = foundation.getSystemStatus();
+```
+
+### Individual pillar packages
+
+| Pillar | npm package |
+|---|---|
+| TOI | `@neurolift-technologies/toi` |
+| OTOI | `@neurolift-technologies/otoi` |
+| RRT Advocate (⚠️ prototype) | `@neurolift-technologies/rrt-advocate` |
+| Sleepwalker Protocol | `@neurolift-technologies/sleepwalker-protocol` |
+
+For Python usage and the canonical reference foundation, see the
+[`asfdk`](https://github.com/NeuroLift-Technologies/asfdk) and per-component
+repositories linked in [Component Sources](#component-sources).
 
 ## 📁 Repository Structure
 
 ```
 solidarity-framework/                    # Solidarity Framework docs/governance root
 │
-│  -- Component Documentation & Reference Implementations ---------------------
-├── rrt-advocate/                        # 🚨 Crisis intervention component
-│   ├── src/rrt_advocate.py             # Core crisis intervention engine
-│   ├── config/crisis_thresholds.yaml   # Crisis detection configuration
-│   ├── docs/                           # RRT documentation
-│   └── tests/                          # RRT test suite
-├── nlt-otoi/                           # 📋 Interaction governance framework
-│   ├── src/fusion/                     # TOI parser, OTOI orchestrator, privacy guardian
-│   ├── schemas/                        # JSON schemas for TOI/OTOI
-│   ├── templates/                      # TOI/charter templates
-│   ├── docs/                           # OTOI documentation
-│   └── examples/                       # Integration examples
-├── sleepwalker/                        # 🌙 Emotional continuity protocol
-│   ├── sleepwalker_protocol/           # Python implementation
-│   ├── src/                            # TypeScript implementation
-│   ├── examples/                       # Usage examples
-│   └── tests/                          # SWP test suite
-├── unified-core/                       # 🔧 Integration layer
-│   ├── neurolift_foundation.py         # Main foundation class
-│   ├── integration/                    # Component integrations
-│   │   ├── rrt_integration.py
-│   │   ├── toi_otoi_integration.py
-│   │   └── sleepwalker_integration.py
-│   ├── supervisor/                     # Supervisor AI coordination
-│   └── coordination/                   # Cross-component coordination
+│  -- Component implementations are NOT vendored here -------------------------
+│     Each pillar lives in its own repo and ships to npm. See "Component
+│     Sources" above (RRT Advocate, NLT-OTOI, Sleepwalker, VibeVoice) and the
+│     reference kit at NeuroLift-Technologies/asfdk.
 │
 │  -- Coding-Agent Operations Hub ---------------------------------------------
 ├── agents/                             # 🤖 Org-wide agent & skill profiles
@@ -234,7 +180,6 @@ solidarity-framework/                    # Solidarity Framework docs/governance 
 │  -- Cloudflare Agent Development --------------------------------------------
 ├── links.md                            # 🔗 Cloudflare agent development references
 ├── mcp-config.yaml                     # 🔌 MCP server configurations (GitHub + Cloudflare)
-├── hosting/                            # 🌐 Web application layer (Next.js)
 │
 │  -- Repository Root ---------------------------------------------------------
 ├── AGENTS.md                           # Agent coordination protocol
@@ -276,16 +221,13 @@ Escalate immediately when:
 
 ## 🧪 Testing
 
-```bash
-# Run RRT Advocate tests
-cd rrt-advocate && pytest tests/ -v
+This is a documentation/governance repo and carries no component test suites.
+Each pillar's tests live in its own repository:
 
-# Run Sleepwalker Protocol tests (Python)
-cd sleepwalker && pytest tests/ -v
-
-# Run Sleepwalker Protocol tests (TypeScript)
-cd sleepwalker && npm test
-```
+- RRT Advocate — [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate)
+- NLT-OTOI — [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi)
+- Sleepwalker Protocol — [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker)
+- Reference kit (ASFDK) — [`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk)
 
 ## 🔐 Privacy & Security
 

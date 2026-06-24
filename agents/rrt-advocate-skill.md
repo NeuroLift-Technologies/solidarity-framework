@@ -52,7 +52,7 @@ The RRT Advocate Skill wraps the RRT Advocate component — published as npm pac
 
 ### Python Integration
 
-The RRT Advocate component lives in repo [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) and is published as npm package `@neurolift-technologies/rrt-advocate`. Install or vendor that package, then import:
+The RRT Advocate component lives in repo [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate). For Python, install the Python package from that repository (or vendor the source), then import. *(For TypeScript/JavaScript, use the npm package `@neurolift-technologies/rrt-advocate` instead.)*
 
 ```python
 from rrt_advocate import RRTAdvocate, CrisisLevel

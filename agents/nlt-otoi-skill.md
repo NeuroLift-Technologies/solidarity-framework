@@ -50,7 +50,7 @@ The NLT-OTOI Skill wraps the OTOI component — published as npm package `@neuro
 
 ### Python Integration
 
-The OTOI component lives in repo [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) and is published as npm package `@neurolift-technologies/otoi`. Install or vendor that package, then import:
+The OTOI component lives in repo [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi). For Python, install the Python package from that repository (or vendor the source), then import. *(For TypeScript/JavaScript, use the npm package `@neurolift-technologies/otoi` instead.)*
 
 ```python
 from fusion.otoi_orchestrator import OTOIOrchestrator

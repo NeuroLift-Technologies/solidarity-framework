@@ -50,7 +50,7 @@ The Sleepwalker Protocol respects four consent levels defined in the user's TOI:
 
 ### Python Integration
 
-The Sleepwalker Protocol component lives in repo [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) and is published as npm package `@neurolift-technologies/sleepwalker-protocol`. Install or vendor that package, then import:
+The Sleepwalker Protocol component lives in repo [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker). For Python, install the Python package from that repository (or vendor the source), then import. *(For TypeScript/JavaScript, use the npm package `@neurolift-technologies/sleepwalker-protocol` instead.)*
 
 ```python
 from sleepwalker_protocol import SleepwalkerProtocol

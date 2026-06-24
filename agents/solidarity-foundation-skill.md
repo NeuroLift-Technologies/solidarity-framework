@@ -57,12 +57,12 @@ The Foundation can run in several modes depending on your deployment context:
 
 ### Python Integration
 
-The unified core is provided by the `asfdk` repo ([`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk), npm `@neurolift-technologies/asfdk`) — install or vendor that package, then import:
+The unified core is provided by the `asfdk` repo ([`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk)). For Python, install the `unified_core` Python kit from that repository (or vendor the source), then import. *(For TypeScript/JavaScript, use the npm package `@neurolift-technologies/asfdk` instead.)*
 
 ```python
 import asyncio
 
-from neurolift_foundation import (
+from unified_core.neurolift_foundation import (
     NeuroLiftFoundation,
     FoundationConfig,
     FoundationMode,

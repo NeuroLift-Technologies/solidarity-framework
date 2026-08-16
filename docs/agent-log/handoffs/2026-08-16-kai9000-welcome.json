@@ -1,0 +1,79 @@
+{
+  "_template_info": {
+    "template_version": "1.0.0",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "otoi_section": "§5 — Handoff Protocol",
+    "sop_reference": "SOP-NLT-001 Step 8",
+    "document_type": "welcome-handoff"
+  },
+  "handoff_record": {
+    "session_id": "2026-08-16-kai9000-welcome",
+    "agent_name": "opencode (big-pickle)",
+    "platform": "opencode",
+    "date": "2026-08-16T06:37:40-04:00",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/solidarity-framework",
+    "branch": "feat/update-readme-pillars",
+    "active_thread_id": "THREAD-006",
+    "welcome_to": "Kai9000",
+    "work_completed": [
+      "Aligned README.md to the canonical four-pillar framework model (TOI, OTOI, RRT Advocate, Sleepwalker Protocol) across the Core Agent Framework list, architecture diagram, Component Sources table, repository-structure comment, and footer.",
+      "Corrected component repository references: TOI → NeuroLift-Technologies/nlt-toi, OTOI → NeuroLift-Technologies/nlt-otoi.",
+      "Relocated THREAD-012 (Solidarity Framework Learning Web App) into the Active Threads section of docs/active-threads.md, replaced VibeVoice with TOI in its task description, and added blank lines around its table (MD058).",
+      "Addressed all 7 review comments on PR #26 (5 CodeRabbit findings, 2 JDUB1216 comments).",
+      "Ran governance validation (bash .nltotoi/scripts/validate-governance.sh) — PASSED WITH WARNINGS (25/26; 1 pre-existing warning about registration/handoff count mismatch)."
+    ],
+    "work_in_progress": [
+      "PR #26 (docs: update README to reflect four-pillar framework model) is open on branch feat/update-readme-pillars — awaiting human review/merge.",
+      "THREAD-012 (owned by Kai) — Solidarity Framework Learning Web App scaffold under app/ (untracked, not committed)."
+    ],
+    "blockers": [
+      "MCP GitHub token lacks PR write access to NeuroLift-Technologies org — use `gh` CLI (authenticated as JDUB1216) for PR operations in this repo."
+    ],
+    "decisions_made": [
+      {
+        "decision": "Adopt the four-pillar model (TOI, OTOI, RRT Advocate, Sleepwalker Protocol) as canonical in README documentation.",
+        "rationale": "Aligns with the existing repo documentation (file-structure.md, nlt-otoi-skill.md) and review feedback; VibeVoice remains a voice-layer component, not a core pillar.",
+        "made_by": "opencode, per review feedback"
+      }
+    ],
+    "decisions_pending": [
+      {
+        "decision": "Merge PR #26.",
+        "owner": "Joshua W. Dorsey, Sr.",
+        "urgency": "low"
+      },
+      {
+        "decision": "Whether the app/ learning web app (THREAD-012) should be committed to main or developed on a feature branch.",
+        "owner": "Kai / Joshua W. Dorsey, Sr.",
+        "urgency": "medium"
+      }
+    ],
+    "escalations": [
+      {
+        "topic": "None — all work was documentation-only and within scope.",
+        "status": "not-required",
+        "issue_url": null
+      }
+    ],
+    "next_agent_notes": "Welcome to the team, Kai9000! 🎉 You are now operating under ORG-DEV-OTOI-1.0.0 governance. Required reading before substantive work: NLT-DEV-OTOI.md, AGENTS.md, repo CLAUDE.md, and docs/active-threads.md (SOP-NLT-001 8-step onboarding). Commit format is [AGENT_NAME] type(scope): description; every session ends with a handoff record in docs/agent-log/handoffs/. Active context: (1) PR #26 on branch feat/update-readme-pillars updates README to the four-pillar model and is ready for merge; (2) THREAD-012 — the Solidarity Framework learning web app lives untracked under app/ and needs a branch + commits; (3) note there is an untracked registration (docs/agent-log/registrations/2026-08-16-josh-sf-app.json) from Kai's earlier session that should be committed. Escalate to Joshua W. Dorsey, Sr. for architecture decisions, external integrations, or scope expansion. See SOP-NLT-001 for full onboarding details.",
+    "files_modified": [
+      "README.md",
+      "docs/active-threads.md"
+    ],
+    "files_created": [
+      "docs/agent-log/handoffs/2026-08-16-kai9000-welcome.json"
+    ],
+    "files_deleted": [],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh (25/26 pass, 1 pre-existing warning)"
+    ],
+    "tests_passing": true,
+    "pr_url": "https://github.com/NeuroLift-Technologies/solidarity-framework/pull/26",
+    "commit_shas": [
+      "6c2e67f",
+      "042741a",
+      "e6d9f88"
+    ]
+  }
+}

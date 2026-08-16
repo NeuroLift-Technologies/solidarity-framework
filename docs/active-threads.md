@@ -34,6 +34,21 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Related PR** | TBD |
 | **Notes** | Handoff from Claude.ai Main (NLT-HND-2026-008). Documentation additions only — no governance modifications. Awaiting Josh's direction before any further work. |
 
+### THREAD-012 — Solidarity Framework Learning Web App
+
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-012 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-08-16 |
+| **Owner** | Kai |
+| **Branch** | main |
+| **Task** | Build a learning web app to teach Solidarity Framework components (TOI, OTOI, RRT Advocate, Sleepwalker) co-located with docs. |
+| **Scope** | /app (new) |
+| **Blockers** | None |
+| **Related PR** | TBD |
+| **Notes** | Authorized by Josh (Joshua W. Dorsey, Sr.). Deviates from documentation-only scope per intent to centralize learning resources. |
+
 ---
 
 ## Completed Threads

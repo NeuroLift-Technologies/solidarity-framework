@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-05-19
+> Last updated: 2026-08-16
 
 ---
 
@@ -42,12 +42,12 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Status** | 🟡 In Progress |
 | **Started** | 2026-08-16 |
 | **Owner** | Kai |
-| **Branch** | main |
+| **Branch** | feat/solidarity-learning-app |
 | **Task** | Build a learning web app to teach Solidarity Framework components (TOI, OTOI, RRT Advocate, Sleepwalker) co-located with docs. |
 | **Scope** | /app (new) |
 | **Blockers** | None |
 | **Related PR** | TBD |
-| **Notes** | Authorized by Josh (Joshua W. Dorsey, Sr.). Deviates from documentation-only scope per intent to centralize learning resources. |
+| **Notes** | Authorized by Josh (Joshua W. Dorsey, Sr.). Deviates from documentation-only scope per intent to centralize learning resources. Under review: open code-review findings (architecture sign-off, origin-story doc hygiene). |
 
 ---
 

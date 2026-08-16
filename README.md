@@ -23,12 +23,12 @@ The **Agent Solidarity Framework Development Kit (ASFDK)** is a separate impleme
 
 ### Core Agent Framework
 
-The Solidarity Framework defines the layer between the AI model and the agent, including:
+The Solidarity Framework defines the layer between the AI model and the agent, consisting of four core pillars:
 
-- **🚨 RRT Advocate** — Rapid Response Team for crisis intervention and immediate safety protocols
-- **📋 NLT-OTOI Framework** — Terms of Interaction and Orchestrated Terms of Interaction for governance and user preferences
+- **📋 TOI (Terms of Interaction)** — Governance and user-preference foundation
+- **📋 OTOI (Orchestrated TOI)** — Multi-agent coordination and governance layer
+- **🚨 RRT Advocate** — Crisis intervention and immediate safety protocols
 - **🌙 Sleepwalker Protocol (SWP)** — Emotional continuity governance for long-term safety across sessions
-- **🎙️ VibeVoice** — Open-source frontier voice AI for speech recognition (ASR) and text-to-speech (TTS)
 
 Every NLT agent **must** follow the Solidarity Framework governance model and use the relevant implementation repositories for deployable components.
 
@@ -90,10 +90,10 @@ The Solidarity Framework ensures human safety, transparency, minimal footprint, 
 
 | Component | Repository | Purpose |
 |-----------|-----------|---------|
+| **TOI** | [`NeuroLift-Technologies/toi`](https://github.com/NeuroLift-Technologies/toi) | Governance and user-preference foundation |
+| **OTOI** | [`NeuroLift-Technologies/otoi`](https://github.com/NeuroLift-Technologies/otoi) | Multi-agent coordination and governance layer |
 | **RRT Advocate** | [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) | Crisis intervention & safety |
-| **NLT-OTOI** | [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) | Interaction governance & orchestration |
-| **Sleepwalker** | [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) | Emotional continuity across sessions |
-| **VibeVoice** | [`NeuroLift-Technologies/VibeVoice`](https://github.com/NeuroLift-Technologies/VibeVoice) | Voice AI — ASR (speech recognition) & TTS (speech synthesis) |
+| **Sleepwalker Protocol** | [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) | Emotional continuity across sessions |
 
 ## 🚀 Using the Framework
 

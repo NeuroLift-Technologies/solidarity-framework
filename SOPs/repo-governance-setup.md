@@ -1,5 +1,5 @@
 # SOP-NLT-002 — Repository Governance Bootstrap
-> Standard Operating Procedure · ORG-DEV-OTOI-1.0.0
+> Standard Operating Procedure · ORG-DEV-OTOI-1.0.3
 > Applies to: Any agent bootstrapping NLT governance infrastructure in a new repository
 > Effective: 2025-04-04 · Owner: Joshua W. Dorsey, Sr.
 
@@ -7,7 +7,7 @@
 
 ## Purpose
 
-This SOP defines the process for setting up ORG-DEV-OTOI-1.0.0-compliant governance infrastructure in a new NeuroLift Technologies repository. It ensures all repositories have a consistent, complete governance foundation before active agent work begins.
+This SOP defines the process for setting up ORG-DEV-OTOI-1.0.3-compliant governance infrastructure in a new NeuroLift Technologies repository. It ensures all repositories have a consistent, complete governance foundation before active agent work begins.
 
 ---
 
@@ -90,7 +90,7 @@ touch docs/agent-log/handoffs/.gitkeep
 
 **Commit:**
 ```
-[AGENT_NAME] chore(governance): initialize OTOI directory structure (ORG-DEV-OTOI-1.0.0)
+[AGENT_NAME] chore(governance): initialize OTOI directory structure (ORG-DEV-OTOI-1.0.3)
 ```
 
 ### Phase 3 — Create Repo-Specific CLAUDE.md
@@ -166,7 +166,7 @@ Fix any issues before proceeding.
 ### Phase 8 — Open Pull Request
 
 Create a PR with:
-- **Title:** `chore(governance): bootstrap OTOI governance infrastructure (ORG-DEV-OTOI-1.0.0)`
+- **Title:** `chore(governance): bootstrap OTOI governance infrastructure (ORG-DEV-OTOI-1.0.3)`
 - **Description:** Reference this SOP, list all files added, confirm validation script passes
 - **Reviewer:** Joshua W. Dorsey, Sr.
 - **Labels:** `governance`, `chore`
@@ -204,7 +204,7 @@ Before closing the bootstrap PR, confirm:
 | **Owner** | Joshua W. Dorsey, Sr. |
 | **Review Cycle** | Quarterly |
 | **Next Review** | 2025-07-04 |
-| **OTOI Alignment** | ORG-DEV-OTOI-1.0.0 |
+| **OTOI Alignment** | ORG-DEV-OTOI-1.0.3 |
 
 ---
 

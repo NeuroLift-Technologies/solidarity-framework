@@ -12,7 +12,7 @@ Purpose: Canonical Solidarity Framework documentation and governance source;
          hosting)
 Owner: NeuroLift Technologies
 Organization: NeuroLift Technologies
-Governance: ORG-DEV-OTOI-1.0.0
+Governance: ORG-DEV-OTOI-1.0.3
 """
 
 import os
@@ -58,7 +58,7 @@ class RepositoryTopography:
     """
     
     # Governance
-    governance_contract: str = "ORG-DEV-OTOI-1.0.0"
+    governance_contract: str = "ORG-DEV-OTOI-1.0.3"
     authority: str = "Joshua W. Dorsey, Sr."
     escalation_email: str = "info@neuroliftsolutions.com"
     
@@ -151,7 +151,7 @@ class RepositoryTopography:
         "root": {
             "README.md": "Agent Solidarity Kit documentation and usage guide",
             "GEMINI_TOPOGRAPHY.py": "Repository structure and metadata (this file)",
-            "AGENTS.md": "Agent coordination protocol (ORG-DEV-OTOI-1.0.0)",
+            "AGENTS.md": "Agent coordination protocol (ORG-DEV-OTOI-1.0.3)",
             "CLAUDE.md": "AI assistant guide for OTOI compliance",
             "CONTRIBUTING.md": "Contribution guidelines",
             "CODE_OF_CONDUCT.md": "Community code of conduct",

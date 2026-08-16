@@ -193,9 +193,9 @@ solidarity-framework/                    # Solidarity Framework docs/governance 
 └── README.md                           # This file
 ```
 
-## 🔐 Governance (ORG-DEV-OTOI-1.0.0)
+## 🔐 Governance (ORG-DEV-OTOI-1.0.3)
 
-This repository is governed by **ORG-DEV-OTOI-1.0.0** — the NeuroLift Technologies Orchestrated Terms of Interaction contract.
+This repository is governed by **ORG-DEV-OTOI-1.0.3** — the NeuroLift Technologies Orchestrated Terms of Interaction contract.
 
 ### For AI Agents
 
@@ -270,7 +270,7 @@ This project is licensed under the Apache License 2.0 — see the [LICENSE](LICE
 **Framework Version**: 2.0.0  
 **Components**: RRT Advocate, NLT-OTOI Framework, Sleepwalker Protocol, VibeVoice  
 **Repository Role**: Documentation · Governance · Coding-Agent Ops Documentation · Cloudflare Agent Development
-**Governance**: ORG-DEV-OTOI-1.0.0  
+**Governance**: ORG-DEV-OTOI-1.0.3  
 **Status**: 🟢 Active Development
 
 *"Tech That Gets You, Nothing About Us Without Us, ElevAIte Your Mind"*

@@ -140,4 +140,4 @@ Before ending any significant session:
 
 ---
 
-*Internal governance document — NeuroLift Technologies | ORG-DEV-OTOI-1.0.0*
+*Internal governance document — NeuroLift Technologies | ORG-DEV-OTOI-1.0.3*

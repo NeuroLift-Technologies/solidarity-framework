@@ -1,5 +1,5 @@
 # CLAUDE.md — NeuroLift-Technologies/solidarity-framework
-> OTOI Compliance File · ORG-DEV-OTOI-1.0.0 · Step 3 of Agent Onboarding (SOP-NLT-001)
+> OTOI Compliance File · ORG-DEV-OTOI-1.0.3 · Step 3 of Agent Onboarding (SOP-NLT-001)
 
 ---
 
@@ -10,7 +10,7 @@
 | **Repository**     | `NeuroLift-Technologies/solidarity-framework`              |
 | **Visibility**     | Private                                                    |
 | **Purpose**        | Solidarity Framework documentation and governance source: framework principles, component documentation, coding-agent operations, and Cloudflare agent development resources |
-| **OTOI Version**   | ORG-DEV-OTOI-1.0.0                                        |
+| **OTOI Version**   | ORG-DEV-OTOI-1.0.3                                        |
 | **Governing SOP**  | SOP-NLT-001 (`SOPs/new-agent-onboarding.md`)              |
 | **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol, VibeVoice, Agent Ops Documentation, Cloudflare Dev Resources |
 
@@ -127,4 +127,4 @@ When in doubt, escalate. It is always better to pause than to guess.
 
 ---
 
-*This file is part of the ORG-DEV-OTOI-1.0.0 governance framework for NeuroLift Technologies.*
+*This file is part of the ORG-DEV-OTOI-1.0.3 governance framework for NeuroLift Technologies.*

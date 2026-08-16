@@ -62,22 +62,23 @@ The Solidarity Framework ensures human safety, transparency, minimal footprint, 
 │                  Solidarity Framework                           │
 │          "The Layer Between the Model and the Agent"             │
 ├─────────────────────────────────────────────────────────────────┤
-│  ┌──────────────────┐  ┌──────────────────┐  ┌───────────────┐ │
-│  │ RRT Advocate      │  │ NLT-OTOI         │  │ Sleepwalker   │ │
-│  │ (Protective)      │◄─┤ (Constitutional) │◄─┤ (Continuity)  │ │
-│  │                   │  │                  │  │               │ │
-│  │ • Crisis Detection│  │ • TOI Governance │  │ • Emotional   │ │
-│  │ • Emergency       │  │ • OTOI Orchestr. │  │   State       │ │
-│  │   Response        │  │ • Privacy Guard  │  │   Detection   │ │
-│  │ • Tiered Alerts   │  │ • User Prefs     │  │ • Session     │ │
-│  │ • Agency Preserv. │  │ • Multi-Agent    │  │   Continuity  │ │
-│  └──────────────────┘  └──────────────────┘  └───────────────┘ │
+│  ┌───────────────────────────┐  ┌───────────────────────────┐  │
+│  │ TOI                        │  │ OTOI                       │  │
+│  │ (Terms of Interaction)     │  │ (Orchestrated TOI)         │  │
+│  │                            │  │                            │  │
+│  │ • Governance Foundation    │  │ • Multi-Agent Coord.       │  │
+│  │ • User Preferences         │  │ • Orchestration Layer      │  │
+│  │ • Privacy Guard            │  │ • Agency Preservation      │  │
+│  └───────────────────────────┘  └───────────────────────────┘  │
 ├─────────────────────────────────────────────────────────────────┤
-│                      VibeVoice (Voice Layer)                     │
-│  ┌──────────────────────────┐  ┌──────────────────────────────┐ │
-│  │ VibeVoice-ASR-7B          │  │ VibeVoice-Realtime-0.5B      │ │
-│  │ (Speech Recognition)      │  │ (Text-to-Speech Streaming)   │ │
-│  └──────────────────────────┘  └──────────────────────────────┘ │
+│  ┌───────────────────────────┐  ┌───────────────────────────┐  │
+│  │ RRT Advocate               │  │ Sleepwalker Protocol       │  │
+│  │ (Protective)               │  │ (Continuity)               │  │
+│  │                            │  │                            │  │
+│  │ • Crisis Detection         │  │ • Emotional State          │  │
+│  │ • Emergency Response       │  │ • Session Continuity       │  │
+│  │ • Tiered Alerts            │  │ • Long-Term Safety         │  │
+│  └───────────────────────────┘  └───────────────────────────┘  │
 ├─────────────────────────────────────────────────────────────────┤
 │                        Unified Core                              │
 │  ┌──────────────────┐  ┌──────────────────┐  ┌───────────────┐ │
@@ -90,8 +91,8 @@ The Solidarity Framework ensures human safety, transparency, minimal footprint, 
 
 | Component | Repository | Purpose |
 |-----------|-----------|---------|
-| **TOI** | [`NeuroLift-Technologies/toi`](https://github.com/NeuroLift-Technologies/toi) | Governance and user-preference foundation |
-| **OTOI** | [`NeuroLift-Technologies/otoi`](https://github.com/NeuroLift-Technologies/otoi) | Multi-agent coordination and governance layer |
+| **TOI** | [`NeuroLift-Technologies/nlt-toi`](https://github.com/NeuroLift-Technologies/nlt-toi) | Governance and user-preference foundation |
+| **OTOI** | [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) | Multi-agent coordination and governance layer |
 | **RRT Advocate** | [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) | Crisis intervention & safety |
 | **Sleepwalker Protocol** | [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) | Emotional continuity across sessions |
 
@@ -141,7 +142,7 @@ solidarity-framework/                    # Solidarity Framework docs/governance 
 │
 │  -- Component implementations are NOT vendored here -------------------------
 │     Each pillar lives in its own repo and ships to npm. See "Component
-│     Sources" above (RRT Advocate, NLT-OTOI, Sleepwalker, VibeVoice) and the
+│     Sources" above (TOI, OTOI, RRT Advocate, Sleepwalker) and the
 │     reference kit at NeuroLift-Technologies/asfdk.
 │
 │  -- Coding-Agent Operations Hub ---------------------------------------------
@@ -268,7 +269,7 @@ This project is licensed under the Apache License 2.0 — see the [LICENSE](LICE
 ---
 
 **Framework Version**: 2.0.0  
-**Components**: RRT Advocate, NLT-OTOI Framework, Sleepwalker Protocol, VibeVoice  
+**Components**: TOI, OTOI, RRT Advocate, Sleepwalker Protocol  
 **Repository Role**: Documentation · Governance · Coding-Agent Ops Documentation · Cloudflare Agent Development
 **Governance**: ORG-DEV-OTOI-1.0.0  
 **Status**: 🟢 Active Development

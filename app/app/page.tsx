@@ -94,8 +94,8 @@ export default function SolidarityNarrativeHome() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
             {[
-              { id: 'playground', href: 'https://sme-agents.vercel.app', name: 'Agent Playground', fullName: 'Interactive Web App', icon: '🤖', color: '#7c3aed', desc: 'Try TOI, OTOI, RRT Advocate, Sleepwalker, SDL, and ASFDK agents live.' },
-              { id: 'sme-home', href: 'https://sme-agents.vercel.app', name: 'SME Agents Home', fullName: 'Ecosystem Landing Page', icon: '🧭', color: '#0d9488', desc: 'Seven domain-specialized agents, their capabilities, and how they orchestrate.' },
+              { id: 'playground', href: 'https://sme-agents-one.vercel.app', name: 'Agent Playground', fullName: 'Interactive Web App', icon: '🤖', color: '#7c3aed', desc: 'Try TOI, OTOI, RRT Advocate, Sleepwalker, SDL, and ASFDK agents live.' },
+              { id: 'sme-home', href: 'https://sme-agents-one.vercel.app', name: 'SME Agents Home', fullName: 'Ecosystem Landing Page', icon: '🧭', color: '#0d9488', desc: 'Seven domain-specialized agents, their capabilities, and how they orchestrate.' },
             ].map((agent) => (
               <a key={agent.id} href={agent.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div style={{

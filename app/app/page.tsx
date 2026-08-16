@@ -84,6 +84,41 @@ export default function SolidarityNarrativeHome() {
         </div>
       </section>
 
+      {/* SME Agents Playground */}
+      <section style={{ padding: '4rem 2rem', backgroundColor: '#f5f3ff' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '0.5rem' }}>Try the SME Agents</h2>
+          <p style={{ fontSize: '1.25rem', color: '#6b7280', textAlign: 'center', marginBottom: '3rem' }}>
+            Live playground for the seven domain-specialized agents under the Solidarity Framework.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
+            {[
+              { id: 'playground', href: 'https://sme-agents.vercel.app', name: 'Agent Playground', fullName: 'Interactive Web App', icon: '🤖', color: '#7c3aed', desc: 'Try TOI, OTOI, RRT Advocate, Sleepwalker, SDL, and ASFDK agents live.' },
+              { id: 'sme-home', href: 'https://sme-agents.vercel.app', name: 'SME Agents Home', fullName: 'Ecosystem Landing Page', icon: '🧭', color: '#0d9488', desc: 'Seven domain-specialized agents, their capabilities, and how they orchestrate.' },
+            ].map((agent) => (
+              <a key={agent.id} href={agent.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div style={{
+                  padding: '2rem',
+                  borderRadius: '1rem',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid #e9d5ff',
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer',
+                  borderTop: `4px solid ${agent.color}`
+                }}>
+                  <div role="img" aria-label={agent.name} style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{agent.icon}</div>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{agent.name}</h3>
+                  <p style={{ fontSize: '0.875rem', color: '#6b7280', marginBottom: '1rem' }}>{agent.fullName}</p>
+                  <p style={{ fontSize: '1rem', color: '#374151', marginBottom: '1.5rem' }}>{agent.desc}</p>
+                  <span style={{ color: agent.color, fontWeight: '600' }}>Open Playground →</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Looking Ahead */}
       <section style={{ padding: '4rem 2rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Looking Ahead</h2>

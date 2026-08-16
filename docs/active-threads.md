@@ -198,3 +198,17 @@ When adding a new thread, copy this template:
 ---
 
 *This file is part of the ORG-DEV-OTOI-1.0.0 governance framework for NeuroLift Technologies.*
+
+### THREAD-012 — Solidarity Framework Learning Web App
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-012 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-08-16 |
+| **Owner** | Kai |
+| **Branch** | main |
+| **Task** | Build a learning web app to teach Solidarity Framework components (RRT Advocate, NLT-OTOI, Sleepwalker, VibeVoice) co-located with docs. |
+| **Scope** | /app (new) |
+| **Blockers** | None |
+| **Related PR** | TBD |
+| **Notes** | Authorized by Josh (Joshua W. Dorsey, Sr.). Deviates from documentation-only scope per intent to centralize learning resources. |

@@ -1,12 +1,11 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function SleepwalkerDetail() {
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', padding: '2rem', maxWidth: '900px', margin: '0 auto', backgroundColor: '#f9fafb', minHeight: '100vh' }}>
-      <Link href="/" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600', display: 'block', marginBottom: '2rem' }}>← Back to Learning Center</Link>
+    <main style={{ fontFamily: 'system-ui, sans-serif', padding: '2rem', maxWidth: '900px', margin: '0 auto', backgroundColor: '#f9fafb', minHeight: '100vh' }}>
+      <nav aria-label="Breadcrumb"><Link href="/" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600', display: 'block', marginBottom: '2rem' }}>← Back to Learning Center</Link></nav>
       <header style={{ marginBottom: '3rem', borderBottom: '4px solid #a855f7', paddingBottom: '1rem' }}>
-        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🌙</div>
+        <div role="img" aria-label="Sleepwalker Protocol" style={{ fontSize: '3rem', marginBottom: '1rem' }}>🌙</div>
         <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.5rem' }}>Sleepwalker Protocol</h1>
         <p style={{ fontSize: '1.25rem', color: '#6b7280' }}>Emotional Continuity Layer</p>
       </header>
@@ -33,6 +32,6 @@ export default function SleepwalkerDetail() {
           </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

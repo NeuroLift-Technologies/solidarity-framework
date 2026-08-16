@@ -1,12 +1,11 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function OTOIDetail() {
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', padding: '2rem', maxWidth: '900px', margin: '0 auto', backgroundColor: '#f9fafb', minHeight: '100vh' }}>
-      <Link href="/" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600', display: 'block', marginBottom: '2rem' }}>← Back to Learning Center</Link>
+    <main style={{ fontFamily: 'system-ui, sans-serif', padding: '2rem', maxWidth: '900px', margin: '0 auto', backgroundColor: '#f9fafb', minHeight: '100vh' }}>
+      <nav aria-label="Breadcrumb"><Link href="/" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600', display: 'block', marginBottom: '2rem' }}>← Back to Learning Center</Link></nav>
       <header style={{ marginBottom: '3rem', borderBottom: '4px solid #6366f1', paddingBottom: '1rem' }}>
-        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📋</div>
+        <div role="img" aria-label="OTOI" style={{ fontSize: '3rem', marginBottom: '1rem' }}>📋</div>
         <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.5rem' }}>OTOI</h1>
         <p style={{ fontSize: '1.25rem', color: '#6b7280' }}>Orchestrated Terms of Interaction</p>
       </header>
@@ -35,7 +34,7 @@ export default function OTOIDetail() {
             <p style={{ fontSize: '0.9rem', color: '#4b5563' }}>Filters and protects sensitive data boundaries.</p>
           </div>
         </div>
-      </div}
-    </div>
+      </div>
+    </main>
   );
 }

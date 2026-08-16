@@ -89,15 +89,19 @@ export default function SolidarityNarrativeHome() {
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '0.5rem' }}>Try the SME Agents</h2>
           <p style={{ fontSize: '1.25rem', color: '#6b7280', textAlign: 'center', marginBottom: '3rem' }}>
-            Live playground for the seven domain-specialized agents under the Solidarity Framework.
+            Each framework component has a live, domain-specialized agent. Open one to try it.
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
             {[
-              { id: 'playground', href: 'https://sme-agents-one.vercel.app', name: 'Agent Playground', fullName: 'Interactive Web App', icon: '🤖', color: '#7c3aed', desc: 'Try TOI, OTOI, RRT Advocate, Sleepwalker, SDL, and ASFDK agents live.' },
-              { id: 'sme-home', href: 'https://sme-agents-one.vercel.app', name: 'SME Agents Home', fullName: 'Ecosystem Landing Page', icon: '🧭', color: '#0d9488', desc: 'Seven domain-specialized agents, their capabilities, and how they orchestrate.' },
+              { slug: 'toi', name: 'TOI Agent', fullName: 'Terms of Interaction', icon: '📋', color: '#3b82f6', desc: 'Parse, validate, and resolve your Terms of Interaction live.' },
+              { slug: 'otoi', name: 'OTOI Agent', fullName: 'Orchestrated Terms of Interaction', icon: '🔀', color: '#6366f1', desc: 'Honor TOI stacks across multi-agent meshes.' },
+              { slug: 'asfdk', name: 'ASFDK Agent', fullName: 'Solidarity Framework Dev Kit', icon: '🧩', color: '#059669', desc: 'Solidarity Layer middleware between model and runtime.' },
+              { slug: 'rrt', name: 'RRT Advocate', fullName: 'Rapid Response Team', icon: '🚨', color: '#ef4444', desc: 'Crisis detection and immediate safety protocols.' },
+              { slug: 'sleepwalker', name: 'Sleepwalker', fullName: 'Continuity Layer', icon: '🌙', color: '#a855f7', desc: 'Emotional continuity across sessions.' },
+              { slug: 'sdl', name: 'SDL Agent', fullName: 'State Detection Layer', icon: '🛡️', color: '#f59e0b', desc: 'Fail-closed routing net for response decisions.' },
             ].map((agent) => (
-              <a key={agent.id} href={agent.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <a key={agent.slug} href={`https://sme-agents-one.vercel.app/agents/${agent.slug}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div style={{
                   padding: '2rem',
                   borderRadius: '1rem',
@@ -111,7 +115,7 @@ export default function SolidarityNarrativeHome() {
                   <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{agent.name}</h3>
                   <p style={{ fontSize: '0.875rem', color: '#6b7280', marginBottom: '1rem' }}>{agent.fullName}</p>
                   <p style={{ fontSize: '1rem', color: '#374151', marginBottom: '1.5rem' }}>{agent.desc}</p>
-                  <span style={{ color: agent.color, fontWeight: '600' }}>Open Playground →</span>
+                  <span style={{ color: agent.color, fontWeight: '600' }}>Open Agent →</span>
                 </div>
               </a>
             ))}

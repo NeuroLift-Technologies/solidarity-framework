@@ -37,7 +37,7 @@ export default function SolidarityNarrativeHome() {
         <div style={{ marginBottom: '4rem', padding: '2rem', backgroundColor: '#eff6ff', borderRadius: '1rem', borderLeft: '4px solid #3b82f6' }}>
           <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem' }}>The Realization</h2>
           <p style={{ fontSize: '1.2rem', color: '#1e40af' }}>
-            What we discovered is that these needs aren't niche. They are the baseline expectations for <strong>humane AI assistance</strong>.
+            What we discovered is that these needs aren't niche. They are the baseline expectations for <strong style={{ fontWeight: 'bold' }}>humane AI assistance</strong>.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function SolidarityNarrativeHome() {
           <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>The Universal Layer</h2>
           <p style={{ fontSize: '1.2rem', color: '#374151', marginBottom: '1.5rem' }}>
             The Solidarity Framework is the result of this evolution. It is the source of truth for the principles and components that sit 
-            <strong>between the model and the agent</strong>. It ensures that no matter the tool, the interaction is governed by safety, transparency, and human agency.
+            <strong style={{ fontWeight: 'bold' }}>between the model and the agent</strong>. It ensures that no matter the tool, the interaction is governed by safety, transparency, and human agency.
           </p>
         </div>
       </section>
@@ -53,7 +53,9 @@ export default function SolidarityNarrativeHome() {
       {/* The Pillars Section */}
       <section style={{ padding: '4rem 2rem', backgroundColor: '#111827', color: 'white' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '3rem' }}>The Tools of Solidarity</h2>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '0.5rem' }}>Tools of Solidarity</h2>
+          <p style={{ fontSize: '1.25rem', color: '#9ca3af', textAlign: 'center', marginBottom: '3rem' }}>The Learning Center</p>
+          
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
             {pillars.map((pillar) => (
               <Link key={pillar.id} href={pillar.path} style={{ textDecoration: 'none', color: 'inherit' }}>

@@ -32,6 +32,7 @@ jobs:
           echo ""
           echo "Checking commits between ${BASE} and ${HEAD} for OTOI §4.2 commit format..."
           echo "Required: [AGENT_NAME] type(scope): description"
+          echo "Note: Merge commits are human-authored and excluded (the format governs agent commits only)."
           echo ""
 
           while IFS= read -r line; do
@@ -44,7 +45,7 @@ jobs:
               echo "    → Non-compliant. Expected: [AGENT_NAME] type(scope): description"
               FAILURES=$((FAILURES + 1))
             fi
-          done < <(git log --oneline "${BASE}..${HEAD}" 2>/dev/null)
+          done < <(git log --no-merges --oneline "${BASE}..${HEAD}" 2>/dev/null)
 
           echo ""
           if [ "$FAILURES" -gt 0 ]; then

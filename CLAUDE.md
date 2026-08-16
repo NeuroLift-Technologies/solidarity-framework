@@ -8,7 +8,7 @@
 | Field              | Value                                                     |
 |--------------------|-----------------------------------------------------------|
 | **Repository**     | `NeuroLift-Technologies/solidarity-framework`              |
-| **Visibility**     | Private                                                    |
+| **Visibility**     | Public                                                     |
 | **Purpose**        | Solidarity Framework documentation and governance source: framework principles, component documentation, coding-agent operations, and Cloudflare agent development resources |
 | **OTOI Version**   | ORG-DEV-OTOI-1.0.3                                        |
 | **Governing SOP**  | SOP-NLT-001 (`SOPs/new-agent-onboarding.md`)              |

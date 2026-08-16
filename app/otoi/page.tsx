@@ -1,5 +1,9 @@
 import Link from 'next/link';
 
+/**
+ * OTOI detail page in the Learning Center.
+ * Explains the Orchestrated Terms of Interaction layer and multi-agent coordination.
+ */
 export default function OTOIDetail() {
   return (
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: '2rem', maxWidth: '900px', margin: '0 auto', backgroundColor: '#f9fafb', minHeight: '100vh' }}>

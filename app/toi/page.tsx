@@ -1,5 +1,9 @@
 import Link from 'next/link';
 
+/**
+ * TOI detail page in the Learning Center.
+ * Explains the Terms of Interaction declarative schema and its reserved $ keys.
+ */
 export default function TOIDetail() {
   return (
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: '2rem', maxWidth: '900px', margin: '0 auto', backgroundColor: '#f9fafb', minHeight: '100vh' }}>

@@ -5,7 +5,7 @@
     "name": "NeuroLift-Technologies/solidarity-framework",
     "purpose": "Agent Solidarity Kit — governance, integration layer, and operational contracts for NLT coding agents",
     "mode": "production",
-    "visibility": "private",
+    "visibility": "public",
     "audience": "internal-coding-agents"
   },
   "canonical_contract": "NLT-DEV-OTOI.md",

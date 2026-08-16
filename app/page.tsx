@@ -1,9 +1,13 @@
 import Link from 'next/link';
 
+/**
+ * Landing page for the Learning Center.
+ * Renders the narrative hero and pillar navigation cards for the four Solidarity Framework components.
+ */
 export default function SolidarityNarrativeHome() {
   const pillars = [
     { id: 'toi', path: '/toi', name: 'TOI', fullName: 'Terms of Interaction', icon: '📋', color: '#3b82f6', desc: 'Establishing user identity and boundaries.' },
-    { id: 'otoi', path: '/otoi', name: 'OTOI', fullName: 'Orchestrated Terms of Interaction', icon: '📋', color: '#6366f1', desc: 'Ensuring multi-agent coordination and honoring.' },
+    { id: 'otoi', path: '/otoi', name: 'OTOI', fullName: 'Orchestrated Terms of Interaction', icon: '📋', color: '#6366f1', desc: 'Ensuring multi-agent coordination and honoring user boundaries.' },
     { id: 'rrt', path: '/rrt', name: 'RRT Advocate', fullName: 'Rapid Response Team', icon: '🚨', color: '#ef4444', desc: 'Crisis detection and immediate safety protocols.' },
     { id: 'sleepwalker', path: '/sleepwalker', name: 'Sleepwalker Protocol', fullName: 'Continuity Layer', icon: '🌙', color: '#a855f7', desc: 'Maintaining emotional state across sessions.' },
   ];

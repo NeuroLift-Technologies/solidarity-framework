@@ -1,5 +1,9 @@
 import Link from 'next/link';
 
+/**
+ * RRT Advocate detail page in the Learning Center.
+ * Explains the Rapid Response Team crisis layer and its five personas.
+ */
 export default function RRTDetail() {
   const personas = [
     { name: 'Ash', focus: 'Validation & Burnout', desc: 'Recognizes collapse, validates exhaustion, diffuses internalized ableism.' },
@@ -28,11 +32,11 @@ export default function RRTDetail() {
       </section>
       <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '1.5rem' }}>The Five Personas</h3>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-        {personas.map(p => (
-          <div key={p.name} style={{ padding: '1.5rem', backgroundColor: 'white', borderRadius: '1rem', border: '1px solid #e5e7eb', borderLeft: '4px solid #ef4444' }}>
-            <div style={{ fontWeight: 'bold', color: '#111827', fontSize: '1.2rem' }}>{p.name}</div>
-            <div style={{ fontSize: '0.9rem', color: '#ef4444', fontWeight: '600', marginBottom: '0.5rem' }}>{p.focus}</div>
-            <p style={{ fontSize: '0.95rem', color: '#4b5563' }}>{p.desc}</p>
+        {personas.map((persona) => (
+          <div key={persona.name} style={{ padding: '1.5rem', backgroundColor: 'white', borderRadius: '1rem', border: '1px solid #e5e7eb', borderLeft: '4px solid #ef4444' }}>
+            <div style={{ fontWeight: 'bold', color: '#111827', fontSize: '1.2rem' }}>{persona.name}</div>
+            <div style={{ fontSize: '0.9rem', color: '#ef4444', fontWeight: '600', marginBottom: '0.5rem' }}>{persona.focus}</div>
+            <p style={{ fontSize: '0.95rem', color: '#4b5563' }}>{persona.desc}</p>
           </div>
         ))}
       </div>

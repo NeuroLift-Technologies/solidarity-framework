@@ -1,89 +1,93 @@
 import React from 'react';
+import Link from 'next/link';
 
-export default function SolidarityLearningHome() {
+export default function SolidarityNarrativeHome() {
   const pillars = [
-    {
-      id: 'toi',
-      path: '/toi',
-      name: 'TOI',
-      fullName: 'Terms of Interaction',
-      description: 'The foundational governance layer establishing user preferences and identity.',
-      color: '#3b82f6',
-      icon: '📋'
-    },
-    {
-      id: 'otoi',
-      path: '/otoi',
-      name: 'OTOI',
-      fullName: 'Orchestrated TOI',
-      description: 'The coordination layer ensuring multi-agent honoring of the TOI.',
-      color: '#6366f1',
-      icon: '📋'
-    },
-    {
-      id: 'rrt',
-      path: '/rrt',
-      name: 'RRT Advocate',
-      fullName: 'Rapid Response Team',
-      description: 'The protective layer for crisis detection and immediate safety protocols.',
-      color: '#ef4444',
-      icon: '🚨'
-    },
-    {
-      id: 'sleepwalker',
-      path: '/sleepwalker',
-      name: 'Sleepwalker Protocol',
-      fullName: 'Continuity Layer',
-      description: 'The continuity layer managing emotional state across sessions.',
-      color: '#a855f7',
-      icon: '🌙'
-    },
+    { id: 'toi', path: '/toi', name: 'TOI', fullName: 'Terms of Interaction', icon: '📋', color: '#3b82f6', desc: 'Establishing user identity and boundaries.' },
+    { id: 'otoi', path: '/otoi', name: 'OTOI', fullName: 'Orchestrated TOI', icon: '📋', color: '#6366f1', desc: 'Ensuring multi-agent coordination and honoring.' },
+    { id: 'rrt', path: '/rrt', name: 'RRT Advocate', fullName: 'Rapid Response Team', icon: '🚨', color: '#ef4444', desc: 'Crisis detection and immediate safety protocols.' },
+    { id: 'sleepwalker', path: '/sleepwalker', name: 'Sleepwalker Protocol', fullName: 'Continuity Layer', icon: '🌙', color: '#a855f7', desc: 'Maintaining emotional state across sessions.' },
   ];
 
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', padding: '2rem', maxWidth: '1000px', margin: '0 auto', backgroundColor: '#f9fafb', minHeight: '100vh' }}>
-      <header style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '1rem' }}>Solidarity Framework Learning Center</h1>
-        <p style={{ fontSize: '1.25rem', color: '#4b5563', maxWidth: '700px', margin: '0 auto' }}>
-          Explore the layers that sit between the model and the agent to ensure human safety, transparency, and emotional continuity.
+    <div style={{ fontFamily: 'system-ui, sans-serif', backgroundColor: '#fff', color: '#111827', lineHeight: '1.6' }}>
+      {/* Hero Section */}
+      <section style={{ padding: '6rem 2rem', textAlign: 'center', backgroundColor: '#f9fafb', borderBottom: '1px solid #e5e7eb' }}>
+        <h1 style={{ fontSize: '3.5rem', fontWeight: 'bold', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+          The Solidarity Framework
+        </h1>
+        <p style={{ fontSize: '1.5rem', color: '#4b5563', maxWidth: '800px', margin: '0 auto', lineHeight: '1.4' }}>
+          From a concrete need for neurodivergent support to a universal layer between model and agent.
         </p>
-      </header>
+      </section>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
-        {pillars.map((pillar) => (
-          <a key={pillar.id} href={pillar.path} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div style={{ 
-              padding: '1.5rem', 
-              borderRadius: '1rem', 
-              backgroundColor: 'white', 
-              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', 
-              border: '1px solid #e5e7eb',
-              transition: 'transform 0.2s ease',
-              cursor: 'pointer',
-              borderTop: `4px solid ${pillar.color}`
-            }}>
-              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{pillar.icon}</div>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.5rem' }}>{pillar.name}</h2>
-              <p style={{ fontSize: '0.875rem', fontWeight: '600', color: '#6b7280', marginBottom: '1rem' }}>{pillar.fullName}</p>
-              <p style={{ fontSize: '1rem', color: '#374151', lineHeight: '1.5', marginBottom: '1.5rem' }}>{pillar.description}</p>
-              <button style={{ 
-                width: '100%', 
-                padding: '0.5rem', 
-                borderRadius: '0.5rem', 
-                border: 'none', 
-                backgroundColor: pillar.color, 
-                color: 'white', 
-                fontWeight: '600',
-                cursor: 'pointer'
-              }}>
-                Learn More
-              </button>
-            </div>
-          </a>
-        ))}
-      </div>
+      {/* The Story Section */}
+      <section style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto' }}>
+        <div style={{ marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Where this began</h2>
+          <p style={{ fontSize: '1.2rem', color: '#374151', marginBottom: '1.5rem' }}>
+            NeuroLift Technologies started with a specific mission: build intelligent, adaptive support that worked for neurodivergent minds first. 
+            We focused on ADHD, autism spectrum, and thinking patterns that mainstream tools often ignore.
+          </p>
+          <p style={{ fontSize: '1.2rem', color: '#374151' }}>
+            This journey taught us hard lessons about crisis response, shame-resistant design, and the absolute necessity of privacy-first state.
+          </p>
+        </div>
 
-      <footer style={{ marginTop: '4rem', textAlign: 'center', color: '#9ca3af', fontSize: '0.875rem' }}>
+        <div style={{ marginBottom: '4rem', padding: '2rem', backgroundColor: '#eff6ff', borderRadius: '1rem', borderLeft: '4px solid #3b82f6' }}>
+          <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem' }}>The Realization</h2>
+          <p style={{ fontSize: '1.2rem', color: '#1e40af' }}>
+            What we discovered is that these needs aren't niche. They are the baseline expectations for <strong>humane AI assistance</strong>.
+          </p>
+        </div>
+
+        <div style={{ marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>The Universal Layer</h2>
+          <p style={{ fontSize: '1.2rem', color: '#374151', marginBottom: '1.5rem' }}>
+            The Solidarity Framework is the result of this evolution. It is the source of truth for the principles and components that sit 
+            <strong>between the model and the agent</strong>. It ensures that no matter the tool, the interaction is governed by safety, transparency, and human agency.
+          </p>
+        </div>
+      </section>
+
+      {/* The Pillars Section */}
+      <section style={{ padding: '4rem 2rem', backgroundColor: '#111827', color: 'white' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '3rem' }}>The Tools of Solidarity</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
+            {pillars.map((pillar) => (
+              <Link key={pillar.id} href={pillar.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ 
+                  padding: '2rem', 
+                  borderRadius: '1rem', 
+                  backgroundColor: '#1f2937', 
+                  border: '1px solid #374151',
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer',
+                  borderTop: `4px solid ${pillar.color}`
+                }}>
+                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{pillar.icon}</div>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{pillar.name}</h3>
+                  <p style={{ fontSize: '0.875rem', color: '#9ca3af', marginBottom: '1rem' }}>{pillar.fullName}</p>
+                  <p style={{ fontSize: '1rem', color: '#d1d5db', marginBottom: '1.5rem' }}>{pillar.desc}</p>
+                  <span style={{ color: pillar.color, fontWeight: '600' }}>Learn More →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Looking Ahead */}
+      <section style={{ padding: '4rem 2rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Looking Ahead</h2>
+        <p style={{ fontSize: '1.2rem', color: '#4b5563' }}>
+          From healthcare and education to the workplace and beyond, we are extending these core principles—transparency, minimal footprint, 
+          and escalation culture—to every product we build. The framework is the contract; the future is built on top of it.
+        </p>
+      </section>
+
+      <footer style={{ padding: '2rem', textAlign: 'center', color: '#9ca3af', fontSize: '0.875rem', borderTop: '1px solid #e5e7eb' }}>
         <p>NeuroLift Technologies • Governed by HAIEF</p>
       </footer>
     </div>

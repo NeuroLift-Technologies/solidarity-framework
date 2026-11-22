@@ -19,18 +19,7 @@ ai_assistant_directive:
 
 The **solidarity-framework** repository is the canonical documentation and governance source for the NeuroLift Technologies Solidarity Framework. It defines the principles, operating procedures, component documentation, and agent-facing governance that NLT agents use when building or integrating Solidarity Framework systems.
 
-The **Agent Solidarity Framework Development Kit (ASFDK)** is a separate implementation/development-kit repository. This repo may document ASFDK architecture and integration expectations, but it is not the ASFDK source repo.
-
-### Core Agent Framework
-
-The Solidarity Framework defines the layer between the AI model and the agent, consisting of four core pillars:
-
-- **📋 TOI (Terms of Interaction)** — Governance and user-preference foundation
-- **📋 OTOI (Orchestrated Terms of Interaction)** — Multi-agent coordination and governance layer
-- **🚨 RRT Advocate** — Crisis intervention and immediate safety protocols
-- **🌙 Sleepwalker Protocol (SWP)** — Emotional continuity governance for long-term safety across sessions
-
-Every NLT agent **must** follow the Solidarity Framework governance model and use the relevant implementation repositories for deployable components.
+The repository hosts the framework documentation, coding-agent governance and the Learning Center in [`app/`](app/).
 
 ### Coding-Agent Operations Documentation
 
@@ -38,14 +27,14 @@ This repository also houses documentation and governance infrastructure for NLT 
 
 - **🤖 Agent & Skill Profiles** (`agents/`) — Custom agent and skill definitions deployed across the org
 - **📋 Governance SOPs & Templates** (`SOPs/`, `templates/`) — OTOI-compliant operating procedures and registration artifacts
-- **⚙️ CI Workflows** (`.github/workflows/`) — Automated governance validation, commit-format enforcement, and security checks
+- **⚙️ CI Workflows** (`.github/workflows/`) — Automated governance validation and commit-format checks
 
 ### Cloudflare Agent Development
 
 - **🔗 Agent Reference Links** (`links.md`) — Curated Cloudflare Workers, Agents SDK, Durable Objects, and MCP resources for NLT agent builds
 - **🔌 MCP Server Configuration** (`mcp-config.yaml`) — Ready-to-use MCP server configs for GitHub and Cloudflare tooling
 
-The Solidarity Framework ensures human safety, transparency, minimal footprint, and escalation culture across all of these layers.
+Human agency, transparency, a minimal footprint and escalation guide framework design.
 
 > **How the Solidarity Framework is different:**
 > MCP connects agents to tools. Agent-to-agent (A2A) connects agents to agents.
@@ -55,85 +44,20 @@ The Solidarity Framework ensures human safety, transparency, minimal footprint, 
 
 ## 🏗️ Architecture
 
-### Solidarity Framework Layers
+The [architecture guide](docs/unified_architecture.md) explains the four pillars, their supporting components and the evidence required for enforcement claims.
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                  Solidarity Framework                           │
-│          "The Layer Between the Model and the Agent"             │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌───────────────────────────┐  ┌───────────────────────────┐  │
-│  │ TOI                        │  │ OTOI                       │  │
-│  │ (Terms of Interaction)     │  │ (Orchestrated Terms of Interaction)         │  │
-│  │                            │  │                            │  │
-│  │ • Governance Foundation    │  │ • Multi-Agent Coord.       │  │
-│  │ • User Preferences         │  │ • Orchestration Layer      │  │
-│  │ • Privacy Guard            │  │ • Agency Preservation      │  │
-│  └───────────────────────────┘  └───────────────────────────┘  │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌───────────────────────────┐  ┌───────────────────────────┐  │
-│  │ RRT Advocate               │  │ Sleepwalker Protocol       │  │
-│  │ (Protective)               │  │ (Continuity)               │  │
-│  │                            │  │                            │  │
-│  │ • Crisis Detection         │  │ • Emotional State          │  │
-│  │ • Emergency Response       │  │ • Session Continuity       │  │
-│  │ • Tiered Alerts            │  │ • Long-Term Safety         │  │
-│  └───────────────────────────┘  └───────────────────────────┘  │
-├─────────────────────────────────────────────────────────────────┤
-│                        Unified Core                              │
-│  ┌──────────────────┐  ┌──────────────────┐  ┌───────────────┐ │
-│  │ Supervisor AI     │  │ Component Comms  │  │ State Manager │ │
-│  └──────────────────┘  └──────────────────┘  └───────────────┘ │
-└─────────────────────────────────────────────────────────────────┘
-```
+| Pillar | Role | Component source |
+|---|---|---|
+| Terms of Interaction (TOI) | Human-authored preferences and authority constraints, with a canonical format and signing primitives. | [nlt-toi](https://github.com/NeuroLift-Technologies/nlt-toi) |
+| Orchestrated Terms of Interaction (OTOI) | Resolves trusted TOI and decides policy, delegated grants, outbound release, retention, purge and direct governance notifications. | [nlt-otoi](https://github.com/NeuroLift-Technologies/nlt-otoi) |
+| RRT AIdvocAIte | Protective response and immediate, bounded RED/BLACK direct support in the architecture. | [rrt-advocate](https://github.com/NeuroLift-Technologies/rrt-advocate) |
+| Sleepwalker Protocol | Independent continuity assurance and drift monitoring against OTOI requirements. | [sleepwalker](https://github.com/NeuroLift-Technologies/sleepwalker) |
 
-### Component Sources
+The [State Detection Layer (SDL)](https://github.com/NeuroLift-Technologies/nlt-sdl) supplies advisory observations. The [Agent Solidarity Framework Deployment Kit (ASFDK)](https://github.com/NeuroLift-Technologies/asfdk) integrates component interfaces. The [ASFDK Harness](https://github.com/NeuroLift-Technologies/asfdk-harness) applies OTOI decisions at supported runtime boundaries. These supporting components sit alongside the four pillars.
 
-| Component | Repository | Purpose |
-|-----------|-----------|---------|
-| **TOI** | [`NeuroLift-Technologies/nlt-toi`](https://github.com/NeuroLift-Technologies/nlt-toi) | Governance and user-preference foundation |
-| **OTOI** | [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi) | Multi-agent coordination and governance layer |
-| **RRT Advocate** | [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate) | Crisis intervention & safety |
-| **Sleepwalker Protocol** | [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker) | Emotional continuity across sessions |
+## Using the framework
 
-## 🚀 Using the Framework
-
-This repository is **documentation and governance only** — it no longer vendors
-the component implementations. Each Solidarity Framework pillar ships from its own
-repository and is published to npm (see [Component Sources](#component-sources)
-above). To build or integrate, install the packages directly.
-
-### Reference implementation kit — ASFDK
-
-The fastest way to wire all four pillars together is the **Agent Solidarity
-Framework Development Kit** ([`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk)),
-which provides both a Python `unified_core` kit and a TypeScript umbrella package
-that depends on the four pillars:
-
-```bash
-npm install @neurolift-technologies/asfdk
-```
-
-```ts
-import { createFoundation, FoundationMode } from '@neurolift-technologies/asfdk';
-
-// The orchestrator routes interactions through the active pillars for a mode.
-const foundation = await createFoundation('user_001', FoundationMode.UNIFIED);
-const status = foundation.getSystemStatus();
-```
-
-### Individual pillar packages
-
-| Pillar | npm package |
-|---|---|
-| TOI | `@neurolift-technologies/toi` |
-| OTOI | `@neurolift-technologies/otoi` |
-| RRT Advocate (⚠️ prototype) | `@neurolift-technologies/rrt-advocate` |
-| Sleepwalker Protocol | `@neurolift-technologies/sleepwalker-protocol` |
-
-For Python usage and the canonical reference foundation, see the
-[`asfdk`](https://github.com/NeuroLift-Technologies/asfdk) and per-component
-repositories linked in [Component Sources](#component-sources).
+Start with the component source above for release-specific installation instructions, APIs and coverage. Use the Learning Center to explore the architecture. Its examples explain component roles.
 
 ## 📁 Repository Structure
 
@@ -225,26 +149,24 @@ Escalate immediately when:
 
 ## 🧪 Testing
 
-This is a documentation/governance repo and carries no component test suites.
-Each pillar's tests live in its own repository:
+Run repository governance checks with `bash .nltotoi/scripts/validate-governance.sh --strict`. For the Learning Center, use Node 24 and run:
 
-- RRT Advocate — [`NeuroLift-Technologies/rrt-advocate`](https://github.com/NeuroLift-Technologies/rrt-advocate)
-- NLT-OTOI — [`NeuroLift-Technologies/nlt-otoi`](https://github.com/NeuroLift-Technologies/nlt-otoi)
-- Sleepwalker Protocol — [`NeuroLift-Technologies/sleepwalker`](https://github.com/NeuroLift-Technologies/sleepwalker)
-- Reference kit (ASFDK) — [`NeuroLift-Technologies/asfdk`](https://github.com/NeuroLift-Technologies/asfdk)
+```bash
+cd app
+npm ci
+npm run lint
+npm run build
+```
 
-## 🔐 Privacy & Security
+Component test suites live in their respective repositories.
 
-### Privacy-First Design
+## Privacy & Security
 
-- **Local Processing**: Core functionality operates locally without external dependencies
-- **Encrypted Storage**: All user data encrypted at rest and in transit
-- **Minimal Data Collection**: Only essential data collected for functionality
-- **User Control**: Complete user control over data sharing and retention
+The framework architecture requires data minimization and prohibits persistence of raw conversations, prompts, responses, transcripts and user-linked crisis profiles. OTOI decides eligibility, retention duration and purge requirements. Check the [architecture guide](docs/unified_architecture.md#continuity-and-data) for the continuity boundary and the component release for implementation evidence.
 
 ### Solidarity Framework Principles
 
-1. **Transparency** — All agent actions are logged and auditable
+1. **Transparency** — Record governance evidence with the minimum data needed
 2. **Minimal Footprint** — Agents only modify what is necessary
 3. **Escalation Culture** — When in doubt, escalate to human authority
 4. **Human Flourishing** — Technology serves people, not the other way around

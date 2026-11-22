@@ -1,0 +1,23 @@
+{
+  "agent_registration": {
+    "agent_name": "Codex",
+    "platform": "ChatGPT Work Mode",
+    "version": "GPT-6",
+    "session_id": "codex-learning-alignment-20261122",
+    "entry_date": "2026-11-22T15:28:54-05:00",
+    "entry_point": "Joshua directed the next step after PR #40 merged.",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.4",
+    "working_repo": "NeuroLift-Technologies/solidarity-framework",
+    "working_branch": "codex/align-docs-learning-center",
+    "scope": "Align framework documentation, agent guidance and the existing Learning Center. Preserve ADR status and component/runtime behavior.",
+    "capabilities_self_reported": [
+      "Repository editing",
+      "Build and route verification"
+    ],
+    "known_limitations": [
+      "Architecture status and publication labels require owner confirmation."
+    ],
+    "preferred_handoff_format": "JSON"
+  }
+}

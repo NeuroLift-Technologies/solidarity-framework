@@ -6,10 +6,10 @@ import Link from 'next/link';
  */
 export default function SolidarityNarrativeHome() {
   const pillars = [
-    { id: 'toi', path: '/toi', name: 'TOI', fullName: 'Terms of Interaction', icon: '📋', color: '#3b82f6', desc: 'Establishing user identity and boundaries.' },
-    { id: 'otoi', path: '/otoi', name: 'OTOI', fullName: 'Orchestrated Terms of Interaction', icon: '📋', color: '#6366f1', desc: 'Ensuring multi-agent coordination and honoring user boundaries.' },
-    { id: 'rrt', path: '/rrt', name: 'RRT Advocate', fullName: 'Rapid Response Team', icon: '🚨', color: '#ef4444', desc: 'Crisis detection and immediate safety protocols.' },
-    { id: 'sleepwalker', path: '/sleepwalker', name: 'Sleepwalker Protocol', fullName: 'Continuity Layer', icon: '🌙', color: '#a855f7', desc: 'Maintaining emotional state across sessions.' },
+    { id: 'toi', path: '/toi', name: 'TOI', fullName: 'Terms of Interaction', icon: '📋', color: '#3b82f6', desc: 'Declaring your interaction preferences and authority boundaries.' },
+    { id: 'otoi', path: '/otoi', name: 'OTOI', fullName: 'Orchestrated Terms of Interaction', icon: '📋', color: '#6366f1', desc: 'Resolving trusted terms and making governance decisions.' },
+    { id: 'rrt', path: '/rrt', name: 'RRT AIdvocAIte', fullName: 'Rapid Response Team', icon: '🚨', color: '#ef4444', desc: 'Protective response and bounded direct support.' },
+    { id: 'sleepwalker', path: '/sleepwalker', name: 'Sleepwalker Protocol', fullName: 'Continuity Layer', icon: '🌙', color: '#a855f7', desc: 'Independently monitoring continuity and protective drift.' },
   ];
 
   return (
@@ -48,8 +48,7 @@ export default function SolidarityNarrativeHome() {
         <div style={{ marginBottom: '4rem' }}>
           <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>The Universal Layer</h2>
           <p style={{ fontSize: '1.2rem', color: '#374151', marginBottom: '1.5rem' }}>
-            The Solidarity Framework is the result of this evolution. It is the source of truth for the principles and components that sit 
-            <strong>between the model and the agent</strong>. It ensures that no matter the tool, the interaction is governed by safety, transparency, and human agency.
+            The four pillars define the person’s terms, governance decisions, protective response and continuity. The State Detection Layer (SDL) provides advisory signals. The Agent Solidarity Framework Deployment Kit (ASFDK) integrates the components, and the ASFDK Harness applies OTOI decisions at supported runtime boundaries.
           </p>
         </div>
       </section>
@@ -89,17 +88,17 @@ export default function SolidarityNarrativeHome() {
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '0.5rem' }}>Try the SME Agents</h2>
           <p style={{ fontSize: '1.25rem', color: '#6b7280', textAlign: 'center', marginBottom: '3rem' }}>
-            Each framework component has a live, domain-specialized agent. Open one to try it.
+            Explore component concepts in these playgrounds. A playground session does not verify deployment or enforcement coverage.
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
             {[
-              { slug: 'toi', name: 'TOI Agent', fullName: 'Terms of Interaction', icon: '📋', color: '#3b82f6', desc: 'Parse, validate, and resolve your Terms of Interaction live.' },
-              { slug: 'otoi', name: 'OTOI Agent', fullName: 'Orchestrated Terms of Interaction', icon: '🔀', color: '#6366f1', desc: 'Honor TOI stacks across multi-agent meshes.' },
-              { slug: 'asfdk', name: 'ASFDK Agent', fullName: 'Solidarity Framework Dev Kit', icon: '🧩', color: '#059669', desc: 'Solidarity Layer middleware between model and runtime.' },
-              { slug: 'rrt', name: 'RRT Advocate', fullName: 'Rapid Response Team', icon: '🚨', color: '#ef4444', desc: 'Crisis detection and immediate safety protocols.' },
-              { slug: 'sleepwalker', name: 'Sleepwalker', fullName: 'Continuity Layer', icon: '🌙', color: '#a855f7', desc: 'Emotional continuity across sessions.' },
-              { slug: 'sdl', name: 'SDL Agent', fullName: 'State Detection Layer', icon: '🛡️', color: '#f59e0b', desc: 'Fail-closed routing net for response decisions.' },
+              { slug: 'toi', name: 'TOI Agent', fullName: 'Terms of Interaction', icon: '📋', color: '#3b82f6', desc: 'Explore how to express interaction preferences and boundaries.' },
+              { slug: 'otoi', name: 'OTOI Agent', fullName: 'Orchestrated Terms of Interaction', icon: '🔀', color: '#6366f1', desc: 'Explore how governance decisions apply to agent actions.' },
+              { slug: 'asfdk', name: 'ASFDK Agent', fullName: 'Agent Solidarity Framework Deployment Kit', icon: '🧩', color: '#059669', desc: 'Explore how component interfaces fit together.' },
+              { slug: 'rrt', name: 'RRT AIdvocAIte', fullName: 'Rapid Response Team', icon: '🚨', color: '#ef4444', desc: 'Protective response and bounded direct support.' },
+              { slug: 'sleepwalker', name: 'Sleepwalker', fullName: 'Continuity Layer', icon: '🌙', color: '#a855f7', desc: 'Explore continuity and retention boundaries.' },
+              { slug: 'sdl', name: 'SDL Agent', fullName: 'State Detection Layer', icon: '🛡️', color: '#f59e0b', desc: 'Explore state observations and advisory signals.' },
             ].map((agent) => (
               <a key={agent.slug} href={`https://sme-agents-one.vercel.app/agents/${agent.slug}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div style={{

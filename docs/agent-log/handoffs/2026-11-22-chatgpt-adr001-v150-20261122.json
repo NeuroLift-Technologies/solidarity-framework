@@ -1,0 +1,70 @@
+{
+  "handoff_record": {
+    "session_id": "chatgpt-adr001-v150-20261122",
+    "agent_name": "ChatGPT",
+    "platform": "ChatGPT GitHub connector",
+    "date": "2026-11-22T10:14:53-05:00",
+    "otoi_version": "ORG-DEV-OTOI-1.0.3",
+    "repo": "NeuroLift-Technologies/solidarity-framework",
+    "branch": "docs/adr-001-v1.4.2",
+    "active_thread_id": "THREAD-ADR-001",
+    "work_completed": [
+      "Fetched existing PR #38 document and repository NLT-DEV-OTOI.md, AGENTS.md, CLAUDE.md and active threads.",
+      "Used supplied ADR-001 v1.5.0 Draft as full-text baseline; reconciled owner decisions OI-01 through OI-14, preserving prior evidence boundaries and agent attribution.",
+      "Updated docs/ADR-001.md on existing PR branch only with v1.5.0 Draft; read back and verified metadata and decision-closure section.",
+      "Added this session registration and updated active-thread follow-up.",
+      "Updated PR #38 title/description to v1.5.0; not merged."
+    ],
+    "work_in_progress": [
+      "Owner review of PR #38, CI failures from earlier head, and independent technical review; implementation separately authorized."
+    ],
+    "blockers": [
+      "No integrated AT-001 evidence or production enforcement validation performed.",
+      "Existing PR had previously failed agent commit-format check, governance validator and CodeQL; outcomes for new head not verified."
+    ],
+    "decisions_made": [
+      {
+        "decision": "GitHub solidarity-framework docs/ADR-001.md is the canonical documentation home.",
+        "made_by": "Joshua W. Dorsey, Sr.",
+        "scope": "Home/location, not merge or effective approval"
+      },
+      {
+        "decision": "Record approved OI-01 through OI-14 contracts without autonomous implementation.",
+        "made_by": "Joshua W. Dorsey, Sr.",
+        "scope": "Architectural direction; documentation-only PR update"
+      }
+    ],
+    "decisions_pending": [
+      {
+        "decision": "Review/merge PR #38 and decide whether/when ADR enters Approved status.",
+        "owner": "Joshua W. Dorsey, Sr."
+      },
+      {
+        "decision": "Commission proof, remediation and integration work in the component repositories under separate scopes.",
+        "owner": "Joshua W. Dorsey, Sr."
+      }
+    ],
+    "escalations": [],
+    "next_agent_notes": "This PR now contains full v1.5.0 Draft and §6.4.1 owner-approved closures. Do not treat original v1.5 draft's older open-item table as overriding §6.4.1. Check new CI status. No push to main, merge, deployment, data purge or pillar implementation is authorized.",
+    "files_modified": [
+      "docs/ADR-001.md",
+      "docs/active-threads.md"
+    ],
+    "files_created": [
+      "docs/agent-log/registrations/2026-11-22-chatgpt-chatgpt-adr001-v150-20261122.json",
+      "docs/agent-log/handoffs/2026-11-22-chatgpt-adr001-v150-20261122.json"
+    ],
+    "pr_metadata_updated": true,
+    "tests_run": [
+      "GitHub readback: v1.5.0 JSON metadata, canonical source and §6.4.1 decision matrix present.",
+      "No local CI or integrated runtime test executed."
+    ],
+    "tests_passing": false,
+    "pr_url": "https://github.com/NeuroLift-Technologies/solidarity-framework/pull/38",
+    "commit_shas": [
+      "5dc65311e84c6e9853d0d94d189468de261162ca",
+      "49d133fb02e180b1ff1036365685c71c33231889",
+      "7bc597adca512de736cea1934d785f498757245c"
+    ]
+  }
+}

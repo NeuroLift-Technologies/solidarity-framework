@@ -32,7 +32,7 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Task** | Retire superseded artifacts with verified replacements and index framework evidence. |
 | **Scope** | Legacy repository navigation, documentation and evidence references. |
 | **Blockers** | None. |
-| **Related PR** | TBD |
+| **Related PR** | [#42](https://github.com/NeuroLift-Technologies/solidarity-framework/pull/42) |
 | **Notes** | Follow-up to merged PR #41. Local validation is complete and owner review is pending. |
 
 ### THREAD-GOV-CLEANUP — Governance File Consolidation

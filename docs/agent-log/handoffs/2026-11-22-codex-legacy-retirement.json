@@ -35,6 +35,6 @@
     ],
     "tests_run": "Node 24 app clean install, lint and build, strict governance 26/26, pinned upstream import comparison, local Markdown links and anchors, seven reviewed source commits, six npm artifact HTTP checks, Git whitespace and reference searches.",
     "tests_passing": true,
-    "pr_url": null
+    "pr_url": "https://github.com/NeuroLift-Technologies/solidarity-framework/pull/42"
   }
 }

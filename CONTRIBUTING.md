@@ -1,6 +1,6 @@
 # Contributing to NeuroLift Technologies Projects
 
-Thank you for your interest in contributing! These guidelines apply to all repositories in the **NeuroLift Technologies** organization unless a repository provides its own `CONTRIBUTING.md`.
+Read the [public contributor contract and local requirements](GOVERNANCE.md) before contributing. The guidelines below apply to this repository.
 
 ## Table of Contents
 

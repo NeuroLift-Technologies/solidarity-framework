@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-08-16
+> Last updated: 2026-11-22T14:46:53-05:00
 
 ---
 
@@ -19,6 +19,20 @@ This file tracks all **current and recently completed** work threads in this rep
 ---
 
 ## Active Threads
+
+### THREAD-GOV-CLEANUP — Governance File Consolidation
+
+**Status:** open
+**Owner:** Codex · `codex-governance-cleanup-20261122`
+**Started:** 2026-11-22T14:42:16-05:00
+**Last updated:** 2026-11-22T14:46:53-05:00
+**Branch:** `codex/consolidate-governance-files`
+**Task:** Adopt the organization’s public governance baseline and consolidate nested governance files.
+**Scope:** Governance docs and templates, discovery and validation, and the read-only upstream comparison workflow.
+**Summary:** Consolidate approved governance paths and make the public mirror diff reviewable.
+**Blockers:** Owner review and hosted checks pending.
+**Related PR:** [#40](https://github.com/NeuroLift-Technologies/solidarity-framework/pull/40)
+**Next action:** Review the consolidation pull request and its read-only comparison against the organization baseline.
 
 ### THREAD-006 — OTOI Docs: First-Receiver Advocate Rule & Positioning Statement
 | Field | Value |

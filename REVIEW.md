@@ -1,9 +1,9 @@
 ```yaml
 ai_assistant_directive:
   priority: 1
-  instruction: "Before performing any review tasks, read NLT-DEV-OTOI.md and follow the review format defined in this file."
+  instruction: "Before performing any review tasks, read GOVERNANCE.md and follow the review format defined in this file."
   description: "REVIEW.md defines the canonical format for agent-conducted code reviews, ensuring consistency, governance compliance, and audit-ready documentation."
-  required_file: "NLT-DEV-OTOI.md"
+  required_file: "GOVERNANCE.md"
 ```
 
 # REVIEW.md — Agent Review Format
@@ -18,13 +18,13 @@ This file defines the canonical format for agent-conducted reviews in NLT reposi
 **Review Date:** [ISO 8601 date]
 **Review Type:** [Code | Content | Governance | Security]
 **Scope:** [Files, pages, or sections reviewed]
-**OTOI Version:** ORG-DEV-OTOI-1.0.3
+**OTOI Version:** ORG-DEV-OTOI-1.0.4
 
 ---
 
 ## Pre-Review Checklist
 
-- [ ] Read NLT-DEV-OTOI.md and understood governance requirements
+- [ ] Read GOVERNANCE.md and understood governance requirements
 - [ ] Identified the review scope and what is being evaluated
 - [ ] Checked for any active threads in `docs/active-threads.md` related to this review
 - [ ] Verified the review format matches this template
@@ -99,4 +99,4 @@ This file defines the canonical format for agent-conducted reviews in NLT reposi
 
 ---
 
-*This review was conducted following the format defined in `REVIEW.md` under ORG-DEV-OTOI-1.0.3.*
+*This review was conducted following the format defined in `REVIEW.md` under ORG-DEV-OTOI-1.0.4.*

@@ -1,4 +1,6 @@
 
+
+> Historical layout. See the [current governance registry](.nltotoi/index/governance-files.md) and [public governance requirements](GOVERNANCE.md) for active paths and contributor rules.
 ## Architecture Decision: Public vs. Private Governance
 
 | Layer | Repo | Audience | Purpose |

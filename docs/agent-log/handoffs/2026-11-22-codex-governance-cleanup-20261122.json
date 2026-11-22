@@ -1,0 +1,89 @@
+{
+  "handoff_record": {
+    "session_id": "codex-governance-cleanup-20261122",
+    "agent_name": "Codex",
+    "platform": "ChatGPT Work Mode",
+    "date": "2026-11-22T14:46:53-05:00",
+    "otoi_version": "ORG-DEV-OTOI-1.0.4",
+    "repo": "NeuroLift-Technologies/solidarity-framework",
+    "branch": "codex/consolidate-governance-files",
+    "active_thread_id": "THREAD-GOV-CLEANUP",
+    "work_completed": [
+      "Adopted the organization .github governance minimum and retained repository-specific instructions.",
+      "Consolidated 15 nested governance paths and verified all local discovery paths.",
+      "Replaced the outbound workflow with a read-only upstream comparison pinned to 0890bdea5a2f91c37268eb8d851ccfc59f0bf1ef."
+    ],
+    "work_in_progress": [
+      "Owner review and hosted GitHub checks."
+    ],
+    "blockers": [
+      "None for review. ADR-001 status requires a separate owner decision."
+    ],
+    "decisions_made": [
+      "Joshua designated the .github files as the required governance minimum."
+    ],
+    "decisions_pending": [
+      "Owner review and merge disposition."
+    ],
+    "escalations": [],
+    "next_agent_notes": "Use the organization contract as the floor. Update the pinned imported files through a reviewed PR. Use the historical Git revision for retired copies. ADR-001 and Learning Center updates remain separate.",
+    "files_modified": [
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/copilot-instructions.md",
+      ".github/scripts/compare-public-governance.py",
+      ".github/workflows/sync-governance-public.yml",
+      ".github/workflows/validate-governance.yml",
+      ".nltotoi/.nltotoi/README.md",
+      ".nltotoi/.nltotoi/contracts/README.md",
+      ".nltotoi/.nltotoi/index/governance-files.md",
+      ".nltotoi/.nltotoi/proposals/validation-roadmap.md",
+      ".nltotoi/.nltotoi/scripts/validate-governance.sh",
+      ".nltotoi/README.md",
+      ".nltotoi/contracts/README.md",
+      ".nltotoi/index/governance-files.md",
+      ".nltotoi/proposals/validation-roadmap.md",
+      ".nltotoi/scripts/validate-governance.sh",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "GOVERNANCE.md",
+      "ISSUE_TEMPLATE/ISSUE_TEMPLATE/agent-escalation.md",
+      "ISSUE_TEMPLATE/ISSUE_TEMPLATE/governance-proposal.md",
+      "ISSUE_TEMPLATE/agent-escalation.md",
+      "ISSUE_TEMPLATE/governance-proposal.md",
+      "PULL_REQUEST_TEMPLATE/agent-contribution.md",
+      "README.md",
+      "REVIEW.md",
+      "SOPs/SOPs/incident-response.md",
+      "SOPs/SOPs/new-agent-onboarding.md",
+      "SOPs/SOPs/repo-governance-setup.md",
+      "SOPs/incident-response.md",
+      "SOPs/new-agent-onboarding.md",
+      "SOPs/repo-governance-setup.md",
+      "agents/nlt-governance-steward.md",
+      "agents/nlt-otoi-skill.md",
+      "agents/rrt-advocate-skill.md",
+      "agents/sleepwalker-skill.md",
+      "agents/solidarity-foundation-skill.md",
+      "agents/swe-agent.md",
+      "docs/active-threads.md",
+      "docs/agent-log/README.md",
+      "docs/agent-log/registrations/2026-11-22-codex-codex-governance-cleanup-20261122.json",
+      "file-structure.md",
+      "nltotoi.json",
+      "templates/agent-registration.json",
+      "templates/escalation.md",
+      "templates/handoff-record.json",
+      "templates/intent-log.md",
+      "templates/review-record.md",
+      "templates/templates/agent-registration.json",
+      "templates/templates/commit-message.md",
+      "templates/templates/escalation.md",
+      "templates/templates/handoff-record.json",
+      "templates/templates/intent-log.md"
+    ],
+    "tests_run": "Strict validator 26/26; four exact imports; simulated missing path, changed import and upstream A/M/D; local entry-point links, workflow YAML and git diff --check.",
+    "tests_passing": true,
+    "pr_url": null
+  }
+}

@@ -1,24 +1,23 @@
 {
   "nltotoi_version": "1.0.0",
-  "document_id": "ORG-DEV-OTOI-1.0.3",
+  "document_id": "ORG-DEV-OTOI-1.0.4",
   "repository": {
     "name": "NeuroLift-Technologies/solidarity-framework",
-    "purpose": "Agent Solidarity Kit — governance, integration layer, and operational contracts for NLT coding agents",
+    "purpose": "Agent Solidarity Kit \u2014 governance, integration layer, and operational contracts for NLT coding agents",
     "mode": "production",
     "visibility": "public",
-    "audience": "internal-coding-agents"
+    "audience": "public-contributors"
   },
-  "canonical_contract": "NLT-DEV-OTOI.md",
+  "canonical_contract": "GOVERNANCE.md",
   "agents_gateway": "AGENTS.md",
   "discovery": {
     "file_index": ".nltotoi/index/governance-files.md",
     "validation_script": ".nltotoi/scripts/validate-governance.sh",
     "contracts_namespace": ".nltotoi/contracts/README.md",
-    "agents_directory": "agents/",
-    "vscode_agents_directory": ".github/agents/"
+    "agents_directory": "agents/"
   },
   "required_files": [
-    "NLT-DEV-OTOI.md",
+    "GOVERNANCE.md",
     "AGENTS.md",
     "nltotoi.json",
     ".nltotoi/README.md",
@@ -32,7 +31,7 @@
     "ISSUE_TEMPLATE/agent-escalation.md",
     "ISSUE_TEMPLATE/governance-proposal.md",
     "PULL_REQUEST_TEMPLATE/agent-contribution.md",
-    "workflows/validate-governance.yml",
+    ".github/workflows/validate-governance.yml",
     "SOPs/new-agent-onboarding.md",
     "SOPs/repo-governance-setup.md",
     "SOPs/incident-response.md"
@@ -40,7 +39,7 @@
   "authority": {
     "final_decision_maker": "Joshua W. Dorsey, Sr.",
     "escalation_target": "info@neuroliftsolutions.com",
-    "amendment_process": "governance-proposal GitHub issue → Joshua review → version bump"
+    "amendment_process": "governance-proposal GitHub issue \u2192 Joshua review \u2192 version bump"
   },
   "ethical_framework": {
     "solidarity_framework": true,
@@ -51,6 +50,16 @@
   "metadata": {
     "created": "2026-03-31",
     "version": "1.0.0",
-    "last_updated": "2026-05-28"
+    "last_updated": "2026-11-22"
+  },
+  "upstream_governance": {
+    "repository": "NeuroLift-Technologies/.github",
+    "revision": "0890bdea5a2f91c37268eb8d851ccfc59f0bf1ef",
+    "imported_files": [
+      "ISSUE_TEMPLATE/agent-escalation.md",
+      "ISSUE_TEMPLATE/governance-proposal.md",
+      "templates/agent-registration.json",
+      "templates/handoff-record.json"
+    ]
   }
 }

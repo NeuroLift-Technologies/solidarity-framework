@@ -1,6 +1,6 @@
-# AGENTS.md — NeuroLift Technologies Organization-Wide Internal Gateway
+# AGENTS.md — NeuroLift Technologies Repository Contributor Gateway
 
-> **Internal use only.** This is the private governance gateway for all coding agents operating within NeuroLift Technologies repositories. For public-facing principles, see the public [`NeuroLift-Technologies/.github`](https://github.com/NeuroLift-Technologies/.github) repository.
+> Read [GOVERNANCE.md](GOVERNANCE.md) and its links to the NeuroLift Technologies public contract before starting. The organization contract sets the required minimum. The instructions below add repository-specific requirements.
 
 ---
 
@@ -9,7 +9,7 @@
 You are a coding agent operating within the **NeuroLift Technologies** organization. This document is your internal coordination gateway.
 
 **Mandatory reading order:**
-1. `NLT-DEV-OTOI.md` — Full org-level coding agent contract (this repo, root level)
+1. `GOVERNANCE.md` — Links to the organization contract and local requirements
 2. Repo-level `CLAUDE.md` — Project-specific context (in the repo you are working in)
 3. `docs/active-threads.md` — Current work state (in the repo you are working in)
 
@@ -33,10 +33,10 @@ The principles are public. The operational machinery is in `NeuroLift-Technologi
 ### Session Start (Every Session)
 
 ```
-1. Read NLT-DEV-OTOI.md (this repo)
+1. Read the public contract linked in GOVERNANCE.md
 2. Read repo-level CLAUDE.md (working repo)
 3. Read docs/active-threads.md (working repo)
-4. Self-register per OTOI Section 3
+4. Record registration in the first commit of the feature branch using templates/agent-registration.json
 5. Confirm task scope before beginning
 ```
 
@@ -49,6 +49,11 @@ All agent commits must follow:
 ```
 
 Types: `feat`, `fix`, `docs`, `refactor`, `chore`, `test`, `ci`
+
+### Pull Requests and Reviews
+
+- Use the [agent pull request template](PULL_REQUEST_TEMPLATE/agent-contribution.md) when opening a pull request and complete its checklist.
+- Read [REVIEW.md](REVIEW.md) before reviewing a pull request and use its format to document findings and the verdict.
 
 ### Escalation Triggers
 
@@ -83,7 +88,7 @@ These are **non-negotiable**. No exceptions without explicit Joshua approval:
 All files below live in this repository (`NeuroLift-Technologies/solidarity-framework`):
 
 ```
-NLT-DEV-OTOI.md                        ← Canonical org-level agent contract
+GOVERNANCE.md                          ← Organization contract and local requirements
 AGENTS.md                               ← This file
 nltotoi.json                            ← Discovery manifest
 
@@ -107,7 +112,7 @@ ISSUE_TEMPLATE/
 PULL_REQUEST_TEMPLATE/
 └── agent-contribution.md              ← Agent PR checklist
 
-workflows/
+.github/workflows/
 └── validate-governance.yml            ← CI: runs validate-governance.sh
 
 SOPs/
@@ -140,4 +145,4 @@ Before ending any significant session:
 
 ---
 
-*Internal governance document — NeuroLift Technologies | ORG-DEV-OTOI-1.0.3*
+*Repository contributor guide — NeuroLift Technologies | ORG-DEV-OTOI-1.0.4*

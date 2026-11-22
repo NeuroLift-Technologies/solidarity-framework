@@ -1,0 +1,31 @@
+{
+  "agent_registration": {
+    "agent_name": "Codex",
+    "platform": "ChatGPT Work Mode",
+    "version": "GPT-6",
+    "session_id": "codex-governance-cleanup-20261122",
+    "entry_date": "2026-11-22T14:42:16-05:00",
+    "entry_point": "Joshua authorized the first cleanup PR following the repository audit.",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.4",
+    "working_repo": "NeuroLift-Technologies/solidarity-framework",
+    "working_branch": "codex/consolidate-governance-files",
+    "task_summary": "Consolidate nested governance files, repair discovery and preview public mirror changes.",
+    "active_thread_id": "THREAD-GOV-CLEANUP",
+    "capabilities_self_reported": [
+      "Repository edits",
+      "Local validation",
+      "GitHub pull requests"
+    ],
+    "known_limitations": [
+      "Mirror write and deployment are outside PR preparation."
+    ],
+    "preferred_handoff_format": "JSON",
+    "escalation_acknowledged": true,
+    "escalation_contact": "Joshua W. Dorsey, Sr.",
+    "solidarity_framework_acknowledged": true,
+    "commit_format_acknowledged": true,
+    "handoff_required_acknowledged": true,
+    "scope": "Consolidate nested governance artifacts, adopt the public organization minimum and verify upstream template provenance. ADR status and deployment stay outside the PR scope."
+  }
+}

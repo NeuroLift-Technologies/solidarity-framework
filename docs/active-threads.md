@@ -34,6 +34,18 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Related PR** | TBD |
 | **Notes** | Handoff from Claude.ai Main (NLT-HND-2026-008). Documentation additions only — no governance modifications. Awaiting Josh's direction before any further work. |
 
+n
+### THREAD-ADR-001 — ADR-001 v1.5.0 Reconciliation
+| **Thread ID** | THREAD-ADR-001 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-11-22 |
+| **Owner** | ChatGPT — session chatgpt-adr001-v150-20261122 |
+| **Branch** | `docs/adr-001-v1.5.0` |
+| **Task** | Reconcile owner-approved OI-01–OI-14 decisions into ADR-001 v1.5.0 Draft and update PR #38 |
+| **Scope** | `docs/ADR-001.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
+| **Blockers** | None |
+| **Related PR** | #38 |
+| **Notes** | Completed agent registration and handoff record per CodeRabbit review requirements. PR submission is not ADR promotion, merge, deployment or authorization for implementation. |
 ### THREAD-012 — Solidarity Framework Learning Web App
 
 | Field | Value |

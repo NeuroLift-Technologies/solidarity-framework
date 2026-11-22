@@ -50,6 +50,11 @@ All agent commits must follow:
 
 Types: `feat`, `fix`, `docs`, `refactor`, `chore`, `test`, `ci`
 
+### Pull Requests and Reviews
+
+- Use the [agent pull request template](PULL_REQUEST_TEMPLATE/agent-contribution.md) when opening a pull request and complete its checklist.
+- Read [REVIEW.md](REVIEW.md) before reviewing a pull request and use its format to document findings and the verdict.
+
 ### Escalation Triggers
 
 Escalate to Joshua immediately when:

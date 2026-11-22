@@ -20,6 +20,21 @@ This file tracks all **current and recently completed** work threads in this rep
 
 ## Active Threads
 
+### THREAD-LEARNING-ALIGNMENT — Framework Documentation and Learning Center
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-LEARNING-ALIGNMENT |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-11-22T15:28:54-05:00 |
+| **Last updated** | 2026-11-22T15:28:54-05:00 |
+| **Owner** | Codex · `codex-learning-alignment-20261122` |
+| **Branch** | `codex/align-docs-learning-center` |
+| **Task** | Align the public framework explanation and Learning Center with the component ownership recorded in ADR-001. |
+| **Scope** | README, CLAUDE, unified architecture, affected skills, existing Learning Center routes and app checks. |
+| **Blockers** | ADR effective status and public disclosure pending owner confirmation. |
+| **Related PR** | TBD |
+| **Notes** | Learning Center content follow-up to merged PR #30. |
+
 ### THREAD-GOV-CLEANUP — Governance File Consolidation
 
 **Status:** open

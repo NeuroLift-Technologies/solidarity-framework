@@ -1,0 +1,23 @@
+{
+  "agent_registration": {
+    "agent_name": "Codex",
+    "platform": "ChatGPT Work Mode",
+    "version": "GPT-6",
+    "session_id": "codex-legacy-retirement-20261122",
+    "entry_date": "2026-11-22T15:43:27-05:00",
+    "entry_point": "Joshua confirmed PR #41 was merged and directed the next cleanup item.",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.4",
+    "working_repo": "NeuroLift-Technologies/solidarity-framework",
+    "working_branch": "codex/retire-legacy-evidence",
+    "scope": "Retire superseded navigation artifacts and publish an ADR-001 evidence index.",
+    "capabilities_self_reported": [
+      "Repository maintenance",
+      "Source and release verification"
+    ],
+    "known_limitations": [
+      "Org search covers indexed references. Private runner access and current deployment behavior are outside scope."
+    ],
+    "preferred_handoff_format": "JSON"
+  }
+}

@@ -20,6 +20,21 @@ This file tracks all **current and recently completed** work threads in this rep
 
 ## Active Threads
 
+### THREAD-LEGACY-RETIREMENT — Retire superseded artifacts and index framework evidence
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-LEGACY-RETIREMENT |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-11-22T15:43:27-05:00 |
+| **Last updated** | 2026-11-22T15:43:27-05:00 |
+| **Owner** | Codex · `codex-legacy-retirement-20261122` |
+| **Branch** | `codex/retire-legacy-evidence` |
+| **Task** | Retire superseded artifacts with verified replacements and index framework evidence. |
+| **Scope** | Legacy repository navigation, documentation and evidence references. |
+| **Blockers** | None. |
+| **Related PR** | TBD |
+| **Notes** | Follow-up to merged PR #41. |
+
 ### THREAD-LEARNING-ALIGNMENT — Framework Documentation and Learning Center
 | Field | Value |
 |-------|-------|

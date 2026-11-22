@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-11-21T20:42:20-05:00
+> Last updated: 2026-11-21T20:43:00-05:00
 
 ---
 
@@ -19,18 +19,6 @@ This file tracks all **current and recently completed** work threads in this rep
 ---
 
 ## Active Threads
-
-### THREAD-ADR-001 — ADR-001 documentation submission
-
-**Status:** open  
-**Owner:** ChatGPT (GPT-6), session `chatgpt-adr001-20261121`  
-**Started:** 2026-11-21T20:42:20-05:00  
-**Last updated:** 2026-11-21T20:42:20-05:00  
-**Branch:** `docs/adr-001-v1.4.2`  
-**Summary:** Owner requested a single documentation PR submitting the supplied ADR-001 v1.4.2 Draft. No pillar implementation, promotion to effective status, or merge.  
-**Blockers:** None for submission; integrated acceptance and open decisions remain as specified in the ADR.  
-**Next action:** Submit ADR and request owner review.
-
 
 ### THREAD-006 — OTOI Docs: First-Receiver Advocate Rule & Positioning Statement
 | Field | Value |
@@ -64,6 +52,18 @@ This file tracks all **current and recently completed** work threads in this rep
 ---
 
 ## Completed Threads
+
+### THREAD-ADR-001 — ADR-001 documentation submission
+
+**Status:** resolved — PR submitted  
+**Owner:** ChatGPT (GPT-6), session `chatgpt-adr001-20261121`  
+**Started:** 2026-11-21T20:42:20-05:00  
+**Last updated:** 2026-11-21T20:43:00-05:00  
+**Branch:** `docs/adr-001-v1.4.2`  
+**Summary:** Owner requested a single documentation PR submitting the supplied ADR-001 v1.4.2 Draft. No pillar implementation, promotion to effective status, or merge.  
+**Blockers:** None for submission; integrated acceptance and open decisions remain as specified in the ADR.  
+**Next action:** Owner reviews and merges PR #38; repository copy becomes canonical on merge. Implementation and effective-status gates remain separate.
+**Related PR:** https://github.com/NeuroLift-Technologies/solidarity-framework/pull/38
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
 

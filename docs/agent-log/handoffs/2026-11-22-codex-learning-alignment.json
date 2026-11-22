@@ -1,0 +1,52 @@
+{
+  "handoff_record": {
+    "session_id": "codex-learning-alignment-20261122",
+    "agent_name": "Codex",
+    "date": "2026-11-22T15:33:48-05:00",
+    "otoi_version": "ORG-DEV-OTOI-1.0.4",
+    "repo": "NeuroLift-Technologies/solidarity-framework",
+    "branch": "codex/align-docs-learning-center",
+    "work_completed": [
+      "Reconciled ADR-001 v1.5.0 status with Joshua’s confirmation.",
+      "Aligned the documentation, affected skills and five Learning Center routes.",
+      "Moved ESLint config into the app and added dedicated Node 24 pull request checks.",
+      "Recorded the merges of ADR PR #38 and Learning Center PR #30 in their thread entries."
+    ],
+    "work_in_progress": [
+      "Owner PR review and hosted checks."
+    ],
+    "blockers": [
+      "Public disclosure classification has not been changed."
+    ],
+    "decisions_made": [
+      "Joshua confirmed ADR-001 v1.5.0 is effective as the architecture baseline."
+    ],
+    "decisions_pending": [
+      "Public disclosure classification and any later runtime implementation approvals."
+    ],
+    "escalations": [],
+    "next_agent_notes": "Follow the effective ADR for architecture. Use its separate production and implementation gates. THREAD-006 and the remaining THREAD-012 review scope were left with their respective owners.",
+    "files_modified": [
+      ".github/workflows/learning-center.yml",
+      "CLAUDE.md",
+      "README.md",
+      "agents/nlt-otoi-skill.md",
+      "agents/rrt-advocate-skill.md",
+      "agents/sleepwalker-skill.md",
+      "agents/solidarity-foundation-skill.md",
+      "app/app/otoi/page.tsx",
+      "app/app/page.tsx",
+      "app/app/rrt/page.tsx",
+      "app/app/sleepwalker/page.tsx",
+      "app/app/toi/page.tsx",
+      "app/eslint.config.mjs",
+      "docs/ADR-001.md",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-11-22-codex-learning-alignment.json",
+      "docs/unified_architecture.md"
+    ],
+    "tests_run": "Node 24 clean install, lint, build; five local production routes, six playground URLs, 26 strict governance checks, ADR metadata validation, Markdown links and workflow YAML.",
+    "tests_passing": true,
+    "pr_url": null
+  }
+}

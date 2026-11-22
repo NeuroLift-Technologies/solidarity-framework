@@ -16,18 +16,18 @@ export default function TOIDetail() {
       <section style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '1rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', border: '1px solid #e5e7eb', marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#111827', marginBottom: '1rem' }}>The Declaration of Dignity</h2>
         <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#374151', marginBottom: '1rem' }}>
-          TOI is a <strong>purely declarative</strong> JSON schema. It is not a prompt, nor is it a set of instructions. It is a signed declaration of a user's identity, boundaries, and preferences.
+          TOI gives a person a portable way to declare interaction preferences, boundaries and authority constraints. The TOI project defines the canonical format, generator and signing primitives.
         </p>
         <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#374151' }}>
-          By separating <em style={{ fontStyle: 'italic' }}>preferences</em> from <em style={{ fontStyle: 'italic' }}>instructions</em>, TOI prevents "instruction drift" and ensures that the user's fundamental rights are not overridden by the AI's internal optimization.
+          A signature verifies integrity against a key. OTOI must establish that the key is trusted and bound to the person before using the declaration as authority.
         </p>
       </section>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2rem' }}>
         <div style={{ padding: '1.5rem', backgroundColor: 'white', borderRadius: '1rem', border: '1px solid #e5e7eb' }}>
           <h3 style={{ fontWeight: 'bold', color: '#111827', marginBottom: '0.5rem' }}>Technical Rigor</h3>
           <ul style={{ color: '#4b5563', lineHeight: '1.6', fontSize: '0.95rem' }}>
-            <li><strong style={{ fontWeight: 'bold' }}>RFC 8785 JCS:</strong> JSON Canonicalization Scheme ensures byte-identical forms across runtimes.</li>
-            <li><strong style={{ fontWeight: 'bold' }}>Ed25519 Signing:</strong> Cryptographic proof of authorship and integrity.</li>
+            <li><strong>Canonical format:</strong> Defines the bytes that signing and verification use.</li>
+            <li><strong>Signing:</strong> Binds document integrity to the signing key.</li>
             <li><strong>Strict Schema:</strong> reserved `$` keys for format evolution (e.g., `$toi`, `$tier`, `$created`, `$updated`, `$signature`).</li>
           </ul>
         </div>

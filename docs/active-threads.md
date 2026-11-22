@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-11-22T14:46:53-05:00
+> Last updated: 2026-11-22T15:33:48-05:00
 
 ---
 
@@ -26,14 +26,14 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Thread ID** | THREAD-LEARNING-ALIGNMENT |
 | **Status** | 🟡 In Progress |
 | **Started** | 2026-11-22T15:28:54-05:00 |
-| **Last updated** | 2026-11-22T15:28:54-05:00 |
+| **Last updated** | 2026-11-22T15:33:48-05:00 |
 | **Owner** | Codex · `codex-learning-alignment-20261122` |
 | **Branch** | `codex/align-docs-learning-center` |
 | **Task** | Align the public framework explanation and Learning Center with the component ownership recorded in ADR-001. |
 | **Scope** | README, CLAUDE, unified architecture, affected skills, existing Learning Center routes and app checks. |
-| **Blockers** | ADR effective status and public disclosure pending owner confirmation. |
+| **Blockers** | Public disclosure pending owner confirmation. |
 | **Related PR** | TBD |
-| **Notes** | Learning Center content follow-up to merged PR #30. |
+| **Notes** | Learning Center content follow-up to merged PR #30. Local validation complete. Owner review is next. |
 
 ### THREAD-GOV-CLEANUP — Governance File Consolidation
 
@@ -64,17 +64,6 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Notes** | Handoff from Claude.ai Main (NLT-HND-2026-008). Documentation additions only — no governance modifications. Awaiting Josh's direction before any further work. |
 
 n
-### THREAD-ADR-001 — ADR-001 v1.5.0 Reconciliation
-| **Thread ID** | THREAD-ADR-001 |
-| **Status** | 🟡 In Progress |
-| **Started** | 2026-11-22 |
-| **Owner** | ChatGPT — session chatgpt-adr001-v150-20261122 |
-| **Branch** | `docs/adr-001-v1.5.0` |
-| **Task** | Reconcile owner-approved OI-01–OI-14 decisions into ADR-001 v1.5.0 Draft and update PR #38 |
-| **Scope** | `docs/ADR-001.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
-| **Blockers** | None |
-| **Related PR** | #38 |
-| **Notes** | Completed agent registration and handoff record per CodeRabbit review requirements. PR submission is not ADR promotion, merge, deployment or authorization for implementation. |
 ### THREAD-012 — Solidarity Framework Learning Web App
 
 | Field | Value |
@@ -87,7 +76,7 @@ n
 | **Task** | Build a learning web app to teach Solidarity Framework components (TOI, OTOI, RRT Advocate, Sleepwalker) co-located with docs. |
 | **Scope** | /app (new) |
 | **Blockers** | None |
-| **Related PR** | TBD |
+| **Related PR** | [#30](https://github.com/NeuroLift-Technologies/solidarity-framework/pull/30) (merged) |
 | **Notes** | Authorized by Josh (Joshua W. Dorsey, Sr.). Deviates from documentation-only scope per intent to centralize learning resources. Under review: open code-review findings (architecture sign-off, origin-story doc hygiene). |
 
 ---
@@ -95,6 +84,18 @@ n
 ## Completed Threads
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
+
+### THREAD-ADR-001 — ADR-001 v1.5.0 Reconciliation
+| **Thread ID** | THREAD-ADR-001 |
+| **Status** | ✅ Complete |
+| **Started** | 2026-11-22 |
+| **Owner** | ChatGPT — session chatgpt-adr001-v150-20261122 |
+| **Branch** | `docs/adr-001-v1.5.0` |
+| **Task** | Reconcile owner-approved OI-01–OI-14 decisions into ADR-001 v1.5.0 Draft and update PR #38 |
+| **Scope** | `docs/ADR-001.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
+| **Blockers** | None |
+| **Related PR** | [#38](https://github.com/NeuroLift-Technologies/solidarity-framework/pull/38) (merged) |
+| **Notes** | Merged the canonical document. Joshua confirmed ADR-001 v1.5.0 is effective on 2026-11-22. Implementation and deployment approval remain separate. |
 
 ### THREAD-008 — CI: Investigate and fix GitHub Pages deployment issue
 | Field | Value |

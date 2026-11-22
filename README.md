@@ -44,7 +44,7 @@ Human agency, transparency, a minimal footprint and escalation guide framework d
 
 ## 🏗️ Architecture
 
-The [architecture guide](docs/unified_architecture.md) explains the four pillars, their supporting components and the evidence required for enforcement claims.
+The [architecture guide](docs/unified_architecture.md) explains the four pillars and their supporting components. The [evidence index](docs/evidence-index.md) links reviewed revisions, release artifacts, and the acceptance and deployment records.
 
 | Pillar | Role | Component source |
 |---|---|---|
@@ -61,65 +61,16 @@ Start with the component source above for release-specific installation instruct
 
 ## 📁 Repository Structure
 
-```
-solidarity-framework/                    # Solidarity Framework docs/governance root
-│
-│  -- Component implementations are NOT vendored here -------------------------
-│     Each pillar lives in its own repo and ships to npm. See "Component
-│     Sources" above (TOI, OTOI, RRT Advocate, Sleepwalker) and the
-│     reference kit at NeuroLift-Technologies/asfdk.
-│
-│  -- Coding-Agent Operations Hub ---------------------------------------------
-├── agents/                             # 🤖 Org-wide agent & skill profiles
-│   ├── nlt-governance-steward.md      # OTOI compliance & guidance agent
-│   ├── rrt-advocate-skill.md          # RRT Advocate skill definition
-│   ├── nlt-otoi-skill.md              # NLT-OTOI skill definition
-│   ├── sleepwalker-skill.md           # Sleepwalker skill definition
-│   ├── solidarity-foundation-skill.md # Unified Foundation skill definition
-│   └── swe-agent.md                   # Senior software engineer agent
-├── docs/                               # 📚 Governance documentation
-│   ├── active-threads.md              # Current work state
-│   └── agent-log/                     # Agent session audit trail
-├── SOPs/                               # 📋 Standard operating procedures
-│   ├── new-agent-onboarding.md        # SOP-NLT-001
-│   ├── repo-governance-setup.md       # SOP-NLT-002
-│   └── incident-response.md           # SOP-NLT-003
-├── templates/                          # 📝 Governance templates
-│   ├── agent-registration.json
-│   ├── handoff-record.json
-│   ├── escalation.md
-│   └── intent-log.md
-├── ISSUE_TEMPLATE/                     # 🎫 Issue templates
-│   ├── agent-escalation.md
-│   ├── governance-proposal.md
-│   ├── bug_report.md
-│   └── feature_request.md
-├── .nltotoi/                           # 🔒 Governance infrastructure
-│   ├── README.md
-│   ├── contracts/README.md
-│   ├── proposals/validation-roadmap.md
-│   ├── index/governance-files.md
-│   └── scripts/validate-governance.sh
-├── .github/                            # ⚙️ GitHub configuration & CI workflows
-│   ├── copilot-instructions.md
-│   ├── workflows/
-│   └── PULL_REQUEST_TEMPLATE.md
-│
-│  -- Cloudflare Agent Development --------------------------------------------
-├── links.md                            # 🔗 Cloudflare agent development references
-├── mcp-config.yaml                     # 🔌 MCP server configurations (GitHub + Cloudflare)
-│
-│  -- Repository Root ---------------------------------------------------------
-├── AGENTS.md                           # Agent coordination protocol
-├── CLAUDE.md                           # AI assistant guide (OTOI compliant)
-├── GOVERNANCE.md                      # Organization contract and local requirements
-├── CONTRIBUTING.md                     # Contribution guidelines
-├── CODE_OF_CONDUCT.md                  # Community standards
-├── SECURITY.md                         # Security policy
-├── SUPPORT.md                          # Support guide
-├── LICENSE                             # Apache 2.0
-└── README.md                           # This file
-```
+| Path | Contents |
+|---|---|
+| [`docs/`](docs/) | Framework architecture, interaction history and [evidence index](docs/evidence-index.md). |
+| [`app/`](app/) | Next.js Learning Center. |
+| [`GOVERNANCE.md`](GOVERNANCE.md), [`AGENTS.md`](AGENTS.md), [`CLAUDE.md`](CLAUDE.md) | Organization contract, contributor workflow and repository guidance. |
+| [`nltotoi.json`](nltotoi.json), [`.nltotoi/`](.nltotoi/) | Machine-readable discovery, [governance file registry](.nltotoi/index/governance-files.md) and local validation. |
+| [`agents/`](agents/), [`SOPs/`](SOPs/), [`templates/`](templates/) | Agent and skill profiles, procedures and contributor templates. |
+| [`docs/active-threads.md`](docs/active-threads.md), [`docs/agent-log/`](docs/agent-log/) | Work coordination and session records. |
+| [`.github/workflows/`](.github/workflows/), [agent PR template](PULL_REQUEST_TEMPLATE/agent-contribution.md), [review format](REVIEW.md) | CI and contribution checks. |
+| [`links.md`](links.md), [`mcp-config.yaml`](mcp-config.yaml) | Cloudflare development and MCP references. |
 
 ## 🔐 Governance (ORG-DEV-OTOI-1.0.4)
 

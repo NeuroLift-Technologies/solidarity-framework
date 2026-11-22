@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-11-22T15:33:48-05:00
+> Last updated: 2026-11-22T15:45:31-05:00
 
 ---
 
@@ -20,20 +20,20 @@ This file tracks all **current and recently completed** work threads in this rep
 
 ## Active Threads
 
-### THREAD-LEARNING-ALIGNMENT — Framework Documentation and Learning Center
+### THREAD-LEGACY-RETIREMENT — Retire superseded artifacts and index framework evidence
 | Field | Value |
 |-------|-------|
-| **Thread ID** | THREAD-LEARNING-ALIGNMENT |
+| **Thread ID** | THREAD-LEGACY-RETIREMENT |
 | **Status** | 🟡 In Progress |
-| **Started** | 2026-11-22T15:28:54-05:00 |
-| **Last updated** | 2026-11-22T15:33:48-05:00 |
-| **Owner** | Codex · `codex-learning-alignment-20261122` |
-| **Branch** | `codex/align-docs-learning-center` |
-| **Task** | Align the public framework explanation and Learning Center with the component ownership recorded in ADR-001. |
-| **Scope** | README, CLAUDE, unified architecture, affected skills, existing Learning Center routes and app checks. |
-| **Blockers** | Public disclosure pending owner confirmation. |
-| **Related PR** | [#41](https://github.com/NeuroLift-Technologies/solidarity-framework/pull/41) |
-| **Notes** | Learning Center content follow-up to merged PR #30. Local validation complete. Owner review is next. |
+| **Started** | 2026-11-22T15:43:27-05:00 |
+| **Last updated** | 2026-11-22T15:43:27-05:00 |
+| **Owner** | Codex · `codex-legacy-retirement-20261122` |
+| **Branch** | `codex/retire-legacy-evidence` |
+| **Task** | Retire superseded artifacts with verified replacements and index framework evidence. |
+| **Scope** | Legacy repository navigation, documentation and evidence references. |
+| **Blockers** | None. |
+| **Related PR** | [#42](https://github.com/NeuroLift-Technologies/solidarity-framework/pull/42) |
+| **Notes** | Follow-up to merged PR #41. Local validation is complete and owner review is pending. |
 
 ### THREAD-GOV-CLEANUP — Governance File Consolidation
 
@@ -84,6 +84,21 @@ n
 ## Completed Threads
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
+
+### THREAD-LEARNING-ALIGNMENT — Framework Documentation and Learning Center
+| Field | Value |
+|-------|-------|
+| **Thread ID** | THREAD-LEARNING-ALIGNMENT |
+| **Status** | ✅ Complete |
+| **Started** | 2026-11-22T15:28:54-05:00 |
+| **Last updated** | 2026-11-22T15:45:31-05:00 |
+| **Owner** | Codex · `codex-learning-alignment-20261122` |
+| **Branch** | `codex/align-docs-learning-center` |
+| **Task** | Align the public framework explanation and Learning Center with the component ownership recorded in ADR-001. |
+| **Scope** | README, CLAUDE, unified architecture, affected skills, existing Learning Center routes and app checks. |
+| **Blockers** | None for the merged scope. |
+| **Related PR** | [#41](https://github.com/NeuroLift-Technologies/solidarity-framework/pull/41) |
+| **Notes** | Learning Center content follow-up to merged PR #30. Merged in PR #41. |
 
 ### THREAD-ADR-001 — ADR-001 v1.5.0 Reconciliation
 | **Thread ID** | THREAD-ADR-001 |

@@ -1,0 +1,40 @@
+{
+  "handoff_record": {
+    "session_id": "codex-legacy-retirement-20261122",
+    "agent_name": "Codex",
+    "date": "2026-11-22T15:45:31-05:00",
+    "otoi_version": "ORG-DEV-OTOI-1.0.4",
+    "repo": "NeuroLift-Technologies/solidarity-framework",
+    "branch": "codex/retire-legacy-evidence",
+    "work_completed": [
+      "Retired the stale Python topography and standalone directory map.",
+      "Added an ADR-001 evidence index with verified source pins and npm tarball addresses.",
+      "Recorded PR #41 as merged."
+    ],
+    "work_in_progress": [
+      "Owner review and hosted checks."
+    ],
+    "blockers": [
+      "Integrated acceptance and live runtime enforcement were not established by this work."
+    ],
+    "decisions_made": [
+      "Retained the reusable CI entry point and VS Code settings because downstream and local editor usage could not be excluded."
+    ],
+    "decisions_pending": [],
+    "escalations": [],
+    "next_agent_notes": "Use the README and governance registry for current navigation. Retrieve the retired files from edea202e185835c26055f1c1fbed05972ebc25e3 or revert the retirement commit. Use the detailed OI-10 receipt through its existing internal access path.",
+    "files_modified": [
+      "GEMINI_TOPOGRAPHY.py",
+      "file-structure.md",
+      "README.md",
+      "docs/unified_architecture.md",
+      "docs/evidence-index.md",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-11-22-codex-legacy-retirement.json",
+      "docs/agent-log/handoffs/2026-11-22-codex-legacy-retirement.json"
+    ],
+    "tests_run": "Node 24 app clean install, lint and build, strict governance 26/26, pinned upstream import comparison, local Markdown links and anchors, seven reviewed source commits, six npm artifact HTTP checks, Git whitespace and reference searches.",
+    "tests_passing": true,
+    "pr_url": "https://github.com/NeuroLift-Technologies/solidarity-framework/pull/42"
+  }
+}

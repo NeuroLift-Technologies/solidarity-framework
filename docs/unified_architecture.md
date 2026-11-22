@@ -31,4 +31,4 @@ The framework's data boundary excludes raw conversations, prompts, responses, tr
 
 ## Deployment evidence
 
-Record the component revision, adapter and operation whenever reporting runtime coverage. A configured control has settings, an activated control is running on the named surface, and an enforced control has evidence that it intercepted the operation before execution or release. A package install or a Learning Center playground session establishes neither a runtime coverage result nor deployment readiness.
+Use the [evidence index](evidence-index.md) to find reviewed revisions, artifacts, acceptance controls and deployment observations. Record the component revision, adapter and operation whenever reporting runtime coverage. A configured control has settings, an activated control is running on the named surface, and an enforced control has evidence that it intercepted the operation before execution or release. A package install or a Learning Center playground session establishes neither a runtime coverage result nor deployment readiness.

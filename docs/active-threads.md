@@ -1,6 +1,6 @@
 # Active Threads — NeuroLift-Technologies/solidarity-framework
 > OTOI §4.1 Step 4 · Read before starting any work to avoid conflicts
-> Last updated: 2026-11-21T20:43:00-05:00
+> Last updated: 2026-08-16
 
 ---
 
@@ -34,6 +34,18 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Related PR** | TBD |
 | **Notes** | Handoff from Claude.ai Main (NLT-HND-2026-008). Documentation additions only — no governance modifications. Awaiting Josh's direction before any further work. |
 
+n
+### THREAD-ADR-001 — ADR-001 v1.5.0 Reconciliation
+| **Thread ID** | THREAD-ADR-001 |
+| **Status** | 🟡 In Progress |
+| **Started** | 2026-11-22 |
+| **Owner** | ChatGPT — session chatgpt-adr001-v150-20261122 |
+| **Branch** | `docs/adr-001-v1.5.0` |
+| **Task** | Reconcile owner-approved OI-01–OI-14 decisions into ADR-001 v1.5.0 Draft and update PR #38 |
+| **Scope** | `docs/ADR-001.md`, `docs/agent-log/registrations/`, `docs/agent-log/handoffs/` |
+| **Blockers** | None |
+| **Related PR** | #38 |
+| **Notes** | Completed agent registration and handoff record per CodeRabbit review requirements. PR submission is not ADR promotion, merge, deployment or authorization for implementation. |
 ### THREAD-012 — Solidarity Framework Learning Web App
 
 | Field | Value |
@@ -52,19 +64,6 @@ This file tracks all **current and recently completed** work threads in this rep
 ---
 
 ## Completed Threads
-
-### THREAD-ADR-001 — ADR-001 documentation submission
-
-**Status:** resolved — PR submitted  
-**Owner:** ChatGPT (GPT-6), session `chatgpt-adr001-20261121`  
-**Started:** 2026-11-21T20:42:20-05:00  
-**Last updated:** 2026-11-21T20:43:00-05:00  
-**Branch:** `docs/adr-001-v1.4.2`  
-**Summary:** Owner requested a single documentation PR submitting the supplied ADR-001 v1.4.2 Draft. No pillar implementation, promotion to effective status, or merge.  
-**Blockers:** None for submission; integrated acceptance and open decisions remain as specified in the ADR.  
-**Next action:** Owner reviews and merges PR #38; repository copy becomes canonical on merge. Implementation and effective-status gates remain separate.
-**2026-11-22 follow-up:** Owner authorized ChatGPT GPT-6 to update the same PR with v1.5.0 Draft. OI-01–OI-14 owner decisions incorporated on PR branch. GitHub is the designated canonical home; this revision remains unmerged and not effective. New session `chatgpt-adr001-v150-20261122`; previous session records are historical. CI and owner review remain pending.
-**Related PR:** https://github.com/NeuroLift-Technologies/solidarity-framework/pull/38
 
 <!-- Move threads here when closed. Retain for 30 days after completion. -->
 

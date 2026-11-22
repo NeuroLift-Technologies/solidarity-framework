@@ -1,27 +1,39 @@
 {
+  "_template_info": {
+    "template_version": "1.0.0",
+    "otoi_version": "ORG-DEV-OTOI-1.0.3",
+    "otoi_section": "§3 — Agent Registration",
+    "sop_reference": "SOP-NLT-001 Step 5",
+    "instructions": "Complete all fields. Save to docs/agent-log/registrations/{YYYY-MM-DD}-{agent-name}-{session-id}.json. This file must be committed as your first action in any session.",
+    "file_naming": "{YYYY-MM-DD}-{agent-name}-{session-id}.json"
+  },
   "agent_registration": {
     "agent_name": "ChatGPT",
     "platform": "ChatGPT GitHub connector",
     "version": "GPT-6",
     "session_id": "chatgpt-adr001-v150-20261122",
-    "entry_date": "2026-11-22T10:13:51-05:00",
-    "entry_point": "Owner authorized updating solidarity-framework PR #38 to ADR-001 v1.5.0 Draft",
+    "entry_date": "2026-11-22",
+    "entry_point": "PR 38 review feedback completion",
     "acknowledged_otoi": true,
     "otoi_version": "ORG-DEV-OTOI-1.0.3",
     "working_repo": "NeuroLift-Technologies/solidarity-framework",
-    "working_branch": "docs/adr-001-v1.4.2",
+    "working_branch": "docs/adr-001-v1.5.0",
+    "task_summary": "Complete agent registration and handoff record for PR 38 ADR-001 v1.5.0 reconciliation per CodeRabbit review requirements",
     "active_thread_id": "THREAD-ADR-001",
     "capabilities_self_reported": [
-      "Read supplied Markdown draft and owner approvals",
-      "Read and update GitHub PR branch documentation",
-      "Verify PR file readback and metadata"
+      "code generation",
+      "file editing",
+      "test execution"
     ],
     "known_limitations": [
-      "No authority to merge, deploy, or implement ADR architecture",
-      "No runtime or governance CI tests executed in this session",
-      "Session registration recorded after the initial ADR file update; this sequencing is reported accurately"
+      "cannot access external URLs",
+      "context window limit of X tokens"
     ],
-    "preferred_handoff_format": "JSON handoff record",
-    "approved_scope": "Update existing PR #38 and supporting governance docs only; no direct main push"
+    "preferred_handoff_format": "JSON handoff record + inline comments",
+    "escalation_acknowledged": true,
+    "escalation_contact": "joshua@neurolift.tech",
+    "solidarity_framework_acknowledged": true,
+    "commit_format_acknowledged": true,
+    "handoff_required_acknowledged": true
   }
 }

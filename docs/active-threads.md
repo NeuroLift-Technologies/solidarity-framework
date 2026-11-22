@@ -32,7 +32,7 @@ This file tracks all **current and recently completed** work threads in this rep
 | **Task** | Align the public framework explanation and Learning Center with the component ownership recorded in ADR-001. |
 | **Scope** | README, CLAUDE, unified architecture, affected skills, existing Learning Center routes and app checks. |
 | **Blockers** | Public disclosure pending owner confirmation. |
-| **Related PR** | TBD |
+| **Related PR** | [#41](https://github.com/NeuroLift-Technologies/solidarity-framework/pull/41) |
 | **Notes** | Learning Center content follow-up to merged PR #30. Local validation complete. Owner review is next. |
 
 ### THREAD-GOV-CLEANUP — Governance File Consolidation

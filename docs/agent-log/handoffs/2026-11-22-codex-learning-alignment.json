@@ -47,6 +47,6 @@
     ],
     "tests_run": "Node 24 clean install, lint, build; five local production routes, six playground URLs, 26 strict governance checks, ADR metadata validation, Markdown links and workflow YAML.",
     "tests_passing": true,
-    "pr_url": null
+    "pr_url": "https://github.com/NeuroLift-Technologies/solidarity-framework/pull/41"
   }
 }

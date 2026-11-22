@@ -1,6 +1,6 @@
 # Validation Roadmap — NLT Governance
 
-**Status:** v1.0 — Basic file existence validation implemented  
+**Status:** Historical planning record
 **Scope:** `NeuroLift-Technologies/solidarity-framework`  
 **Owner:** Joshua W. Dorsey, Sr.
 
@@ -27,7 +27,7 @@ The `validate-governance.sh` script provides:
 
 ### v1.2 — Cross-Reference Validation
 
-- [ ] Verify all paths referenced in `nltotoi.json` exist on disk
+- [x] Verify all local governance paths referenced in `nltotoi.json` exist on disk
 - [ ] Verify all paths in `.nltotoi/index/governance-files.md` exist on disk
 - [ ] Detect orphaned files not listed in the index
 

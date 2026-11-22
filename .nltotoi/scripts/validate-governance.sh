@@ -17,8 +17,8 @@ set -euo pipefail
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 
-SCRIPT_VERSION="1.0.0"
-OTOI_VERSION="ORG-DEV-OTOI-1.0.3"
+SCRIPT_VERSION="1.1.0"
+OTOI_VERSION="ORG-DEV-OTOI-1.0.4"
 
 # Colors (only if stdout is a terminal)
 if [ -t 1 ]; then
@@ -145,7 +145,7 @@ check_json_valid() {
     return 1  # Already reported as missing
   fi
   if command -v python3 >/dev/null 2>&1; then
-    if python3 -c "import json, sys; json.load(open('$file'))" 2>/dev/null; then
+    if python3 -c 'import json, sys; json.load(open(sys.argv[1]))' "$file" 2>/dev/null; then
       pass "$label is valid JSON"
       return 0
     else
@@ -153,7 +153,7 @@ check_json_valid() {
       return 1
     fi
   elif command -v node >/dev/null 2>&1; then
-    if node -e "JSON.parse(require('fs').readFileSync('$file','utf8'))" 2>/dev/null; then
+    if node -e 'JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"))' "$file" 2>/dev/null; then
       pass "$label is valid JSON"
       return 0
     else
@@ -240,6 +240,44 @@ section "Tier 5 — Governance Infrastructure"
 
 check_file_exists ".nltotoi/index/governance-files.md"    ".nltotoi governance file registry"
 check_file_exists ".nltotoi/scripts/validate-governance.sh" "validate-governance.sh (this script)"
+
+# Repositories that carry a discovery manifest also validate its local paths.
+if [ -f "$REPO_ROOT/nltotoi.json" ]; then
+  section "Governance Discovery Manifest"
+  if python3 - "$REPO_ROOT" <<'PYTHON'
+import json
+from pathlib import Path
+import sys
+
+root = Path(sys.argv[1]).resolve()
+manifest = json.loads((root / "nltotoi.json").read_text(encoding="utf-8"))
+paths = {
+    manifest["canonical_contract"]: "file",
+    manifest["agents_gateway"]: "file",
+    **dict.fromkeys(manifest["required_files"], "file"),
+}
+paths.update({
+    path: "dir" if key.endswith("_directory") else "file"
+    for key, path in manifest["discovery"].items()
+})
+errors = []
+for value, kind in paths.items():
+    path = (root / value).resolve()
+    if not path.is_relative_to(root):
+        errors.append(f"{value}: path is outside the repository")
+    elif kind == "dir" and not path.is_dir():
+        errors.append(f"{value}: required directory is missing")
+    elif kind == "file" and not path.is_file():
+        errors.append(f"{value}: required file is missing")
+if errors:
+    sys.exit("\n".join(errors))
+PYTHON
+  then
+    pass "All local nltotoi.json paths resolve"
+  else
+    fail "nltotoi.json is invalid or its local paths do not resolve"
+  fi
+fi
 
 # ── Staleness Checks ──────────────────────────────────────────────────────────
 section "Staleness Checks"

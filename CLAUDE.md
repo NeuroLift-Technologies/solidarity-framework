@@ -1,5 +1,5 @@
 # CLAUDE.md — NeuroLift-Technologies/solidarity-framework
-> OTOI Compliance File · ORG-DEV-OTOI-1.0.3 · Step 3 of Agent Onboarding (SOP-NLT-001)
+> OTOI Compliance File · ORG-DEV-OTOI-1.0.4 · Step 3 of Agent Onboarding (SOP-NLT-001)
 
 ---
 
@@ -10,7 +10,7 @@
 | **Repository**     | `NeuroLift-Technologies/solidarity-framework`              |
 | **Visibility**     | Public                                                     |
 | **Purpose**        | Solidarity Framework documentation and governance source: framework principles, component documentation, coding-agent operations, and Cloudflare agent development resources |
-| **OTOI Version**   | ORG-DEV-OTOI-1.0.3                                        |
+| **OTOI Version**   | ORG-DEV-OTOI-1.0.4                                        |
 | **Governing SOP**  | SOP-NLT-001 (`SOPs/new-agent-onboarding.md`)              |
 | **Components**     | RRT Advocate, NLT-OTOI, Sleepwalker Protocol, VibeVoice, Agent Ops Documentation, Cloudflare Dev Resources |
 
@@ -73,7 +73,7 @@ source code. Implementation changes belong in the component repos linked above.
 
 Before beginning work, confirm you have read:
 
-- [ ] `NLT-DEV-OTOI.md` — repo-local governance contract (read first)
+- [ ] `GOVERNANCE.md` — organization contract and local requirements (read first)
 - [ ] `AGENTS.md` — coordination gateway and guardrails
 - [ ] `SOPs/new-agent-onboarding.md` — onboarding process SOP-NLT-001
 - [ ] `docs/active-threads.md` — current work in progress
@@ -107,7 +107,7 @@ This is a **documentation/governance** repo — Markdown-first, no application c
 - Component implementations use their own stacks — see each component repo.
 
 ### Key Files
-- `NLT-DEV-OTOI.md` / `AGENTS.md` — governance contract & coordination gateway
+- `GOVERNANCE.md` / `AGENTS.md` — governance sources and repository coordination
 - `agents/` — org-wide agent & skill profiles (incl. the pillar skill docs)
 - `SOPs/` — standard operating procedures (onboarding, repo setup, incident response)
 - `templates/` — OTOI registration, handoff, escalation, intent-log artifacts
@@ -127,4 +127,4 @@ When in doubt, escalate. It is always better to pause than to guess.
 
 ---
 
-*This file is part of the ORG-DEV-OTOI-1.0.3 governance framework for NeuroLift Technologies.*
+*This file is part of the ORG-DEV-OTOI-1.0.4 governance framework for NeuroLift Technologies.*

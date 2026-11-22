@@ -6,7 +6,7 @@
 > is defined in `REVIEW.md` at the repository root; this template is the
 > fillable incarnation of that format.
 >
-> **Governed by:** ORG-DEV-OTOI-1.0.3
+> **Governed by:** ORG-DEV-OTOI-1.0.4
 > **Canonical format:** [`REVIEW.md`](../REVIEW.md)
 
 ---
@@ -17,13 +17,13 @@
 **Review Date:** [ISO 8601 date, e.g. 2026-03-31T14:30:00-04:00]
 **Review Type:** [Code | Content | Governance | Security]
 **Scope:** [Files, pages, or sections reviewed]
-**OTOI Version:** ORG-DEV-OTOI-1.0.3
+**OTOI Version:** ORG-DEV-OTOI-1.0.4
 
 ---
 
 ## Pre-Review Checklist
 
-- [ ] Read `NLT-DEV-OTOI.md` and understood governance requirements
+- [ ] Read `GOVERNANCE.md` and understood governance requirements
 - [ ] Identified the review scope and what is being evaluated
 - [ ] Checked for any active threads in `docs/active-threads.md` related to this review
 - [ ] Verified the review format matches `REVIEW.md`
@@ -98,4 +98,4 @@
 
 ---
 
-*This review was conducted following the format defined in `REVIEW.md` under ORG-DEV-OTOI-1.0.3.*
+*This review was conducted following the format defined in `REVIEW.md` under ORG-DEV-OTOI-1.0.4.*

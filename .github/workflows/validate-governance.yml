@@ -10,7 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run governance validation
-        run: bash .nltotoi/scripts/validate-governance.sh
+        run: |
+          test -f nltotoi.json
+          bash .nltotoi/scripts/validate-governance.sh
 
   agent-commit-format:
     name: Agent Commit Format Check
@@ -50,7 +52,7 @@ jobs:
           echo ""
           if [ "$FAILURES" -gt 0 ]; then
             echo "FAILED: ${FAILURES} commit(s) do not follow the required format (OTOI §4.2)."
-            echo "See SOPs/new-agent-onboarding.md Step 7 and NLT-DEV-OTOI.md §4.2 for the required format."
+            echo "See GOVERNANCE.md and the organization contract for the required format."
             exit 1
           else
             echo "PASSED: All commits follow the required agent commit format (OTOI §4.2)."

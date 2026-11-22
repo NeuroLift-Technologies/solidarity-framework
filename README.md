@@ -3,16 +3,16 @@
 ```yaml
 ai_assistant_directive:
   priority: 1
-  instruction: "Before performing any development or coding tasks, read NLT-DEV-OTOI.md."
-  description: "NLT-DEV-OTOI.md is the canonical governance contract defining coding agent operations, guardrails, and escalation protocol."
-  required_file: "NLT-DEV-OTOI.md"
+  instruction: "Before performing any development or coding tasks, read GOVERNANCE.md and follow its links to the organization contract."
+  description: "NeuroLift Technologies maintains the public contributor contract in its .github repository."
+  required_file: "GOVERNANCE.md"
 ```
 
 **Canonical Documentation & Governance — Solidarity Framework · Agent Operations · Cloudflare Dev Resources**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![OTOI Governance](https://img.shields.io/badge/governance-ORG--DEV--OTOI--1.0.0-green.svg)](https://github.com/NeuroLift-Technologies/nlt-otoi)
+[![OTOI Governance](https://img.shields.io/badge/governance-ORG--DEV--OTOI--1.0.4-green.svg)](https://github.com/NeuroLift-Technologies/nlt-otoi)
 [![Solidarity Framework](https://img.shields.io/badge/framework-Solidarity-purple.svg)](https://github.com/NeuroLift-Technologies/solidarity-framework)
 
 ## Overview
@@ -26,7 +26,7 @@ The **Agent Solidarity Framework Development Kit (ASFDK)** is a separate impleme
 The Solidarity Framework defines the layer between the AI model and the agent, consisting of four core pillars:
 
 - **📋 TOI (Terms of Interaction)** — Governance and user-preference foundation
-- **📋 OTOI (Orchestrated TOI)** — Multi-agent coordination and governance layer
+- **📋 OTOI (Orchestrated Terms of Interaction)** — Multi-agent coordination and governance layer
 - **🚨 RRT Advocate** — Crisis intervention and immediate safety protocols
 - **🌙 Sleepwalker Protocol (SWP)** — Emotional continuity governance for long-term safety across sessions
 
@@ -64,7 +64,7 @@ The Solidarity Framework ensures human safety, transparency, minimal footprint, 
 ├─────────────────────────────────────────────────────────────────┤
 │  ┌───────────────────────────┐  ┌───────────────────────────┐  │
 │  │ TOI                        │  │ OTOI                       │  │
-│  │ (Terms of Interaction)     │  │ (Orchestrated TOI)         │  │
+│  │ (Terms of Interaction)     │  │ (Orchestrated Terms of Interaction)         │  │
 │  │                            │  │                            │  │
 │  │ • Governance Foundation    │  │ • Multi-Agent Coord.       │  │
 │  │ • User Preferences         │  │ • Orchestration Layer      │  │
@@ -171,6 +171,9 @@ solidarity-framework/                    # Solidarity Framework docs/governance 
 │   ├── bug_report.md
 │   └── feature_request.md
 ├── .nltotoi/                           # 🔒 Governance infrastructure
+│   ├── README.md
+│   ├── contracts/README.md
+│   ├── proposals/validation-roadmap.md
 │   ├── index/governance-files.md
 │   └── scripts/validate-governance.sh
 ├── .github/                            # ⚙️ GitHub configuration & CI workflows
@@ -185,7 +188,7 @@ solidarity-framework/                    # Solidarity Framework docs/governance 
 │  -- Repository Root ---------------------------------------------------------
 ├── AGENTS.md                           # Agent coordination protocol
 ├── CLAUDE.md                           # AI assistant guide (OTOI compliant)
-├── NLT-DEV-OTOI.md                    # Org-level coding agent contract
+├── GOVERNANCE.md                      # Organization contract and local requirements
 ├── CONTRIBUTING.md                     # Contribution guidelines
 ├── CODE_OF_CONDUCT.md                  # Community standards
 ├── SECURITY.md                         # Security policy
@@ -194,9 +197,9 @@ solidarity-framework/                    # Solidarity Framework docs/governance 
 └── README.md                           # This file
 ```
 
-## 🔐 Governance (ORG-DEV-OTOI-1.0.3)
+## 🔐 Governance (ORG-DEV-OTOI-1.0.4)
 
-This repository is governed by **ORG-DEV-OTOI-1.0.3** — the NeuroLift Technologies Orchestrated Terms of Interaction contract.
+The [NeuroLift Technologies public governance contract](GOVERNANCE.md) applies to contributors to this repository.
 
 ### For AI Agents
 
@@ -271,7 +274,7 @@ This project is licensed under the Apache License 2.0 — see the [LICENSE](LICE
 **Framework Version**: 2.0.0  
 **Components**: TOI, OTOI, RRT Advocate, Sleepwalker Protocol  
 **Repository Role**: Documentation · Governance · Coding-Agent Ops Documentation · Cloudflare Agent Development
-**Governance**: ORG-DEV-OTOI-1.0.3  
+**Governance**: ORG-DEV-OTOI-1.0.4
 **Status**: 🟢 Active Development
 
 *"Tech That Gets You, Nothing About Us Without Us, ElevAIte Your Mind"*

@@ -1,6 +1,6 @@
 # Agent Log — NeuroLift-Technologies/solidarity-framework
 
-This directory contains the persistent audit trail of all AI agent sessions that have worked in this repository. It is a core component of the ORG-DEV-OTOI-1.0.0 governance framework.
+This directory contains the persistent audit trail of all AI agent sessions that have worked in this repository. It is a core component of the ORG-DEV-OTOI-1.0.4 governance framework.
 
 ---
 
@@ -19,7 +19,7 @@ docs/agent-log/
 
 ## Registrations
 
-Every agent session must begin with a self-registration, placed in `registrations/`. Registration is required by OTOI §3 before any work begins.
+Every agent session must begin with a self-registration, placed in `registrations/`. The [public governance contract](../../GOVERNANCE.md) requires registration before significant work.
 
 **Template:** `templates/agent-registration.json` (in repository root)
 
@@ -44,7 +44,7 @@ Registrations document:
 
 ## Handoffs
 
-Every agent session must end with a handoff record, placed in `handoffs/`. This is non-negotiable per OTOI §5. A session that ends without a handoff record is a governance violation.
+Every agent session must end with a handoff record, placed in `handoffs/`. The [public governance contract](../../GOVERNANCE.md) requires a handoff before leaving the session.
 
 **Template:** `templates/handoff-record.json` (in repository root)
 
@@ -80,7 +80,7 @@ Handoffs document:
 
 | Document | Location |
 |----------|----------|
-| OTOI Contract | `NLT-DEV-OTOI.md` |
+| Public OTOI Contract | `GOVERNANCE.md` |
 | Agent Coordination | `AGENTS.md` |
 | Onboarding SOP | `SOPs/new-agent-onboarding.md` |
 | Registration Template | `templates/agent-registration.json` |
@@ -88,4 +88,4 @@ Handoffs document:
 
 ---
 
-*This directory is part of the ORG-DEV-OTOI-1.0.0 governance framework for NeuroLift Technologies.*
+*This directory is part of the ORG-DEV-OTOI-1.0.4 governance framework for NeuroLift Technologies.*
